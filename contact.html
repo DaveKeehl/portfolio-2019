@@ -105,12 +105,15 @@
 
                 <div class="columns">
                     <div class="column form">
-                        <form method="POST" name="contactform" action="https://formspree.io/davide.ciulla@ticino.com">
+                        <form method="POST" name="contactform" id="contactform">
                             <div class="form-fields">
                                 <input type="text" name="name" class="form-control form-name" placeholder="Name" required>
                                 <input type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
                                 <input type="tel" name="phone" class="form-control form-phone" placeholder="Phone - Optional">
                                 <input type="text" name="subject" class="form-control form-subject" placeholder="Subject" required>
+                                <input type="hidden" name="_next" value="https://davekeehl.github.io/Portfolio/contact.html"/>
+                                <input type="hidden" name="_subject" value="Online Portfolio Contact"/>
+                                <input type="text" name="_gotcha" style="display:none"/>
                                 <div class="select is-fullwidth">
                                     <select name="type" required>
                                         <option selected>General Question</option>
@@ -239,6 +242,9 @@
                 $("#instagram svg > path").removeClass("svg-purple");
             },
         );
+
+        var contactform =  document.getElementById('contactform');
+        contactform.setAttribute('action', '//formspree.io/' + 'davide.ciulla' + '@' + 'ticino' + '.' + 'com');
 
     </script>
 
