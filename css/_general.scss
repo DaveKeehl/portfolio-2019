@@ -1,0 +1,144 @@
+// main: main.scss
+
+/********* GENERAL STYLES *********/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+p {
+    font-weight: 400;
+    line-height: 25px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff5252;
+}
+
+a:active {
+    color: white !important;
+}
+
+.columns {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
+
+.columns:not(:last-child) {
+    margin-bottom: 0;
+}
+
+.columns:last-child {
+    margin-bottom: 0;
+}
+
+.columns:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main-content {
+    padding: 100px 0;
+    color: #333;
+}
+
+.container {
+    max-width: 80%;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.row [class^=col] {
+    margin: 0;
+}
+
+#return-to-top {
+    text-align: center;
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+#return-to-top:hover i {
+    color: #fff;
+    top: 3px;
+}
+
+.modal-content {
+    overflow: hidden;
+}

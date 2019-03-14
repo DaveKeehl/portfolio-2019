@@ -1,0 +1,96 @@
+// main: main.scss
+
+/********* ABOUT ME *********/
+
+.about-quote {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 50%;
+}
+
+.about-quote img {
+    vertical-align: top;
+}
+
+.about-text {
+    padding: 50px 0;
+    text-align: justify;
+}
+
+.about-photo,
+.about-photo-mobile {
+    text-align: center;
+}
+
+.img-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.about-photo img,
+.about-photo-mobile img {
+    width: 400px;
+    vertical-align: middle;
+}
+
+.about-photo-mobile img {
+    margin-bottom: 20px;
+}
+
+.about-topCircle {
+    width: 11px;
+    height: 11px;
+    border-radius: 100px;
+    background-color: #ff5252;
+    margin: 0 auto;
+}
+
+.about-bottomCircle {
+    width: 11px;
+    height: 11px;
+    border-radius: 100px;
+    background-color: #333;
+    margin: 0 auto;
+}
+
+.about-divider {
+    width: 3px;
+    height: 100%;
+    background-color: #333;
+    background: -webkit-linear-gradient(#ff5252, #333);
+    background: -o-linear-gradient(#ff5252, #333);
+    background: -webkit-gradient(linear, left top, left bottom, from(#ff5252), to(#333));
+    background: linear-gradient(#ff5252, #333);
+    margin: 0 auto;
+}
+
+.about-topCircle-mobile {
+    width: 11px;
+    height: 11px;
+    border-radius: 100px;
+    background-color: #ff5252;
+    float: left
+}
+
+.about-bottomCircle-mobile {
+    width: 11px;
+    height: 11px;
+    border-radius: 100px;
+    background-color: #333;
+    float: right;
+}
+
+.about-divider-mobile {
+    margin: 50px auto;
+    height: 5px;
+    width: 80px;
+    display: none;
+    background-color: #333;
+    background: -webkit-linear-gradient(to right, #ff5252, #333);
+    background: -o-linear-gradient(to right, #ff5252, #333);
+    background: -webkit-gradient(linear, left top, right top, from(#ff5252), to(#333));
+    background: -webkit-linear-gradient(left, #ff5252, #333);
+    background: -o-linear-gradient(left, #ff5252, #333);
+    background: linear-gradient(to right, #ff5252, #333);
+}

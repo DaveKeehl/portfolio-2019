@@ -1,0 +1,59 @@
+// main: main.scss
+
+/********* FOOTER *********/
+
+.footer-top,
+.footer-bottom {
+    font-weight: 400;
+}
+
+.footer-top {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 20px;
+}
+
+.footer-icons li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.footer-icons svg {
+    height: 40px;
+}
+
+.footer-icons svg > path {
+    fill: white;
+}
+
+.footer-divider {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+    height: 1px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.footer-bottom-info {
+    margin: 0 auto;
+}
+
+.footer-bottom-info div {
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.footer-bottom-info p {
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.footer-bottom-info p:last-child {
+    margin-bottom: 0px;
+}

@@ -1,0 +1,188 @@
+// main: main.scss
+
+/********* PORTFOLIO *********/
+
+.portfolio h1 {
+    margin-bottom: 25px;
+}
+
+.portfolio p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+
+.portfolio span {
+    cursor: pointer;
+}
+
+.portfolio span:focus,
+.portfolio span:visited,
+.portfolio span:hover,
+.portfolio span:active {
+    color: #ff5252;
+}
+
+.artwork-preview {
+    position: relative;
+}
+
+.artwork-preview:hover .overlay {
+    opacity: 1;
+}
+
+.artwork-preview-box {
+    width: 100%;
+}
+
+.columnHide {
+    display: none;
+    padding: 5px;
+}
+
+.columnShow {
+    display: block;
+    padding: 5px;
+}
+
+.artwork-preview img {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    width: 100%;
+}
+
+.artwork-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: .25s ease;
+    -o-transition: .25s ease;
+    transition: .25s ease;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.artwork-overlay-text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+ul.artwork-overlay {
+    list-style: none;
+}
+
+.artwork-overlay ul > li {
+    margin-bottom: 20px;
+    width: 200px;
+    font-weight: 300;
+}
+
+.artwork-overlay ul > li:first-child {
+    font-weight: 700;
+}
+
+.artwork-overlay ul > li:last-child {
+    color: rgba(185, 185, 185, 1);
+    margin-bottom: 0px;
+}
+
+.artwork-preview:hover .artwork-overlay {
+    opacity: 1;
+}
+
+li.artwork-band {
+    font-weight: 500;
+}
+
+li.artwork-album,
+li.artwork-task {
+    font-size: 18px;
+}
+
+.artwork-overlay iframe {
+    border: 0;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    bottom: 0%;
+}
+
+#maintextlink {
+    color: white;
+}
+
+.theme-dark #infolayer {
+    text-align: center;
+}
+
+.video-thumbnail {
+    background-color: black;
+    overflow: hidden;
+}
+
+.video-thumbnail img {
+    vertical-align: top;
+    -webkit-filter: none;
+    filter: none;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    cursor: pointer;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+
+}
+
+.video-thumbnail img:hover {
+    -webkit-filter: opacity(0.8)blur(5px);
+    filter: opacity(0.8)blur(5px);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-mobile-access {
+    background-color: #333;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.portfolio-mobile-access p {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 0;
+}
+
+.modal-content {
+    text-align: center;
+}
