@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metatags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>test</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Bulma CSS -->
+    <link href="css/bulma.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.min.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#333333">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <meta name="msapplication-TileColor" content="#333333">
+    <meta name="msapplication-config" content="img/browserconfig.xml">
+    <meta name="theme-color" content="#333333">
+</head>
+
+
+<body>
+
+    <div class="test columns">
+        <a href="#">
+            <div class="left">
+                <p>GRAPHICS</p>
+            </div>
+        </a>
+        <div class="logo">
+            <img src="img/Logo.svg"/>
+        </div>
+        <a href="index.html">
+            <div class="right">
+                <p>MUSIC</p>
+            </div>
+        </a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+
+        $(".left").hover(
+            function() {
+                $(".right").addClass("right-hover");
+            },
+            function() {
+                $(".right").removeClass("right-hover");
+            },
+        );
+
+
+        $(".right").hover(
+            function() {
+                $(".left").addClass("left-hover");
+            },
+            function() {
+                $(".left").removeClass("left-hover");
+            },
+        );
+
+    </script>
+
+</body>
+
+</html>
