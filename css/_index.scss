@@ -33,17 +33,13 @@
 }
 
 .index-bgGraphics {
-    // background-color: tomato;
     background-image: url(https://picsum.photos/1920/1080/?random);
     background-size: cover;
-    transition: all 0.25s ease;
 }
 
 .index-bgMusic {
-    // background-color: tomato;
     background-image: url(https://source.unsplash.com/random/1920x1080);
     background-size: cover;
-    transition: all 0.25s ease;
 }
 
 .opacity-down {
@@ -63,13 +59,17 @@
     align-items: center;
     height: 150px;
     width: 150px;
-    transition: all 0.25s ease;
+    transition: all 0.5s ease;
 }
 
 .index .logo svg {
     height: 50%;
     filter: none;
     -webkit-filter: none;
+    animation-name: logo-animation;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 .index .logo path {
@@ -79,6 +79,26 @@
 
 .logo-big {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes logo-animation {
+    0% {
+        filter: blur(0px);
+        transform: rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+        filter: blur(0px);
+    }
+    50% {
+        filter: blur(0px);
+    }
+    75% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(0px);
+        transform: rotateY(360deg) rotateZ(360deg);
+    }
 }
 
 .left-graphics {
@@ -127,7 +147,7 @@
     clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
 }
 
-.left-graphics h1 {
+.left-graphics h2 {
     margin: 0;
     color: #333;
     left: 25%;
@@ -136,7 +156,7 @@
     position: absolute;
 }
 
-.right-graphics h1 {
+.right-graphics h2 {
     margin: 0;
     color: white;
     left: 75%;
