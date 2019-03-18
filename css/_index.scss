@@ -165,37 +165,48 @@
     position: absolute;
 }
 
-@media (max-width:480px) {
-    .left p {
-        left: 50%;
-        top: 25%;
-    }
-    .right p {
-        left: 50%;
-        top: 75%;
-    }
-    .left {
+@media (max-width:776px) {
+    .left-graphics {
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+        h2 {
+            left: 50%;
+            top: 25%;
+        }
     }
-    .left-hover {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
-    }
-    .left:hover {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
-    }
-    .right {
+    .right-graphics {
         -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        h2 {
+            left: 50%;
+            top: 75%;
+        }
     }
-    .right:hover {
-        -webkit-clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
-        clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+    .left-hover {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
     }
     .right-hover {
         -webkit-clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
         clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
+    }
+    .left-hover-2 {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
+        clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
+    }
+    .right-hover-2 {
+        -webkit-clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+    }
+    .left-trigger {
+        width: 100vw;
+        height: 50vh;
+    }
+    .right-trigger {
+        width: 100vw;
+        height: 50vh;
+        position: absolute;
+        left: 0;
+        top: 50vh;
     }
 }
