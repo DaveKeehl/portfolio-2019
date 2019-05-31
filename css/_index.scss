@@ -42,9 +42,9 @@
 	background-size: cover;
 }
 
-.opacity-down {
-	opacity: 0.8;
-}
+// .opacity-down {
+// 	opacity: 0.8;
+// }
 
 .index .logo {
 	position: absolute;
@@ -99,6 +99,30 @@
 		filter: blur(0px);
 		transform: rotateY(360deg) rotateZ(360deg);
 	}
+}
+
+@keyframes bg-animation {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 200px 200px;
+	}
+}
+
+.left-graphics::after,
+.right-graphics::after {
+	content: "";
+	opacity: 0.1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+	background-size: 200px 200px;
+	background-image: url('../img/magic pattern.jpg');
+	animation-duration: bg-animation 8s infinite linear;
 }
 
 .left-graphics {
