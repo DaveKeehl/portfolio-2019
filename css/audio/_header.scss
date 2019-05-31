@@ -1,32 +1,32 @@
-// main: main.scss
+// main: ../audio.scss
 
 /********* HEADER *********/
 
 header,
 footer {
-    color: white;
-    background-color: #333;
+	color: white;
+	background-color: #333;
 }
 
 header {
-    padding: 10px 0;
+	padding: 10px 0;
 	li {
 		color: white;
 	}
 }
 
 .current-page {
-    font-weight: 600 !important;
-    color: #ff5252 !important;
+	font-weight: 600 !important;
+	color: #ff5252 !important;
 }
 
 .navbar {
-    background-color: #333;
+	background-color: #333;
 }
 
 .navbar-brand {
 	a:hover {
-    	color: white;
+		color: white;
 	}
 	svg {
 		height: 60px;
@@ -44,31 +44,31 @@ header {
 }
 
 .navbar-brand-txt {
-    margin-left: 2rem;
+	margin-left: 2rem;
 }
 
 .navbar-item,
 .navbar-link {
-    padding: 0px;
-    line-height: 1;
-    color: white;
+	padding: 0px;
+	line-height: 1;
+	color: white;
 }
 
 span.logo-name {
-    letter-spacing: 4px;
-    font-weight: 500 !important;
-    font-size: 16px;
+	letter-spacing: 4px;
+	font-weight: 500 !important;
+	font-size: 16px;
 }
 
 span.logo-job {
-    font-weight: 400;
-    letter-spacing: 1.9px;
-    color: rgba(255, 255, 255, 0.6);
-    margin-top: 2px;
+	font-weight: 400;
+	letter-spacing: 1.9px;
+	color: rgba(255, 255, 255, 0.6);
+	margin-top: 2px;
 }
 
 .navbar-menu {
-    font-weight: 400;
+	font-weight: 400;
 	ul {
 		float: right;
 		padding: 20px 0;
@@ -96,13 +96,13 @@ span.logo-job {
 .navbar-link:hover,
 a.navbar-item.is-active,
 a.navbar-item:hover {
-    background-color: transparent;
-    color: #ff5252;
-    text-decoration: none;
+	background-color: transparent;
+	color: #ff5252;
+	text-decoration: none;
 }
 
 .navbar-burger {
-    height: auto;
+	height: auto;
 	span {
 		height: 2px;
 		width: 20px;

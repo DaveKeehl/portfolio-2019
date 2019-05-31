@@ -3,212 +3,212 @@
 //TRIGGERS
 
 .triggers {
-    position: relative;
-    z-index: 1;
+	position: relative;
+	z-index: 1;
 }
 
 .left-trigger {
-    width: 50vw;
-    height: 100vh;
+	width: 50vw;
+	height: 100vh;
 }
 
 .right-trigger {
-    width: 50vw;
-    height: 100vh;
-    position: absolute;
-    left: 50vw;
-    top: 0;
+	width: 50vw;
+	height: 100vh;
+	position: absolute;
+	left: 50vw;
+	top: 0;
 }
 
 // GRAPHICS
 
 .index {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    font-weight: bold !important;
-    transition: all 0.5s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	font-weight: bold !important;
+	transition: all 0.5s ease;
 }
 
 .index-bgGraphics {
-    // background-image: url(https://picsum.photos/1920/1080/?random);
-    background-size: cover;
+	// background-image: url(https://picsum.photos/1920/1080/?random);
+	background-size: cover;
 }
 
 .index-bgMusic {
-    // background-image: url(https://source.unsplash.com/random/1920x1080);
-    background-size: cover;
+	// background-image: url(https://source.unsplash.com/random/1920x1080);
+	background-size: cover;
 }
 
 .opacity-down {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 
 .index .logo {
-    position: absolute;
-    border-radius: 1000px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 10;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    width: 150px;
-    transition: all 0.5s ease;
+	position: absolute;
+	border-radius: 1000px;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 10;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
+	width: 150px;
+	transition: all 0.5s ease;
 }
 
 .index .logo svg {
-    height: 50%;
-    filter: none;
-    -webkit-filter: none;
-    animation-name: logo-animation;
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+	height: 50%;
+	filter: none;
+	-webkit-filter: none;
+	animation-name: logo-animation;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
 }
 
 .index .logo path {
-    fill: #333;
-    stroke: #333;
+	fill: #333;
+	stroke: #333;
 }
 
 .logo-big {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
 }
 
 @keyframes logo-animation {
-    0% {
-        filter: blur(0px);
-        transform: rotateY(0deg) rotateZ(0deg);
-    }
-    25% {
-        filter: blur(0px);
-    }
-    50% {
-        filter: blur(0px);
-    }
-    75% {
-        filter: blur(0px);
-    }
-    100% {
-        filter: blur(0px);
-        transform: rotateY(360deg) rotateZ(360deg);
-    }
+	0% {
+		filter: blur(0px);
+		transform: rotateY(0deg) rotateZ(0deg);
+	}
+	25% {
+		filter: blur(0px);
+	}
+	50% {
+		filter: blur(0px);
+	}
+	75% {
+		filter: blur(0px);
+	}
+	100% {
+		filter: blur(0px);
+		transform: rotateY(360deg) rotateZ(360deg);
+	}
 }
 
 .left-graphics {
-    -webkit-clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    background-color: white;
+	-webkit-clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	background-color: white;
 }
 
 .right-graphics {
-    background-color: #333;
-    -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
-    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: all 0.5s ease;
-    cursor: pointer;
+	background-color: #333;
+	-webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+	clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	transition: all 0.5s ease;
+	cursor: pointer;
 }
 
 .left-hover {
-    -webkit-clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
-    transition: all 0.5s ease;
+	-webkit-clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
+	transition: all 0.5s ease;
 }
 
 .right-hover {
-    -webkit-clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
-    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
-    transition: all 0.5s ease;
+	-webkit-clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
+	clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
+	transition: all 0.5s ease;
 }
 
 .left-hover-2 {
-    -webkit-clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
-    clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
+	-webkit-clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
+	clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
 }
 
 .right-hover-2 {
-    -webkit-clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
-    clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
+	-webkit-clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
+	clip-path: polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%);
 }
 
 .left-graphics h2 {
-    margin: 0;
-    color: #333;
-    left: 25%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    position: absolute;
+	margin: 0;
+	color: #333;
+	left: 25%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	position: absolute;
 }
 
 .right-graphics h2 {
-    margin: 0;
-    color: white;
-    left: 75%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    position: absolute;
+	margin: 0;
+	color: white;
+	left: 75%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	position: absolute;
 }
 
 @media (max-width:776px) {
-    .left-graphics {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
-        h2 {
-            left: 50%;
-            top: calc(25% - 150px / 4);
-        }
-    }
-    .right-graphics {
-        -webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
-        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
-        h2 {
-            left: 50%;
-            top: calc(75% + 150px / 4);
-        }
-    }
-    .left-hover {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
-    }
-    .right-hover {
-        -webkit-clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
-        clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
-    }
-    .left-hover-2 {
-        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
-        clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
-    }
-    .right-hover-2 {
-        -webkit-clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
-        clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
-    }
-    .left-trigger {
-        width: 100vw;
-        height: 50vh;
-    }
-    .right-trigger {
-        width: 100vw;
-        height: 50vh;
-        position: absolute;
-        left: 0;
-        top: 50vh;
-    }
+	.left-graphics {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+		h2 {
+			left: 50%;
+			top: calc(25% - 150px / 4);
+		}
+	}
+	.right-graphics {
+		-webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+		h2 {
+			left: 50%;
+			top: calc(75% + 150px / 4);
+		}
+	}
+	.left-hover {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+	}
+	.right-hover {
+		-webkit-clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
+	}
+	.left-hover-2 {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
+	}
+	.right-hover-2 {
+		-webkit-clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+	}
+	.left-trigger {
+		width: 100vw;
+		height: 50vh;
+	}
+	.right-trigger {
+		width: 100vw;
+		height: 50vh;
+		position: absolute;
+		left: 0;
+		top: 50vh;
+	}
 }

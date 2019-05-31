@@ -1,18 +1,18 @@
-// main: main.scss
+// main: ../audio.scss
 
 /********* PORTFOLIO *********/
 
 .portfolio {
 	h1 {
-	    margin-bottom: 25px;
+		margin-bottom: 25px;
 	}
 	p {
-	    text-align: center;
-	    margin-bottom: 25px;
-	    font-weight: 400;
+		text-align: center;
+		margin-bottom: 25px;
+		font-weight: 400;
 	}
 	span {
-	    cursor: pointer;
+		cursor: pointer;
 		&:focus, &:visited, &:hover, &:active {
 			color: #ff5252;
 		}
@@ -20,67 +20,67 @@
 }
 
 .artwork-preview {
-    position: relative;
+	position: relative;
 	&:hover .overlay {
 		opacity: 1;
 	}
 }
 
 .artwork-preview-box {
-    width: 100%;
+	width: 100%;
 }
 
 .columnHide {
-    display: none;
-    padding: 5px;
+	display: none;
+	padding: 5px;
 }
 
 .columnShow {
-    display: block;
-    padding: 5px;
+	display: block;
+	padding: 5px;
 }
 
 .artwork-preview img {
-    display: inline-block;
-    margin: 0;
-    vertical-align: top;
-    width: 100%;
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+	width: 100%;
 }
 
 .artwork-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    -webkit-transition: .25s ease;
-    -o-transition: .25s ease;
-    transition: .25s ease;
-    background-color: rgba(0, 0, 0, 0.85);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	-webkit-transition: .25s ease;
+	-o-transition: .25s ease;
+	transition: .25s ease;
+	background-color: rgba(0, 0, 0, 0.85);
 }
 
 .artwork-overlay-text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 }
 
 ul.artwork-overlay {
-    list-style: none;
+	list-style: none;
 }
 
 .artwork-overlay ul > li {
-    margin-bottom: 20px;
-    width: 200px;
-    font-weight: 300;
+	margin-bottom: 20px;
+	width: 200px;
+	font-weight: 300;
 	&:first-child {
 		font-weight: 700;
 	}
@@ -91,37 +91,37 @@ ul.artwork-overlay {
 }
 
 .artwork-preview:hover .artwork-overlay {
-    opacity: 1;
+	opacity: 1;
 }
 
 li.artwork-band {
-    font-weight: 500;
+	font-weight: 500;
 }
 
 li.artwork-album,
 li.artwork-task {
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .artwork-overlay iframe {
-    border: 0;
-    width: 100% !important;
-    height: 100% !important;
-    position: absolute;
-    bottom: 0%;
+	border: 0;
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute;
+	bottom: 0%;
 }
 
 #maintextlink {
-    color: white;
+	color: white;
 }
 
 .theme-dark #infolayer {
-    text-align: center;
+	text-align: center;
 }
 
 .video-thumbnail {
-    background-color: black;
-    overflow: hidden;
+	background-color: black;
+	overflow: hidden;
 	img {
 		vertical-align: top;
 		-webkit-filter: none;
@@ -144,11 +144,11 @@ li.artwork-task {
 }
 
 .video-container {
-    position: relative;
-    overflow: hidden;
-    height: 0;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
 	iframe, object, embed {
 		position: absolute;
 		top: 0;
@@ -159,9 +159,9 @@ li.artwork-task {
 }
 
 .portfolio-mobile-access {
-    background-color: #333;
-    width: 100%;
-    padding: 20px 0;
+	background-color: #333;
+	width: 100%;
+	padding: 20px 0;
 	p {
 		font-size: 30px;
 		color: white;
@@ -170,5 +170,5 @@ li.artwork-task {
 }
 
 .modal-content {
-    text-align: center;
+	text-align: center;
 }
