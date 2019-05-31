@@ -82,25 +82,25 @@
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) !important;
 }
 
-@keyframes logo-animation {
-	0% {
-		filter: blur(0px);
-		transform: rotateY(0deg) rotateZ(0deg);
-	}
-	25% {
-		filter: blur(0px);
-	}
-	50% {
-		filter: blur(0px);
-	}
-	75% {
-		filter: blur(0px);
-	}
-	100% {
-		filter: blur(0px);
-		transform: rotateY(360deg) rotateZ(360deg);
-	}
-}
+// @keyframes logo-animation {
+// 	0% {
+// 		filter: blur(0px);
+// 		transform: rotateY(0deg) rotateZ(0deg);
+// 	}
+// 	25% {
+// 		filter: blur(0px);
+// 	}
+// 	50% {
+// 		filter: blur(0px);
+// 	}
+// 	75% {
+// 		filter: blur(0px);
+// 	}
+// 	100% {
+// 		filter: blur(0px);
+// 		transform: rotateY(360deg) rotateZ(360deg);
+// 	}
+// }
 
 @keyframes bg-animation {
 	from {
