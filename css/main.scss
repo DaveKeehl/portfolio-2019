@@ -1,11 +1,12 @@
+// GLOBAL STYLES
 @import "utility";
 @import "general";
-@import "header";
-@import "footer";
-@import "index";
-@import "homepage";
-@import "about";
-@import "services";
-@import "portfolio";
-@import "contact";
 @import "mediaqueries";
+@import "variables";
+
+// INDEX PAGE
+@import "index";
+
+// AUDIO & GRAPHICS
+@import "audio";
+@import "graphics";
