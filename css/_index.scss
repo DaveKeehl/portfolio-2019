@@ -122,8 +122,16 @@
 	position: absolute;
 	z-index: -1;
 	background-size: 200px 200px;
-	background-image: url('../img/magic pattern.jpg');
+	// background-image: url('../img/magic pattern.jpg');
 	animation: bg-animation 20s infinite linear;
+}
+
+.left-graphics::after {
+	background-image: url('../img/bgA.jpg');
+}
+
+.right-graphics::after {
+	background-image: url('../img/bgB.jpg');
 }
 
 .left-graphics {
