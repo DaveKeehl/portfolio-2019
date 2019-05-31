@@ -8,11 +8,10 @@
     height: 100vh;
     min-height: 360px;
     position: relative;
-}
-
-.hero video {
-    -o-object-fit: cover;
-    object-fit: cover;
+	video {
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
 }
 
 .logo {
@@ -25,16 +24,15 @@
     color: white;
     fill: white;
     text-align: center;
-}
+	svg {
+		height: 250px;
+		-webkit-filter: drop-shadow(0px 0px 3px white);
+		filter: drop-shadow(0px 0px 3px white);
+	}
+	path {
+		fill: white;
 
-.logo svg {
-    height: 250px;
-    -webkit-filter: drop-shadow(0px 0px 3px white);
-    filter: drop-shadow(0px 0px 3px white);
-}
-
-.logo path {
-    fill: white;
+	}
 }
 
 .logo-noStroke {
@@ -62,10 +60,9 @@
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
-}
-
-.down-arrow:hover {
-    color: rgba(255, 255, 255, 0.2);
+	&:hover {
+		color: rgba(255, 255, 255, 0.2);
+	}
 }
 
 @-webkit-keyframes arrow {
@@ -174,21 +171,18 @@
 
 .home {
     text-align: center;
-}
-
-.home h2 {
-    font-weight: 600;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.home h3 {
-    margin-bottom: 50px;
-    line-height: 25px;
-}
-
-.home path {
-    fill: #333;
+	h2 {
+		font-weight: 600;
+		margin-bottom: 50px;
+		text-align: center;
+	}
+	h3 {
+	    margin-bottom: 50px;
+	    line-height: 25px;
+	}
+	path {
+	    fill: #333;
+	}
 }
 
 .home-emphasis {
@@ -196,23 +190,23 @@
     font-weight: 700;
 }
 
-.home-icons p {
-    font-weight: 700;
-    font-size: 20px;
-}
-
-.home-icons a:hover {
-    color: white;
-}
-
-.home-icons svg {
-    isolation: isolate;
-    width: 100%;
-    height: 60px;
-    margin-bottom: 20px;
-    -webkit-transition: fill 0.2s ease;
-    -o-transition: fill 0.2s ease;
-    transition: fill 0.2s ease;
+.home-icons {
+	p {
+	    font-weight: 700;
+	    font-size: 20px;
+	}
+	a:hover {
+	    color: white;
+	}
+	svg {
+	    isolation: isolate;
+	    width: 100%;
+	    height: 60px;
+	    margin-bottom: 20px;
+	    -webkit-transition: fill 0.2s ease;
+	    -o-transition: fill 0.2s ease;
+	    transition: fill 0.2s ease;
+	}
 }
 
 .home-mixing,

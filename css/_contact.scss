@@ -4,24 +4,22 @@
 
 .contact {
     text-align: center;
-}
+	h1 {
+		margin-bottom: 0;
 
-.contact h1 {
-    margin-bottom: 0;
-}
-
-.contact p {
-    margin: 50px 0;
-    text-align: center;
+	}
+	p {
+		margin: 50px 0;
+		text-align: center;
+	}
 }
 
 .form {
     text-align: center;
-}
-
-.form h1 {
-    font-size: 30px;
-    margin-bottom: 70px;
+	h1 {
+		font-size: 30px;
+		margin-bottom: 70px;
+	}
 }
 
 .form-control {
@@ -58,30 +56,29 @@ textarea.form-message {
 
 .form-button {
     text-align: center;
-}
-
-.form-button input {
-    height: 40px;
-    width: 25%;
-    color: white;
-    border: none;
-    background-color: #333;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
-    cursor: pointer;
-    background-image: none;
-    white-space: nowrap;
-    padding: 6px 12px;
-    line-height: 1.42857143;
-    -webkit-user-select: none;
-    margin-bottom: 0px;
-    -webkit-appearance: none;
-    transition: all 0.15s ease;
+	input {
+		height: 40px;
+		width: 25%;
+		color: white;
+		border: none;
+		background-color: #333;
+		border-radius: 4px;
+		font-size: 14px;
+		font-weight: normal;
+		text-align: center;
+		vertical-align: middle;
+		-ms-touch-action: manipulation;
+		touch-action: manipulation;
+		cursor: pointer;
+		background-image: none;
+		white-space: nowrap;
+		padding: 6px 12px;
+		line-height: 1.42857143;
+		-webkit-user-select: none;
+		margin-bottom: 0px;
+		-webkit-appearance: none;
+		transition: all 0.15s ease;
+	}
 }
 
 .form-button input:hover {
@@ -159,19 +156,18 @@ select:invalid {
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 20px;
-}
+	&:hover {
+		border: 1px solid transparent;
 
-.select select:hover {
-    border: 1px solid transparent;
+	}
 }
 
 .select:not(.is-multiple) {
     height: initial;
     margin-bottom: 5px;
-}
-
-.select:not(.is-multiple):not(.is-loading)::after {
-    border-color: #333;
+	&:not(.is-loading)::after {
+	    border-color: #333;
+	}
 }
 
 .select select.is-active,

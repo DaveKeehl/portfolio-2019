@@ -33,12 +33,12 @@
 }
 
 .index-bgGraphics {
-    background-image: url(https://picsum.photos/1920/1080/?random);
+    // background-image: url(https://picsum.photos/1920/1080/?random);
     background-size: cover;
 }
 
 .index-bgMusic {
-    background-image: url(https://source.unsplash.com/random/1920x1080);
+    // background-image: url(https://source.unsplash.com/random/1920x1080);
     background-size: cover;
 }
 
@@ -109,7 +109,7 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    transition: all 0.25s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
     background-color: white;
 }
@@ -123,18 +123,20 @@
     left: 0;
     height: 100vh;
     width: 100vw;
-    transition: all 0.25s ease;
+    transition: all 0.5s ease;
     cursor: pointer;
 }
 
 .left-hover {
     -webkit-clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%);
+    transition: all 0.5s ease;
 }
 
 .right-hover {
     -webkit-clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
     clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%);
+    transition: all 0.5s ease;
 }
 
 .left-hover-2 {
@@ -171,7 +173,7 @@
         clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
         h2 {
             left: 50%;
-            top: 25%;
+            top: calc(25% - 150px / 4);
         }
     }
     .right-graphics {
@@ -179,7 +181,7 @@
         clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
         h2 {
             left: 50%;
-            top: 75%;
+            top: calc(75% + 150px / 4);
         }
     }
     .left-hover {

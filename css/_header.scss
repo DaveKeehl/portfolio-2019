@@ -10,10 +10,9 @@ footer {
 
 header {
     padding: 10px 0;
-}
-
-header li {
-    color: white;
+	li {
+		color: white;
+	}
 }
 
 .current-page {
@@ -25,23 +24,23 @@ header li {
     background-color: #333;
 }
 
-.navbar-brand a:hover {
-    color: white;
-}
-
-.navbar-brand svg {
-    height: 60px;
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    margin-left: 12px;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.navbar-brand path {
-    fill: white;
+.navbar-brand {
+	a:hover {
+    	color: white;
+	}
+	svg {
+		height: 60px;
+		-webkit-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+		margin-left: 12px;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	}
+	path {
+		fill: white;
+	}
 }
 
 .navbar-brand-txt {
@@ -70,34 +69,27 @@ span.logo-job {
 
 .navbar-menu {
     font-weight: 400;
-
-}
-
-.navbar-menu ul {
-    float: right;
-    padding: 20px 0;
-
-}
-
-.navbar-menu li {
-    margin-right: 20px;
-    float: left;
-    font-weight: 400;
-}
-
-.navbar-menu li:hover {
-    border-bottom: 2px solid #ff5252;
-    padding-bottom: 2px;
-}
-
-.navbar-menu li:active {
-    border-bottom: 2px solid #ff5252;
-    padding-bottom: 2px;
-    color: #ff5252;
-}
-
-.navbar-menu li:last-child {
-    margin-right: 0px;
+	ul {
+		float: right;
+		padding: 20px 0;
+	}
+	li {
+		margin-right: 20px;
+		float: left;
+		font-weight: 400;
+		&:hover {
+			border-bottom: 2px solid #ff5252;
+			padding-bottom: 2px;
+		}
+		&:active {
+			border-bottom: 2px solid #ff5252;
+			padding-bottom: 2px;
+			color: #ff5252;
+		}
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
 }
 
 .navbar-link.is-active,
@@ -111,13 +103,11 @@ a.navbar-item:hover {
 
 .navbar-burger {
     height: auto;
-}
-
-.navbar-burger span {
-    height: 2px;
-    width: 20px;
-}
-
-.navbar-burger:hover {
-    background-color: transparent;
+	span {
+		height: 2px;
+		width: 20px;
+	}
+	&:hover {
+		background-color: transparent;
+	}
 }

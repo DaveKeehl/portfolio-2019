@@ -42,18 +42,18 @@
 
 #graphics ul > li {
     margin-top: 10px;
+	&:first-child {
+		margin-top: 0;
+	}
 }
 
-#graphics ul > li:first-child {
-    margin-top: 0;
-}
-
-.services h1 {
-    margin-bottom: 0;
-}
-
-.services h2 {
-    font-weight: 700;
+.services {
+	h1 {
+    	margin-bottom: 0;
+	}
+	h2 {
+	    font-weight: 700;
+	}
 }
 
 .services-divider {
@@ -70,16 +70,32 @@
     margin-bottom: 10px;
 }
 
-.services-icons svg {
-    height: 130px;
-}
-
-.services-icons circle {
-    stroke: #333;
-    fill: #333;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
+.services-icons {
+	svg {
+	    height: 130px;
+	}
+	circle {
+	    stroke: #333;
+	    fill: #333;
+	    -webkit-transition: all 0.2s;
+	    -o-transition: all 0.2s;
+	    transition: all 0.2s;
+	}
+	p {
+	    font-size: 26px;
+	    font-weight: 700;
+	    margin-top: 20px;
+	    color: #333;
+	    -webkit-transition: all 0.2s;
+	    -o-transition: all 0.2s;
+	    transition: all 0.2s;
+		&:hover {
+		    color: #ff5252;
+		}
+	}
+	path {
+	    fill: white;
+	}
 }
 
 .recording-icon circle:hover,
@@ -98,24 +114,6 @@
 .scroll-graphics svg:hover {
     -webkit-filter: drop-shadow(0px 0px 20x #ff5252);
     filter: drop-shadow(0px 0px 20x #ff5252);
-}
-
-.services-icons p {
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 20px;
-    color: #333;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
-.services-icons p:hover {
-    color: #ff5252;
-}
-
-.services-icons path {
-    fill: white;
 }
 
 .columns.services-task {
@@ -147,14 +145,13 @@
     -webkit-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
-}
-
-.services-task img:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    -webkit-filter: opacity(0.4);
-    filter: opacity(0.4);
+	&:hover {
+	    -webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	    transform: scale(1.2);
+	    -webkit-filter: opacity(0.4);
+	    filter: opacity(0.4);
+	}
 }
 
 #recording img {

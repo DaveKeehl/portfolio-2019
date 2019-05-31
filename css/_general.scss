@@ -41,34 +41,29 @@ ul {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-a:hover {
-    color: #ff5252;
-}
-
-a:active {
-    color: white !important;
+	&:hover {
+		color: #ff5252;
+	}
+	&:active {
+		color: white !important;
+	}
 }
 
 .columns {
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-}
-
-.columns:not(:last-child) {
-    margin-bottom: 0;
-}
-
-.columns:last-child {
-    margin-bottom: 0;
-}
-
-.columns:after {
-    content: "";
-    display: table;
-    clear: both;
+	&:not(:last-child) {
+	    margin-bottom: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
 }
 
 .column {
@@ -94,10 +89,9 @@ a:active {
 .row {
     margin-left: 0px;
     margin-right: 0px;
-}
-
-.row [class^=col] {
-    margin: 0;
+	&[class^=col] {
+	    margin: 0;
+	}
 }
 
 #return-to-top {
@@ -117,26 +111,23 @@ a:active {
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
-}
-
-#return-to-top i {
-    color: #fff;
-    margin: 0;
-    position: relative;
-    top: 13px;
-    font-size: 19px;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-}
-
-#return-to-top:hover {
-    background: rgba(0, 0, 0, 0.85);
-}
-
-#return-to-top:hover i {
-    color: #fff;
-    top: 3px;
+	i {
+		color: #fff;
+		margin: 0;
+		position: relative;
+		top: 13px;
+		font-size: 19px;
+		-webkit-transition: all 0.25s ease;
+		-o-transition: all 0.25s ease;
+		transition: all 0.25s ease;
+	}
+	&:hover {
+	    background: rgba(0, 0, 0, 0.85);
+		i {
+			color: #fff;
+			top: 3px;
+		}
+	}
 }
 
 .modal-content {

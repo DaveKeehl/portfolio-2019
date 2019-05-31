@@ -14,19 +14,16 @@
 
 .footer-icons {
     margin-bottom: 20px;
-}
-
-.footer-icons li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.footer-icons svg {
-    height: 40px;
-}
-
-.footer-icons svg > path {
-    fill: white;
+	li {
+		display: inline-block;
+		margin: 0 5px;
+	}
+	svg {
+		height: 40px;
+		&>path {
+			fill: white;
+		}
+	}
 }
 
 .footer-divider {
@@ -42,18 +39,16 @@
 
 .footer-bottom-info {
     margin: 0 auto;
-}
+	div {
+		letter-spacing: 0.5px;
+		font-weight: 300;
+	}
+	p {
+		margin-bottom: 5px;
+		font-weight: 400;
+		&:last-child {
+			margin-bottom: 0px;
 
-.footer-bottom-info div {
-    letter-spacing: 0.5px;
-    font-weight: 300;
-}
-
-.footer-bottom-info p {
-    margin-bottom: 5px;
-    font-weight: 400;
-}
-
-.footer-bottom-info p:last-child {
-    margin-bottom: 0px;
+		}
+	}
 }
