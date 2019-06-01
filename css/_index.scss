@@ -114,7 +114,7 @@
 .left-graphics::after,
 .right-graphics::after {
 	content: "";
-	opacity: 0.1;
+	opacity: 0.05;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -198,6 +198,11 @@
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
 	position: absolute;
+}
+
+.left-graphics h2,
+.right-graphics h2 {
+	font-size: 2rem;
 }
 
 @media (max-width:776px) {
