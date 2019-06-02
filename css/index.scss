@@ -139,12 +139,12 @@
 
 .left-graphics h2 {
 	color: #333;
-	left: 25%;
+	left: calc(25% - 75px / 2);
 }
 
 .right-graphics h2 {
 	color: white;
-	left: 75%;
+	left: calc(75% + 75px / 2);
 }
 
 .left-graphics h2,
