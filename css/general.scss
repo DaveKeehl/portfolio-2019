@@ -108,9 +108,7 @@ a {
 	text-decoration: none;
 	border-radius: 35px;
 	display: none;
-	-webkit-transition: all 0.25s ease;
-	-o-transition: all 0.25s ease;
-	transition: all 0.25s ease;
+	@include transition (all, 0.25s, ease);
 	i {
 		color: #fff;
 		margin: 0;
@@ -118,9 +116,6 @@ a {
 		top: 13px;
 		font-size: 19px;
 		@include transition (all, 0.25s, ease);
-		-webkit-transition: all 0.25s ease;
-		-o-transition: all 0.25s ease;
-		transition: all 0.25s ease;
 	}
 	&:hover {
 		background: rgba(0, 0, 0, 0.85);
@@ -259,8 +254,7 @@ a {
 }
 
 .svg-red-shadow {
-	-webkit-filter: drop-shadow(0px 0px 3px #ff5252);
-	filter: drop-shadow(0px 0px 3px #ff5252);
+	@include filter (drop-shadow(0px 0px 3px #ff5252));
 }
 
 .svg-darkBlue {
@@ -280,7 +274,5 @@ a {
 }
 
 .logo-rotate {
-	-webkit-transform: rotate(450deg) !important;
-	-ms-transform: rotate(450deg) !important;
-	transform: rotate(450deg) !important;
+	@include transform (rotate(450deg) !important);
 }
