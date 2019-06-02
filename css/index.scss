@@ -23,10 +23,6 @@
 // GRAPHICS
 
 .index {
-	&::-webkit-scrollbar {
-		width: 0 !important;
-	}
-	overflow: -moz-scrollbars-none;
 	position: absolute;
 	top: 0;
 	left: 0;
