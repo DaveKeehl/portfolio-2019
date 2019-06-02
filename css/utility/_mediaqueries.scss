@@ -115,6 +115,53 @@
 	}
 }
 
+
+@media (max-width:767px) {
+	.left-graphics {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+		h2 {
+			left: 50%;
+			top: calc(25% - 150px / 4);
+		}
+	}
+	.right-graphics {
+		-webkit-clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+		h2 {
+			left: 50%;
+			top: calc(75% + 150px / 4);
+		}
+	}
+	.left-hover {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%);
+	}
+	.right-hover {
+		-webkit-clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%);
+	}
+	.left-hover-2 {
+		-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
+		clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%);
+	}
+	.right-hover-2 {
+		-webkit-clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+		clip-path: polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%);
+	}
+	.left-trigger {
+		width: 100vw;
+		height: 50vh;
+	}
+	.right-trigger {
+		width: 100vw;
+		height: 50vh;
+		position: absolute;
+		left: 0;
+		top: 50vh;
+	}
+}
+
 @media (max-width: 767px) {
 
 	.hero-video {
