@@ -1,7 +1,6 @@
 // GLOBAL STYLES
 @import "utility";
 @import "general";
-@import "mediaqueries";
 @import "variables";
 
 // INDEX PAGE
@@ -10,3 +9,5 @@
 // AUDIO & GRAPHICS
 @import "audio";
 @import "graphics";
+
+@import "mediaqueries";
