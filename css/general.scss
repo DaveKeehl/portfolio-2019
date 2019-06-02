@@ -1,6 +1,6 @@
 // main: main.scss
 
-/********* GENERAL STYLES *********/
+@import "utility/mixins";
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -117,6 +117,7 @@ a {
 		position: relative;
 		top: 13px;
 		font-size: 19px;
+		@include transition (all, 0.25s, ease);
 		-webkit-transition: all 0.25s ease;
 		-o-transition: all 0.25s ease;
 		transition: all 0.25s ease;

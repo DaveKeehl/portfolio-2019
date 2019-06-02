@@ -1,0 +1,142 @@
+// main: ../main.scss
+
+@mixin keyframes ($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+}
+
+@mixin animation-name ($name) {
+	-webkit-animation-name: $name;
+	-moz-animation-name: $name;
+	-ms-animation-name: $name;
+	-o-animation-name: $name;
+	animation-name: $name;
+}
+
+@mixin animation-duration ($duration) {
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+	-ms-animation-duration: $duration;
+	-o-animation-duration: $duration;
+    animation-duration: $duration;
+}
+
+@mixin animation-timing-function ($timing-function) {
+	-webkit-animation-timing-function: $timing-function;
+	-moz-animation-timing-function: $timing-function;
+	-ms-animation-timing-function: $timing-function;
+	-o-animation-timing-function: $timing-function;
+	animation-timing-function: $timing-function;
+}
+
+@mixin animation-delay ($delay) {
+	-webkit-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-ms-animation-delay: $delay;
+	-o-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+@mixin animation-iteration-count ($iteration-count) {
+	-webkit-animation-iteration-count: $iteration-count;
+	-moz-animation-iteration-count: $iteration-count;
+	-ms-animation-iteration-count: $iteration-count;
+	-o-animation-iteration-count: $iteration-count;
+	animation-iteration-count: $iteration-count;
+}
+
+@mixin animation-direction ($direction) {
+	-webkit-animation-direction: $direction;
+	-moz-animation-direction: $direction;
+	-ms-animation-direction: $direction;
+	-o-animation-direction: $direction;
+	animation-direction: $direction;
+}
+
+@mixin animation-fill-mode ($fill-mode) {
+	-webkit-animation-fill-mode: $fill-mode;
+	-moz-animation-fill-mode: $fill-mode;
+	-ms-animation-fill-mode: $fill-mode;
+	-o-animation-fill-mode: $fill-mode;
+	animation-fill-mode: $fill-mode;
+}
+
+@mixin animation-play-state ($play-state) {
+	-webkit-animation-play-state: $play-state;
+	-moz-animation-play-state: $play-state;
+	-ms-animation-play-state: $play-state;
+	-o-animation-play-state: $play-state;
+	animation-play-state: $play-state;
+}
+
+@mixin animation ($name, $duration, $iteration-count, $timing-function) {
+	-webkit-animation-name: $name;
+    -webkit-animation-duration: $duration;
+	-webkit-animation-iteration-count: $iteration-count;
+	-webkit-animation-timing-function: $timing-function;
+
+	-moz-animation-name: $name;
+    -moz-animation-duration: $duration;
+	-moz-animation-iteration-count: $iteration-count;
+	-moz-animation-timing-function: $timing-function;
+
+	-ms-animation-name: $name;
+	-ms-animation-duration: $duration;
+	-ms-animation-iteration-count: $iteration-count;
+	-ms-animation-timing-function: $timing-function;
+
+	-o-animation-name: $name;
+	-o-animation-duration: $duration;
+	-o-animation-iteration-count: $iteration-count;
+	-o-animation-timing-function: $timing-function;
+
+	animation-name: $name;
+	animation-duration: $duration;
+	animation-iteration-count: $iteration-count;
+	animation-timing-function: $timing-function;
+}
+
+@mixin transition ($property, $duration, $timing-function) {
+	-webkit-transition: $property $duration $timing-function;
+	-moz-transition: $property $duration $timing-function;
+	-ms-transition: $property $duration $timing-function;
+	-o-transition: $property $duration $timing-function;
+	transition: $property $duration $timing-function;
+}
+
+@mixin transform ($properties) {
+	-webkit-transform: $properties;
+	-moz-transform: $properties;
+	-ms-transform: $properties;
+	-o-transform: $properties;
+	transform: $properties;
+}
+
+@mixin filter ($properties) {
+	-webkit-filter: $properties;
+	-moz-filter: $properties;
+	-ms-filter: $properties;
+	-o-filter: $properties;
+	filter: $properties;
+}
+
+@mixin clip-path ($properties) {
+	-webkit-clip-path: $properties;
+	-moz-clip-path: $properties;
+	-ms-clip-path: $properties;
+	-o-clip-path: $properties;
+	clip-path: $properties;
+}

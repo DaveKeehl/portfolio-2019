@@ -29,7 +29,7 @@
 	width: 100vw;
 	height: 100vh;
 	font-weight: bold !important;
-	transition: all 0.5s ease;
+	@include transition (all, 0.5s, ease);
 }
 
 .index .logo {
@@ -62,15 +62,6 @@
 	}
 }
 
-@keyframes bg-animation {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 200px 200px;
-	}
-}
-
 .left-graphics::after,
 .right-graphics::after {
 	content: "";
@@ -83,7 +74,7 @@
 	z-index: -1;
 	background-size: 200px 200px;
 	// background-image: url('../img/magic pattern.jpg');
-	animation: bg-animation 20s infinite linear;
+	@include animation (bg-animation, 20s, infinite, linear);
 }
 
 .left-graphics::after {
@@ -143,24 +134,20 @@
 }
 
 .left-graphics h2 {
-	margin: 0;
 	color: #333;
 	left: 25%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	position: absolute;
 }
 
 .right-graphics h2 {
-	margin: 0;
 	color: white;
 	left: 75%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	position: absolute;
 }
 
 .left-graphics h2,
 .right-graphics h2 {
+	margin: 0;
 	font-size: 2rem;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	position: absolute;
 }

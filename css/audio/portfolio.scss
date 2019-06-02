@@ -1,7 +1,5 @@
 // main: audio.scss
 
-/********* PORTFOLIO *********/
-
 .portfolio {
 	h1 {
 		margin-bottom: 25px;
@@ -56,9 +54,7 @@
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	-webkit-transition: .25s ease;
-	-o-transition: .25s ease;
-	transition: .25s ease;
+	@include transition (all, 0.25s, ease);
 	background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -68,9 +64,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
+	@include transform (translate(-50%, -50%));
 }
 
 ul.artwork-overlay {
@@ -124,21 +118,13 @@ li.artwork-task {
 	overflow: hidden;
 	img {
 		vertical-align: top;
-		-webkit-filter: none;
-		filter: none;
-		-webkit-transform: scale(1);
-		-ms-transform: scale(1);
-		transform: scale(1);
+		@include filter (none);
+		@include transform (scale(1));
 		cursor: pointer;
-		-webkit-transition: all 0.25s;
-		-o-transition: all 0.25s;
-		transition: all 0.25s;
+		@include transition (all, 0.25s, ease);
 		&:hover {
-			-webkit-filter: opacity(0.8)blur(5px);
-			filter: opacity(0.8)blur(5px);
-			-webkit-transform: scale(1.2);
-			-ms-transform: scale(1.2);
-			transform: scale(1.2);
+			@include filter (opacity(0.8)blur(5px));
+			@include transform (scale(1.2));
 		}
 	}
 }
