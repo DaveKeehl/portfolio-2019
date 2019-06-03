@@ -42,10 +42,12 @@
 		// animation-duration: 4s;
 		// animation-timing-function: linear;
 		// animation-iteration-count: infinite;
-	}
-	path {
-		fill: #333;
-		stroke: #333;
+		path {
+			fill: #333;
+			&:first-of-type {
+				stroke: #333;
+			}
+		}
 	}
 }
 
