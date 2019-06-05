@@ -40,7 +40,7 @@
 
 <body>
 
-	<div class="wrapper">
+	<div class="wrapper portfolio">
 
 		<header>
 
@@ -90,12 +90,28 @@
 
 		</header>
 
+		<div class="audioPlayer">
+			<div class="container">
+				<div class="info">
+					<div class="art"></div>
+					<div class="artist">Artist</div>
+					<span> - </span>
+					<div class="song">Song</div>
+				</div>
+				<div class="progress-bar"></div>
+				<div class="audio-controls">
+					<div class="previous"></div>
+					<div class="play"></div>
+					<div class="next"></div>
+				</div>
+			</div>
+		</div>
 
 		<div class="container">
 
 			<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
-			<div class="main-content portfolio">
+			<div class="main-content">
 
 				<h1>Portfolio</h1>
 
@@ -246,6 +262,7 @@
 	<script src="../js/back-to-top.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
 	<script src="../js/recurrent-interactions.js"></script>
+	<script src="https://sdk.scdn.co/spotify-player.js"></script>
 
 	<script>
 
@@ -288,9 +305,37 @@
 			element.className = arr1.join(" ");
 		}
 
+		window.onSpotifyWebPlaybackSDKReady = () => {
+		  const token = 'BQAmVIKri2RzHBubcmuT6Si_toHRIBNmt2T7EIyxRb9ISTrWKs5StoGksngKFfpk6ESnHPZ_qYHbTrNn-t0x0MhAGbp3ltEoq6XK07nvAYV4VYuZtzEey-CMrJg2sFc-8yoLs1Dn-zaZOYHWEZAEf91ACCTKPR474WpLyPU';
+		  const player = new Spotify.Player({
+		    name: 'Portfolio Online',
+		    getOAuthToken: cb => { cb(token); }
+		  });
+
+		  // Error handling
+		  player.addListener('initialization_error', ({ message }) => { console.error(message); });
+		  player.addListener('authentication_error', ({ message }) => { console.error(message); });
+		  player.addListener('account_error', ({ message }) => { console.error(message); });
+		  player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+		  // Playback status updates
+		  player.addListener('player_state_changed', state => { console.log(state); });
+
+		  // Ready
+		  player.addListener('ready', ({ device_id }) => {
+		    console.log('Ready with Device ID', device_id);
+		  });
+
+		  // Not Ready
+		  player.addListener('not_ready', ({ device_id }) => {
+		    console.log('Device ID has gone offline', device_id);
+		  });
+
+		  // Connect to the player!
+		  player.connect();
+		};
+
     </script>
-
-
 
 </body>
 
