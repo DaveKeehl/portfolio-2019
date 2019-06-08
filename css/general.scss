@@ -285,3 +285,15 @@ a {
 	opacity: 0.5;
 	@include transform (rotate(90deg) translateX(0.5px) translateY(1px));
 }
+
+.moveBackToTop {
+	bottom: 20px !important;
+}
+
+.footerNoMargin {
+	margin-bottom: 0 !important;
+}
+
+.hidePlayer {
+	@include transform (translateY(70px) !important);
+}

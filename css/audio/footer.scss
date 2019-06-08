@@ -1,5 +1,9 @@
 // main: audio.scss
 
+footer {
+	@include transition (all, 0.25s, ease);
+}
+
 .footer-top,
 .footer-bottom {
 	font-weight: 400;
