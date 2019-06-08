@@ -30,12 +30,33 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding: 10px 0;
+	padding: 10px;
 	background-color: white;
 	box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
 	z-index: 50;
 	transform: translateY(0);
 	@include transition (transform, 0.25s, ease);
+	.playerButtons {
+		position: relative;
+		.closePlayer {
+			position: absolute;
+			right: 0;
+			height: 23px;
+			width: 23px;
+			background-color: rgba(0, 0, 0, 0);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			i {
+				font-family: "FontAwesome", regular;
+				font-size: 1.1em;
+				line-height: 15px;
+				width: 15px;
+				z-index: -1;
+				@include transition (all, 0.25s, ease);
+			}
+		}
+	}
 	.container {
 		display: flex;
 		flex-direction: row;

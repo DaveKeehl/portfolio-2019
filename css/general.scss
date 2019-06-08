@@ -280,3 +280,8 @@ a {
 .logo-rotate {
 	@include transform (rotate(450deg) !important);
 }
+
+.closeButton-rotate {
+	opacity: 0.5;
+	@include transform (rotate(90deg) translateX(0.5px) translateY(1px));
+}
