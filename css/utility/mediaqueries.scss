@@ -188,20 +188,20 @@
 @media (max-width: 550px) {
 	.portfolio {
 		.footer-afterOpen {
-			margin-bottom: 123px;
+			margin-bottom: 132px;
 		}
 		.hidePlayer {
-			@include transform (translateY(123px) !important);
+			@include transform (translateY(132px) !important);
 		}
 		.moveArrow-afterOpen {
-			bottom: 143px !important;
+			bottom: 152px !important;
 		}
 		.moveArrow-afterClose {
 			bottom: 20px !important;
 		}
 		.audioPlayer {
 			padding: 20px;
-			transform: translateY(123px);
+			transform: translateY(132px);
 			.container {
 				max-width: 100%;
 				flex-direction: column;
