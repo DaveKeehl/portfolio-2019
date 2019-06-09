@@ -286,12 +286,16 @@ a {
 	@include transform (rotate(90deg) translateX(0.5px) translateY(1px));
 }
 
-.moveBackToTop {
-	bottom: 20px !important;
+.footer-afterOpen {
+	margin-bottom: 70px;
 }
 
-.footerNoMargin {
-	margin-bottom: 0 !important;
+.footer-afterClose {
+	margin-bottom: 0;
+}
+
+.showPlayer {
+	@include transform (translateY(0) !important);
 }
 
 .hidePlayer {

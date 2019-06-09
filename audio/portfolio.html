@@ -101,11 +101,13 @@
 					<span> - </span>
 					<div class="song">Song</div>
 				</div>
-				<div class="progress-bar"></div>
 				<div class="audio-controls">
-					<div class="previous"></div>
-					<div class="play"></div>
-					<div class="next"></div>
+					<div class="seek">
+						<div class="previous"></div>
+						<div class="play"></div>
+						<div class="next"></div>
+					</div>
+					<div class="progress-bar"></div>
 				</div>
 			</div>
 		</div>
@@ -354,7 +356,7 @@
 		var backToTop = document.querySelector(".portfolio #return-to-top");
 		var footer = document.getElementsByTagName("footer")[0];
 
-		var playerIsOpen = true;
+		var playerIsOpen = false;
 
 		h1.addEventListener("click", openPlayer);
 		closeButton.addEventListener("click", closePlayer);
@@ -362,14 +364,23 @@
 		function closePlayer() {
 			if (playerIsOpen == true) {
 				console.log("closing the player...");
+
+				player.classList.remove("showPlayer");
 				player.classList.add("hidePlayer");
 				player = document.getElementsByClassName("audioPlayer")[0];
-				footer.classList.add("footerNoMargin");
+
+				footer.classList.remove("footer-afterOpen");
+				footer.classList.add("footer-afterClose");
 				footer = document.getElementsByTagName("footer")[0];
-				backToTop.style.bottom = "20px";
+
+				backToTop.classList.remove("moveArrow-afterOpen");
+				backToTop.classList.add("moveArrow-afterClose");
+
 				portfolio.removeChild(player);
 				portfolio.appendChild(player);
+
 				playerIsOpen = false;
+
 				console.log("player is closed");
 			}
 			else {
@@ -379,13 +390,21 @@
 
 		function openPlayer() {
 			if (playerIsOpen == false) {
-				console.log("opening the player");
+				console.log("opening the player...");
+
 				player.classList.remove("hidePlayer");
+				player.classList.add("showPlayer");
 				player = document.getElementsByClassName("audioPlayer")[0];
-				footer.classList.remove("footerNoMargin");
+
+				footer.classList.remove("footer-afterClose");
+				footer.classList.add("footer-afterOpen");
 				footer = document.getElementsByTagName("footer")[0];
-				backToTop.style.bottom = "90px";
+
+				backToTop.classList.remove("moveArrow-afterClose");
+				backToTop.classList.add("moveArrow-afterOpen");
+
 				playerIsOpen = true;
+
 				console.log("player is open");
 			}
 			else {
