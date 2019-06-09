@@ -97,9 +97,10 @@
 			<div class="container">
 				<div class="info">
 					<div class="art"></div>
-					<div class="artist">Artist</div>
+					<p class="artist">Artist</p>
 					<span> - </span>
-					<div class="song">Song</div>
+					<p class="song">Song</p>
+					<p class="trackCount">(3/5)</p>
 				</div>
 				<div class="audio-controls">
 					<div class="seek">
@@ -107,7 +108,9 @@
 						<div class="play"></div>
 						<div class="next"></div>
 					</div>
-					<div class="progress-bar"></div>
+					<div class="progress-bar">
+						<div class="current-pos"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -310,36 +313,6 @@
 			element.className = arr1.join(" ");
 		}
 
-		window.onSpotifyWebPlaybackSDKReady = () => {
-		  const token = 'BQAmVIKri2RzHBubcmuT6Si_toHRIBNmt2T7EIyxRb9ISTrWKs5StoGksngKFfpk6ESnHPZ_qYHbTrNn-t0x0MhAGbp3ltEoq6XK07nvAYV4VYuZtzEey-CMrJg2sFc-8yoLs1Dn-zaZOYHWEZAEf91ACCTKPR474WpLyPU';
-		  const player = new Spotify.Player({
-		    name: 'Portfolio Online',
-		    getOAuthToken: cb => { cb(token); }
-		  });
-
-		  // Error handling
-		  player.addListener('initialization_error', ({ message }) => { console.error(message); });
-		  player.addListener('authentication_error', ({ message }) => { console.error(message); });
-		  player.addListener('account_error', ({ message }) => { console.error(message); });
-		  player.addListener('playback_error', ({ message }) => { console.error(message); });
-
-		  // Playback status updates
-		  player.addListener('player_state_changed', state => { console.log(state); });
-
-		  // Ready
-		  player.addListener('ready', ({ device_id }) => {
-		    console.log('Ready with Device ID', device_id);
-		  });
-
-		  // Not Ready
-		  player.addListener('not_ready', ({ device_id }) => {
-		    console.log('Device ID has gone offline', device_id);
-		  });
-
-		  // Connect to the player!
-		  player.connect();
-		};
-
 		$(".closePlayer").hover(
 			function() {
 				$(".closePlayer i").addClass("closeButton-rotate");
@@ -349,38 +322,33 @@
 			},
 		);
 
-		var portfolio = document.getElementsByClassName("portfolio")[0];
 		let h1 = document.querySelector(".portfolio h1");
-		var player = document.getElementsByClassName("audioPlayer")[0];
+		h1.addEventListener("click", openPlayer);
+
 		var closeButton = document.getElementsByClassName("closePlayer")[0];
-		var backToTop = document.querySelector(".portfolio #return-to-top");
-		var footer = document.getElementsByTagName("footer")[0];
+		closeButton.addEventListener("click", closePlayer);
 
 		var playerIsOpen = false;
-
-		h1.addEventListener("click", openPlayer);
-		closeButton.addEventListener("click", closePlayer);
 
 		function closePlayer() {
 			if (playerIsOpen == true) {
 				console.log("closing the player...");
-
+				let player = document.getElementsByClassName("audioPlayer")[0];
 				player.classList.remove("showPlayer");
 				player.classList.add("hidePlayer");
-				player = document.getElementsByClassName("audioPlayer")[0];
-
+				let footer = document.getElementsByTagName("footer")[0];
 				footer.classList.remove("footer-afterOpen");
 				footer.classList.add("footer-afterClose");
-				footer = document.getElementsByTagName("footer")[0];
-
+				let seek = document.getElementsByClassName("current-pos")[0];
+				seek.style.animationName = "";
+				seek.style.animationPlayState = "paused";
+				let backToTop = document.querySelector(".portfolio #return-to-top");
 				backToTop.classList.remove("moveArrow-afterOpen");
 				backToTop.classList.add("moveArrow-afterClose");
-
+				let portfolio = document.getElementsByClassName("portfolio")[0];
 				portfolio.removeChild(player);
 				portfolio.appendChild(player);
-
 				playerIsOpen = false;
-
 				console.log("player is closed");
 			}
 			else {
@@ -391,20 +359,18 @@
 		function openPlayer() {
 			if (playerIsOpen == false) {
 				console.log("opening the player...");
-
+				let player = document.getElementsByClassName("audioPlayer")[0];
 				player.classList.remove("hidePlayer");
 				player.classList.add("showPlayer");
-				player = document.getElementsByClassName("audioPlayer")[0];
-
+				let footer = document.getElementsByTagName("footer")[0];
 				footer.classList.remove("footer-afterClose");
 				footer.classList.add("footer-afterOpen");
-				footer = document.getElementsByTagName("footer")[0];
-
+				let seek = document.getElementsByClassName("current-pos")[0];
+				seek.style.animationPlayState = "running";
+				let backToTop = document.querySelector(".portfolio #return-to-top");
 				backToTop.classList.remove("moveArrow-afterClose");
 				backToTop.classList.add("moveArrow-afterOpen");
-
 				playerIsOpen = true;
-
 				console.log("player is open");
 			}
 			else {
