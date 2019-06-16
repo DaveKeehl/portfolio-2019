@@ -93,6 +93,7 @@
 			border-radius: 10px;
 			background-color: #dedede;
 			margin: 0 25px;
+			cursor: pointer;
 			.current-pos {
 				height: 100%;
 				max-width: 100%;
@@ -108,15 +109,22 @@
 				border-radius: 10px;
 				display: flex;
 				align-items: center;
-				&:after {
+				&::after {
 					content: '';
 					background-color: #ff5252;
-					width: 13px;
-					height: 13px;
+					height: 7px;
+					width: 7px;
 					position: relative;
 					border-radius: 100%;
-					left: calc(100% - 13px);
+					left: calc(100% - 7px);
 					top: 0%;
+					box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+					@include transition (all, 0.1s, ease);
+				}
+				&:hover::after {
+					height: 13px;
+					width: 13px;
+					left: calc(100% - 13px);
 					box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 				}
 			}
