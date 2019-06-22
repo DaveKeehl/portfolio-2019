@@ -123,7 +123,7 @@
 
 				<h1>Portfolio</h1>
 
-				<p>
+				<p id="filters">
 					<span onclick="filterSelection('all')" name="category">All</span> |
 					<span onclick="filterSelection('recording')" name="category">Recording</span> |
 					<span onclick="filterSelection('mixing')" name="category">Mixing</span> |
@@ -280,12 +280,27 @@
 		function filterSelection(c) {
 			var x, i;
 			x = document.getElementsByClassName("columnHide");
-			if (c == "all") c = "";
+			filter = document.querySelectorAll("#filters span");
+			for (i = 0; i < filter.length; i++) {
+				filter[i].classList.remove("filter-active");
+			}
+			if (c == "all") {
+				element = document.querySelector("#filters span:nth-child(1)");
+				c = "";
+			} else if (c == "recording") {
+				element = document.querySelector("#filters span:nth-child(2)");
+			} else if (c == "mixing") {
+				element = document.querySelector("#filters span:nth-child(3)");
+			} else if (c == "mastering") {
+				element = document.querySelector("#filters span:nth-child(4)");
+			}
+			element.classList.add("filter-active");
 			// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
 			for (i = 0; i < x.length; i++) {
 				filterRemoveClass(x[i], "columnShow");
 				if (x[i].className.indexOf(c) > -1) filterAddClass(x[i], "columnShow");
 			}
+			console.log("reached the end!");
 		}
 
 		// Show filtered elements

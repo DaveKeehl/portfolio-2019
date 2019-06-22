@@ -184,6 +184,11 @@
 	}
 }
 
+.filter-active {
+	color: #ff5252;
+	text-decoration: underline;
+}
+
 .artwork-preview {
 	position: relative;
 	&:hover .overlay {
