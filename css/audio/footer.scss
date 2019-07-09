@@ -1,55 +1,57 @@
 // main: audio.scss
 
-footer {
-	@include transition (all, 0.25s, ease);
-}
-
-.footer-top,
-.footer-bottom {
-	font-weight: 400;
-}
-
-.footer-top {
-	padding: 40px 0;
-	text-align: center;
-}
-
-.footer-icons {
-	margin-bottom: 20px;
-	li {
-		display: inline-block;
-		margin: 0 5px;
+.audio {
+	footer {
+		@include transition (all, 0.25s, ease);
 	}
-	svg {
-		height: 40px;
-		&>path {
-			fill: white;
-		}
-	}
-}
 
-.footer-divider {
-	background-color: rgba(255, 255, 255, 0.2);
-	margin-bottom: 20px;
-	height: 1px;
-}
-
-.footer-bottom {
-	text-align: center;
-	padding-bottom: 20px;
-}
-
-.footer-bottom-info {
-	margin: 0 auto;
-	div {
-		letter-spacing: 0.5px;
-		font-weight: 300;
-	}
-	p {
-		margin-bottom: 5px;
+	.footer-top,
+	.footer-bottom {
 		font-weight: 400;
-		&:last-child {
-			margin-bottom: 0px;
+	}
+
+	.footer-top {
+		padding: 40px 0;
+		text-align: center;
+	}
+
+	.footer-icons {
+		margin-bottom: 20px;
+		li {
+			display: inline-block;
+			margin: 0 5px;
+		}
+		svg {
+			height: 40px;
+			&>path {
+				fill: white;
+			}
 		}
 	}
+
+	.footer-divider {
+		background-color: rgba(255, 255, 255, 0.2);
+		margin-bottom: 20px;
+		height: 1px;
+	}
+
+	.footer-bottom {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+
+	.footer-bottom-info {
+		margin: 0 auto;
+		div {
+			letter-spacing: 0.5px;
+			font-weight: 300;
+		}
+		p {
+			margin-bottom: 5px;
+			font-weight: 400;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+	}	
 }

@@ -1,1 +1,21 @@
 // main: graphics.scss
+
+.graphics-hero {
+	background-color: green;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.graphics-homeServices {
+	background-color: yellow;
+	h2 {
+		color: black;
+	}
+	.columns div:first-child {
+		background-color: tomato;
+		height: 50px;
+		width: 50px;
+	}
+}
