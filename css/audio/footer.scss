@@ -1,9 +1,10 @@
 // main: audio.scss
 
-.audio {
-	footer {
-		@include transition (all, 0.25s, ease);
-	}
+.audio footer {
+
+	color: white;
+	background-color: #333;
+	@include transition (all, 0.25s, ease);
 
 	.footer-top,
 	.footer-bottom {
@@ -13,18 +14,31 @@
 	.footer-top {
 		padding: 40px 0;
 		text-align: center;
-	}
-
-	.footer-icons {
-		margin-bottom: 20px;
-		li {
-			display: inline-block;
-			margin: 0 5px;
+		.footer-icons {
+			margin-bottom: 20px;
+			li {
+				display: inline-block;
+				margin: 0 5px;
+			}
+			svg {
+				height: 40px;
+				&>path {
+					fill: white;
+				}
+			}
 		}
-		svg {
-			height: 40px;
-			&>path {
-				fill: white;
+		.footer-top-info {
+			margin: 0 auto;
+			div {
+				letter-spacing: 0.5px;
+				font-weight: 300;
+			}
+			p {
+				margin-bottom: 5px;
+				font-weight: 400;
+				&:last-child {
+					margin-bottom: 0px;
+				}
 			}
 		}
 	}
@@ -40,18 +54,4 @@
 		padding-bottom: 20px;
 	}
 
-	.footer-bottom-info {
-		margin: 0 auto;
-		div {
-			letter-spacing: 0.5px;
-			font-weight: 300;
-		}
-		p {
-			margin-bottom: 5px;
-			font-weight: 400;
-			&:last-child {
-				margin-bottom: 0px;
-			}
-		}
-	}	
 }

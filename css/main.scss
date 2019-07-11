@@ -1,15 +1,11 @@
 // GLOBAL STYLES
 @import "general";
-
 @import "utility/variables";
 @import "utility/animations";
 @import "utility/mixins";
-
 // INDEX PAGE
 @import "index";
-
 // AUDIO & GRAPHICS
 @import "audio/audio";
 @import "graphics/graphics";
-
 @import "utility/mediaqueries";

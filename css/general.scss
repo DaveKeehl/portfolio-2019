@@ -7,9 +7,14 @@ html {
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
 	-webkit-font-smoothing: antialiased !important;
 	-moz-osx-font-smoothing: grayscale;
+	&.audio, &.index {
+		font-family: 'Raleway', sans-serif;
+	}
+	&.graphics {
+		font-family: 'Lato', sans-serif;
+	}
 }
 
 h1 {
@@ -42,7 +47,7 @@ ul {
 	padding: 0;
 }
 
-a {
+.audio a {
 	color: inherit;
 	text-decoration: none;
 	&:hover {
@@ -51,6 +56,11 @@ a {
 	&:active {
 		color: white !important;
 	}
+}
+
+.graphics a {
+	color: inherit;
+	text-decoration: none;
 }
 
 .columns {

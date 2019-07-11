@@ -1,1 +1,107 @@
 // main: graphics.scss
+
+.graphics header {
+
+	font-family: 'Raleway', sans-serif;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	color: white;
+	background-color: rgba(0, 0, 0 ,0.15);
+	padding: 10px 0;
+
+	&:hover {
+		color: rgba(255, 255, 255, 0.5);
+	}
+	&:active {
+		color: white !important;
+	}
+
+	.navbar {
+		background-color: transparent;
+		.navbar-brand {
+			a:hover {
+				color: white;
+			}
+			svg {
+				height: 60px;
+				margin-left: 12px;
+				@include transform (rotate(90deg));
+				@include transition (all, 0.5s, ease);
+			}
+			path {
+				fill: white;
+				stroke: white;
+			}
+			.navbar-brand-txt {
+				margin-left: 2rem;
+				span.logo-name {
+					letter-spacing: 4px;
+					font-weight: 500 !important;
+					font-size: 16px;
+				}
+
+				span.logo-job {
+					font-weight: 400;
+					letter-spacing: 1.9px;
+					color: rgba(255, 255, 255, 0.6);
+					margin-top: 2px;
+				}
+			}
+		}
+		.navbar-item,
+		.navbar-link {
+			padding: 0px;
+			line-height: 1;
+			color: white;
+		}
+		.navbar-link.is-active,
+		.navbar-link:hover,
+		a.navbar-item.is-active,
+		a.navbar-item:hover {
+			background-color: transparent;
+			color: #ff5252;
+			text-decoration: none;
+		}
+		.navbar-burger {
+			height: auto;
+			color: white;
+			span {
+				height: 2px;
+				width: 20px;
+			}
+			&:hover {
+				background-color: transparent;
+			}
+		}
+		.navbar-menu {
+			font-weight: 400;
+			text-transform: uppercase;
+			ul {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+			}
+			li {
+				color: white;
+				margin-right: 20px;
+				float: left;
+				font-weight: 400;
+				&:hover {
+					color: rgba(255, 255, 255, 0.5);
+				}
+				&:active {
+					color: #ff5252;
+				}
+				&:last-child {
+					margin-right: 0px;
+				}
+			}
+			.current-page {
+				text-decoration: underline;
+			}
+		}
+	}
+
+}

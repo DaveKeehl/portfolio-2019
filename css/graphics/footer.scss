@@ -1,0 +1,78 @@
+// main: graphics.scss
+
+.graphics footer {
+
+	color: black;
+
+	.container {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	@include transition (all, 0.25s, ease);
+
+	.footer-top,
+	.footer-bottom {
+		font-weight: 400;
+	}
+
+	.footer-top {
+		text-align: center;
+		.footer-icons {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-bottom: 20px;
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 5px;
+				color: white;
+				background-color: #4497FB;
+				height: 40px;
+				width: 40px;
+				border-radius: 100%;
+				i {
+					font-size: 20px;
+				}
+			}
+		}
+		.info {
+			margin: 0 auto;
+			div {
+				letter-spacing: 0.5px;
+				font-weight: 300;
+			}
+			p {
+				margin-bottom: 5px;
+				font-weight: 400;
+				&:last-child {
+					margin-bottom: 0px;
+				}
+				a {
+					transition: all 0.15s ease;
+					&:hover {
+						opacity: 0.5;
+					}
+				}
+			}
+		}
+	}
+
+	.footer-divider {
+		background-color: rgba(51, 51, 51, 0.2);
+		margin: 20px 0;
+		height: 1px;
+		width: 50px;
+	}
+
+	.footer-bottom {
+		text-align: center;
+		padding-bottom: 50px;
+	}
+
+
+}
