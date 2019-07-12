@@ -32,10 +32,12 @@
 
 @media (max-width: 1024px)
 	.audio
-		.navbar-menu
+		header .navbar .navbar-menu
 			background-color: #333
 			-webkit-box-shadow: 0px 0px 0px transparent
 			box-shadow: 0px 0px 0px transparent
+			.navbar-end
+				text-align: center
 			ul
 				flex-direction: column
 				border-top: 1px solid rgba(255, 255, 255, 0.2)
@@ -43,18 +45,14 @@
 				padding-bottom: 20px
 				margin-top: 10px
 				font-size: 18px
-
-			li
-				margin-right: 0
-				margin-top: 10px
-				&:hover
-					border-bottom: 0px solid transparent
-					padding-bottom: 0px
-
-				&:first-child
-					margin-top: 0px
-		.navbar-end
-			text-align: center
+				li
+					margin-right: 0
+					margin-top: 10px
+					&:hover
+						border-bottom: 0px solid transparent
+						padding-bottom: 0px
+					&:first-child
+						margin-top: 0px
 		.home-mastering
 			margin-left: 16.66667%
 	.graphics
@@ -108,33 +106,35 @@
 
 @media (max-width:767px)
 	.index
-		.left-graphics
-			@include clip-path (polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%))
-			h2
-				left: 50%
-				top: calc(25% - 150px / 4)
-		.right-graphics
-			@include clip-path (polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%))
-			h2
-				left: 50%
-				top: calc(75% + 150px / 4)
-		.left-hover
-			@include clip-path (polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%))
-		.right-hover
-			@include clip-path (polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%))
-		.left-hover-2
-			@include clip-path (polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%))
-		.right-hover-2
-			@include clip-path (polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%))
-		.left-trigger
-			width: 100vw
-			height: 50vh
-		.right-trigger
-			width: 100vw
-			height: 50vh
-			position: absolute
-			left: 0
-			top: 50vh
+		.triggers
+			.left-trigger
+				width: 100vw
+				height: 50vh
+			.right-trigger
+				width: 100vw
+				height: 50vh
+				position: absolute
+				left: 0
+				top: 50vh
+		.graphics
+			.left-graphics
+				@include clip-path (polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%))
+				h2
+					left: 50%
+					top: calc(25% - 150px / 4)
+			.right-graphics
+				@include clip-path (polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%))
+				h2
+					left: 50%
+					top: calc(75% + 150px / 4)
+			.left-hover
+				@include clip-path (polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%))
+			.right-hover
+				@include clip-path (polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%))
+			.left-hover-2
+				@include clip-path (polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%))
+			.right-hover-2
+				@include clip-path (polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%))
 
 @media (max-width: 767px)
 	.audio main
@@ -194,7 +194,6 @@
 						margin: 10px 0
 
 @media (max-width: 480px)
-
 	.audio
 		header
 			.navbar-menu li
@@ -208,7 +207,6 @@
 			font-size: 28px !important
 		h3
 			font-size: 1.3rem !important
-
 	.audio.home
 		.hero
 			.logo svg

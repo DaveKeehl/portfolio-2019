@@ -8,6 +8,7 @@
 
 	.hero {
 		background-image: url(../img/Smoke.png);
+		background-size: cover;
 		filter: contrast(2);
 		position: relative;
 		display: flex;
@@ -26,38 +27,43 @@
 				margin-bottom: 100px;
 				font-size: 48px;
 				letter-spacing: 0.3em;
-				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				// text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 			}
 		}
 	}
 	.services {
 		filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5));
 		margin-top: -50vh;
-		svg:first-of-type {
-			transform: translateY(2px);
-			& ~ div {
-				background-color: white;
-			}
+		.top-wave {
+			width: 100%;
+			display: block;
 		}
-		.container {
-			padding: 50px 0 100px 0;
+		.bottom-wave {
+			width: 100%;
+			display: block;
 		}
-		h3 {
-			font-size: 32px;
-			color: black;
-			margin-bottom: 50px;
-		}
-		.column {
-			text-align: center;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			h4 {
-				color: black;
-				font-weight: 700;
-			}
-			p {
-				color: #6D7C90;
+		div:nth-child(2) {
+			background-color: white;
+			.container {
+				padding: 50px 0 100px 0;
+				h3 {
+					font-size: 32px;
+					color: black;
+					margin-bottom: 50px;
+				}
+				.column {
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					h4 {
+						color: black;
+						font-weight: 700;
+					}
+					p {
+						color: #6D7C90;
+					}
+				}
 			}
 		}
 	}
@@ -181,14 +187,8 @@
 			font-weight: 900;
 			line-height: 115px;
 			margin: 0;
-			color: white;
-			font-size: 96px;
-			font-weight: 900;
-			line-height: 115px;
-			background-image: url(../img/action-wave.svg);
-			margin: 0;
-			background-repeat: no-repeat;
-			background-position-y: bottom;
+			position: relative;
+			z-index: 5;
 			span {
 				display: block;
 				&:nth-child(1) {
@@ -199,6 +199,12 @@
 					text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 				}
 			}
+		}
+		img {
+			width: 100%;
+		    display: block;
+		    margin-top: -320px;
+		    transform: translateY(1px);
 		}
 		h1 ~ div {
 			background-color: white;
