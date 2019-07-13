@@ -1,0 +1,33 @@
+// main: ../main.scss
+
+@import "mixins"
+
+/********* INDEX *********/
+
+@include keyframes (bg-animation)
+	from
+		background-position: 0 0
+	to
+		background-position: 200px 200px
+
+/********* AUDIO - HOMEPAGE *********/
+
+@include keyframes (arrow)
+	0%
+		bottom: 4em
+	20%
+		bottom: 5em
+	40%
+		bottom: 2em
+	100%
+		bottom: 4em
+
+@include keyframes (arrow-glow)
+	0%
+		@include filter (drop-shadow(0px 0px 0px white))
+	20%
+		@include filter (drop-shadow(0px 0px 0px white))
+	40%
+		@include filter (drop-shadow(0px 0px 10px white))
+	100%
+		@include filter (drop-shadow(0px 0px 0px white))
