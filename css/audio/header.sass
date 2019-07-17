@@ -2,20 +2,20 @@
 
 .audio header
 
-	color: white
-	background-color: #333
+	color: $white
+	background-color: $grey
 	padding: 10px 0
 
 	.navbar
-		background-color: #333
+		background-color: $grey
 		.navbar-brand
 			a:hover
 				color: white
 			svg
-				height: 60px
-				margin-left: 12px
 				@include transform (rotate(90deg))
 				@include transition (all, 0.5s, ease)
+				height: 60px
+				margin-left: 12px
 			path
 				fill: white
 				stroke: white
@@ -40,7 +40,7 @@
 		a.navbar-item.is-active,
 		a.navbar-item:hover
 			background-color: transparent
-			color: #ff5252
+			color: $red
 			text-decoration: none
 		.navbar-burger
 			height: auto
@@ -62,14 +62,14 @@
 				float: left
 				font-weight: 400
 				// &:hover
-				// 	border-bottom: 2px solid #ff5252
+				// 	border-bottom: 2px solid $red
 				// 	padding-bottom: 2px
 				&:active
-					// border-bottom: 2px solid #ff5252
+					// border-bottom: 2px solid $red
 					// padding-bottom: 2px
-					color: #ff5252
+					color: $red
 				&:last-child
 					margin-right: 0px
 			.current-page
 				font-weight: 600
-				color: #ff5252
+				color: $red

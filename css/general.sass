@@ -1,17 +1,26 @@
 // main: main.scss
 
 @import "utility/mixins"
+@import "utility/variables"
+
+*,
+*::before,
+*::after
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
 
 html
 	overflow-y: auto
 
 body
-	-webkit-font-smoothing: antialiased !important
+	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	&.audio, &.index
 		font-family: 'Raleway', sans-serif
 	&.graphics
 		font-family: 'Lato', sans-serif
+		position: relative
+		z-index: -5
 
 h1
 	font-size: 40px
@@ -19,44 +28,19 @@ h1
 	text-align: center
 	margin-bottom: 50px
 
-.graphics main h1
-	padding-top: calc(100px + 80px)
-	margin-bottom: 100px
-
 h2
 	font-size: 30px
 	font-weight: 600
 	text-align: center
-
-.audio h3
-	font-size: 20px
-	font-weight: 400
-	text-align: center
-
-.graphics h3
-	font-size: 20px
-	font-weight: 400
 
 p
 	font-weight: 400
 	line-height: 25px
 
 ul
-	list-style: none
 	margin: 0
+	list-style: none
 	padding: 0
-
-.audio a
-	color: inherit
-	text-decoration: none
-	&:hover
-		color: #ff5252
-	&:active
-		color: white !important
-
-.graphics a
-	color: inherit
-	text-decoration: none
 
 .columns
 	margin-left: 0
@@ -67,25 +51,12 @@ ul
 	&:last-child
 		margin-bottom: 0
 	&:after
-		content: ""
 		display: table
+		content: ""
 		clear: both
 
 .column
 	padding: 0
-
-*,
-*::before,
-*::after
-	-webkit-box-sizing: border-box
-	box-sizing: border-box
-
-.audio main
-	padding: 100px 0
-	color: #333
-
-.graphics main
-	color: white
 
 .container
 	max-width: 80%
@@ -97,6 +68,8 @@ ul
 		margin: 0
 
 #return-to-top
+	@include transition (all, 0.25s, ease)
+	display: none
 	text-align: center
 	position: fixed
 	z-index: 99
@@ -109,23 +82,55 @@ ul
 	display: block
 	text-decoration: none
 	border-radius: 35px
-	display: none
-	@include transition (all, 0.25s, ease)
 	i
-		color: #fff
+		@include transition (all, 0.25s, ease)
 		margin: 0
+		color: $white
 		position: relative
 		top: 13px
 		font-size: 19px
-		@include transition (all, 0.25s, ease)
 	&:hover
 		background: rgba(0, 0, 0, 0.85)
 		i
-			color: #fff
+			color: #FFF
 			top: 3px
 
 .modal-content
 	overflow: hidden
+
+.audio
+	a
+		color: inherit
+		text-decoration: none
+		&:hover
+			color: $red
+		&:active
+			color: $white !important
+	h3
+		font-size: 20px
+		font-weight: 400
+		text-align: center
+	main
+		padding: 100px 0
+		color: $grey
+
+.graphics
+	a
+		color: inherit
+		text-decoration: none
+	h3
+		font-size: 20px
+		font-weight: 400
+	main
+		color: $white
+		h1
+			padding-top: calc(100px + 80px)
+			margin-bottom: 100px
+			text-transform: uppercase
+	.waves
+		img
+			position: absolute
+			width: 100%
 
 /********* UTILITY *********/
 
@@ -217,30 +222,30 @@ ul
 	display: none !important
 
 .svg-red
-	fill: #ff5252 !important
-	stroke: #ff5252 !important
+	fill: $red !important
+	stroke: $red !important
 
 .svg-red-shadow
-	@include filter (drop-shadow(0px 0px 3px #ff5252))
+	@include filter (drop-shadow(0px 0px 3px $red))
 
 .svg-darkBlue
-	fill: #1b5edc !important
+	fill: #1B5EDC !important
 
 .svg-lightBlue
-	fill: #19a2ff !important
+	fill: #19A2FF !important
 
 .svg-purple
-	fill: #bc2a8d !important
+	fill: #BC2A8D !important
 
 .text-red
-	color: #ff5252 !important
+	color: $red !important
 
 .logo-rotate
 	@include transform (rotate(450deg) !important)
 
 .closeButton-rotate
-	opacity: 0.5
 	@include transform (rotate(90deg) translateX(0.5px) translateY(1px))
+	opacity: 0.5
 
 .footer-afterOpen
 	margin-bottom: 70px

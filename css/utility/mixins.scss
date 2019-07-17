@@ -27,11 +27,11 @@
 }
 
 @mixin animation-duration ($duration) {
-    -webkit-animation-duration: $duration;
-    -moz-animation-duration: $duration;
+	-webkit-animation-duration: $duration;
+	-moz-animation-duration: $duration;
 	-ms-animation-duration: $duration;
 	-o-animation-duration: $duration;
-    animation-duration: $duration;
+	animation-duration: $duration;
 }
 
 @mixin animation-timing-function ($timing-function) {
@@ -84,12 +84,12 @@
 
 @mixin animation ($name, $duration, $iteration-count, $timing-function) {
 	-webkit-animation-name: $name;
-    -webkit-animation-duration: $duration;
+	-webkit-animation-duration: $duration;
 	-webkit-animation-iteration-count: $iteration-count;
 	-webkit-animation-timing-function: $timing-function;
 
 	-moz-animation-name: $name;
-    -moz-animation-duration: $duration;
+	-moz-animation-duration: $duration;
 	-moz-animation-iteration-count: $iteration-count;
 	-moz-animation-timing-function: $timing-function;
 

@@ -1,10 +1,5 @@
-// main: graphics.scss
-
 .graphics.about
-
 	background: linear-gradient(to bottom, #C638EF 0%, #17BAFF 60%, #657CF8 100%)
-	position: relative
-	z-index: -5
 
 	main
 		position: relative
@@ -36,8 +31,8 @@
 							margin-top: 10px
 							margin-bottom: 20px
 							p
-								font-style: italic
 								margin: 0 5px
+								font-style: italic
 								width: fit-content
 							img
 								height: 19px
@@ -51,6 +46,7 @@
 				.middle
 					padding-bottom: 15px
 					p
+						margin: 0 10px 5px 0
 						opacity: 0.3
 						font-size: 16px
 						color: white
@@ -59,16 +55,15 @@
 						padding: 5px
 						width: fit-content
 						line-height: 1.2
-						margin: 0 10px 5px 0
 				.bottom
 					div
 						display: flex
 						flex-direction: row
 						a
+							display: flex
 							height: 30px
 							width: 30px
 							border-radius: 100%
-							display: flex
 							justify-content: center
 							align-items: center
 							margin-right: 10px
@@ -106,28 +101,10 @@
 					p
 						font-size: 18px
 						margin: 0 5px
-	footer
-		color: white
-		text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.35)
-		position: relative
-		z-index: 20
-		.footer-top
-			.footer-icons a
-				background-color: white
-				color: #5F85F7
-				box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.35)
-				i
-					text-shadow: 0 0 0
-		.footer-divider
-			background-color: white
-		.footer-bottom a p
-			color: white
-	.wave1
-		position: absolute
-		bottom: 0
-		width: 100%
-	.wave2
-		position: absolute
-		z-index: 5
-		bottom: 0
-		width: 100%
+
+	.waves img
+		&:nth-child(1)
+			bottom: 0
+		&:nth-child(2)
+			z-index: 5
+			bottom: 0

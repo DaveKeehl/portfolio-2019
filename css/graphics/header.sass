@@ -1,7 +1,4 @@
-// main: graphics.scss
-
 .graphics header
-
 	font-family: 'Raleway', sans-serif
 	position: fixed
 	top: 0
@@ -17,10 +14,10 @@
 			a:hover
 				color: white
 			svg
-				height: 60px
-				margin-left: 12px
 				@include transform (rotate(90deg))
 				@include transition (all, 0.5s, ease)
+				height: 60px
+				margin-left: 12px
 			path
 				fill: white
 				stroke: white
@@ -28,7 +25,7 @@
 				margin-left: 2rem
 				span.logo-name
 					letter-spacing: 4px
-					font-weight: 500 !important
+					font-weight: 500
 					font-size: 16px
 				span.logo-job
 					font-weight: 400
@@ -45,7 +42,7 @@
 		a.navbar-item.is-active,
 		a.navbar-item:hover
 			background-color: transparent
-			color: #ff5252
+			color: #FF5252
 			text-decoration: none
 		.navbar-burger
 			height: auto
