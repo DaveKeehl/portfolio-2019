@@ -101,14 +101,14 @@
         </p>
         <div class="columns is-multiline">
             <div class="column is-one-quarter-desktop is-one-third-tablet video ux">
-                <div>
+                <div onclick="openModal('work1', 'description1', 'www.youtube.com')">
                     <p class="publishing">publishing</p>
                     <p class="video">video</p>
                     <p class="web">web</p>
                     <p class="ux">ui/ux</p>
                 </div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ">
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
                 <div>
                     <p class="publishing">publishing</p>
                     <p class="video">video</p>
@@ -203,7 +203,7 @@
     </footer>
 
     <div class="modal-sidebar">
-        <aside>
+        <aside class="graphicsPortfolio-modalClose">
             <img src="../img/close-modal.svg">
             <div class="categories">
                 <p class="publishing">publishing</p>
@@ -215,7 +215,7 @@
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur lobortis tempus. Vivamus cursus enim enim, vitae rhoncus arcu consequat vel. Aliquam tempus sagittis libero, eget tempor quam tempor eu. Praesent ultricies ipsum
                 id lorem posuere, ac accumsan velit venenatis. In non neque pharetra, fringilla tellus ut, commodo eros. Aliquam a nisi pretium, laoreet ante vitae, ultricies justo. Donec ornare cursus sapien vitae scelerisque. Proin et elit suscipit,
                 varius libero sit amet, porta leo. Nam vel justo eu nisl pharetra mattis. Aenean aliquam nisl eget enim varius tempus. Curabitur sodales est vitae ex volutpat ornare.</p>
-            <a>Check it out</a>
+            <a href="" target="_blank">Check it out</a>
         </aside>
     </div>
 
@@ -229,6 +229,51 @@
     <script src="../js/recurrent-interactions.js"></script>
 
     <script>
+        // MODAL SECTION
+
+        let page = document.getElementsByTagName("html")[0];
+        let closeModalButton = document.querySelector(".graphics.portfolio .modal-sidebar aside img").addEventListener("click", closeModal);
+        let modal = document.querySelector(".graphics.portfolio .modal-sidebar");
+        let modalSidebar = document.querySelector(".graphics.portfolio .modal-sidebar aside");
+        let workName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
+        let workDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
+        let workLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
+        let isClosed = true;
+
+        // CLOSE MODAL
+
+        function closeModal() {
+            if (isClosed == false && page.classList.contains("overflow-hidden")) {
+                modalSidebar.classList.add("graphicsPortfolio-modalClose");
+                setTimeout(function() {
+                    page.classList.remove("overflow-hidden");
+                }, 500);
+                modal.style.backgroundColor = "transparent";
+                setTimeout(function() {
+                    modal.style.display = "none";
+                }, 1500);
+                isClosed = true;
+            }
+        }
+
+        // OPEN MODAL
+
+        function openModal(name, description, link) {
+            if (isClosed == true && page.classList.contains("overflow-hidden") == false) {
+                // INJECT WORK DETAILS
+                workName.innerHTML = name;
+                workDescription.innerHTML = description;
+                workLink.href = 'https://' + link;
+                // SHOW MODAL
+                page.classList.add("overflow-hidden");
+                modal.style.display = "flex";
+                modal.style.backgroundColor = "rgba(0, 0, 0, .8)";
+                modalSidebar.classList.remove("graphicsPortfolio-modalClose");
+                // SET MODAL STATE
+                isClosed = false;
+            }
+        }
+
         // Execute the function and show all columns
         filterSelection("all")
 
