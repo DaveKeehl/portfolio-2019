@@ -1,5 +1,7 @@
 .graphics.portfolio
 	background: linear-gradient(to bottom, #C638EF 0%, #17BAFF 40.1%, #C638EF 100%)
+	overflow: hidden
+	height: 100vh
 
 	main
 
@@ -9,10 +11,10 @@
 		span
 			cursor: pointer
 			&:focus, &:visited, &:hover, &:active
-				color: $black
+				color: transparentize($white, .5)
 
 		.filter-active
-			color: $black
+			color: $white
 			text-decoration: underline
 
 		.columnHide
@@ -36,7 +38,7 @@
 					cursor: pointer
 					justify-content: flex-end
 					align-items: flex-end
-					height: calc((100vw / 4 - 5px * 8) / 100 * 80 -19px)
+					height: calc(((100vw - 30px) / 100 * 80) / 4 - 10px)
 					border-radius: 10px
 					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15), 0px 5px 20px rgba(0, 0, 0, 0.3)
 					p
@@ -49,19 +51,23 @@
 						text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1)
 						margin-right: 10px
 						&.publishing
-							background-color: #4378FF
+							background-color: $publishing
 						&.video
-							background-color: #FF7A00
+							background-color: $video
 						&.web
-							background-color: #FD2BA3
+							background-color: $web
 						&.ux
-							background-color: #7E5DFF
+							background-color: $ux
 						&:last-child
 							margin-right: 0
 				&:nth-child(1)
 					div
 						background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../img/graphics-work1.jpg)
 						background-size: cover
+						transition: background .5s ease
+						&:hover
+							background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .5)), url(../img/graphics-work1.jpg)
+							background-size: cover
 				&:nth-child(2)
 					div
 						background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../img/graphics-work2.jpg)
@@ -92,6 +98,73 @@
 						background-size: cover
 	footer
 		margin-top: 280px
+
+	.modal-sidebar
+		display: flex
+		justify-content: flex-end
+		background-color: transparentize($black, .2)
+		width: 100%
+		height: 100vh
+		position: absolute
+		top: 0
+		z-index: 100
+		aside
+			position: relative
+			padding: 20px
+			border-top-left-radius: 20px
+			height: 100%
+			background-color: $white
+			max-width: 450px
+			overflow: auto
+			img
+				position: absolute
+				top: 10px
+				right: 10px
+				transition: all .2s ease
+				&:hover
+					opacity: .5
+					cursor: pointer
+					transform: rotate(90deg)
+			.categories
+				display: flex
+				flex-direction: row
+				text-transform: uppercase
+				font-size: 12px
+				p
+					margin-right: 10px
+					color: white
+					padding: 5px
+					border-radius: 3px
+					line-height: 1
+					&.publishing
+						background-color: $publishing
+					&.video
+						background-color: $video
+					&.web
+						background-color: $web
+					&.ux
+						background-color: $ux
+					&:last-child
+						margin-right: 0
+			h2
+				margin-top: 50px
+				margin-bottom: 20px
+				text-align: left
+				color: $black
+			.description
+				color: $darkBlue
+			a
+				display: block
+				margin-top: 50px
+				color: black
+				text-decoration: underline
+				&::after
+					content: ''
+					margin-left: 10px
+					background: url(../img/modal-arrow.svg) no-repeat
+					height: 8px
+					width: 21px
+					display: inline-block
 
 	.waves
 		img
