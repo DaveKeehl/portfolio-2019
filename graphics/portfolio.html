@@ -203,7 +203,7 @@
     </footer>
 
     <div class="modal-sidebar">
-        <aside class="graphicsPortfolio-modalClose">
+        <aside>
             <img src="../img/close-modal.svg">
             <div class="categories">
                 <p class="publishing">publishing</p>
@@ -244,14 +244,20 @@
 
         function closeModal() {
             if (isClosed == false && page.classList.contains("overflow-hidden")) {
+                // 1. REMOVE BACKGROUND IN-ANIMATION
+                modal.classList.remove("modal-background-in");
+                // 2. REMOVE SIDEBAR IN-ANIMATION
+                modalSidebar.classList.remove("graphicsPortfolio-modalOpen");
+                // 3. ADD BACKGROUND OUT-ANIMATION
+                modal.classList.add("modal-background-out");
+                // 4. ADD SIDEBAR OUT-ANIMATION
                 modalSidebar.classList.add("graphicsPortfolio-modalClose");
                 setTimeout(function() {
+                    // 5. ADD SCROLLBAR TO PAGE
                     page.classList.remove("overflow-hidden");
+                    // 6. REMOVE MODAL FROM PAGE
+                    modal.classList.remove("display-flex");
                 }, 500);
-                modal.style.backgroundColor = "transparent";
-                setTimeout(function() {
-                    modal.style.display = "none";
-                }, 1500);
                 isClosed = true;
             }
         }
@@ -265,10 +271,18 @@
                 workDescription.innerHTML = description;
                 workLink.href = 'https://' + link;
                 // SHOW MODAL
-                page.classList.add("overflow-hidden");
-                modal.style.display = "flex";
-                modal.style.backgroundColor = "rgba(0, 0, 0, .8)";
+                // 1. REMOVE BACKGROUND OUT-ANIMATION
+                modal.classList.remove("modal-background-out");
+                // 2. REMOVE SIDEBAR OUT-ANIMATION
                 modalSidebar.classList.remove("graphicsPortfolio-modalClose");
+                // 3. REMOVE PAGE SCROLLBAR
+                page.classList.add("overflow-hidden");
+                // 4. SHOW MODAL
+                modal.classList.add("display-flex");
+                // 5. ADD BACKGROUND IN-ANIMATION
+                modal.classList.add("modal-background-in");
+                // 6. ADD SIDEBAR IN-ANIMATION
+                modalSidebar.classList.add("graphicsPortfolio-modalOpen");
                 // SET MODAL STATE
                 isClosed = false;
             }

@@ -99,16 +99,22 @@
 
 	.modal-sidebar
 		display: none
-		// display: flex
+		position: fixed
 		justify-content: flex-end
 		background-color: transparent
-		// background-color: transparentize($black, .2)
 		width: 100%
 		height: 100vh
-		position: absolute
 		top: 0
 		z-index: 100
-		transition: background-color 1s ease
+		transition: all 1s ease
+		&.display-flex
+			display: flex
+		&.modal-background-in
+			@include animation (modal-background-in, .5s, 1, ease)
+			@include animation-fill-mode (forwards)
+		&.modal-background-out
+			@include animation (modal-background-out, 1s, 1, ease)
+			@include animation-fill-mode (forwards)
 		aside
 			position: relative
 			padding: 20px
@@ -117,8 +123,13 @@
 			background-color: $white
 			width: 450px
 			overflow: auto
-			transform: translateX(450px)
 			transition: all .5s cubic-bezier(1, 0, 0, 1)
+			&.graphicsPortfolio-modalOpen
+				@include animation (modalOpen, .5s, 1, cubic-bezier(1, 0, 0, 1))
+				@include animation-fill-mode (forwards)
+			&.graphicsPortfolio-modalClose
+				@include animation (modalClose, .5s, 1, cubic-bezier(1, 0, 0, 1))
+				@include animation-fill-mode (forwards)
 			img
 				position: absolute
 				top: 10px
