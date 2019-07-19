@@ -100,69 +100,29 @@
             <span onclick="filterSelection('video')" name="category">Video Editing</span>
         </p>
         <div class="columns is-multiline">
-            <div class="column is-one-quarter-desktop is-one-third-tablet ux web">
-                <div onclick="openModal('Personal Portfolio', 'This is the description of my personal portfolio.', 'www.davideciulla.com', ['ui/ux', 'web'])">
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web">
+                <div class="categories" onclick="openModal('Personal Portfolio', 'This is the description of my personal portfolio.', 'www.davideciulla.com', ['ui/ux', 'web'], ['html', 'sass', 'js', 'figma', 'github'])"></div>
+            </div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+                <div class="categories"></div>
+            </div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow publishing">
+                <div class="categories"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
+                <div class="categories"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
+                <div class="categories"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
+                <div class="categories"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
+                <div class="categories"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
-            </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div>
-                    <p class="publishing">publishing</p>
-                    <p class="video">video</p>
-                    <p class="web">web</p>
-                    <p class="ux">ui/ux</p>
-                </div>
+                <div class="categories"></div>
             </div>
         </div>
     </main>
@@ -224,17 +184,36 @@
     <script src="../js/recurrent-interactions.js"></script>
 
     <script>
-        // MODAL SECTION
-
         let page = document.getElementsByTagName("html")[0];
         let closeModalButton = document.querySelector(".graphics.portfolio .modal-sidebar aside img").addEventListener("click", closeModal);
         let modal = document.querySelector(".graphics.portfolio .modal-sidebar");
         let modalSidebar = document.querySelector(".graphics.portfolio .modal-sidebar aside");
-        let workName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
-        let workDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
-        let workCategories = document.querySelector(".graphics.portfolio .modal-sidebar .categories");
-        let workLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
+        let work = document.querySelectorAll(".graphics.portfolio .columns .column");
+        let workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
+        let modalName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
+        let modalDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
+        let modalCategories = document.querySelector(".graphics.portfolio .modal-sidebar .categories");
+        let modalLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
         let isClosed = true;
+
+        for (i = 0; i < work.length; i++) {
+            console.log("analyzing work number " + i);
+            for (j = 0; j < work[i].classList.length; j++) {
+                if (work[i].classList[j] === 'ux' || work[i].classList[j] === 'web' || work[i].classList[j] === 'video' || work[i].classList[j] === 'publishing') {
+                    console.log("work " + i + ", class: " + work[i].classList[j]);
+                    let category = document.createElement("p");
+                    if (work[i].classList[j] === 'ux') {
+                        category.innerHTML = 'ui/ux';
+                    } else {
+                        category.innerHTML = work[i].classList[j];
+                    }
+                    category.classList.add(work[i].classList[j]);
+                    workCategories[i].appendChild(category);
+                }
+            }
+        }
+        console.log("ANALYZED ALL WORKS");
+
 
         // CLOSE MODAL
 
@@ -254,8 +233,8 @@
                     // 6. REMOVE MODAL FROM PAGE
                     modal.classList.remove("display-flex");
                     // RESET CATEGORIES
-                    while (workCategories.hasChildNodes()) {
-                        workCategories.removeChild(workCategories.firstChild);
+                    while (modalCategories.hasChildNodes()) {
+                        modalCategories.removeChild(modalCategories.firstChild);
                     }
                 }, 500);
                 isClosed = true;
@@ -267,11 +246,11 @@
         function openModal(name, description, link, categories) {
             if (isClosed == true && page.classList.contains("overflow-hidden") == false) {
                 // INJECT WORK DETAILS
-                workName.innerHTML = name;
-                workDescription.innerHTML = description;
-                workLink.href = 'https://' + link;
+                modalName.innerHTML = name;
+                modalDescription.innerHTML = description;
+                modalLink.href = 'https://' + link;
                 for (i = 0; i < categories.length; i++) {
-                    if (categories[i] === 'ui/ux' || 'web' || 'publishing' || 'video') {
+                    if (categories[i] === 'ui/ux' || 'web' || 'publishing' || 'video' && categories.length <= 4) {
                         let category = document.createElement("p");
                         category.innerHTML = categories[i];
                         if (categories[i] == 'ui/ux') {
@@ -279,9 +258,10 @@
                         } else {
                             category.classList.add(categories[i]);
                         }
-                        workCategories.appendChild(category);
+                        modalCategories.appendChild(category);
                     }
                 }
+
                 // SHOW MODAL
                 // 1. REMOVE BACKGROUND OUT-ANIMATION
                 modal.classList.remove("modal-background-out");
