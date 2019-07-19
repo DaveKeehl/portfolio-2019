@@ -100,8 +100,8 @@
             <span onclick="filterSelection('video')" name="category">Video Editing</span>
         </p>
         <div class="columns is-multiline">
-            <div class="column is-one-quarter-desktop is-one-third-tablet video ux">
-                <div onclick="openModal('work1', 'description1', 'www.youtube.com')">
+            <div class="column is-one-quarter-desktop is-one-third-tablet ux web">
+                <div onclick="openModal('Personal Portfolio', 'This is the description of my personal portfolio.', 'www.davideciulla.com', ['ui/ux', 'web'])">
                     <p class="publishing">publishing</p>
                     <p class="video">video</p>
                     <p class="web">web</p>
@@ -205,12 +205,7 @@
     <div class="modal-sidebar">
         <aside>
             <img src="../img/close-modal.svg">
-            <div class="categories">
-                <p class="publishing">publishing</p>
-                <p class="video">video</p>
-                <p class="web">web</p>
-                <p class="ux">ui/ux</p>
-            </div>
+            <div class="categories"></div>
             <h2>Work title /</h2>
             <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam consectetur lobortis tempus. Vivamus cursus enim enim, vitae rhoncus arcu consequat vel. Aliquam tempus sagittis libero, eget tempor quam tempor eu. Praesent ultricies ipsum
                 id lorem posuere, ac accumsan velit venenatis. In non neque pharetra, fringilla tellus ut, commodo eros. Aliquam a nisi pretium, laoreet ante vitae, ultricies justo. Donec ornare cursus sapien vitae scelerisque. Proin et elit suscipit,
@@ -237,6 +232,7 @@
         let modalSidebar = document.querySelector(".graphics.portfolio .modal-sidebar aside");
         let workName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
         let workDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
+        let workCategories = document.querySelector(".graphics.portfolio .modal-sidebar .categories");
         let workLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
         let isClosed = true;
 
@@ -257,6 +253,10 @@
                     page.classList.remove("overflow-hidden");
                     // 6. REMOVE MODAL FROM PAGE
                     modal.classList.remove("display-flex");
+                    // RESET CATEGORIES
+                    while (workCategories.hasChildNodes()) {
+                        workCategories.removeChild(workCategories.firstChild);
+                    }
                 }, 500);
                 isClosed = true;
             }
@@ -264,12 +264,24 @@
 
         // OPEN MODAL
 
-        function openModal(name, description, link) {
+        function openModal(name, description, link, categories) {
             if (isClosed == true && page.classList.contains("overflow-hidden") == false) {
                 // INJECT WORK DETAILS
                 workName.innerHTML = name;
                 workDescription.innerHTML = description;
                 workLink.href = 'https://' + link;
+                for (i = 0; i < categories.length; i++) {
+                    if (categories[i] === 'ui/ux' || 'web' || 'publishing' || 'video') {
+                        let category = document.createElement("p");
+                        category.innerHTML = categories[i];
+                        if (categories[i] == 'ui/ux') {
+                            category.classList.add('ux');
+                        } else {
+                            category.classList.add(categories[i]);
+                        }
+                        workCategories.appendChild(category);
+                    }
+                }
                 // SHOW MODAL
                 // 1. REMOVE BACKGROUND OUT-ANIMATION
                 modal.classList.remove("modal-background-out");
