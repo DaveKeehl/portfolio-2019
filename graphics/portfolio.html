@@ -100,14 +100,14 @@
             <span onclick="filterSelection('video')" name="category">Video Editing</span>
         </p>
         <div class="columns is-multiline">
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web video">
-                <div class="categories" onclick="openModal(0, 'Personal Portfolio', 'This is the description of my personal portfolio.', ['html', 'sass', 'js', 'github'], 'www.davideciulla.com')"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web">
+                <div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'sass', 'js', 'figma', 'github'], 'www.davideciulla.com')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
+                <div class="categories" onclick="openModal(1, 'SwissAPO', 'This is the description of SwissAPO.', ['wordpress', 'html', 'css'], 'www.swiss-apo.ch')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow publishing">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
+                <div class="categories" onclick="openModal(2, 'Voices Beyond Silence', 'This is the description of the VBS website.', ['wix', 'affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
                 <div class="categories"></div>
@@ -164,7 +164,7 @@
 
     <div class="modal-sidebar">
         <aside>
-            <img src="../img/close-modal.svg">
+            <img class="close" src="../img/close-modal.svg">
             <div class="categories"></div>
             <h2></h2>
             <p class="description"></p>
@@ -236,10 +236,12 @@
                 }
                 for (i = 0; i < tools.length; i++) {
                     console.log("loop cycle: " + i);
-                    let logo;
                     switch (tools[i]) {
                         case 'html':
-                            logo = '<i class="fab fa-html5">' + '</i>';
+                            logo = '<i class="fab fa-html5 tooltip">' + '</i>';
+                            break;
+                        case 'css':
+                            logo = '<i class="fab fa-css3-alt">' + '</i>';
                             break;
                         case 'sass':
                             logo = '<i class="fab fa-sass">' + '</i>';
@@ -249,8 +251,37 @@
                             break;
                         case 'github':
                             logo = '<i class="fab fa-github">' + '</i>';
+                            break;
+                        case 'figma':
+                            logo = '<img src="../img/figma.svg">';
+                            break;
+                        case 'wordpress':
+                            logo = '<i class="fab fa-wordpress">' + '</i>';
+                            break;
+                        case 'wix':
+                            logo = '<i class="fab fa-wix">' + '</i>';
+                            break
+                        case 'affinity-photo':
+                            logo = '<img src="../img/affinity-photo.svg">';
+                            break;
+                        case 'affinity-designer':
+                            logo = '<img src="../img/affinity-designer.svg">';
+                            break;
+                        case 'affinity-publisher':
+                            logo = '<img src="../img/affinity-publisher.svg">';
+                            break;
+                        case 'premiere':
+                            logo = '<img src="../img/premiere.svg">';
+                            break;
+                        case 'after-effects':
+                            logo = '<img src="../img/after-effects.svg">';
+                            break;
                     }
                     let tool = document.createElement("div");
+                    let tooltip = '<span class="tooltiptext">' + tools[i] + '</span>';
+                    console.log(tooltip);
+                    // console.log(logo);
+                    // logo.append(tooltip);
                     tool.innerHTML = logo;
                     tool.classList.add(tools[i]);
                     modalTools.append(tool);
