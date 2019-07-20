@@ -163,17 +163,21 @@
 			h2
 				word-break: break-all
 				margin-top: 50px
-				margin-bottom: 20px
 				text-align: left
 				color: $black
 			.description
 				color: $darkBlue
 				word-break: break-all
+				margin-top: 20px
 			a
 				display: block
 				margin-top: 50px
 				color: black
 				text-decoration: underline
+				font-weight: 600
+				transition: all .2s ease
+				&:hover
+					opacity: 0.5
 				&::after
 					content: ''
 					margin-left: 10px
@@ -181,6 +185,24 @@
 					height: 8px
 					width: 21px
 					display: inline-block
+			.tools
+				display: flex
+				margin-top: 20px
+				font-size: 24px
+				color: #c1c1c1
+				& div
+					margin-right: 10px
+					transition: all .2s ease
+					&:last-child
+						margin-right: 0
+				.html:hover
+					color: $html
+				.sass:hover
+					color: $sass
+				.js:hover
+					color: $js
+				.github:hover
+					color: $black
 
 	.waves
 		img
