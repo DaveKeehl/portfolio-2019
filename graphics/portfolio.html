@@ -183,19 +183,40 @@
     <script src="../js/recurrent-interactions.js"></script>
 
     <script>
-        let page = document.getElementsByTagName("html")[0];
-        let closeModalButton = document.querySelector(".graphics.portfolio .modal-sidebar aside img");
+        // Elementi
+        var $window = $(window);
+        var $header = $('header');
+
+        // Variabili
+        var yPosition = 0;
+        var windowHeight = $window.height();
+        var headerHeight = $header.height();
+
+        // Eventi
+        $window.on('scroll', function scrollHandler() {
+            yPosition = $(this).scrollTop();
+            var opacity = yPosition / (windowHeight - headerHeight) + 0.1;
+            var maxOpacity = 0.2;
+            if (opacity <= maxOpacity) {
+                $header.css('background-color', `rgba(0, 0, 0, ${opacity})`);
+            } else {
+                $header.css('background-color', `rgba(0, 0, 0, ${maxOpacity}`);
+            }
+        });
+
+        var page = document.getElementsByTagName("html")[0];
+        var closeModalButton = document.querySelector(".graphics.portfolio .modal-sidebar aside img");
         closeModalButton.addEventListener("click", closeModal);
-        let modal = document.querySelector(".graphics.portfolio .modal-sidebar");
-        let modalSidebar = document.querySelector(".graphics.portfolio .modal-sidebar aside");
-        let work = document.querySelectorAll(".graphics.portfolio .columns .column");
-        let workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
-        let modalName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
-        let modalDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
-        let modalCategories = document.querySelector(".graphics.portfolio .modal-sidebar .categories");
-        let modalTools = document.querySelector(".graphics.portfolio .modal-sidebar .tools");
-        let modalLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
-        let isClosed = true;
+        var modal = document.querySelector(".graphics.portfolio .modal-sidebar");
+        var modalSidebar = document.querySelector(".graphics.portfolio .modal-sidebar aside");
+        var work = document.querySelectorAll(".graphics.portfolio .columns .column");
+        var workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
+        var modalName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
+        var modalDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
+        var modalCategories = document.querySelector(".graphics.portfolio .modal-sidebar .categories");
+        var modalTools = document.querySelector(".graphics.portfolio .modal-sidebar .tools");
+        var modalLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
+        var isClosed = true;
 
         // ADDING TAGS TO EACH WORK SAMPLE
 

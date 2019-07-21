@@ -30,30 +30,12 @@
 		.columns
 			.column
 				padding: 5px
-				&:nth-child(1)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work1.jpg)
-				&:nth-child(2)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work2.jpg)
-				&:nth-child(3)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work3.jpg)
-				&:nth-child(4)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work4.jpg)
-				&:nth-child(5)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work5.jpg)
-				&:nth-child(6)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work6.jpg)
-				&:nth-child(7)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work7.jpg)
-				&:nth-child(8)
-					.categories
-						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work8.jpg)
+				@for $i from 1 through $work-samples
+					&:nth-child(#{$i})
+						.categories
+							background-image: url(../media/img/graphics-work#{$i}.svg)
+							&:hover
+								background-image: url(../media/img/graphics-work#{$i}-hover.svg)
 				.categories
 					display: flex
 					padding: 10px
@@ -64,8 +46,7 @@
 					border-radius: 10px
 					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15), 0px 5px 20px rgba(0, 0, 0, 0.3)
 					background-size: cover
-					&:hover
-						transition: all .25s ease
+					transition: background-image .15s ease
 					p
 						text-transform: uppercase
 						font-size: 12px
@@ -93,6 +74,7 @@
 		display: none
 		position: fixed
 		justify-content: flex-end
+		align-items: center
 		background-color: transparent
 		width: 100%
 		height: 100vh
