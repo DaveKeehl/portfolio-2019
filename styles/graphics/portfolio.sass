@@ -1,0 +1,256 @@
+.graphics.portfolio
+	background: linear-gradient(to bottom, #C638EF 0%, #17BAFF 40.1%, #C638EF 100%)
+
+	main
+
+		h1
+			margin-bottom: 50px
+
+		span
+			cursor: pointer
+			&:focus, &:visited, &:hover, &:active
+				color: transparentize($white, .5)
+
+		.filter-active
+			color: $white
+			text-decoration: underline
+
+		.columnHide
+			display: none
+			padding: 5px
+
+		.columnShow
+			display: block
+			padding: 5px
+
+		#filters
+			text-align: center
+			margin-bottom: 70px
+
+		.columns
+			.column
+				padding: 5px
+				&:nth-child(1)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work1.jpg)
+				&:nth-child(2)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work2.jpg)
+				&:nth-child(3)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work3.jpg)
+				&:nth-child(4)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work4.jpg)
+				&:nth-child(5)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work5.jpg)
+				&:nth-child(6)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work6.jpg)
+				&:nth-child(7)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work7.jpg)
+				&:nth-child(8)
+					.categories
+						background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, .25)), url(../media/img/graphics-work8.jpg)
+				.categories
+					display: flex
+					padding: 10px
+					cursor: pointer
+					justify-content: flex-end
+					align-items: flex-end
+					height: calc(((100vw - 30px) / 100 * 80) / 4 - 10px)
+					border-radius: 10px
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15), 0px 5px 20px rgba(0, 0, 0, 0.3)
+					background-size: cover
+					&:hover
+						transition: all .25s ease
+					p
+						text-transform: uppercase
+						font-size: 12px
+						padding: 5px
+						border-radius: 3px
+						line-height: 1
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15)
+						text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1)
+						margin-right: 10px
+						&.publishing
+							background-color: $publishing
+						&.video
+							background-color: $video
+						&.web
+							background-color: $web
+						&.ux
+							background-color: $ux
+						&:last-child
+							margin-right: 0
+
+	footer
+		margin-top: 280px
+
+	.modal-sidebar
+		display: none
+		position: fixed
+		justify-content: flex-end
+		background-color: transparent
+		width: 100%
+		height: 100vh
+		top: 0
+		z-index: 100
+		transition: all 1s ease
+		&.display-flex
+			display: flex
+		&.modal-background-in
+			@include animation (modal-background-in, .5s, 1, ease)
+			@include animation-fill-mode (forwards)
+		&.modal-background-out
+			@include animation (modal-background-out, 1s, 1, ease)
+			@include animation-fill-mode (forwards)
+		aside
+			position: relative
+			padding: 20px
+			border-top-left-radius: 20px
+			height: 100%
+			background-color: $white
+			width: 450px
+			overflow: auto
+			transition: all .5s cubic-bezier(1, 0, 0, 1)
+			&.graphicsPortfolio-modalOpen
+				@include animation (modalOpen, .5s, 1, cubic-bezier(1, 0, 0, 1))
+				@include animation-fill-mode (forwards)
+			&.graphicsPortfolio-modalClose
+				@include animation (modalClose, .5s, 1, cubic-bezier(1, 0, 0, 1))
+				@include animation-fill-mode (forwards)
+			img.close
+				position: absolute
+				top: 10px
+				right: 10px
+				transition: all .25s ease
+				&:hover
+					opacity: .5
+					cursor: pointer
+					transform: rotate(90deg)
+			.categories
+				display: flex
+				flex-direction: row
+				text-transform: uppercase
+				font-size: 12px
+				p
+					margin-right: 10px
+					color: white
+					padding: 5px
+					border-radius: 3px
+					line-height: 1
+					&.publishing
+						background-color: $publishing
+					&.video
+						background-color: $video
+					&.web
+						background-color: $web
+					&.ux
+						background-color: $ux
+					&:last-child
+						margin-right: 0
+			h2
+				word-break: break-all
+				margin-top: 50px
+				text-align: left
+				color: $black
+			.description
+				color: $darkBlue
+				word-break: break-word
+				margin-top: 20px
+			a
+				display: block
+				margin-top: 50px
+				color: black
+				text-decoration: underline
+				font-weight: 600
+				transition: all .2s ease
+				width: fit-content
+				&:hover
+					opacity: 0.5
+				&::after
+					content: ''
+					margin-left: 10px
+					background: url(../media/img/modal-arrow.svg) no-repeat
+					height: 8px
+					width: 21px
+					display: inline-block
+			.tools
+				display: flex
+				margin-top: 20px
+				font-size: 24px
+				color: #8f8f8f
+				div
+					margin-right: 10px
+					// transition: all .2s ease
+					&:last-child
+						margin-right: 0
+				.html:hover
+					color: $html
+				.css:hover
+					color: $css
+				.sass:hover
+					color: $sass
+				.javascript:hover
+					color: $js
+				.github:hover
+					color: $black
+				.figma, .premiere, .after-effects, .affinity-photo, .affinity-designer, .affinity-publisher, .cinema-4d
+					.tooltip
+						height: 24px
+						filter: grayscale(1)
+						// transition: all .2s ease
+						&:hover
+							filter: grayscale(0)
+						span
+							transition: none
+				.wordpress:hover
+					color: $wordpress
+				.wix:hover
+					color: $wix
+				.tooltip
+					position: relative
+					&:hover
+						.tooltip-text
+							visibility: visible
+					.tooltip-text
+						font-family: 'Lato', sans-serif
+						text-transform: uppercase
+						visibility: hidden
+						font-size: 14px
+						width: fit-content
+						height: fit-content
+						background-color: black
+						color: #fff
+						text-align: center
+						border-radius: 6px
+						padding: 5px
+						position: absolute
+						z-index: 1000
+						bottom: 150%
+						left: -50%
+						transform: translateX(-50%)
+						margin-left: 100%
+						line-height: 1
+						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15)
+						text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1)
+						&:after
+							content: ""
+							position: absolute
+							top: 100%
+							left: 50%
+							margin-left: -5px
+							border-width: 5px
+							border-style: solid
+							border-color: black transparent transparent transparent
+
+	.waves
+		img
+			&:nth-child(1)
+				bottom: 0
+				z-index: -1
+			&:nth-child(2)
+				bottom: 0

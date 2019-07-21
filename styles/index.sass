@@ -1,0 +1,104 @@
+.index
+
+	//TRIGGERS
+
+	.triggers
+		position: relative
+		z-index: 1
+		cursor: pointer
+		.left-trigger
+			width: 50vw
+			height: 100vh
+		.right-trigger
+			width: 50vw
+			height: 100vh
+			position: absolute
+			left: 50vw
+			top: 0
+
+	// GRAPHICS
+
+	.graphics
+		.logo
+			position: absolute
+			top: 50%
+			left: 50%
+			@include transform (translateX(-50%) translateY(-50%))
+			border-radius: 100%
+			z-index: 10
+			background-color: white
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 150px
+			width: 150px
+			box-shadow: 0 0 25px rgba(0, 0, 0, 0.75)
+			@include transition (all, 0.5s, ease)
+			svg
+				height: 50%
+				filter: none
+				-webkit-filter: none
+				// animation-name: logo-animation
+				// animation-duration: 4s
+				// animation-timing-function: linear
+				// animation-iteration-count: infinite
+				path
+					fill: #333
+					&:first-of-type
+						stroke: #333
+		.left-graphics::after,
+		.right-graphics::after
+			content: ""
+			opacity: 0.05
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			position: absolute
+			z-index: -1
+			background-size: 200px 200px
+			// background-image: url('../media/img/magic pattern.jpg')
+			@include animation (bg-animation, 20s, infinite, linear)
+		.left-graphics::after
+			background-image: url('../media/img/bgA.jpg')
+		.right-graphics::after
+			background-image: url('../media/img/bgB.jpg')
+		.left-graphics
+			@include clip-path (polygon(0% 0%, 50% 0%, 50% 100%, 0% 100%))
+			position: absolute
+			top: 0
+			height: 100vh
+			width: 100vw
+			@include transition (all, 0.5s, ease)
+			background-color: white
+		.right-graphics
+			background-color: #333
+			@include clip-path (polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%))
+			position: absolute
+			top: 0
+			height: 100vh
+			width: 100vw
+			@include transition (all, 0.5s, ease)
+		.left-hover
+			@include clip-path (polygon(0% 0%, 40% 0%, 60% 100%, 0% 100%))
+			@include transition (all, 0.5s, ease)
+		.right-hover
+			@include clip-path (polygon(40% 0%, 100% 0%, 100% 100%, 60% 100%))
+			@include transition (all, 0.5s, ease)
+		.left-hover-2
+			@include clip-path (polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%))
+		.right-hover-2
+			@include clip-path (polygon(60% 0%, 100% 0%, 100% 100%, 40% 100%))
+		.left-graphics h2
+			color: #333
+			left: calc(25% - 75px / 2)
+		.right-graphics h2
+			color: white
+			left: calc(75% + 75px / 2)
+		.left-graphics h2,
+		.right-graphics h2
+			margin: 0
+			font-size: 2rem
+			top: 50%
+			@include transform (translateX(-50%) translateY(-50%))
+			position: absolute

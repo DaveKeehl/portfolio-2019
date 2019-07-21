@@ -18,22 +18,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Bulma CSS -->
-    <link href="../css/bulma/bulma.min.css" rel="stylesheet">
+    <link href="../styles/bulma/bulma.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/utility/reset.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../styles/utility/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
-    <link rel="manifest" href="../img/site.webmanifest">
-    <link rel="mask-icon" href="../img/safari-pinned-tab.svg" color="#333333">
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../media/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../media/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../media/img/favicon-16x16.png">
+    <link rel="manifest" href="../media/img/site.webmanifest">
+    <link rel="mask-icon" href="../media/img/safari-pinned-tab.svg" color="#333333">
+    <link rel="shortcut icon" href="../media/img/favicon.ico">
     <meta name="msapplication-TileColor" content="#333333">
-    <meta name="msapplication-config" content="../img/browserconfig.xml">
+    <meta name="msapplication-config" content="../media/img/browserconfig.xml">
     <meta name="theme-color" content="#333333">
 </head>
 
@@ -101,7 +101,7 @@
         </p>
         <div class="columns is-multiline">
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web">
-                <div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'sass', 'js', 'figma', 'github'], 'www.davideciulla.com')"></div>
+                <div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'sass', 'javascript', 'figma', 'github'], 'www.davideciulla.com')"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
                 <div class="categories" onclick="openModal(1, 'SwissAPO', 'This is the description of SwissAPO.', ['wordpress', 'html', 'css'], 'www.swiss-apo.ch')"></div>
@@ -109,20 +109,20 @@
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
                 <div class="categories" onclick="openModal(2, 'Voices Beyond Silence', 'This is the description of the VBS website.', ['wix', 'affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow publishing">
+                <div class="categories" onclick="openModal(3, 'VBS - CD Art', 'This is the description of the publishing designs made for VBS.', ['affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+                <div class="categories" onclick="openModal(4, 'Intro FIP', 'This is the description of the intro made for Film In Piazza.', ['after-effects'], '')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+                <div class="categories" onclick="openModal(5, 'Cool FIP video', 'This is the description of a cool video made for Film In Piazza.', ['premiere'], '')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+                <div class="categories" onclick="openModal(6, 'Intro 1 Teleticino', 'This is the description of an intro made for Teleticino.', ['premiere', 'after-effects', 'cinema-4d'], '')"></div>
             </div>
-            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
-                <div class="categories"></div>
+            <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+                <div class="categories" onclick="openModal(7, 'Intro 2 Teleticino', 'This is the description of an intro made for Teleticino.', ['premiere', 'after-effects', 'cinema-4d'], '')"></div>
             </div>
         </div>
     </main>
@@ -164,7 +164,7 @@
 
     <div class="modal-sidebar">
         <aside>
-            <img class="close" src="../img/close-modal.svg">
+            <img class="close" src="../media/img/close-modal.svg">
             <div class="categories"></div>
             <h2></h2>
             <p class="description"></p>
@@ -174,8 +174,8 @@
     </div>
 
     <div class="waves">
-        <img src="../img/portfolio-wave1.svg">
-        <img src="../img/portfolio-wave2.svg">
+        <img src="../media/img/portfolio-wave1.svg">
+        <img src="../media/img/portfolio-wave2.svg">
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -235,54 +235,37 @@
                     }
                 }
                 for (i = 0; i < tools.length; i++) {
-                    console.log("loop cycle: " + i);
-                    switch (tools[i]) {
-                        case 'html':
-                            logo = '<i class="fab fa-html5 tooltip">' + '</i>';
-                            break;
-                        case 'css':
-                            logo = '<i class="fab fa-css3-alt">' + '</i>';
-                            break;
-                        case 'sass':
-                            logo = '<i class="fab fa-sass">' + '</i>';
-                            break;
-                        case 'js':
-                            logo = '<i class="fab fa-js">' + '</i>';
-                            break;
-                        case 'github':
-                            logo = '<i class="fab fa-github">' + '</i>';
-                            break;
-                        case 'figma':
-                            logo = '<img src="../img/figma.svg">';
-                            break;
-                        case 'wordpress':
-                            logo = '<i class="fab fa-wordpress">' + '</i>';
-                            break;
-                        case 'wix':
-                            logo = '<i class="fab fa-wix">' + '</i>';
-                            break
-                        case 'affinity-photo':
-                            logo = '<img src="../img/affinity-photo.svg">';
-                            break;
-                        case 'affinity-designer':
-                            logo = '<img src="../img/affinity-designer.svg">';
-                            break;
-                        case 'affinity-publisher':
-                            logo = '<img src="../img/affinity-publisher.svg">';
-                            break;
-                        case 'premiere':
-                            logo = '<img src="../img/premiere.svg">';
-                            break;
-                        case 'after-effects':
-                            logo = '<img src="../img/after-effects.svg">';
-                            break;
+                    let logo;
+                    if (['html', 'css', 'sass', 'javascript', 'github', 'wordpress', 'wix'].includes(tools[i])) {
+                        logo = document.createElement("i");
+                        let toolClass;
+                        if (tools[i] === 'html') {
+                            toolClass = "fa-html5";
+                        } else if (tools[i] === 'css') {
+                            toolClass = "fa-css3-alt";
+                        } else if (tools[i] === 'javascript') {
+                            toolClass = "fa-js";
+                        } else {
+                            toolClass = "fa-" + tools[i];
+                        }
+                        logo.classList.add("fab", toolClass);
+                    } else {
+                        logo = document.createElement("span");
+                        console.log(logo);
+                        logo.style.background = "url(../media/img/" + tools[i] + ".svg) no-repeat center";
+                        logo.style.width = "24px";
+                        logo.style.height = "24px";
+                        logo.style.display = "block";
                     }
+                    logo.classList.add("tooltip");
+                    let tooltip = document.createElement("span");
+                    tooltip.classList.add("tooltip-text");
+                    tooltipText = tools[i].replace('-', ' ');
+                    console.log(tooltipText)
+                    tooltip.innerHTML = tooltipText;
+                    logo.appendChild(tooltip);
                     let tool = document.createElement("div");
-                    let tooltip = '<span class="tooltiptext">' + tools[i] + '</span>';
-                    console.log(tooltip);
-                    console.log(logo);
-                    logo.append(tooltip);
-                    tool.innerHTML = logo;
+                    tool.appendChild(logo);
                     tool.classList.add(tools[i]);
                     modalTools.append(tool);
                 }
