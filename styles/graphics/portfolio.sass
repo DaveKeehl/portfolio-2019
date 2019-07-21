@@ -185,7 +185,7 @@
 				color: #8f8f8f
 				div
 					margin-right: 10px
-					// transition: all .2s ease
+					transition: all .15s ease
 					&:last-child
 						margin-right: 0
 				.html:hover
@@ -198,19 +198,19 @@
 					color: $js
 				.github:hover
 					color: $black
-				.figma, .premiere, .after-effects, .affinity-photo, .affinity-designer, .affinity-publisher, .cinema-4d
-					.tooltip
-						height: 24px
-						filter: grayscale(1)
-						// transition: all .2s ease
-						&:hover
-							filter: grayscale(0)
-						span
-							transition: none
 				.wordpress:hover
 					color: $wordpress
 				.wix:hover
 					color: $wix
+				.figma, .premiere, .after-effects, .affinity-photo, .affinity-designer, .affinity-publisher, .cinema-4d, .bulma, .jquery, .react, .gitlab, .node-js
+					.tooltip
+						height: 24px
+						filter: grayscale(1)
+						transition: all .15s ease
+						&:hover
+							filter: grayscale(0)
+						span
+							transition: none
 				.tooltip
 					position: relative
 					&:hover
@@ -235,8 +235,7 @@
 						transform: translateX(-50%)
 						margin-left: 100%
 						line-height: 1
-						box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15)
-						text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 1px 2px rgba(0, 0, 0, 0.1)
+						box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15)
 						&:after
 							content: ""
 							position: absolute

@@ -101,7 +101,7 @@
         </p>
         <div class="columns is-multiline">
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web">
-                <div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'sass', 'javascript', 'figma', 'github'], 'www.davideciulla.com')"></div>
+                <div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'bulma', 'sass', 'javascript', 'jquery', 'figma', 'github'], 'www.davideciulla.com')"></div>
             </div>
             <div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
                 <div class="categories" onclick="openModal(1, 'SwissAPO', 'This is the description of SwissAPO.', ['wordpress', 'html', 'css'], 'www.swiss-apo.ch')"></div>
@@ -250,9 +250,9 @@
                         }
                         logo.classList.add("fab", toolClass);
                     } else {
-                        logo = document.createElement("span");
+                        logo = document.createElement("div");
                         console.log(logo);
-                        logo.style.background = "url(../media/img/" + tools[i] + ".svg) no-repeat center";
+                        logo.style.background = "url(../media/img/" + tools[i] + ".svg) center/contain no-repeat ";
                         logo.style.width = "24px";
                         logo.style.height = "24px";
                         logo.style.display = "block";
