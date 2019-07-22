@@ -1,26 +1,24 @@
-import { task, src, dest, watch } from 'gulp';
-import sass, { logError } from 'gulp-sass';
-// import uglifycss from 'gulp-uglifycss';
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const uglifycss = require('gulp-uglifycss');
+const autoprefixer = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
 
-task('sass', function() {
-    return src('./css/**/*.sass')
-        .pipe(sass().on('error', logError))
-        .pipe(dest('./css'));
-});
+function sassTask() {
+  return gulp
+    .src('./styles/main.sass')
+    .pipe(sourcemaps.init())
+      .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer())
+      .pipe(uglifycss({uglyComments: true,}),)
+    .pipe(sourcemaps.write('../maps'))
+    .pipe(gulp.dest('./styles'));
+}
 
-task('css', function() {
-    return src('./css/main.css')
-        .pipe(uglifycss({
-            "uglyComments": true
-        }))
-        .pipe(dest('./css'));
-});
+function watchTask() {
+  gulp.watch('./styles/**/*.sass', sassTask);
+}
 
-task('run', ['sass', 'css']);
-
-task('watch', function() {
-    watch('./sass/*.sass', ['sass']);
-    watch('./css/*.css', ['css']);
-});
-
-task('default', ['run', 'watch']);
+exports.sassTask = sassTask;
+exports.watchTask = watchTask;
+exports.default = gulp.parallel(sassTask, watchTask);

@@ -18,7 +18,11 @@
     "homepage": "https://github.com/DaveKeehl/Portfolio#readme",
     "devDependencies": {
         "gulp": "^4.0.2",
-        "gulp-sass": "^4.0.2"
+        "gulp-sass": "^4.0.2",
+        "gulp-uglifycss": "^1.1.0"
     },
-    "dependencies": {}
+    "dependencies": {
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-sourcemaps": "^2.6.5"
+    }
 }
