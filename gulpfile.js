@@ -11,7 +11,7 @@ function sassTask() {
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer())
       .pipe(uglifycss({uglyComments: true,}),)
-    .pipe(sourcemaps.write('../maps'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./styles'));
 }
 

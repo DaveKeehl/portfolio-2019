@@ -5,7 +5,7 @@
 	<!-- Metatags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Davide Ciulla | Portfolio</title>
+	<title>Davide Ciulla | Contact</title>
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -38,7 +38,7 @@
 </head>
 
 
-<body class="graphics portfolio">
+<body class="graphics contact">
 
 	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
@@ -80,8 +80,8 @@
 						<li><a href='home.html'>Home</a>
 							<li><a href="about.html">About</a>
 								<li><a href="services.html">Services</a>
-									<li><a class="current-page" href="portfolio.html">Portfolio</a>
-										<li><a href="contact.html">Contact</a>
+									<li><a href="portfolio.html">Portfolio</a>
+										<li><a class="current-page" href="contact.html">Contact</a>
 					</ul>
 				</div>
 			</div>
@@ -91,40 +91,25 @@
 	</header>
 
 	<main class="container">
-		<h1>PORTFOLIO</h1>
-		<p id="filters">
-			<span onclick="filterSelection('all')" name="category">All</span> |
-			<span onclick="filterSelection('ux')" name="category">UI/UX Design</span> |
-			<span onclick="filterSelection('web')" name="category">Web Design</span> |
-			<span onclick="filterSelection('publishing')" name="category">Publishing Design</span> |
-			<span onclick="filterSelection('video')" name="category">Video Editing</span>
-		</p>
-		<div class="columns is-multiline">
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web">
-				<div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'bulma', 'sass', 'javascript', 'jquery', 'figma', 'github'], 'www.davideciulla.com')"></div>
+		<h1>CONTACT</h1>
+		<p>Lorem ipsum</p>
+		<form method="POST" name="contactform" id="contactform">
+			<input type="text" name="Name" class="form-control form-name" placeholder="Name" required>
+			<input type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
+			<input type="tel" name="Phone" class="form-control form-phone" placeholder="Phone (Optional)">
+			<input type="text" name="Subject" class="form-control form-subject" placeholder="Subject" required>
+			<input type="hidden" name="_next" value="https://davekeehl.github.io/Portfolio/graphics/contact.html" />
+			<input type="hidden" name="_subject" value="Online Portfolio Contact" />
+			<input type="text" name="_gotcha" style="display:none" />
+			<div class="select is-fullwidth">
+				<select name="Category" required>
+					<option selected>General Question</option>
+					<option>Work Offer</option>
+				</select>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
-				<div class="categories" onclick="openModal(1, 'SwissAPO', 'This is the description of SwissAPO.', ['wordpress', 'html', 'css'], 'www.swiss-apo.ch')"></div>
-			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
-				<div class="categories" onclick="openModal(2, 'Voices Beyond Silence', 'This is the description of the VBS website.', ['wix', 'affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
-			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow publishing">
-				<div class="categories" onclick="openModal(3, 'VBS - CD Art', 'This is the description of the publishing designs made for VBS.', ['affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
-			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
-				<div class="categories" onclick="openModal(4, 'Intro FIP', 'This is the description of the intro made for Film In Piazza.', ['after-effects'], '')"></div>
-			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
-				<div class="categories" onclick="openModal(5, 'Cool FIP video', 'This is the description of a cool video made for Film In Piazza.', ['premiere'], '')"></div>
-			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
-				<div class="categories" onclick="openModal(6, 'Intro 1 Teleticino', 'This is the description of an intro made for Teleticino.', ['premiere', 'after-effects', 'cinema-4d'], '')"></div>
-			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
-				<div class="categories" onclick="openModal(7, 'Intro 2 Teleticino', 'This is the description of an intro made for Teleticino.', ['premiere', 'after-effects', 'cinema-4d'], '')"></div>
-			</div>
-		</div>
+			<textarea class="form-control form-message" name="Message" rows="10" placeholder="Your message" required></textarea>
+			<input type="submit" name="Send" class="form-send" value="Send" />
+		</form>
 	</main>
 
 	<footer>
@@ -162,19 +147,8 @@
 		</div>
 	</footer>
 
-	<div class="modal-sidebar">
-		<aside>
-			<img class="close" src="../media/img/close-modal.svg">
-			<div class="categories"></div>
-			<h2></h2>
-			<p class="description"></p>
-			<div class="tools"></div>
-			<a href="" target="_blank">Check it out</a>
-		</aside>
-	</div>
-
 	<div class="waves">
-		<img class="wave1" src="../media/img/portfolio-wave1.svg">
+		<img class="wave1" src="../media/img/contact-waves1.svg">
 		<img class="wave2" src="../media/img/portfolio-wave2.svg">
 	</div>
 
@@ -182,8 +156,11 @@
 	<script src="../js/back-to-top.js"></script>
 	<script src="../js/recurrent-interactions.js"></script>
 	<script src="../js/header-opacity.js"></script>
-	<script src="../js/graphicsPortfolio-filter.js"></script>
-	<script src="../js/graphicsPortfolio-modals.js"></script>
+
+	<script>
+		var contactform = document.getElementById('contactform');
+		contactform.setAttribute('action', 'https://formspree.io/' + 'ciulld' + '@' + 'usi' + '.' + 'ch');
+	</script>
 
 </body>
 

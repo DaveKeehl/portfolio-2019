@@ -32,6 +32,20 @@
 	100%
 		@include filter (drop-shadow(0px 0px 0px white))
 
+/********* GRAPHICS - HOME *********/
+
+@include keyframes (particle1)
+	0%
+		transform: translateX(0) translateY(0) scaleX(1) scaleY(1)
+	25%
+		transform: scaleX(0.5) scaleY(0.5)
+	50%
+		transform: translateX(-100px) translateY(100px) scaleX(1) scaleY(1)
+	75%
+		transform: scaleX(0.5) scaleY(0.5)
+	100%
+		transform: translateX(0) translateY(0) scaleX(1) scaleY(1)
+
 /********* GRAPHICS - PORTFOLIO *********/
 
 @include keyframes (modalOpen)
