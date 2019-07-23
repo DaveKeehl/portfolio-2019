@@ -268,7 +268,7 @@
 				<span></span>
 			</div>
 			<div class="description">
-				<p>This is a description</p>
+				<p></p>
 			</div>
 			<div class="columns">
 				<h2 class="column selected">UI/UX Design
@@ -344,6 +344,30 @@
 		// 	hero.style.backgroundPosition = 'center ' + (yPosition * 0.5) + 'px';
 		// }
 
+		var showcaseCategories = document.querySelectorAll('.graphics.home .showcase .columns .column');
+		var showcaseDescription = document.querySelector('.graphics.home .showcase .description p');
+		const uxDescription = "ux design... yaya :)";
+		const webDescription = "haha I know what you're thinking...";
+		const publishingDescription = "I'm not crazy!";
+		const videoDescription = "... or am I? :P";
+		var descriptions = [
+			uxDescription,
+			webDescription,
+			publishingDescription,
+			videoDescription
+		];
+
+		showcaseDescription.innerHTML = descriptions[0];
+
+		for (let i = 0; i < showcaseCategories.length; i++) {
+			showcaseCategories[i].addEventListener("click", function() {
+				for (let j = 0; j < showcaseCategories.length; j++) {
+					showcaseCategories[j].classList.remove('selected');
+				}
+				showcaseCategories[i].classList.add('selected');
+				showcaseDescription.innerHTML = descriptions[i];
+			});
+		}
 		
 	</script>
 
