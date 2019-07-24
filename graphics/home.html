@@ -5,6 +5,7 @@
 	<!-- Metatags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="Description" content="This is the homepage of my graphics portfolio.">
 	<title>Davide Ciulla | Home</title>
 
 	<!-- Google Fonts -->
@@ -12,7 +13,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
 
 	<!-- Fontawesome -->
-	<script src="https://kit.fontawesome.com/c6af894bde.js"></script>
+	<link href="https://kit-free.fontawesome.com" rel="preconnect" as="script" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/c6af894bde.js" crossorigin="anonymous"></script>
 
 	<!-- Material Icons -->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -38,7 +40,7 @@
 </head>
 
 
-<body class="graphics home">
+<body class="graphics home" onload="typewriter()">
 
 	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
 
@@ -332,39 +334,59 @@
 	<script src="../js/back-to-top.js"></script>
 	<script src="../js/recurrent-interactions.js"></script>
 	<script src="../js/header-opacity.js"></script>
-	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+	<!-- <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script> -->
 
 	<script type="text/javascript">
 		
-		var text = document.querySelector('.graphics.home #typewriter');
+		var element = document.querySelector('.graphics.home #typewriter');
+		var i = 0;
+		var text = 'Lorem ipsum typing effect!';
+		var speed = 150;
 
-		var typewriter = new Typewriter(text, {
-			loop: true,
-			delay: 150,
-		});
+		// function typewriter() {
+		// 	if (i < text.length) {
+		// 		element.innerHTML += text.charAt(i);
+		// 		i++;
+		// 		setTimeout(typewriter, speed);
+		// 	}
+		// }
 
-		typewriter
-			.pauseFor(2500)
-			.typeString('<span style="color:white;">I love</span>')
-			.pauseFor(1500)
-			.typeString('<br>')
-			.pauseFor(1500)
-			.typeString('designing interfaces')
-			.pauseFor(1500)
-			.deleteChars(20)
-			.pauseFor(1500)
-			.typeString('creating websites')
-			.pauseFor(1500)
-			.deleteChars(17)
-			.pauseFor(1500)
-			.typeString('making documents')
-			.pauseFor(1500)
-			.deleteChars(16)
-			.pauseFor(1500)
-			.typeString('working with video')
-			.pauseFor(1500)
-			.deleteChars(18)
-			.start();
+		// var options = {
+		// 	strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
+		// 	typeSpeed: 40
+		// }
+
+		// var typed = new Typed(text, options);
+
+
+		// var typewriter = new Typewriter(text, {
+		// 	loop: true,
+		// 	delay: 150,
+		// });
+
+		// typewriter
+		// 	.pauseFor(2500)
+		// 	.typeString('<span style="color:white;">I love</span>')
+		// 	.pauseFor(1500)
+		// 	.typeString('<br>')
+		// 	.pauseFor(1500)
+		// 	.typeString('designing interfaces')
+		// 	.pauseFor(1500)
+		// 	.deleteChars(20)
+		// 	.pauseFor(1500)
+		// 	.typeString('creating websites')
+		// 	.pauseFor(1500)
+		// 	.deleteChars(17)
+		// 	.pauseFor(1500)
+		// 	.typeString('making documents')
+		// 	.pauseFor(1500)
+		// 	.deleteChars(16)
+		// 	.pauseFor(1500)
+		// 	.typeString('working with video')
+		// 	.pauseFor(1500)
+		// 	.deleteChars(18)
+		// 	.start();
 
 		// HERO
 
