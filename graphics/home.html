@@ -90,7 +90,7 @@
 
 	<section class="hero">
 		<div>
-			<h1 id="typewriter"></h1>
+			<div id="typewriter"></div>
 			<svg width="16" height="88" viewBox="0 0 16 88" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M7.29289 87.7071C7.68342 88.0976 8.31658 88.0976 8.70711 87.7071L15.0711 81.3431C15.4616 80.9526 15.4616 80.3195 15.0711 79.9289C14.6805 79.5384 14.0474 79.5384 13.6569 79.9289L8 85.5858L2.34315 79.9289C1.95262 79.5384 1.31946 79.5384 0.928932 79.9289C0.538408 80.3195 0.538408 80.9526 0.928932 81.3431L7.29289 87.7071ZM7 0L7 87H9L9 0L7 0Z" fill="white"/>
 			</svg>
@@ -330,15 +330,94 @@
 	<script src="../js/back-to-top.js"></script>
 	<script src="../js/recurrent-interactions.js"></script>
 	<script src="../js/header-opacity.js"></script>
-	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-	<!-- <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script> -->
 
 	<script type="text/javascript">
 		
 		var element = document.querySelector('.graphics.home #typewriter');
-		var i = 0;
-		var text = 'Lorem ipsum typing effect!';
+		const text = [
+			'I love',
+			'designing interfaces',
+			'creating websites',
+			'making documents',
+			'working with video'
+		];
+		var j = 0;
+		var k = 0;
 		var speed = 150;
+		var pause = 1500;
+		var targetCreated = false;
+
+		for (let i = 0; i < text.length; i++) {
+			if (i === 0) {
+				let love = document.createElement("h1");
+				love.classList.add('love');
+				element.append(love);
+				// write text
+				let x = setInterval((e) => {
+					if (j < text[i].length) {
+						let loveEl = document.querySelector(".graphics.home .hero #typewriter .love");
+						loveEl.innerHTML += text[i].charAt(j);
+						j++;
+					} else {
+						x = clearInterval();
+					}
+				}, speed);
+			} else if (i === 1) {
+				if (targetCreated === false) {
+					let text = document.createElement("h1");
+					text.classList.add("target");
+					element.append(text);
+					targetCreated = true;
+				}
+				let target = document.querySelector(".graphics.home .hero #typewriter .target");
+				// write text
+				setTimeout((e) => {
+					let x = setInterval((e) => {
+						if (k < text[i].length) {
+							target.innerHTML += text[i].charAt(k);
+							k++;
+							console.log(k);
+						} else {
+							x = clearInterval();
+							// delete text
+							setTimeout((e) => {
+								let x = setInterval((e) => {
+									if (k > 0) {
+										target.innerHTML -= text[i].charAt(k);
+										k--;
+										console.log(k);
+									} else {
+										x = clearInterval();
+									}
+								}, speed);
+							}, pause);
+						}
+					}, speed);
+				}, pause);
+
+			}
+		}
+
+		// setInterval((e) => {
+		// 	if (i < text1.length) {
+		// 		element.innerHTML += text1.charAt(i);
+		// 		i++;
+		// 	}
+		// }, speed);
+
+		// setTimeout(function() {
+		// 	var lineBreak = document.createElement("br");
+		// 	element.appendChild(lineBreak);
+		// }, pause);
+
+		// setInterval((e) => {
+		// 	let newSpan = document.createElement("span");
+		// 	element.appendChild(newSpan);
+		// 	if (i < text2.length) {
+		// 		newSpan.innerHTML += text2.charAt(i);
+		// 		i++;
+		// 	}
+		// }, speed);
 
 		// function typewriter() {
 		// 	if (i < text.length) {
@@ -347,42 +426,6 @@
 		// 		setTimeout(typewriter, speed);
 		// 	}
 		// }
-
-		// var options = {
-		// 	strings: ["<i>First</i> sentence.", "&amp; a second sentence."],
-		// 	typeSpeed: 40
-		// }
-
-		// var typed = new Typed(text, options);
-
-
-		var typewriter = new Typewriter(element, {
-			loop: true,
-			delay: 150,
-		});
-
-		typewriter
-			.pauseFor(2500)
-			.typeString('<span style="color:white;">I love</span>')
-			.pauseFor(1500)
-			.typeString('<br>')
-			.pauseFor(1500)
-			.typeString('designing interfaces')
-			.pauseFor(1500)
-			.deleteChars(20)
-			.pauseFor(1500)
-			.typeString('creating websites')
-			.pauseFor(1500)
-			.deleteChars(17)
-			.pauseFor(1500)
-			.typeString('making documents')
-			.pauseFor(1500)
-			.deleteChars(16)
-			.pauseFor(1500)
-			.typeString('working with video')
-			.pauseFor(1500)
-			.deleteChars(18)
-			.start();
 
 		// HERO
 

@@ -51,7 +51,7 @@ function openModal(id, name, description, tools, link) {
 		}
 		for (i = 0; i < tools.length; i++) {
 			let logo;
-			if (['html', 'css', 'sass', 'javascript', 'github', 'wordpress', 'wix'].includes(tools[i])) {
+			if (['html', 'css', 'bootstrap', 'sass', 'javascript', 'github', 'wordpress', 'wix'].includes(tools[i])) {
 				logo = document.createElement("i");
 				let toolClass;
 				if (tools[i] === 'html') {
