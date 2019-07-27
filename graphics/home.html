@@ -36,7 +36,7 @@
 </head>
 
 
-<body class="graphics home">
+<body class="graphics home" onload=mainInit()>
 
 	<a href="javascript:" id="return-to-top" aria-label="Go to the top of the page"><i class="fa fa-chevron-up"></i></a>
 
@@ -330,73 +330,74 @@
 	<script src="../js/back-to-top.js"></script>
 	<script src="../js/recurrent-interactions.js"></script>
 	<script src="../js/header-opacity.js"></script>
+	<script src="../js/typewriter.js"></script>
 
 	<script type="text/javascript">
 		
-		var element = document.querySelector('.graphics.home #typewriter');
-		const text = [
-			'I love',
-			'designing interfaces',
-			'creating websites',
-			'making documents',
-			'working with video'
-		];
-		var j = 0;
-		var k = 0;
-		var speed = 150;
-		var pause = 1500;
-		var targetCreated = false;
+		// var element = document.querySelector('.graphics.home #typewriter');
+		// const text = [
+		// 	'I love',
+		// 	'designing interfaces',
+		// 	'creating websites',
+		// 	'making documents',
+		// 	'working with video'
+		// ];
+		// var j = 0;
+		// var k = 0;
+		// var speed = 150;
+		// var pause = 1500;
+		// var targetCreated = false;
 
-		for (let i = 0; i < text.length; i++) {
-			if (i === 0) {
-				let love = document.createElement("h1");
-				love.classList.add('love');
-				element.append(love);
-				// write text
-				let x = setInterval((e) => {
-					if (j < text[i].length) {
-						let loveEl = document.querySelector(".graphics.home .hero #typewriter .love");
-						loveEl.innerHTML += text[i].charAt(j);
-						j++;
-					} else {
-						x = clearInterval();
-					}
-				}, speed);
-			} else if (i === 1) {
-				if (targetCreated === false) {
-					let text = document.createElement("h1");
-					text.classList.add("target");
-					element.append(text);
-					targetCreated = true;
-				}
-				let target = document.querySelector(".graphics.home .hero #typewriter .target");
-				// write text
-				setTimeout((e) => {
-					let x = setInterval((e) => {
-						if (k < text[i].length) {
-							target.innerHTML += text[i].charAt(k);
-							k++;
-							console.log(k);
-						} else {
-							x = clearInterval();
-							// delete text
-							setTimeout((e) => {
-								let x = setInterval((e) => {
-									if (k > 0) {
-										target.innerHTML -= text[i].charAt(k);
-										k--;
-										console.log(k);
-									} else {
-										x = clearInterval();
-									}
-								}, speed);
-							}, pause);
-						}
-					}, speed);
-				}, pause);
+		// for (let i = 0; i < text.length; i++) {
+		// 	if (i === 0) {
+		// 		let love = document.createElement("h1");
+		// 		love.classList.add('love');
+		// 		element.append(love);
+		// 		// write text
+		// 		let x = setInterval((e) => {
+		// 			if (j < text[i].length) {
+		// 				let loveEl = document.querySelector(".graphics.home .hero #typewriter .love");
+		// 				loveEl.innerHTML += text[i].charAt(j);
+		// 				j++;
+		// 			} else {
+		// 				x = clearInterval();
+		// 			}
+		// 		}, speed);
+		// 	} else if (i === 1) {
+		// 		if (targetCreated === false) {
+		// 			let text = document.createElement("h1");
+		// 			text.classList.add("target");
+		// 			element.append(text);
+		// 			targetCreated = true;
+		// 		}
+		// 		let target = document.querySelector(".graphics.home .hero #typewriter .target");
+		// 		// write text
+		// 		setTimeout((e) => {
+		// 			let x = setInterval((e) => {
+		// 				if (k < text[i].length) {
+		// 					target.innerHTML += text[i].charAt(k);
+		// 					k++;
+		// 					console.log(k);
+		// 				} else {
+		// 					x = clearInterval();
+		// 					// delete text
+		// 					setTimeout((e) => {
+		// 						let x = setInterval((e) => {
+		// 							if (k > 0) {
+		// 								target.innerHTML -= text[i].charAt(k);
+		// 								k--;
+		// 								console.log(k);
+		// 							} else {
+		// 								x = clearInterval();
+		// 							}
+		// 						}, speed);
+		// 					}, pause);
+		// 				}
+		// 			}, speed);
+		// 		}, pause);
 
-			}
-		}
+		// 	}
+		// }
 
 		// setInterval((e) => {
 		// 	if (i < text1.length) {
