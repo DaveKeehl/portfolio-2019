@@ -21,12 +21,12 @@ function waitRepeatAndStop(fn, cond, cb, ...cbArgs) {
 
 function mainInit() {
 	const mainText = "I love";
-	const mainH1 = document.createElement("h1");
+	// const mainH1 = document.createElement("h1");
 	let i = 0;
-	document.getElementById("typewriter").appendChild(mainH1);
+	// document.getElementById("typewriter").appendChild(mainH1);
 
 	waitRepeatAndStop(() => {
-		mainH1.innerText += mainText.charAt(i);
+		// mainH1.innerText += mainText.charAt(i);
 		i++;
 	}, () => i < mainText.length, otherInit);
 }

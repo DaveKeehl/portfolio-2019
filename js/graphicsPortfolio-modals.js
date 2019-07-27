@@ -16,7 +16,7 @@ var isClosed = true;
 
 for (i = 0; i < work.length; i++) {
 	for (j = 0; j < work[i].classList.length; j++) {
-		if (work[i].classList[j] === 'ux' || work[i].classList[j] === 'web' || work[i].classList[j] === 'video' || work[i].classList[j] === 'publishing') {
+		if (work[i].classList[j] === 'ux' || work[i].classList[j] === 'web' || work[i].classList[j] === 'video' || work[i].classList[j] === 'print') {
 			let category = document.createElement("p");
 			if (work[i].classList[j] === 'ux') {
 				category.innerHTML = 'ui/ux';
@@ -38,7 +38,7 @@ function openModal(id, name, description, tools, link) {
 		modalDescription.innerHTML = description;
 		modalLink.href = 'https://' + link;
 		for (i = 0; i < workCategories[id].children.length; i++) {
-			if (workCategories[id].children[i].innerHTML === 'ui/ux' || 'web' || 'publishing' || 'video') {
+			if (workCategories[id].children[i].innerHTML === 'ui/ux' || 'web' || 'print' || 'video') {
 				let category = document.createElement("p");
 				category.innerHTML = workCategories[id].children[i].innerHTML;
 				if (workCategories[id].children[i].innerHTML === "ui/ux") {

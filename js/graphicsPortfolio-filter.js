@@ -15,7 +15,7 @@ function filterSelection(c) {
 		element = document.querySelector("#filters span:nth-child(2)");
 	} else if (c == "web") {
 		element = document.querySelector("#filters span:nth-child(3)");
-	} else if (c == "publishing") {
+	} else if (c == "print") {
 		element = document.querySelector("#filters span:nth-child(4)");
 	} else if (c == "video") {
 		element = document.querySelector("#filters span:nth-child(5)");
