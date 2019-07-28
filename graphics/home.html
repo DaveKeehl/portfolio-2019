@@ -351,20 +351,7 @@
 			backDelay: 1500,
 			loop: true,
 			showCursor: false,
-			smartBackspace: true,
-			onComplete: (self) => {
-				console.log("completed");
-			},
-			onStringTyped: (arrayPos, self) => {
-				console.log("written");
-				// targetEl.removeChild(test);
-			},
-			onLastStringBackspaced: (self) => {
-				console.log("deleted last string");
-			},
-			preStringTyped: (arrayPos, self) => {
-				console.log("pre-string typed");
-			},
+			smartBackspace: true
 		}
 
 		var typed = new Typed(element, options);

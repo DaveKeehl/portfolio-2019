@@ -9,22 +9,19 @@
 	<title>Davide Ciulla | About</title>
 
 	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet prefetch" as="font">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet prefetch" as="font">
 
 	<!-- Fontawesome -->
-	<script src="https://kit.fontawesome.com/c6af894bde.js"></script>
-
-	<!-- Material Icons -->
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://kit-free.fontawesome.com" rel="preconnect" as="script" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/c6af894bde.js" crossorigin="anonymous"></script>
 
 	<!-- Bulma CSS -->
-	<link href="../styles/bulma/bulma.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+	<link href="../styles/bulma/bulma.min.css" rel="stylesheet preload" as="style">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="../styles/utility/reset.css">
-	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet preload" href="../styles/utility/reset.css" as="style">
+	<link rel="stylesheet preload" href="../styles/main.css" as="style">
 
 	<!-- Favicons -->
 	<link rel="apple-touch-icon" sizes="180x180" href="../media/img/apple-touch-icon.png">
@@ -41,7 +38,7 @@
 
 <body class="graphics about">
 
-	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+	<a href="javascript:" id="return-to-top" aria-label="Go to the top of the page"><i class="fa fa-chevron-up"></i></a>
 
 	<header>
 
@@ -111,12 +108,12 @@
 			<div class="column">
 				<div class="card">
 					<div class="top">
-						<img src="../media/img/guitar.jpg">
+						<img src="../media/img/guitar.jpg" alt="Davide">
 						<h2>Davide Ciulla</h2>
 						<div>
-							<img src="../media/img/rocket.png">
+							<img src="../media/img/rocket.png" alt="Rocket">
 							<p>Busy creating</p>
-							<img src="../media/img/rocket.png">
+							<img src="../media/img/rocket.png" alt="Rocket">
 						</div>
 					</div>
 					<div class="middle">
@@ -157,9 +154,9 @@
 			<h2>Interested? Check out my portfolio</h2>
 			<button>
 				<a href="portfolio.html">
-					<img src="../media/img/cool.png">
+					<img src="../media/img/cool.png" alt="Cool face">
 					<p>Take me there</p>
-					<img src="../media/img/cool.png">
+					<img src="../media/img/cool.png" alt="Cool face">
 				</a>
 			</button>
 		</div>
@@ -171,13 +168,13 @@
 				<div class="row">
 					<div class="column is-12">
 						<div class="footer-icons">
-							<a id="facebook" href="https://m.me/100010249987728" target="_blank">
+							<a id="facebook" href="https://m.me/100010249987728" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Facebook.">
 								<i class="fab fa-facebook-f"></i>
 							</a>
-							<a id="twitter" href="https://twitter.com/messages/compose?recipient_id=1004548398" target="_blank">
+							<a id="twitter" href="https://twitter.com/messages/compose?recipient_id=1004548398" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Twitter">
 								<i class="fab fa-twitter"></i>
 							</a>
-							<a id="instagram" href="https://www.instagram.com/davekeehl/" target="_blank">
+							<a id="instagram" href="https://www.instagram.com/davekeehl/" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Instagram">
 								<i class="fab fa-instagram"></i>
 							</a>
 						</div>
@@ -201,8 +198,8 @@
 	</footer>
 
 	<div class="waves">
-		<img class="wave1" src="../media/img/about-waves1.svg">
-		<img class="wave2" src="../media/img/about-waves2.svg">
+		<img class="wave1" src="../media/img/about-waves1.svg" alt="Wave image">
+		<img class="wave2" src="../media/img/about-waves2.svg" alt="Wave image">
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
