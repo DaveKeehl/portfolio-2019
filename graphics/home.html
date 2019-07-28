@@ -341,21 +341,37 @@
 
 		var options = {
 			strings: [
-				"&nbsp;designing interfaces",
-				"&nbsp;creating websites",
-				"&nbsp;making documents",
-				"&nbsp;working with video"
+				"designing interfaces",
+				"creating websites",
+				"making documents",
+				"working with video"
 			],
 			typeSpeed: 100,
 			backSpeed: 50,
+			startDelay: 2000,
 			backDelay: 1500,
 			loop: true,
-			onStringTyped: (arrayPos, self) => {
-				console.log("one more written");
-			},
+			showCursor: false,
+			smartBackspace: true,
 			onComplete: (self) => {
-				console.log("done");
-			}
+				console.log("completed");
+			},
+			onStringTyped: (arrayPos, self) => {
+				console.log("written");
+				// targetEl.removeChild(test);
+			},
+			onLastStringBackspaced: (self) => {
+				console.log("deleted last string");
+			},
+			onStart: (arrayPos, self) => {
+				console.log("started");
+			},
+			onDestroy: (self) => {
+				console.log("destroyed");
+			},
+			preStringTyped: (arrayPos, self) => {
+				console.log("pre-string typed");
+			},
 		}
 
 		var typed = new Typed(element, options);
