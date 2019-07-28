@@ -33,10 +33,13 @@ for (i = 0; i < work.length; i++) {
 
 function openModal(id, name, description, tools, link) {
 	if (isClosed == true && page.classList.contains("overflow-hidden") == false) {
-		// INJECT WORK DETAILS
+		// INJECT WORK NAME
 		modalName.innerHTML = name;
+		// INJECT WORK DESCRIPTION
 		modalDescription.innerHTML = description;
+		// INJECT WORK EXTERNAL LINK
 		modalLink.href = 'https://' + link;
+		// INJECT WORK TAGS
 		for (i = 0; i < workCategories[id].children.length; i++) {
 			if (workCategories[id].children[i].innerHTML === 'ui/ux' || 'web' || 'print' || 'video') {
 				let category = document.createElement("p");
@@ -49,6 +52,7 @@ function openModal(id, name, description, tools, link) {
 				modalCategories.appendChild(category);
 			}
 		}
+		// INJECT WORK TOOLS AND TECHNOLOGIES
 		for (i = 0; i < tools.length; i++) {
 			let logo;
 			if (['html', 'css', 'bootstrap', 'sass', 'javascript', 'github', 'wordpress', 'wix'].includes(tools[i])) {

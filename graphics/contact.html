@@ -38,7 +38,7 @@
 
 <body class="graphics contact">
 
-	<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+	<a href="javascript:" id="return-to-top" aria-label="Go to the top of the page"><i class="fa fa-chevron-up"></i></a>
 
 	<header>
 
@@ -92,20 +92,26 @@
 		<h1>CONTACT</h1>
 		<p>Lorem ipsum</p>
 		<form method="POST" name="contactform" id="contactform">
-			<input type="text" name="Name" class="form-control form-name" placeholder="Name" required>
-			<input type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
-			<input type="tel" name="Phone" class="form-control form-phone" placeholder="Phone (Optional)">
-			<input type="text" name="Subject" class="form-control form-subject" placeholder="Subject" required>
+			<label for="name">Name</label>
+			<input id="name" type="text" name="Name" class="form-control form-name" placeholder="Name" required>
+			<label for="email">Email</label>
+			<input id="email" type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
+			<label for="tel">Phone</label>
+			<input id="tel"" type="tel" name="Phone" class="form-control form-phone" placeholder="Phone (Optional)">
+			<label for="subject">Email</label>
+			<input id="subject" type="text" name="Subject" class="form-control form-subject" placeholder="Subject" required>
 			<input type="hidden" name="_next" value="https://davekeehl.github.io/Portfolio/graphics/contact.html" />
 			<input type="hidden" name="_subject" value="Online Portfolio Contact" />
 			<input type="text" name="_gotcha" style="display:none" />
-			<div class="select is-fullwidth">
+			<label for="topic">Topic</label>
+			<div class="select is-fullwidth" id="topic">
 				<select name="Category" required>
 					<option selected>General Question</option>
 					<option>Work Offer</option>
 				</select>
 			</div>
-			<textarea class="form-control form-message" name="Message" rows="10" placeholder="Your message" required></textarea>
+			<label for="message">Message</label>
+			<textarea id="message" class="form-control form-message" name="Message" rows="10" placeholder="Your message" required></textarea>
 			<input type="submit" name="Send" class="form-send" value="Send" />
 		</form>
 	</main>
@@ -116,13 +122,13 @@
 				<div class="row">
 					<div class="column is-12">
 						<div class="footer-icons">
-							<a id="facebook" href="https://m.me/100010249987728" target="_blank">
+							<a id="facebook" href="https://m.me/100010249987728" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Facebook.">
 								<i class="fab fa-facebook-f"></i>
 							</a>
-							<a id="twitter" href="https://twitter.com/messages/compose?recipient_id=1004548398" target="_blank">
+							<a id="twitter" href="https://twitter.com/messages/compose?recipient_id=1004548398" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Twitter">
 								<i class="fab fa-twitter"></i>
 							</a>
-							<a id="instagram" href="https://www.instagram.com/davekeehl/" target="_blank">
+							<a id="instagram" href="https://www.instagram.com/davekeehl/" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Instagram">
 								<i class="fab fa-instagram"></i>
 							</a>
 						</div>
@@ -146,8 +152,8 @@
 	</footer>
 
 	<div class="waves">
-		<img class="wave1" src="../media/img/contact-waves1.svg">
-		<img class="wave2" src="../media/img/portfolio-wave2.svg">
+		<img class="wave1" src="../media/img/contact-waves1.svg" alt="Wave image">
+		<img class="wave2" src="../media/img/portfolio-wave2.svg" alt="Wave image">
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
