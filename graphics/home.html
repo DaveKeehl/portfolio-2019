@@ -341,14 +341,14 @@
 
 		var options = {
 			strings: [
-				"designing interfaces",
-				"creating websites",
-				"making documents",
-				"working with video"
+				"^1000designing interfaces",
+				"^1000creating websites",
+				"^1000making documents",
+				"^1000working with video"
 			],
 			typeSpeed: 100,
 			backSpeed: 50,
-			startDelay: 2000,
+			// startDelay: 2000,
 			backDelay: 1500,
 			loop: true,
 			showCursor: false,
@@ -362,12 +362,6 @@
 			},
 			onLastStringBackspaced: (self) => {
 				console.log("deleted last string");
-			},
-			onStart: (arrayPos, self) => {
-				console.log("started");
-			},
-			onDestroy: (self) => {
-				console.log("destroyed");
 			},
 			preStringTyped: (arrayPos, self) => {
 				console.log("pre-string typed");
