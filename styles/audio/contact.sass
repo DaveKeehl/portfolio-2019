@@ -5,48 +5,48 @@
 		h1
 			margin-bottom: 0
 		p
-			margin: 50px 0
+			margin: rem(50px) 0
 			text-align: center
 		.form
 			text-align: center
 			h1
-				font-size: 30px
-				margin-bottom: 70px
+				font-size: rem(30px)
+				margin-bottom: rem(70px)
 		.form-control
-			margin-bottom: 10px
-			height: 40px
-			font-size: 20px
+			margin-bottom: rem(10px)
+			height: rem(40px)
+			font-size: rem(20px)
 			font-weight: 300
-			padding-left: 20px
-			padding-right: 20px
-			color: #585858
-			background-color: rgba(51, 51, 51, 0.1)
+			padding-left: rem(20px)
+			padding-right: rem(20px)
+			color: $audioFormText
+			background-color: transparentize($grey, .9)
 			background-image: none
-			border: 1px solid transparent
-			border-radius: 7px
+			border: rem(1px) solid transparent
+			border-radius: rem(7px)
 		.form-fields input,
 		.form-fields textarea
 			margin: 0 auto
 			width: 60%
 		.form-fields input
-			margin-bottom: 5px
+			margin-bottom: rem(5px)
 		textarea.form-message
 			min-height: 100px
 			max-height: 300px
-			padding-top: 15px
-			margin-bottom: 15px
+			padding-top: rem(15px)
+			margin-bottom: rem(15px)
 			resize: vertical
 		.form-button
 			text-align: center
 			input
-				@include transition (all, 0.15s, ease)
-				height: 40px
+				@include transition (all, .15s, ease)
+				height: rem(40px)
 				width: 25%
 				color: white
 				border: none
-				background-color: #333
-				border-radius: 4px
-				font-size: 14px
+				background-color: $grey
+				border-radius: rem(4px)
+				font-size: rem(14px)
 				font-weight: normal
 				text-align: center
 				vertical-align: middle
@@ -55,78 +55,78 @@
 				cursor: pointer
 				background-image: none
 				white-space: nowrap
-				padding: 6px 12px
+				padding: rem(6px) rem(12px)
 				line-height: 1.42857143
 				-webkit-user-select: none
-				margin-bottom: 0px
+				margin-bottom: 0
 				-webkit-appearance: none
 		.form-button input:hover
 			background-color: $red
 			color: white
 		.form-button input:active,
 		.form-button input:focus
-			background-color: #333
+			background-color: $grey
 			color: white
 		textarea:focus,
 		input:focus,
 		input[type]:focus,
 		.uneditable-input:focus
 			border-color: $red
-			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 99, 71, 0.6)
-			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 99, 71, 0.6)
+			-webkit-box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
+			box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
 			outline: 0 none
 		input.form-send:focus
-			-webkit-box-shadow: 0px 0px 0px transparent
-			box-shadow: 0px 0px 0px transparent
+			-webkit-box-shadow: 0 0 0 transparent
+			box-shadow: 0 0 0 transparent
 		::-webkit-input-placeholder
 			/* WebKit, Blink, Edge */
-			color: rgba(51, 51, 51, 0.4)
+			color: transparentize($grey, .6)
 		:-moz-placeholder
 			/* Mozilla Firefox 4 to 18 */
-			color: rgba(51, 51, 51, 0.4)
+			color: transparentize($grey, .6)
 			opacity: 1
 		::-moz-placeholder
 			/* Mozilla Firefox 19+ */
-			color: rgba(51, 51, 51, 0.4)
+			color: transparentize($grey, .6)
 			opacity: 1
 		:-ms-input-placeholder
 			/* Internet Explorer 10-11 */
-			color: rgba(51, 51, 51, 0.4)
+			color: transparentize($grey, .6)
 			opacity: 1
 		::-ms-input-placeholder
 			/* Microsoft Edge */
-			color: rgba(51, 51, 51, 0.4)
+			color: transparentize($grey, .6)
 			opacity: 1
 		.form-control.error
-			border-color: #FFBF00
-			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #FF9500
-			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #FF9500
+			border-color: $formError
+			-webkit-box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) $formErrorShadow
+			box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) $formErrorShadow
 		select:invalid
-			color: gray
+			color: $grey
 		.select select
-			height: 40px
-			background-color: rgba(51, 51, 51, 0.1)
-			border: 1px solid transparent
-			border-radius: 7px
-			font-size: 20px
+			height: rem(40px)
+			background-color: transparentize($grey, .9)
+			border: rem(1px) solid transparent
+			border-radius: rem(7px)
+			font-size: rem(20px)
 			font-weight: 300
-			padding-top: 0px
-			padding-bottom: 0px
-			padding-left: 20px
+			padding-top: 0
+			padding-bottom: 0
+			padding-left: rem(20px)
 			&:hover
-				border: 1px solid transparent
+				border: rem(1px) solid transparent
 		.select:not(.is-multiple)
 			height: initial
-			margin-bottom: 5px
+			margin-bottom: rem(5px)
 			&:not(.is-loading)::after
-				border-color: #333
+				border-color: $grey
 		.select select.is-active,
 		.select select.is-focused,
 		.select select:active,
 		.select select:focus
 			border-color: $red
-			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 99, 71, 0.6)
-			box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 99, 71, 0.6)
+			-webkit-box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
+			box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
 			outline: 0 none
 		.select.is-fullwidth
 			width: 60%

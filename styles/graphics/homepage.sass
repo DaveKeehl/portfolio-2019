@@ -1,5 +1,5 @@
 .graphics.home
-	background: linear-gradient(to bottom, #C638EF 0%, #17BAFF 40.1%, #657CF8 100%)
+	background: linear-gradient(to bottom, $purple 0%, $celeste 40.1%, $blue 100%)
 
 	.hero
 		display: flex
@@ -8,33 +8,33 @@
 		filter: contrast(2)
 		position: relative
 		justify-content: center
-		color: white
+		color: $white
 		position: relative
 		height: 150vh
-		min-height: 360px
+		min-height: rem(360px)
 		&>div
-			margin-top: calc(-50vh + 80px)
+			margin-top: calc(-50vh + 5rem)
 			#typewriter
 				text-align: center
 				position: relative
-				margin-bottom: 100px
-				font-size: 3rem
-				letter-spacing: 0.3em
+				margin-bottom: rem(100px)
+				font-size: rem(48px)
+				letter-spacing: rem(4.8px)
 				text-transform: uppercase
-				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+				text-shadow: 0 rem(4px) rem(4px) transparentize($black, .75)
 				line-height: 1.75
 				h1
-					font-size: 48px
+					font-size: rem(48px)
 					margin-bottom: 0
 					&:nth-child(2)
 						position: relative
 						&:empty
-							height: 5.25rem
+							height: rem(84px)
 						&:after
 							content: ''
 							background-color: $white
-							height: 60px
-							width: 2px
+							height: rem(60px)
+							width: rem(2px)
 							position: absolute
 							top: 50%
 							transform: translateY(-50%)
@@ -45,7 +45,7 @@
 				left: 50%
 				transform: translateX(-50%)
 	.services
-		filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.5))
+		filter: drop-shadow(0 0 50px transparentize($black, .5))
 		margin-top: -50vh
 		.top-wave
 			display: block
@@ -56,12 +56,12 @@
 		div:nth-child(2)
 			background-color: $white
 			.container
-				padding: 50px 0 100px 0
+				padding: rem(50px) 0 rem(100px) 0
 				h3
 					text-align: center
-					font-size: 32px
-					color: black
-					margin-bottom: 50px
+					font-size: rem(32px)
+					color: $black
+					margin-bottom: rem(50px)
 				.column
 					display: flex
 					text-align: center
@@ -73,75 +73,75 @@
 					p
 						color: $darkBlue
 	.showcase
-		margin: 200px 0
+		margin: rem(200px) 0
 		text-align: center
-		color: white
+		color: $white
 		.work-samples
 			display: flex
 			position: relative
 			justify-content: center
 			& *
 				background-color: $white
-				border: 5px solid #EBEBEB
-				border-radius: 20px
+				border: rem(5px) solid #EBEBEB
+				border-radius: rem(20px)
 			.main-sample
-				width: 460px
-				height: 260px
+				width: rem(460px)
+				height: rem(260px)
 				z-index: 20
-				box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3), 0px 0px 20px rgba(0, 0, 0, 0.15), 0px 0px 10px rgba(0, 0, 0, 0.1)
+				box-shadow: 0 0 rem(50px) transparentize($black, .7), 0 0 rem(20px) transparentize($black, .85), 0 0 rem(10px) transparentize($black, .9)
 			.back-sample-1
 				height: 55%
-				width: 250px
+				width: rem(250px)
 				position: absolute
-				left: calc(50% - 460px / 2 - 250px / 2)
+				left: calc(50% - 28.75rem / 2 - 15.625rem / 2)
 				top: calc(-55% / 2)
-				box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25)
+				box-shadow: 0 0 rem(25px) transparentize($black, .75)
 			.back-sample-2
 				height: 60%
-				width: 275px
+				width: rem(275px)
 				position: absolute
-				right: calc(50% - 460px / 2 - 275px / 1.5)
+				right: calc(50% - 28.75rem / 2 - 17.1875rem / 1.5)
 				bottom: calc(-30% / 2)
-				box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25)
+				box-shadow: 0 0 rem(25px) transparentize($black, .75)
 		.particles
 			span
 				position: absolute
 				background-color: $white
-				box-shadow: 0px 0px 10px #FFFFFF
+				box-shadow: 0 0 rem(10px) $white
 				border-radius: 100%
 				&:nth-child(1)
-					height: 15px
-					width: 15px
+					height: rem(15px)
+					width: rem(15px)
 					top: -10%
 					right: 0
 					animation: particle1 5s ease infinite
 				&:nth-child(2)
-					height: 8px
-					width: 8px
+					height: rem(8px)
+					width: rem(8px)
 					top: -28%
 					left: 25%
 				&:nth-child(3)
-					height: 12px
-					width: 12px
+					height: rem(12px)
+					width: rem(12px)
 					top: 30%
 					left: 10%
 				&:nth-child(4)
-					height: 6px
-					width: 6px
+					height: rem(6px)
+					width: rem(6px)
 					top: 66%
 					left: 60%
 		.description
 			display: flex
-			margin: 90px 0 50px 0
+			margin: rem(90px) 0 rem(50px) 0
 			position: relative
-			filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25))
+			filter: drop-shadow(0px rem(2px) rem(4px) transparentize($black, .75))
 			justify-content: center
 			p
-				padding: 5px
-				font-size: 24px
+				padding: rem(5px)
+				font-size: rem(24px)
 				width: fit-content
 				border-style: solid
-				border-width: 10px 10px 10px 10px
+				border-width: rem(10px) rem(10px) rem(10px) rem(10px)
 				-moz-border-image: url(../media/img/borders.svg) 10 10 10 10 round repeat
 				-webkit-border-image: url(../media/img/borders.svg) 10 10 10 10 round repeat
 				-o-border-image: url(../media/img/borders.svg) 10 10 10 10 round repeat
@@ -149,17 +149,17 @@
 		.columns
 			text-transform: uppercase
 			h2
-				font-size: 28px
+				font-size: rem(28px)
 				font-weight: 700
-				text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25)
+				text-shadow: 0 rem(3px) rem(4px) transparentize($black, .75)
 				position: relative
 				&:hover
 					cursor: pointer
-					text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.75)
+					text-shadow: 0 rem(4px) rem(7px) transparentize($black, .25)
 					&:after
 						content: ''
-						background-color: #333
-						height: 16px
+						background-color: $grey
+						height: rem(16px)
 						width: 80%
 						position: absolute
 						left: 50%
@@ -168,11 +168,11 @@
 						z-index: -1
 				&.column
 					&.selected
-						text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.75)
+						text-shadow: 0 rem(4px) rem(7px) transparentize($black, .25)
 						&:after
 							content: ''
-							background-color: #333
-							height: 16px
+							background-color: $grey
+							height: rem(16px)
 							width: 80%
 							position: absolute
 							left: 50%
@@ -183,44 +183,43 @@
 		h1
 			margin: 0
 			color: white
-			font-size: 96px
+			font-size: rem(96px)
 			font-weight: 900
-			line-height: 115px
+			line-height: rem(115px)
 			position: relative
 			z-index: 5
 			span
 				display: block
 				&:nth-child(1)
-					text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+					text-shadow: 0 rem(4px) rem(4px) transparentize($black, .75)
 
 				&:nth-child(2)
 					color: $homeBlue
-					text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+					text-shadow: 0 rem(4px) rem(4px) transparentize($black, .85)
 		img
 			display: block
 			width: 100%
-			margin-top: -320px
+			margin-top: rem(-320px)
 			transform: translateY(1px)
 		h1 ~ a
 			display: flex
 			justify-content: center
 			background-color: $white
 			text-align: center
-			padding: 100px 0 150px 0
+			padding: rem(100px) 0 rem(150px) 0
 			p
-				// background-color: $homeBlue
-				background-color: $grey
+				background-color: $homeBlue
+				// background-color: $grey
 				color: $white
 				border: 0
-				border-radius: 5px
-				font-size: 18px
+				border-radius: rem(5px)
+				font-size: rem(18px)
 				font-weight: 700
-				padding: 15px 80px
+				padding: rem(15px) rem(80px)
 				width: fit-content
-				box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.35), 0px 2px 2px rgba(51, 51, 51, 0.25)
-				// box-shadow: 0px 4px 4px rgba(68, 151, 251, 0.35), 0px 2px 2px rgba(68, 151, 251, 0.25)
+				box-shadow: 0 rem(4px) rem(4px) transparentize($grey, .65), 0 rem(2px) rem(2px) transparentize($grey, .75)
 				&:active
-					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35), 0px 2px 2px rgba(0, 0, 0, 0.25)
+					box-shadow: 0 rem(4px) rem(4px) transparentize($black, .65), 0 rem(2px) rem(2px) transparentize($black, .75)
 	footer
 		color: $black
 		background-color: $white
@@ -231,7 +230,7 @@
 			i
 				color: $white
 		.footer-divider
-			background-color: rgba(51, 51, 51, .2)
+			background-color: transparentize($grey, .8)
 		.footer-bottom a p
 			color: $darkBlue
 			&:hover

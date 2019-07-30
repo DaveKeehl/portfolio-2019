@@ -1,10 +1,10 @@
 .audio.home
 
 	.hero
-		color: white
+		color: $white
 		position: relative
 		height: 100vh
-		min-height: 360px
+		min-height: rem(360px)
 		position: relative
 		video
 			-o-object-fit: cover
@@ -14,91 +14,90 @@
 			position: absolute
 			top: 50%
 			left: 50%
-			color: white
-			fill: white
+			color: $white
+			fill: $white
 			text-align: center
-			height: 250px
-			-webkit-filter: drop-shadow(0px 0px 3px white)
-			filter: drop-shadow(0px 0px 3px white)
+			height: rem(250px)
+			-webkit-filter: drop-shadow(0 0 rem(3px) $white)
+			filter: drop-shadow(0 0 rem(3px) $white)
 			path
-				fill: white
+				fill: $white
 				&:first-of-type
-					stroke: white
+					stroke: $white
 		.down-arrow
 			@include transform (translate(-50%))
 			@include animation (arrow, 2s, infinite, ease)
-			@include transition (all, 0.25s, ease)
+			@include transition (all, .25s, ease)
 			display: block
 			text-decoration: none
-			color: white
-			height: 40px
+			color: $white
+			height: rem(40px)
 			position: absolute
 			left: 50%
 			&:hover
-				color: rgba(255, 255, 255, 0.2)
+				color: transparentize($white, .8)
 		.material-icons
-			@include filter (drop-shadow(0px 0px 0px white))
+			@include filter (drop-shadow(0 0 0 $white))
 			@include animation (arrow-glow, 2s, infinite, ease)
-			font-size: 80px
-			line-height: 0.5
+			font-size: rem(80px)
+			line-height: .5
 			text-rendering: optimizeLegibility
 			-webkit-font-smoothing: antialiased
 	main
 		text-align: center
 		h2
 			font-weight: 600
-			margin-bottom: 50px
+			margin-bottom: rem(50px)
 			text-align: center
 		h3
-			margin-bottom: 50px
-			line-height: 25px
+			margin-bottom: rem(50px)
+			line-height: rem(25px)
 		path
-			fill: #333
+			fill: $grey
 		.home-emphasis
 			color: $red
 			font-weight: 700
 		.home-icons
 			p
 				font-weight: 700
-				font-size: 20px
+				font-size: rem(20px)
 			a:hover
-				color: white
+				color: $white
 			svg
-				@include transition (fill, 0.2s, ease)
+				@include transition (fill, .2s, ease)
 				isolation: isolate
 				width: 100%
-				height: 60px
-				margin-bottom: 20px
+				height: rem(60px)
+				margin-bottom: rem(20px)
 		.home-mixing,
 		.home-mastering,
 		.home-recording,
 		.home-editing,
 		.home-graphics
-			padding: 10px
+			padding: rem(10px)
 		.home-mixing a,
 		.home-mastering a,
 		.home-recording a,
 		.home-editing a,
 		.home-graphics a
-			@include transition (all, 0.2s, ease)
-			@include transform (translateY(0px))
+			@include transition (all, .2s, ease)
+			@include transform (translateY(0))
 			display: block
-			-webkit-box-shadow: 0px 3px 6px black
-			box-shadow: 0px 3px 6px black
-			border-radius: 30px
-			background-color: white
+			-webkit-box-shadow: 0 rem(3px) rem(6px) $black
+			box-shadow: 0 rem(3px) rem(6px) $black
+			border-radius: rem(30px)
+			background-color: $white
 			cursor: pointer
-			color: #333
-			padding: 35px 0
+			color: $grey
+			padding: rem(35px) 0
 		.home-mixing:hover a,
 		.home-mastering:hover a,
 		.home-recording:hover a,
 		.home-editing:hover a,
 		.home-graphics:hover a
-			@include transform (translateY(-10px))
+			@include transform (translateY(rem(-10px)))
 			background-color: $red
-			color: white
-			-webkit-box-shadow: 0 20px 38px rgba(0, 0, 0, 0.4)
-			box-shadow: 0 20px 38px rgba(0, 0, 0, 0.4)
+			color: $white
+			box-shadow: 0 rem(20px) rem(38px) transparentize($red, .3)
 		path.svg-white
-			fill: white
+			fill: $white

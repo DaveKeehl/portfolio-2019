@@ -4,54 +4,54 @@
 	top: 0
 	width: 100%
 	z-index: 50
-	color: white
+	color: $white
 	// background-color: rgba(0, 0, 0 ,0.1)
-	padding: 10px 0
+	padding: rem(10px) 0
 
 	.navbar
-		background-color: transparent
+		background-color: $transparent
 		.navbar-brand
 			a:hover
-				color: white
+				color: $white
 			svg
 				@include transform (rotate(90deg))
-				@include transition (all, 0.5s, ease)
-				height: 60px
-				margin-left: 12px
+				@include transition (all, .5s, ease)
+				height: rem(60px)
+				margin-left: rem(12px)
 			path
-				fill: white
-				stroke: white
+				fill: $white
+				stroke: $white
 			.navbar-brand-txt
-				margin-left: 2rem
+				margin-left: rem(32px)
 				span.logo-name
-					letter-spacing: 4px
+					letter-spacing: rem(4px)
 					font-weight: 500
-					font-size: 16px
+					font-size: rem(16px)
 				span.logo-job
 					font-weight: 400
-					letter-spacing: 1.9px
-					color: rgba(255, 255, 255, 0.6)
-					margin-top: 2px
+					letter-spacing: rem(1.9px)
+					color: transparentize($white, .4)
+					margin-top: rem(2px)
 		.navbar-item,
 		.navbar-link
-			padding: 0px
+			padding: 0
 			line-height: 1
-			color: white
+			color: $white
 		.navbar-link.is-active,
 		.navbar-link:hover,
 		a.navbar-item.is-active,
 		a.navbar-item:hover
 			background-color: transparent
-			color: #FF5252
+			color: $red
 			text-decoration: none
 		.navbar-burger
 			height: auto
-			color: white
+			color: $white
 			span
-				height: 2px
-				width: 20px
+				height: rem(2px)
+				width: rem(20px)
 			&:hover
-				background-color: transparent
+				background-color: $transparent
 		.navbar-menu
 			font-weight: 400
 			text-transform: uppercase
@@ -60,15 +60,15 @@
 				flex-direction: row
 				align-items: center
 			li
-				color: white
-				margin-right: 20px
+				color: $white
+				margin-right: rem(20px)
 				float: left
 				font-weight: 400
 				&:hover
-					color: rgba(255, 255, 255, 0.5)
+					color: transparentize($white, .5)
 				&:active
-					color: white
+					color: $white
 				&:last-child
-					margin-right: 0px
+					margin-right: 0
 			.current-page
-				border-bottom: 1px solid
+				border-bottom: rem(1px) solid

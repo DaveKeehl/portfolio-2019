@@ -1,25 +1,25 @@
 .audio.portfolio
 
 	.moveArrow-afterClose
-		bottom: 20px !important
+		bottom: rem(20px) !important
 	.moveArrow-afterOpen
-		bottom: 90px !important
+		bottom: rem(90px) !important
 	.audioPlayer
 		position: fixed
 		bottom: 0
 		width: 100%
-		padding: 10px
-		background-color: white
-		box-shadow: 0 0 50px rgba(0, 0, 0, 0.25)
+		padding: rem(10px)
+		background-color: $white
+		box-shadow: 0 0 rem(50px) transparentize($black, .75)
 		z-index: 50
-		transform: translateY(70px)
-		@include transition (transform, 0.25s, ease)
+		transform: translateY(rem(70px))
+		@include transition (transform, .25s, ease)
 		.closePlayer
 			position: absolute
-			right: 10px
-			height: 23px
-			width: 23px
-			background-color: rgba(0, 0, 0, 0)
+			right: rem(10px)
+			height: rem(23px)
+			width: rem(23px)
+			background-color: $transparent
 			display: flex
 			justify-content: center
 			align-items: center
@@ -28,19 +28,19 @@
 			i
 				font-family: "FontAwesome", regular
 				font-size: 1.1em
-				line-height: 15px
-				width: 15px
+				line-height: rem(15px)
+				width: rem(15px)
 				z-index: -1
-				@include transition (all, 0.25s, ease)
+				@include transition (all, .25s, ease)
 		.container
 			display: flex
 			flex-direction: row
 			align-items: center
 		.art
-			background-color: #333
-			height: 50px
-			width: 50px
-			margin-right: 25px
+			background-color: $grey
+			height: rem(50px)
+			width: rem(50px)
+			margin-right: rem(25px)
 		.info
 			display: flex
 			flex-direction: row
@@ -59,10 +59,10 @@
 			width: 100%
 			.progress-bar
 				width: 100%
-				height: 7px
-				border-radius: 10px
-				background-color: #dedede
-				margin: 0 25px
+				height: rem(7px)
+				border-radius: rem(10px)
+				background-color: $lightGrey
+				margin: 0 rem(25px)
 				cursor: pointer
 				.current-pos
 					height: 100%
@@ -74,76 +74,76 @@
 						from {width: 0%}
 						to {width: 100%}
 					animation-play-state: paused
-					background-color: #ff5252
-					border-radius: 10px
+					background-color: $red
+					border-radius: rem(10px)
 					display: flex
 					align-items: center
 					&::after
 						content: ''
-						background-color: #ff5252
-						height: 7px
-						width: 7px
+						background-color: $red
+						height: rem(7px)
+						width: rem(7px)
 						position: relative
 						border-radius: 100%
-						left: calc(100% - 7px)
+						left: calc(100% - rem(7px))
 						top: 0%
-						box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+						box-shadow: 0 0 rem(1px) $transparent
 						@include transition (all, 0.1s, ease)
 					&:hover::after
-						height: 13px
-						width: 13px
-						left: calc(100% - 13px)
-						box-shadow: 0 0 1px rgba(0, 0, 0, 0.5)
+						height: rem(13px)
+						width: rem(13px)
+						left: calc(100% - rem(13px))
+						box-shadow: 0 0 rem(1px) transparentize($black, .5)
 			.seek
 				display: flex
 				align-items: center
 				.play
-					border: 2px solid #333
+					border: rem(2px) solid $grey
 					border-radius: 100%
-					height: 40px
-					width: 40px
-					margin: 0 30px
+					height: rem(40px)
+					width: rem(40px)
+					margin: 0 rem(30px)
 					display: flex
 					align-items: center
 					justify-content: center
-					@include transition (all, 0.15s, ease)
+					@include transition (all, .15s, ease)
 					&:hover
 						cursor: pointer
-						opacity: 0.5
+						opacity: .5
 					&::after
 						content: ''
 						width: 0
 						height: 0
 						border-style: solid
-						border-width: 10px 0 10px 17.3px
-						border-color: transparent transparent transparent #333333
-						transform: translateX(2.5px) scale(0.75)
+						border-width: rem(10px) 0 rem(10px) 17.3px
+						border-color: $transparent $transparent $transparent $grey
+						transform: translateX(rem(2.5px)) scale(.75)
 				.previous, .next
 					display: flex
-					background-color: #333
-					height: 15px
-					width: 3px
+					background-color: $grey
+					height: rem(15px)
+					width: rem(3px)
 					align-items: center
-					@include transition (all, 0.15s, ease)
+					@include transition (all, .15s, ease)
 					&:hover
 						cursor: pointer
-						opacity: 0.5
+						opacity: .5
 					&:after
 						content: ''
 						width: 0
 						height: 0
 						border-style: solid
-						border-width: 10px 0 10px 17.3px
-						border-color: transparent transparent transparent #333333
-						transform: translateX(-2px) scale(0.75) rotate(180deg)
+						border-width: rem(10px) 0 rem(10px) rem(17.3px)
+						border-color: $transparent $transparent $transparent $grey
+						transform: translateX(rem(-2px)) scale(.75) rotate(180deg)
 				.next
 					transform: rotate(180deg)
 	main
 		h1
-			margin-bottom: 25px
+			margin-bottom: rem(25px)
 		p
 			text-align: center
-			margin-bottom: 25px
+			margin-bottom: rem(25px)
 			font-weight: 400
 		span
 			cursor: pointer
@@ -160,10 +160,10 @@
 			width: 100%
 		.columnHide
 			display: none
-			padding: 5px
+			padding: rem(5px)
 		.columnShow
 			display: block
-			padding: 5px
+			padding: rem(5px)
 		.artwork-preview img
 			display: inline-block
 			margin: 0
@@ -178,11 +178,11 @@
 			height: 100%
 			width: 100%
 			opacity: 0
-			@include transition (all, 0.25s, ease)
-			background-color: rgba(0, 0, 0, 0.85)
+			@include transition (all, .25s, ease)
+			background-color: transparentize($black, .15)
 		.artwork-overlay-text
-			color: white
-			font-size: 20px
+			color: $white
+			font-size: rem(20px)
 			position: absolute
 			top: 50%
 			left: 50%
@@ -190,21 +190,21 @@
 		ul.artwork-overlay
 			list-style: none
 		.artwork-overlay ul > li
-			margin-bottom: 20px
-			width: 200px
+			margin-bottom: rem(20px)
+			width: rem(200px)
 			font-weight: 300
 			&:first-child
 				font-weight: 700
 			&:last-child
 				color: rgba(185, 185, 185, 1)
-				margin-bottom: 0px
+				margin-bottom: 0
 		.artwork-preview:hover .artwork-overlay
 			opacity: 1
 		li.artwork-band
 			font-weight: 500
 		li.artwork-album,
 		li.artwork-task
-			font-size: 18px
+			font-size: rem(18px)
 		.artwork-overlay iframe
 			border: 0
 			width: 100% !important
@@ -212,27 +212,27 @@
 			position: absolute
 			bottom: 0%
 		#maintextlink
-			color: white
+			color: $white
 		.theme-dark #infolayer
 			text-align: center
 		.video-thumbnail
-			background-color: black
+			background-color: $black
 			overflow: hidden
 			img
 				vertical-align: top
 				@include filter (none)
 				@include transform (scale(1))
 				cursor: pointer
-				@include transition (all, 0.25s, ease)
+				@include transition (all, .25s, ease)
 				&:hover
-					@include filter (opacity(0.8)blur(5px))
+					@include filter (opacity(.8) blur(5px))
 					@include transform (scale(1.2))
 		.video-container
 			position: relative
 			overflow: hidden
 			height: 0
 			padding-bottom: 56.25%
-			padding-top: 30px
+			padding-top: rem(30px)
 			iframe, object, embed
 				position: absolute
 				top: 0
@@ -240,12 +240,12 @@
 				width: 100%
 				height: 100%
 		.portfolio-mobile-access
-			background-color: #333
+			background-color: $grey
 			width: 100%
-			padding: 20px 0
+			padding: rem(20px) 0
 			p
-				font-size: 30px
-				color: white
+				font-size: rem(30px)
+				color: $white
 				margin-bottom: 0
 		.modal-content
 			display: flex

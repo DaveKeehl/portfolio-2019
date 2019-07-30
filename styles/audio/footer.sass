@@ -1,48 +1,50 @@
 .audio footer
 
-	@include transition (all, 0.25s, ease)
+	@include transition (all, .25s, ease)
 	color: $white
 	background-color: $grey
+
+	a
+		&:hover
+			color: transparentize($white, .5)
 
 	.footer-top,
 	.footer-bottom
 		font-weight: 400
 	.footer-top
-		padding: 40px 0
+		padding: rem(40px) 0
 		text-align: center
 		.footer-icons
-			margin-bottom: 20px
+			margin-bottom: rem(20px)
 			li
 				display: inline-block
-				margin: 0 5px
+				margin: 0 rem(5px)
 			svg
-				height: 40px
+				height: rem(40px)
 				&>path
-					fill: white
+					fill: $white
 		.footer-top-info
 			margin: 0 auto
 			div
-				letter-spacing: 0.5px
+				letter-spacing: .5px
 				font-weight: 300
 			p
-				margin-bottom: 5px
+				margin-bottom: rem(5px)
 				font-weight: 400
 				&:last-child
-					margin-bottom: 0px
+					margin-bottom: 0
 	.footer-divider
-		background-color: rgba(255, 255, 255, 0.2)
-		margin-bottom: 20px
-		height: 1px
+		background-color: transparentize($white, .8)
+		margin-bottom: rem(20px)
+		height: rem(1px)
 	.footer-bottom
 		display: flex
 		flex-direction: column
 		align-items: center
-		padding-bottom: 20px
+		padding-bottom: rem(20px)
 		a
 			display: block
-			font-size: 12px
+			font-size: rem(12px)
 			text-decoration: underline
-			margin-top: 20px
-			&:hover
-				color: transparentize($white, .5)
+			margin-top: rem(20px)
 

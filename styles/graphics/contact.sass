@@ -1,5 +1,5 @@
 .graphics.contact
-	background: linear-gradient(to bottom, #C638EF 0%, #17BAFF 80%)
+	background: linear-gradient(to bottom, $purple 0%, $celeste 80%)
 
 	main
 		text-align: center
@@ -8,29 +8,29 @@
 			margin-bottom: 0
 
 		p
-			margin: 50px 0
+			margin: rem(50px) 0
 
 		form
 			display: flex
 			flex-direction: column
 			align-items: center
 			& *
-				height: 40px
-				border: 1px solid transparent
-				border-radius: 7px
-				padding: 0 15px
-				font-size: 20px
+				height: rem(40px)
+				border: rem(1px) solid $transparent
+				border-radius: rem(7px)
+				padding: 0 rem(15px)
+				font-size: rem(20px)
 				width: 60%
-				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 2px rgba(0, 0, 0, 0.15)
+				box-shadow: 0 rem(4px) rem(4px) transparentize($black, .75), 0 rem(2px) rem(2px) transparentize($black, .85)
 			label
-				margin-bottom: 10px
+				margin-bottom: rem(10px)
 				text-align: left
 				height: auto
 				padding: 0
 				box-shadow: none
 			input, textarea
 				color: $grey
-				margin-bottom: 20px
+				margin-bottom: rem(20px)
 				&::placeholder
 					color: $grey
 					opacity: .2
@@ -38,25 +38,25 @@
 					width: 30%
 					background-color: #2A3039
 					color:  $white
-					font-size: 1em
-					margin: 15px 0 0 0
+					font-size: rem(16px)
+					margin: rem(15px) 0 0 0
 					transition: all .25s ease
 					&:hover
 						cursor: pointer
 						background-color: #1f2124
 					&:focus
-						border: 1px solid transparent
+						border: rem(1px) solid $transparent
 						box-shadow: none
 				&:focus
 					outline: 0
 					border-color: #A73AD1
-					box-shadow: 0px 4px 4px rgba(167, 58, 209, 0.45), 0px 2px 2px rgba(167, 58, 209, 0.35)
+					box-shadow: 0 rem(4px) rem(4px) rgba(167, 58, 209, 0.45), 0 rem(2px) rem(2px) rgba(167, 58, 209, 0.35)
 					&::placeholder
 						color: #A73AD1
 			.select
 				padding: 0
 				border: 0
-				margin-bottom: 20px
+				margin-bottom: rem(20px)
 				select
 					color: $grey
 					height: 100%
@@ -64,17 +64,17 @@
 					box-shadow: none
 					&:focus
 						border-color: #A73AD1
-						box-shadow: 0px 4px 4px rgba(167, 58, 209, 0.45), 0px 2px 2px rgba(167, 58, 209, 0.35)
+						box-shadow: 0 rem(4px) rem(4px) rgba(167, 58, 209, 0.45), 0 rem(2px) rem(2px) rgba(167, 58, 209, 0.35)
 				&:not(.is-multiple):not(.is-loading)::after
 					border-color: $grey
 			textarea
-				padding: 15px
-				min-height: 100px
-				max-height: 300px
+				padding: rem(15px)
+				min-height: rem(100px)
+				max-height: rem(300px)
 				resize: vertical
 
 	footer
-		margin-top: 250px
+		margin-top: rem(250px)
 
 	.waves
 		.wave1

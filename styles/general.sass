@@ -1,7 +1,6 @@
-// main: main.scss
-
 @import "utility/mixins"
 @import "utility/variables"
+@import "utility/functions"
 
 *,
 *::before,
@@ -15,6 +14,7 @@ html
 body
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
+	font-display: swap
 	&.audio, &.index
 		font-family: 'Raleway', sans-serif
 	&.graphics
@@ -52,7 +52,7 @@ ul
 		margin-bottom: 0
 	&:after
 		display: table
-		content: ""
+		content: ''
 		clear: both
 
 .column
@@ -75,8 +75,7 @@ ul
 	z-index: 99
 	bottom: 20px
 	right: 20px
-	background: rgb(0, 0, 0)
-	background: rgba(0, 0, 0, 0.7)
+	background: transparentize($black, .3)
 	width: 50px
 	height: 50px
 	display: block
@@ -90,9 +89,9 @@ ul
 		top: 13px
 		font-size: 19px
 	&:hover
-		background: rgba(0, 0, 0, 0.85)
+		background: transparentize($black, .15)
 		i
-			color: #FFF
+			color: $white
 			top: 3px
 
 .modal-content
@@ -102,10 +101,22 @@ ul
 	a
 		color: inherit
 		text-decoration: none
-		&:hover
-			color: $red
+		// &:hover
+		// 	color: $white
 		&:active
-			color: $white !important
+			color: $white
+	h1
+		position: relative
+		padding-bottom: rem(20px)
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			height: 2px
+			width: rem(50px)
+			background-color: $black
 	h3
 		font-size: 20px
 		font-weight: 400

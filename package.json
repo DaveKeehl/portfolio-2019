@@ -1,29 +1,29 @@
 {
-    "name": "portfolio",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/DaveKeehl/Portfolio.git"
-    },
-    "author": "Davide Ciulla",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/DaveKeehl/Portfolio/issues"
-    },
-    "homepage": "https://github.com/DaveKeehl/Portfolio#readme",
-    "devDependencies": {
-        "gulp": "^4.0.2",
-        "gulp-sass": "^4.0.2",
-        "gulp-uglifycss": "^1.1.0"
-    },
-    "dependencies": {
-        "gulp-autoprefixer": "^6.1.0",
-        "gulp-sourcemaps": "^2.6.5",
-        "typed.js": "^2.0.10"
-    }
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/DaveKeehl/Portfolio.git"
+	},
+	"author": "Davide Ciulla",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/DaveKeehl/Portfolio/issues"
+	},
+	"homepage": "https://github.com/DaveKeehl/Portfolio#readme",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.0.2",
+		"gulp-uglifycss": "^1.1.0"
+	},
+	"dependencies": {
+		"gulp-autoprefixer": "^6.1.0",
+		"gulp-sourcemaps": "^2.6.5",
+		"typed.js": "^2.0.10"
+	}
 }

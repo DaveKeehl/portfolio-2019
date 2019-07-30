@@ -8,7 +8,7 @@
 	from
 		background-position: 0 0
 	to
-		background-position: 200px 200px
+		background-position: rem(200px) rem(200px)
 
 /********* AUDIO - HOMEPAGE *********/
 
@@ -24,33 +24,33 @@
 
 @include keyframes (arrow-glow)
 	0%
-		@include filter (drop-shadow(0px 0px 0px white))
+		@include filter (drop-shadow(0 0 0 $white))
 	20%
-		@include filter (drop-shadow(0px 0px 0px white))
+		@include filter (drop-shadow(0 0 0 $white))
 	40%
-		@include filter (drop-shadow(0px 0px 10px white))
+		@include filter (drop-shadow(0 0 rem(10px) $white))
 	100%
-		@include filter (drop-shadow(0px 0px 0px white))
+		@include filter (drop-shadow(0 0 0 $white))
 
 /********* GRAPHICS - HOME *********/
 
 @include keyframes (caret)
 	0%
-		background-color: rgba(255, 255, 255, 1)
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+		background-color: $white
+		box-shadow: 0 rem(4px) rem(4px) transparentize($black, .75)
 	100%
-		background-color: rgba(255, 255, 255, 0)
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0)
+		background-color: $transparent
+		box-shadow: 0 rem(4px) rem(4px) $transparent
 
 @include keyframes (particle1)
 	0%
 		transform: translateX(0) translateY(0) scaleX(1) scaleY(1)
 	25%
-		transform: scaleX(0.5) scaleY(0.5)
+		transform: scaleX(.5) scaleY(.5)
 	50%
 		transform: translateX(-100px) translateY(100px) scaleX(1) scaleY(1)
 	75%
-		transform: scaleX(0.5) scaleY(0.5)
+		transform: scaleX(.5) scaleY(.5)
 	100%
 		transform: translateX(0) translateY(0) scaleX(1) scaleY(1)
 
@@ -70,12 +70,12 @@
 
 @include keyframes (modal-background-in)
 	0%
-		background-color: transparent
+		background-color: $transparent
 	100%
-		background-color: rgba(0, 0, 0, .8)
+		background-color: transparentize($black, .2)
 
 @include keyframes (modal-background-out)
 	0%
-		background-color: rgba(0, 0, 0, .8)
+		background-color: transparentize($black, .2)
 	100%
-		background-color: transparent
+		background-color: $transparent

@@ -3,89 +3,74 @@
 	text-align: center
 
 	.bg-gradient
-		background-position: 0px 0px
-		background-image: -webkit-linear-gradient(top, white 0px, white 250px, white 250px, black 100%)
-		background-image: -o-linear-gradient(top, white 0px, white 250px, white 250px, black 100%)
-		background-image: linear-gradient(to bottom, white 0px, white 250px, white 250px, black 100%)
+		background-position: 0 0
+		background-image: -webkit-linear-gradient(top, $white 0, $white 250px, $white 250px, $black 100%)
+		background-image: -o-linear-gradient(top, $white 0, $white 250px, $white 250px, $black 100%)
+		background-image: linear-gradient(to bottom, $white 0, $white 250px, $white 250px, $black 100%)
+
 	.services-task
 		text-align: justify
-		margin-top: 100px
+		margin-top: rem(100px)
+
 	#recording
-		margin-top: 150px
+		margin-top: rem(100px)
+
 	#graphics ul
 		list-style: initial
 		list-style-position: inside
-		margin-top: 20px
+		margin-top: rem(20px)
+
 	#graphics ul > li
-		margin-top: 10px
+		margin-top: rem(10px)
 		&:first-child
 			margin-top: 0
+
 	.services
 		h1
 			margin-bottom: 0
 		h2
 			font-weight: 700
+
 	.services-divider
-		background-color: #333
+		background-color: $grey
 		width: 60%
-		height: 3px
-		margin: 20px auto 10px auto
+		height: rem(3px)
+		margin: rem(20px) auto rem(10px) auto
+
 	.services-price
 		text-align: center
 		font-style: italic
 		font-weight: 500
-		margin-bottom: 10px
-	.services-icons
-		svg
-			height: 130px
-		circle
-			stroke: #333
-			fill: #333
-			@include transition (all, 0.2s, ease)
-		p
-			font-size: 26px
-			font-weight: 700
-			margin-top: 20px
-			color: #333
-			@include transition (all, 0.2s, ease)
-			&:hover
-				color: #ff5252
-		path
-			fill: white
-	.recording-icon circle:hover,
-	.editing-icon circle:hover,
-	.mixing-icon circle:hover,
-	.mastering-icon circle:hover,
-	.graphics-icon circle:hover
-		stroke: #ff5252
-		fill: #ff5252
-	.scroll-rec svg:hover,
-	.scroll-edit svg:hover,
-	.scroll-mix svg:hover,
-	.scroll-master svg:hover,
-	.scroll-graphics svg:hover
-		@include filter (drop-shadow(0px 0px 20x #ff5252))
+		margin-bottom: rem(10px)
+
 	.columns.services-task
-		-webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5)
-		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5)
+		box-shadow: 0 5px rem(7px) transparentize($black, .92), 0 5px rem(50px) transparentize($black, .8)
+		transition: box-shadow .2s
+		&:hover
+			box-shadow: 0 5px rem(7px) transparentize($black, .92), 0 5px rem(50px) transparentize($black, .7)
+
+
 	.services-task-textBox
-		padding: 40px
+		padding: rem(40px)
 		background-color: whitesmoke
+
 	.services-task-imageBox
 		overflow: hidden
-		background-color: black
+		background-color: $black
+
 	.services-task img
 		-o-object-fit: cover
 		object-fit: cover
 		width: 100%
 		height: 100%
 		vertical-align: bottom
-		@include transform (scale(1.0))
+		@include transform (scale(1))
 		@include filter (none)
-		@include transition (all, 0.25s, ease)
+		@include transition (all, .25s, ease)
 		&:hover
 			@include transform (scale(1.2))
-			@include filter (opacity(0.4))
+			@include filter (opacity(.4))
+
 	#recording img
 		object-position: 60% 0
 	#editing img
