@@ -2,131 +2,74 @@
 
 	main
 		text-align: center
+
 		h1
 			margin-bottom: 0
+
 		p
 			margin: rem(50px) 0
 			text-align: center
-		.form
-			text-align: center
-			h1
-				font-size: rem(30px)
-				margin-bottom: rem(70px)
-		.form-control
-			margin-bottom: rem(10px)
-			height: rem(40px)
-			font-size: rem(20px)
-			font-weight: 300
-			padding-left: rem(20px)
-			padding-right: rem(20px)
-			color: $audioFormText
-			background-color: transparentize($grey, .9)
-			background-image: none
-			border: rem(1px) solid transparent
-			border-radius: rem(7px)
-		.form-fields input,
-		.form-fields textarea
-			margin: 0 auto
-			width: 60%
-		.form-fields input
-			margin-bottom: rem(5px)
-		textarea.form-message
-			min-height: 100px
-			max-height: 300px
-			padding-top: rem(15px)
-			margin-bottom: rem(15px)
-			resize: vertical
-		.form-button
-			text-align: center
-			input
-				@include transition (all, .15s, ease)
+
+		form
+			display: flex
+			flex-direction: column
+			align-items: center
+
+			input, textarea, .select
 				height: rem(40px)
-				width: 25%
-				color: white
-				border: none
-				background-color: $grey
-				border-radius: rem(4px)
-				font-size: rem(14px)
-				font-weight: normal
-				text-align: center
-				vertical-align: middle
-				-ms-touch-action: manipulation
-				touch-action: manipulation
-				cursor: pointer
-				background-image: none
-				white-space: nowrap
-				padding: rem(6px) rem(12px)
-				line-height: 1.42857143
-				-webkit-user-select: none
-				margin-bottom: 0
-				-webkit-appearance: none
-		.form-button input:hover
-			background-color: $red
-			color: white
-		.form-button input:active,
-		.form-button input:focus
-			background-color: $grey
-			color: white
-		textarea:focus,
-		input:focus,
-		input[type]:focus,
-		.uneditable-input:focus
-			border-color: $red
-			-webkit-box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
-			box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
-			outline: 0 none
-		input.form-send:focus
-			-webkit-box-shadow: 0 0 0 transparent
-			box-shadow: 0 0 0 transparent
-		::-webkit-input-placeholder
-			/* WebKit, Blink, Edge */
-			color: transparentize($grey, .6)
-		:-moz-placeholder
-			/* Mozilla Firefox 4 to 18 */
-			color: transparentize($grey, .6)
-			opacity: 1
-		::-moz-placeholder
-			/* Mozilla Firefox 19+ */
-			color: transparentize($grey, .6)
-			opacity: 1
-		:-ms-input-placeholder
-			/* Internet Explorer 10-11 */
-			color: transparentize($grey, .6)
-			opacity: 1
-		::-ms-input-placeholder
-			/* Microsoft Edge */
-			color: transparentize($grey, .6)
-			opacity: 1
-		.form-control.error
-			border-color: $formError
-			-webkit-box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) $formErrorShadow
-			box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) $formErrorShadow
-		select:invalid
-			color: $grey
-		.select select
-			height: rem(40px)
-			background-color: transparentize($grey, .9)
-			border: rem(1px) solid transparent
-			border-radius: rem(7px)
-			font-size: rem(20px)
-			font-weight: 300
-			padding-top: 0
-			padding-bottom: 0
-			padding-left: rem(20px)
-			&:hover
-				border: rem(1px) solid transparent
-		.select:not(.is-multiple)
-			height: initial
-			margin-bottom: rem(5px)
-			&:not(.is-loading)::after
-				border-color: $grey
-		.select select.is-active,
-		.select select.is-focused,
-		.select select:active,
-		.select select:focus
-			border-color: $red
-			-webkit-box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
-			box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
-			outline: 0 none
-		.select.is-fullwidth
-			width: 60%
+				padding: 0 rem(20px)
+				border-radius: rem(7px)
+				font-weight: 300
+				width: 60%
+				margin-bottom: rem(5px)
+				font-size: rem(20px)
+				border: rem(1px) solid $transparent
+				transition: all .15s ease
+				&:not(.select)
+					color: $grey
+					background-color: transparentize($grey, .9)
+					&::placeholder
+						color: transparentize($grey, .6)
+				&:focus
+					border-color: $red
+					box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
+					outline: 0 none
+
+			.form-button
+				width: 100%
+				input
+					width: 30%
+					background-color: $grey
+					color: $white
+					font-size: rem(16px)
+					margin: rem(10px) 0 0 0
+					transition: all .25s ease
+					cursor: pointer
+					&:hover
+						background-color: $red
+					&:focus
+						border: rem(1px) solid $transparent
+						box-shadow: none
+						background-color: $red
+
+			.select
+				padding: 0
+				select
+					background-color: transparentize($grey, .9)
+					color: $grey
+					height: 100%
+					padding: 0 rem(20px)
+					border: rem(1px) solid $transparent
+					font-weight: 300
+					&:focus
+						border-color: $red
+						box-shadow: inset 0 rem(1px) rem(1px) rgba(0, 0, 0, .075), 0 0 rem(8px) transparentize($audioFormRed, .4)
+						outline: 0 none
+				&:not(.is-multiple):not(.is-loading)::after
+					border-color: $grey
+					
+			textarea
+				padding: rem(15px) rem(20px)
+				min-height: rem(100px)
+				max-height: rem(300px)
+				resize: vertical
