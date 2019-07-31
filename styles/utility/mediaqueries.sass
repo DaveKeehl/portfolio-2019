@@ -119,12 +119,12 @@
 				@include clip-path (polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%))
 				h2
 					left: 50%
-					top: calc(25% - rem(150px) / 4)
+					top: calc(25% - 9.375rem / 4)
 			.right-graphics
 				@include clip-path (polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%))
 				h2
 					left: 50%
-					top: calc(75% + rem(150px) / 4)
+					top: calc(75% + 9.375rem / 4)
 			.left-hover
 				@include clip-path (polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%))
 			.right-hover
@@ -172,7 +172,7 @@
 		.footer-afterOpen
 			margin-bottom: rem(132px)
 		.hidePlayer
-			@include transform (translateY(rem(132px)) !important)
+			@include transform (translateY(8.25rem) !important)
 		.moveArrow-afterOpen
 			bottom: rem(152px) !important
 
@@ -180,7 +180,7 @@
 			bottom: rem(20px) !important
 		.audioPlayer
 			padding: rem(20px)
-			transform: translateY(rem(132px))
+			transform: translateY(8.25rem)
 			.container
 				max-width: 100%
 				flex-direction: column
