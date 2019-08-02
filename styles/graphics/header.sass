@@ -45,11 +45,25 @@
 			color: $red
 			text-decoration: none
 		.navbar-burger
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
 			height: auto
 			color: $white
+			&.is-active span
+				&:nth-child(1)
+					transform: translateY(6px) rotate(45deg)
+				&:nth-child(3)
+					transform: translateY(-6px) rotate(-45deg)
 			span
+				position: relative
+				top: auto
+				left: auto
 				height: rem(2px)
-				width: rem(20px)
+				width: rem(28px)
+				&:nth-child(2)
+					margin: rem(4px) 0
 			&:hover
 				background-color: $transparent
 		.navbar-menu
@@ -71,4 +85,5 @@
 				&:last-child
 					margin-right: 0
 			.current-page
+				position: relative
 				border-bottom: rem(1px) solid

@@ -23,7 +23,7 @@
 			position: absolute
 			top: 50%
 			left: 50%
-			@include transform (translateX(-50%) translateY(-50%))
+			transform: translateX(-50%) translateY(-50%)
 			border-radius: 100%
 			z-index: 10
 			background-color: $white
@@ -32,16 +32,13 @@
 			align-items: center
 			height: rem(150px)
 			width: rem(150px)
-			box-shadow: 0 0 rem(25px) transparentize($black, .15)
-			@include transition (all, .5s, ease)
+			box-shadow: 0 0 rem(25px) transparentize($black, .7)
+			transition: box-shadow .5s
+			&:hover
+				box-shadow: 0 0 rem(25px) transparentize($black, .5)
 			svg
 				height: 50%
 				filter: none
-				-webkit-filter: none
-				// animation-name: logo-animation
-				// animation-duration: 4s
-				// animation-timing-function: linear
-				// animation-iteration-count: infinite
 				path
 					fill: $grey
 					&:first-of-type

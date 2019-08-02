@@ -4,8 +4,6 @@
 
 	.bg-gradient
 		background-position: 0 0
-		background-image: -webkit-linear-gradient(top, $white 0, $white 250px, $white 250px, $black 100%)
-		background-image: -o-linear-gradient(top, $white 0, $white 250px, $white 250px, $black 100%)
 		background-image: linear-gradient(to bottom, $white 0, $white 250px, $white 250px, $black 100%)
 
 	.services-task
@@ -79,5 +77,27 @@
 		object-position: 0% 0
 	#mastering img
 		object-position: 40% 0
-	#graphics img
-		object-position: 20% 0
+	#graphics 
+		img
+			object-position: 20% 0
+		.services-task-textBox
+			display: flex
+			flex-direction: column
+			align-items: center
+			.services-description, ul
+				align-self: flex-start
+			a:last-of-type
+				display: inline-block
+				background-color: $grey
+				padding: 15px 30px
+				color: $white
+				border-radius: 5px
+				margin-top: rem(40px)
+				font-weight: 500
+				transition: background-color .2s
+				&:hover
+					background-color: $red
+
+	footer
+		// this is just a test to see how it looks
+		background-color: #222
