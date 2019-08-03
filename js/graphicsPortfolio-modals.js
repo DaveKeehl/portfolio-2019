@@ -55,6 +55,7 @@ function openModal(id, name, description, tools, link) {
 		// INJECT WORK TOOLS AND TECHNOLOGIES
 		for (i = 0; i < tools.length; i++) {
 			let logo;
+			// USE ICONS
 			if (['html', 'css', 'bootstrap', 'sass', 'javascript', 'github', 'wordpress', 'wix'].includes(tools[i])) {
 				logo = document.createElement("i");
 				let toolClass;
@@ -69,6 +70,7 @@ function openModal(id, name, description, tools, link) {
 				}
 				logo.classList.add("fab", toolClass);
 			} else {
+				// USE IMAGES
 				logo = document.createElement("div");
 				console.log(logo);
 				logo.style.background = "url(../media/img/" + tools[i] + ".svg) center/contain no-repeat ";

@@ -66,14 +66,15 @@
 
 				<span class="navbar-burger burger" data-target="navMenu">
 					<span></span>
-				<span></span>
-				<span></span>
+					<span></span>
+					<span></span>
 				</span>
 
 			</div>
 
 			<div id="navMenu" class="navbar-menu">
 				<div class="navbar-end">
+					<img class="close" src="../media/img/close-modal.svg">
 					<ul>
 						<li><a class="current-page" href='home.html'>Home</a>
 							<li><a href="about.html">About</a>
@@ -391,6 +392,18 @@
 			});
 		}
 		
+		var closeMenu = document.querySelector('.graphics.home header .close');
+		var burger = document.querySelector('.graphics.home header .navbar-burger');
+		let isOpen = false;
+		burger.addEventListener('click', () => {
+			if (isOpen === false) {
+				isOpen = true;
+			}
+		});
+		closeMenu.addEventListener('click', () => {
+			isOpen = false;
+		});
+
 	</script>
 
 </body>
