@@ -68,17 +68,85 @@
 		background-color: $transparent
 		box-shadow: 0 rem(4px) rem(4px) $transparent
 
-@include keyframes (particle1)
+@include keyframes (particle1-scale)
 	0%
-		transform: translateX(0) translateY(0) scaleX(1) scaleY(1)
+		transform: scale(1)
 	25%
-		transform: scaleX(.5) scaleY(.5)
+		transform: scale(.5)
 	50%
-		transform: translateX(-100px) translateY(100px) scaleX(1) scaleY(1)
+		transform: scale(1)
 	75%
-		transform: scaleX(.5) scaleY(.5)
+		transform: scale(.5)
 	100%
-		transform: translateX(0) translateY(0) scaleX(1) scaleY(1)
+		transform: scale(1)
+
+@include keyframes (particle1-position)
+	0%
+		transform: translateX(0) translateY(0)
+	50%
+		transform: translateX(-100px) translateY(100px)
+	100%
+		transform: translateX(0) translateY(0)
+
+@include keyframes (particle2-scale)
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(.5)
+	50%
+		transform: scale(1)
+	75%
+		transform: scale(.5)
+	100%
+		transform: scale(1)
+
+@include keyframes (particle2-position)
+	0%
+		transform: translateX(0) translateY(0)
+	50%
+		transform: translateX(-100px) translateY(100px)
+	100%
+		transform: translateX(0) translateY(0)
+
+@include keyframes (particle3-scale)
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(.5)
+	50%
+		transform: scale(1)
+	75%
+		transform: scale(.5)
+	100%
+		transform: scale(1)
+
+@include keyframes (particle3-position)
+	0%
+		transform: rotate(0) translateX(-50px)
+	50%
+		transform: rotate(0) translateX(-100px)
+	100%
+		transform: rotate(360deg) translateX(-50px)
+
+@include keyframes (particle4-scale)
+	0%
+		transform: scale(1)
+	25%
+		transform: scale(.5)
+	50%
+		transform: scale(1)
+	75%
+		transform: scale(.5)
+	100%
+		transform: scale(1)
+
+@include keyframes (particle4-position)
+	0%
+		transform: translateX(0) translateY(0)
+	50%
+		transform: translateX(-100px) translateY(100px)
+	100%
+		transform: translateX(0) translateY(0)
 
 /********* GRAPHICS - PORTFOLIO *********/
 

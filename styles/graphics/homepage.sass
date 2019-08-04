@@ -103,33 +103,57 @@
 				right: calc(50% - 28.75rem / 2 - 17.1875rem / 1.5)
 				bottom: calc(-30% / 2)
 				box-shadow: 0 0 rem(25px) transparentize($black, .75)
+
 		.particles
-			span
+			div
 				position: absolute
-				background-color: $white
-				box-shadow: 0 0 rem(10px) $white
-				border-radius: 100%
+				&::after
+					content: ''
+					position: absolute
+					background-color: $white
+					box-shadow: 0 0 rem(10px) $white
+					border-radius: 100%
 				&:nth-child(1)
-					height: rem(15px)
-					width: rem(15px)
 					top: -10%
 					right: 0
-					animation: particle1 5s ease infinite
+					animation: particle1-position 5s ease infinite
+					&::after
+						height: rem(15px)
+						width: rem(15px)
+						animation: particle1-scale 5s ease infinite
 				&:nth-child(2)
-					height: rem(8px)
-					width: rem(8px)
 					top: -28%
 					left: 25%
+					animation: particle2-position 5s ease infinite
+					animation-delay: 1s
+					&::after
+						height: rem(8px)
+						width: rem(8px)
+						animation: particle2-scale 5s ease infinite
+						animation-delay: 1s
 				&:nth-child(3)
-					height: rem(12px)
-					width: rem(12px)
 					top: 30%
 					left: 10%
+					animation: particle3-position 5s ease infinite
+					animation-delay: .5s
+					&::after
+						height: rem(12px)
+						width: rem(12px)
+						animation: particle3-scale 5s ease infinite
+						animation-delay: .5s
 				&:nth-child(4)
-					height: rem(6px)
-					width: rem(6px)
 					top: 66%
 					left: 60%
+					animation: particle4-position 5s ease infinite
+					animation-delay: 1.5s
+
+					&::after
+						height: rem(6px)
+						width: rem(6px)
+						animation: particle4-scale 5s ease infinite
+						animation-delay: 1.5s
+
+
 		.description
 			display: flex
 			margin: rem(90px) 0 rem(50px) 0
