@@ -394,7 +394,6 @@
 		// MOBILE MENU
 
 		var page = document.querySelector('html');
-		var closeMenu = document.querySelector('.graphics header .close');
 		var burger = document.querySelector('.graphics header .navbar-burger');
 		var mobileMenu = document.querySelector('.graphics header .navbar-end ul');
 		let isOpen = false;
@@ -405,14 +404,18 @@
 
 		burger.addEventListener('click', () => {
 			if (isOpen === false) {
-				page.style.overflowY = 'initial';
-				mobileMenu.style.animationName = 'mobileMenuOpen';
-				burger.style.animationName = 'menuButtonOpen';
+				page.style.overflowY = 'hidden';
+				mobileMenu.classList.remove('mobileMenuClosed');
+				mobileMenu.classList.add('mobileMenuOpen');
+				// mobileMenu.style.animationName = 'mobileMenuOpen';
+				// burger.style.animationName = 'menuButtonOpen';
 			} 
 			if (isOpen === true) {
-				page.style.overflowY = 'hidden';
-				mobileMenu.style.animationName = 'mobileMenuClose';
-				burger.style.animationName = 'menuButtonClose';
+				page.style.overflowY = 'initial';
+				mobileMenu.classList.remove('mobileMenuClo');
+				mobileMenu.classList.add('mobileMenuOpen');
+				// mobileMenu.style.animationName = 'mobileMenuClose';
+				// burger.style.animationName = 'menuButtonClose';
 			}
 			changeMenuState();
 			console.log("Current menu state: " + isOpen);
