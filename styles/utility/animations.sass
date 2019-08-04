@@ -32,6 +32,32 @@
 	100%
 		@include filter (drop-shadow(0 0 0 $white))
 
+// GRAPHICS
+
+@include keyframes (mobileMenuOpen)
+	0%
+		transform: translateX(100%)
+	100%
+		transform: translateX(0)
+
+@include keyframes (mobileMenuClose)
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(100%)
+
+@include keyframes (menuButtonOpen)
+	0%
+		left: 100%
+	100%
+		left: calc(50% - 4px + 20px)
+
+@include keyframes (menuButtonClose)
+	0%
+		left: calc(50% - 4px + 20px)
+	100%
+		left: 100%
+
 /********* GRAPHICS - HOME *********/
 
 @include keyframes (caret)

@@ -53,6 +53,19 @@
 			margin-left: 16.66667%
 	.graphics
 		header .navbar
+			.navbar-burger
+				&.is-active
+					position: fixed
+					top: calc(3px + 20px)
+					z-index: 20
+					// left: calc(50% - 4px + 20px)
+					width: auto
+					height: auto
+					color: black
+					animation-name: menuButtonClose
+					animation-duration: 1s
+					animation-iteration-count: 1
+					animation-fill-mode: forwards
 			.navbar-menu
 				background-color: $transparent
 				-webkit-box-shadow: 0 0 0 $transparent
@@ -67,6 +80,8 @@
 					transition: all .2s
 				.close
 					display: initial
+					@include animation (closeMenuButton, 2s, 1, ease)
+					animation-delay: .2s
 				ul
 					position: fixed;
 					top: 0;
@@ -81,6 +96,10 @@
 					width: 50%;
 					font-size: rem(28px)
 					box-shadow: rem(-4px) 0 rem(50px) transparentize($black, .75)
+					animation-name: mobileMenuClose
+					animation-duration: 1s
+					animation-iteration-count: 1
+					animation-fill-mode: forwards
 				li
 					font-weight: normal
 					color: transparentize($black, .5)
