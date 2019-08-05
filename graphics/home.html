@@ -74,7 +74,6 @@
 
 			<div id="navMenu" class="navbar-menu">
 				<div class="navbar-end">
-					<!-- <img class="close" src="../media/img/close-modal.svg"> -->
 					<ul>
 						<li><a class="current-page" href='home.html'>Home</a>
 							<li><a href="about.html">About</a>
@@ -405,17 +404,11 @@
 		burger.addEventListener('click', () => {
 			if (isOpen === false) {
 				page.style.overflowY = 'hidden';
-				mobileMenu.classList.remove('mobileMenuClosed');
 				mobileMenu.classList.add('mobileMenuOpen');
-				// mobileMenu.style.animationName = 'mobileMenuOpen';
-				// burger.style.animationName = 'menuButtonOpen';
 			} 
 			if (isOpen === true) {
 				page.style.overflowY = 'initial';
-				mobileMenu.classList.remove('mobileMenuClo');
-				mobileMenu.classList.add('mobileMenuOpen');
-				// mobileMenu.style.animationName = 'mobileMenuClose';
-				// burger.style.animationName = 'menuButtonClose';
+				mobileMenu.classList.remove('mobileMenuOpen');
 			}
 			changeMenuState();
 			console.log("Current menu state: " + isOpen);
