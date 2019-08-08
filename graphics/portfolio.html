@@ -183,6 +183,19 @@
 	<script src="../js/graphicsPortfolio-filter.js"></script>
 	<script src="../js/graphicsPortfolio-modals.js"></script>
 
+	<script>
+		
+		let i = 0;
+
+		var page = document.querySelector('.graphics.portfolio');
+		var workPanel = document.querySelector('.graphics.portfolio .modal-sidebar aside');
+
+		page.addEventListener('scroll', function() {
+			console.log(pageYOffset + 'px');
+		});
+
+	</script>
+
 </body>
 
 </html>

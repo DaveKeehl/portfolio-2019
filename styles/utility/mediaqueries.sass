@@ -94,7 +94,11 @@
 					box-shadow: rem(-4px) 0 rem(50px) transparentize($black, .75)
 					transition: all .5s
 					&.mobileMenuOpen
+						// animation-name: mobileMenuOpen
 						right: 0
+					&.mobileMenuClose
+						animation-name: mobileMenuClose
+						// right: -50%
 				li
 					font-weight: normal
 					color: transparentize($black, .5)
@@ -256,7 +260,21 @@
 					width: 100%
 					height: auto
 					border-radius: rem(50px) rem(50px) 0 0
-					&.graphicsPortfolio-modalOpen
-						animation-name: mobileModalOpen
-					&.graphicsPortfolio-modalClose
-						animation-name: mobileModalClose
+					padding-top: rem(50px)
+					padding-bottom: rem(50px)
+					&:before
+						content: ''
+						height: rem(5px)
+						width: rem(100px)
+						background-color: #c4c4c4
+						border-radius: rem(10px)
+						position: absolute
+						top: rem(10px)
+						left: 50%
+						transform: translateX(-50%)
+					h2
+						margin-top: rem(40px)
+					// &.graphicsPortfolio-modalOpen
+					// 	animation-name: mobileModalOpen
+					// &.graphicsPortfolio-modalClose
+					// 	animation-name: mobileModalClose

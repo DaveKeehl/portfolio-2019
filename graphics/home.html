@@ -401,14 +401,20 @@
 			isOpen ? isOpen = false : isOpen = true;
 		}
 
-		burger.addEventListener('click', () => {
+		burger.addEventListener('click', (e) => {
 			if (isOpen === false) {
 				page.style.overflowY = 'hidden';
-				mobileMenu.classList.add('mobileMenuOpen');
+				setTimeout((e) => {
+					mobileMenu.classList.remove('mobileMenuClose');
+					mobileMenu.classList.add('mobileMenuOpen');
+				}, 0);
 			} 
 			if (isOpen === true) {
-				page.style.overflowY = 'initial';
-				mobileMenu.classList.remove('mobileMenuOpen');
+				page.style.overflowY = 'auto';
+				setTimeout((e) => {
+					mobileMenu.classList.remove('mobileMenuOpen');
+					mobileMenu.classList.add('mobileMenuClose');
+				}, 0);
 			}
 			changeMenuState();
 			console.log("Current menu state: " + isOpen);
