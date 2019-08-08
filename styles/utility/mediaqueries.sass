@@ -1,56 +1,59 @@
-@media (max-width: 1300px)
-	.audio.contact
-		main
-			p
-				text-align: justify
+// MAX-WIDTH = UNTIL THIS BREAKPOINT, DO THIS
+// MIN-WIDTH = FROM THIS BREAPOINT UP, DO THIS
 
-// @media (max-width: 1280px)
+// WIDESCREEN
 
-@media (max-width: 1200px)
-	.audio.home
-		main
-			.home-icons svg
-				isolation: isolate
-				width: 100%
-				height: rem(50px)
-				padding: 0 rem(20px)
-				margin-bottom: rem(20px)
-				fill: $black
-				@include transition (fill, .2s, ease)
-
-// @media screen and (max-width: 1087px)
-
-@media (min-width: 1024px)
-	.graphics
-		header
-			.navbar-burger
-				display: none !important
-
-@media (max-width: 1024px)
+@media screen and (max-width: $widescreen)
 	.audio
-		header .navbar .navbar-menu
-			background-color: $grey
-			-webkit-box-shadow: 0 0 0 $transparent
-			box-shadow: 0 0 0 $transparent
-			.navbar-end
-				text-align: center
-			ul
-				flex-direction: column
-				border-top: rem(1px) solid transparentize($white, .8)
-				padding-top: rem(40px)
-				padding-bottom: rem(20px)
-				margin-top: rem(10px)
-				font-size: rem(20px)
-				li
-					margin-right: 0
-					margin-top: rem(20px)
-					&:hover
-						border-bottom: 0 solid $transparent
-						padding-bottom: 0
-					&:first-child
-						margin-top: 0
-		.home-mastering
-			margin-left: 16.66667%
+		&.home
+			main
+				.home-icons svg
+					isolation: isolate
+					width: 100%
+					height: rem(50px)
+					padding: 0 rem(20px)
+					margin-bottom: rem(20px)
+					fill: $black
+					@include transition (fill, .2s, ease)
+	.graphics
+		&.portfolio
+			main
+				.columns .column
+					.categories
+						height: calc(((100vw - 1.875rem) / 100 * 80) / 3 - 0.625rem)
+
+// DESKTOP
+
+@media screen and (max-width: $desktop)
+	.audio
+		header 
+			.navbar .navbar-menu
+				background-color: $grey
+				-webkit-box-shadow: 0 0 0 $transparent
+				box-shadow: 0 0 0 $transparent
+				.navbar-end
+					text-align: center
+				ul
+					flex-direction: column
+					border-top: rem(1px) solid transparentize($white, .8)
+					padding-top: rem(40px)
+					padding-bottom: rem(20px)
+					margin-top: rem(10px)
+					font-size: rem(20px)
+					li
+						margin-right: 0
+						margin-top: rem(20px)
+						&:hover
+							border-bottom: 0 solid $transparent
+							padding-bottom: 0
+						&:first-child
+							margin-top: 0
+		&.services
+			.services-task
+				margin-top: rem(50px)
+		&.home
+			.home-mastering
+				margin-left: 16.66667%
 	.graphics
 		header .navbar
 			.navbar-burger
@@ -124,14 +127,28 @@
 
 			.navbar-end
 				text-align: center
+		&.portfolio
+			main
+				.columns .column
+					.categories
+						height: calc(((100vw - 1.875rem) / 100 * 80) / 2 - 0.625rem)
+		&.contact
+			main
+				form
+					& *
+						width: 80%
 
-// @media (max-width: 992px)
+@media screen and (min-width: $desktop)
+	.graphics
+		header
+			.navbar .navbar-burger
+				display: none
 
-// @media (max-width: 900px)
+// TABLET
 
-// @media (max-width: 850px)
-
-@media (max-width:767px)
+@media screen and (max-width: $tablet)
+	.no-mobile
+		display: none !important
 	.index
 		.triggers
 			.left-trigger
@@ -162,77 +179,72 @@
 				@include clip-path (polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%))
 			.right-hover-2
 				@include clip-path (polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%))
-
-@media (max-width: 767px)
-	.audio main
-		padding: rem(50px) 0
-	.audio.home
-		.hero-video
-			display: block
-		.home-mastering
-			margin-left: 0 !important
-	.audio.about
-		main
-			.about-divider-mobile
+	.audio
+		&.home
+			.hero-video
 				display: block
-				width: 50%
-			.about-text
-				padding: 0
-	.audio.contact 
-		main form
-			input, textarea
-				width: 100%
-			.select.is-fullwidth
-				width: 100%
-			.form-button input
-				width: 100%
-	.no-mobile
-		display: none !important
+			.home-mastering
+				margin-left: 0
+		&.about
+			main
+				.about-divider-mobile
+					display: block
+					width: 50%
+				.about-text
+					padding: 0
+		&.contact
+			main
+				form
+					input, textarea
+						width: 100%
+					.select.is-fullwidth
+						width: 100%
+					.form-button input
+						width: 100%
+	.graphics
+		header
+			.navbar .navbar-menu
+				ul
+					width: 75%
+		&.home
+			.hero>div #typewriter 
+				h1
+					font-size: rem(28px)
+					&:nth-child(2):after
+						height: rem(40px)
+		&.portfolio
+			main
+				.columns .column
+					.categories
+						height: calc(((100vw - 1.875rem) / 100 * 80) / 1 - 0.625rem)
+		&.contact
+			main
+				form
+					& *
+						width: 100%
+					input[type="submit"]
+						width: 100%
 
-@media (min-width: 768px)
+@media screen and (min-width: $tablet)
 	.no-desktop
 		display: none !important
 
-@media (max-width: 550px)
-	.audio.portfolio
-		.footer-afterOpen
-			margin-bottom: rem(132px)
-		.hidePlayer
-			@include transform (translateY(8.25rem) !important)
-		.moveArrow-afterOpen
-			bottom: rem(152px) !important
+// MOBILE
 
-		.moveArrow-afterClose
-			bottom: rem(20px) !important
-		.audioPlayer
-			padding: rem(20px)
-			transform: translateY(8.25rem)
-			.container
-				max-width: 100%
-				flex-direction: column
-				.art
-					display: none
-				.audio-controls
-					flex-direction: column
-					.seek
-						margin: rem(10px) 0
-
-@media (max-width: 480px)
+@media screen and (max-width: $mobile)
 	.audio
 		h1
-			font-size: rem(35px) !important
+			font-size: rem(35px)
 		h2
-			font-size: rem(28px) !important
+			font-size: rem(28px)
 		h3
-			font-size: 1.3rem !important
-			
+			font-size: 1.3rem
 		header
 			.navbar-menu li
 				margin-right: 0
 				margin-top: rem(15px)
 			.navbar-brand-txt
-				display: none !important
-
+				display: none
 		&.home
 			.hero
 				.logo svg
@@ -250,6 +262,27 @@
 				.home-mastering-content,
 				.home-graphics-content
 					padding: rem(10px) 0
+		&.portfolio
+			.footer-afterOpen
+				margin-bottom: rem(132px)
+			.hidePlayer
+				@include transform (translateY(8.25rem) !important)
+			.moveArrow-afterOpen
+				bottom: rem(152px) !important
+			.moveArrow-afterClose
+				bottom: rem(20px) !important
+			.audioPlayer
+				padding: rem(20px)
+				transform: translateY(8.25rem)
+				.container
+					max-width: 100%
+					flex-direction: column
+					.art
+						display: none
+					.audio-controls
+						flex-direction: column
+						.seek
+							margin: rem(10px) 0
 	.graphics
 		&.portfolio
 			.modal-sidebar
@@ -272,6 +305,8 @@
 						top: rem(10px)
 						left: 50%
 						transform: translateX(-50%)
+					.close
+						display: none
 					h2
 						margin-top: rem(40px)
 					&.graphicsPortfolio-modalOpen

@@ -55,7 +55,7 @@
 							<path d=" M 83.297 179.163 C 83.297 178.197 84.081 177.413 85.047 177.413 C 86.013 177.413 86.797 178.197 86.797 179.163 C 86.797 180.129 86.013 180.913 85.047 180.913 C 84.081 180.913 83.297 180.129 83.297 179.163 Z " fill="rgb(0,0,0)" />
 						</g>
 					</svg>
-					<div class="navbar-item navbar-brand-txt">
+					<div class="navbar-item navbar-brand-txt is-hidden-mobile">
 						<p class="line-18">
 							<span class="logo-name">DAVIDE CIULLA</span>
 							<br>
@@ -66,8 +66,8 @@
 
 				<span class="navbar-burger burger" data-target="navMenu">
 					<span></span>
-				<span></span>
-				<span></span>
+					<span></span>
+					<span></span>
 				</span>
 
 			</div>
@@ -76,10 +76,10 @@
 				<div class="navbar-end">
 					<ul>
 						<li><a href='home.html'>Home</a>
-							<li><a href="about.html">About</a>
-								<li><a href="services.html">Services</a>
-									<li><a class="current-page" href="portfolio.html">Portfolio</a>
-										<li><a href="contact.html">Contact</a>
+						<li><a href="about.html">About</a>
+						<li><a href="services.html">Services</a>
+						<li><a class="current-page" href="portfolio.html">Portfolio</a>
+						<li><a href="contact.html">Contact</a>
 					</ul>
 				</div>
 			</div>
@@ -98,28 +98,28 @@
 			<span onclick="filterSelection('video')" name="category">Video Editing</span>
 		</p>
 		<div class="columns is-multiline">
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow ux web">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow ux web">
 				<div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is the description of my personal portfolio.', ['html', 'sass', 'bulma', 'javascript', 'jquery', 'gulp', 'figma', 'zeplin', 'github'], 'www.davideciulla.com')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow web">
 				<div class="categories" onclick="openModal(1, 'SwissAPO', 'This is the description of SwissAPO.', ['html', 'css', 'wordpress'], 'www.swiss-apo.ch')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow web">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow web">
 				<div class="categories" onclick="openModal(2, 'Voices Beyond Silence', 'This is the description of the VBS website.', ['wix', 'affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow print">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow print">
 				<div class="categories" onclick="openModal(3, 'VBS - CD Art', 'This is the description of the print designs made for VBS.', ['affinity-photo'], 'voicesbeyondsilence.wixsite.com/home')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow video">
 				<div class="categories" onclick="openModal(4, 'Intro FIP', 'This is the description of the intro made for Film In Piazza.', ['after-effects'], '')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow video">
 				<div class="categories" onclick="openModal(5, 'Cool FIP video', 'This is the description of a cool video made for Film In Piazza.', ['premiere'], '')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow video">
 				<div class="categories" onclick="openModal(6, 'Intro 1 Teleticino', 'This is the description of an intro made for Teleticino.', ['premiere', 'after-effects', 'cinema-4d'], '')"></div>
 			</div>
-			<div class="column is-one-quarter-desktop is-one-third-tablet columnHide columnShow video">
+			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow video">
 				<div class="categories" onclick="openModal(7, 'Intro 2 Teleticino', 'This is the description of an intro made for Teleticino.', ['premiere', 'after-effects', 'cinema-4d'], '')"></div>
 			</div>
 		</div>
@@ -183,18 +183,18 @@
 	<script src="../js/graphicsPortfolio-filter.js"></script>
 	<script src="../js/graphicsPortfolio-modals.js"></script>
 
-	<!-- <script>
+	<script>
 		
-		let i = 0;
+		// let i = 0;
 
-		var page = document.querySelector('.graphics.portfolio');
-		var workPanel = document.querySelector('.graphics.portfolio .modal-sidebar aside');
+		// var page = document.querySelector('.graphics.portfolio');
+		// var workPanel = document.querySelector('.graphics.portfolio .modal-sidebar aside');
 
-		page.addEventListener('scroll', function() {
-			console.log(pageYOffset + 'px');
-		});
+		// window.addEventListener('scroll', function() {
+		// 	console.log(pageYOffset + 'px');
+		// });
 
-	</script> -->
+	</script>
 
 </body>
 
