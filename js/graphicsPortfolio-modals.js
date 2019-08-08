@@ -72,7 +72,7 @@ function openModal(id, name, description, tools, link) {
 			} else {
 				// USE IMAGES
 				logo = document.createElement("div");
-				console.log(logo);
+				// console.log(logo);
 				logo.style.background = "url(../media/img/" + tools[i] + ".svg) center/contain no-repeat ";
 				logo.style.width = "24px";
 				logo.style.height = "24px";
@@ -82,7 +82,7 @@ function openModal(id, name, description, tools, link) {
 			let tooltip = document.createElement("span");
 			tooltip.classList.add("tooltip-text");
 			tooltipText = tools[i].replace('-', ' ');
-			console.log(tooltipText)
+			// console.log(tooltipText)
 			tooltip.innerHTML = tooltipText;
 			logo.appendChild(tooltip);
 			let tool = document.createElement("div");
@@ -129,6 +129,7 @@ function closeModal() {
 			while (modalCategories.hasChildNodes()) {
 				modalCategories.removeChild(modalCategories.firstChild);
 			}
+			// RESET TOOLS
 			while (modalTools.hasChildNodes()) {
 				modalTools.removeChild(modalTools.firstChild);
 			}
