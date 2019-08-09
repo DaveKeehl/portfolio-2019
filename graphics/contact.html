@@ -92,26 +92,20 @@
 		<h1>CONTACT</h1>
 		<p>Lorem ipsum</p>
 		<form method="POST" name="contactform" id="contactform">
-			<!-- <label for="name">Name</label> -->
-			<input id="name" type="text" name="Name" class="form-control form-name" placeholder="Name" required>
-			<!-- <label for="email">Email</label> -->
-			<input id="email" type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
-			<!-- <label for="tel">Phone</label> -->
-			<input id="tel"" type="tel" name="Phone" class="form-control form-phone" placeholder="Phone (Optional)">
-			<!-- <label for="subject">Email</label> -->
-			<input id="subject" type="text" name="Subject" class="form-control form-subject" placeholder="Subject" required>
+			<input type="text" name="Name" class="form-control form-name" placeholder="Name" required>
+			<input type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
+			<input type="tel" name="Phone" class="form-control form-phone" placeholder="Phone (Optional)">
+			<input type="text" name="Subject" class="form-control form-subject" placeholder="Subject" required>
 			<input type="hidden" name="_next" value="https://davekeehl.github.io/Portfolio/graphics/contact.html" />
 			<input type="hidden" name="_subject" value="Online Portfolio Contact" />
 			<input type="text" name="_gotcha" style="display:none" />
-			<!-- <label for="topic">Topic</label> -->
-			<div class="select is-fullwidth" id="topic">
+			<div class="select is-fullwidth">
 				<select name="Category" required>
 					<option selected>General Question</option>
 					<option>Work Offer</option>
 				</select>
 			</div>
-			<!-- <label for="message">Message</label> -->
-			<textarea id="message" class="form-control form-message" name="Message" rows="10" placeholder="Your message" required></textarea>
+			<textarea class="form-control form-message" name="Message" rows="10" placeholder="Your message" required></textarea>
 			<input type="submit" name="Send" class="form-send" value="Send" />
 		</form>
 	</main>

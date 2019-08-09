@@ -3,7 +3,7 @@
 	position: fixed
 	top: 0
 	width: 100%
-	z-index: 100
+	z-index: $header-z
 	color: $white
 	// background-color: rgba(0, 0, 0 ,0.1)
 	padding: rem(10px) 0
@@ -14,8 +14,8 @@
 			a:hover
 				color: $white
 			svg
-				@include transform (rotate(90deg))
-				@include transition (all, .5s, ease)
+				transform: rotate(90deg)
+				transition: all .5s
 				height: rem(60px)
 				margin-left: rem(12px)
 			path
