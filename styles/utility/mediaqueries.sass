@@ -1,9 +1,14 @@
-// MAX-WIDTH = UNTIL THIS BREAKPOINT, DO THIS
-// MIN-WIDTH = FROM THIS BREAPOINT UP, DO THIS
+// WIDESCREEN: FROM 1216 TO 1407
+@media screen and (min-width: $widescreen)
+	.graphics
+		&.portfolio
+			main
+				.columns .column
+					.categories
+						height: calc(((100vw - 1.875rem) / 100 * 80) / 4 - 0.625rem)
 
-// WIDESCREEN
-
-@media screen and (max-width: $widescreen)
+// DESKTOP: FROM 1024 TO 1215
+@media screen and (min-width: $desktop)
 	.audio
 		&.home
 			main
@@ -15,45 +20,20 @@
 					margin-bottom: rem(20px)
 					fill: $black
 					@include transition (fill, .2s, ease)
+				.home-mastering
+					margin-left: 0
 	.graphics
+		header
+			.navbar .navbar-burger
+				display: none
 		&.portfolio
 			main
 				.columns .column
 					.categories
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 3 - 0.625rem)
 
-// DESKTOP
-
-@media screen and (max-width: $desktop)
-	.audio
-		header 
-			.navbar .navbar-menu
-				background-color: $grey
-				-webkit-box-shadow: 0 0 0 $transparent
-				box-shadow: 0 0 0 $transparent
-				.navbar-end
-					text-align: center
-				ul
-					flex-direction: column
-					border-top: rem(1px) solid transparentize($white, .8)
-					padding-top: rem(40px)
-					padding-bottom: rem(20px)
-					margin-top: rem(10px)
-					font-size: rem(20px)
-					li
-						margin-right: 0
-						margin-top: rem(20px)
-						&:hover
-							border-bottom: 0 solid $transparent
-							padding-bottom: 0
-						&:first-child
-							margin-top: 0
-		&.services
-			.services-task
-				margin-top: rem(50px)
-		&.home
-			.home-mastering
-				margin-left: 16.66667%
+// TABLET: FROM 769 TO 1023
+@media screen and (max-width: $to-desktop)
 	.graphics
 		header .navbar
 			.navbar-burger
@@ -142,16 +122,16 @@
 					background-image: url("../media/img/contact-tablet-wave1.svg")
 				.wave2
 					background-image: url("../media/img/contact-tablet-wave2.svg")
+@media screen and (min-width: $tablet)
+	.no-desktop
+		display: none !important
+	.audio
+		&.home
+			.home-mastering
+				margin-left: 16.66667%
 
-@media screen and (min-width: $desktop)
-	.graphics
-		header
-			.navbar .navbar-burger
-				display: none
-
-// TABLET
-
-@media screen and (max-width: $tablet)
+// MOBILE: UP TO 768
+@media screen and (max-width: $to-tablet)
 	.no-mobile
 		display: none !important
 	.index
@@ -185,11 +165,58 @@
 			.right-hover-2
 				@include clip-path (polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%))
 	.audio
+		h1
+			font-size: rem(35px)
+		h2
+			font-size: rem(28px)
+		h3
+			font-size: 1.3rem
+		header 
+			.navbar-brand-txt
+				display: none
+			.navbar .navbar-menu
+				background-color: $grey
+				-webkit-box-shadow: 0 0 0 $transparent
+				box-shadow: 0 0 0 $transparent
+				.navbar-end
+					text-align: center
+				ul
+					flex-direction: column
+					border-top: rem(1px) solid transparentize($white, .8)
+					padding-top: rem(40px)
+					padding-bottom: rem(20px)
+					margin-top: rem(10px)
+					font-size: rem(20px)
+					li
+						margin-right: 0
+						margin-top: rem(20px)
+						&:hover
+							border-bottom: 0 solid $transparent
+							padding-bottom: 0
+						&:first-child
+							margin-top: 0
 		&.home
-			.hero-video
-				display: block
-			.home-mastering
-				margin-left: 0
+			.hero
+				.logo svg
+					height: rem(200px)
+				.material-icons
+					font-size: rem(50px)
+				.down-arrow
+					height: rem(25px)
+				.hero-video
+					display: block
+
+			main
+				h3
+					margin-bottom: rem(60px)
+				.home-mastering
+					margin-left: 0
+				.home-recording-content,
+				.home-editing-content,
+				.home-mixing-content,
+				.home-mastering-content,
+				.home-graphics-content
+					padding: rem(10px) 0
 		&.about
 			main
 				.about-divider-mobile
@@ -197,6 +224,27 @@
 					width: 50%
 				.about-text
 					padding: 0
+		&.portfolio
+			.footer-afterOpen
+				margin-bottom: rem(132px)
+			.hidePlayer
+				@include transform (translateY(8.25rem) !important)
+			.moveArrow-afterOpen
+				bottom: rem(152px) !important
+			.moveArrow-afterClose
+				bottom: rem(20px) !important
+			.audioPlayer
+				padding: rem(20px)
+				transform: translateY(8.25rem)
+				.container
+					max-width: 100%
+					flex-direction: column
+					.art
+						display: none
+					.audio-controls
+						flex-direction: column
+						.seek
+							margin: rem(10px) 0
 		&.contact
 			main
 				form
@@ -222,74 +270,6 @@
 				.columns .column
 					.categories
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 1 - 0.625rem)
-		&.contact
-			main
-				form
-					& *
-						width: 100%
-					input[type="submit"]
-						width: 100%
-
-@media screen and (min-width: $tablet)
-	.no-desktop
-		display: none !important
-
-// MOBILE
-
-@media screen and (max-width: $mobile)
-	.audio
-		h1
-			font-size: rem(35px)
-		h2
-			font-size: rem(28px)
-		h3
-			font-size: 1.3rem
-		header
-			.navbar-menu li
-				margin-right: 0
-				margin-top: rem(15px)
-			.navbar-brand-txt
-				display: none
-		&.home
-			.hero
-				.logo svg
-					height: rem(200px)
-				.material-icons
-					font-size: rem(50px)
-				.down-arrow
-					height: rem(25px)
-			main
-				h3
-					margin-bottom: rem(60px)
-				.home-recording-content,
-				.home-editing-content,
-				.home-mixing-content,
-				.home-mastering-content,
-				.home-graphics-content
-					padding: rem(10px) 0
-		&.portfolio
-			.footer-afterOpen
-				margin-bottom: rem(132px)
-			.hidePlayer
-				@include transform (translateY(8.25rem) !important)
-			.moveArrow-afterOpen
-				bottom: rem(152px) !important
-			.moveArrow-afterClose
-				bottom: rem(20px) !important
-			.audioPlayer
-				padding: rem(20px)
-				transform: translateY(8.25rem)
-				.container
-					max-width: 100%
-					flex-direction: column
-					.art
-						display: none
-					.audio-controls
-						flex-direction: column
-						.seek
-							margin: rem(10px) 0
-	.graphics
-		&.portfolio
 			.modal-sidebar
 				align-items: flex-end
 				height: 100vh
@@ -318,7 +298,17 @@
 						animation-name: mobileModalOpen
 					&.graphicsPortfolio-modalClose
 						animation-name: mobileModalClose
+
+// SMALL DEVICES: UP TO 576
+@media screen and (max-width: $to-small)
+	.graphics
 		&.contact
+			main
+				form
+					& *
+						width: 100%
+					input[type="submit"]
+						width: 100%
 			.waves
 				div
 					background-size: contain
