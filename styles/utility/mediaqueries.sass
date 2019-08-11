@@ -1,5 +1,5 @@
 // TABLET: FROM 769 TO 1023
-@media screen and (max-width: $to-desktop)
+@media screen and (max-width: $to-desktop-s)
 	.audio
 		header 
 			.navbar-brand-txt
@@ -98,6 +98,12 @@
 
 			.navbar-end
 				text-align: center
+		&.about
+			main
+				h1 ~ .columns
+					flex-direction: column
+				.card
+					margin-top: rem(100px)
 		&.contact
 			main
 				form
@@ -115,12 +121,22 @@
 		&.home
 			.home-mastering
 				margin-left: 16.66667%
-	.graphics
+
 		&.portfolio
 			main
 				.columns .column
 					.categories
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 2 - 0.625rem)
+	.graphics
+		&.home
+			.action
+				h1
+					font-size: rem(80px)
+		&.about
+			main
+				.columns .column
+					&:nth-child(2) .card
+						width: 80%
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
@@ -141,20 +157,48 @@
 		header
 			.navbar .navbar-burger
 				display: none
+		&.home
+			.showcase
+				.work-samples
+					.back-sample-1, .back-sample-2
+						display: block
+			.action
+				h1
+					font-size: rem(96px)
+					line-height: rem(115px)
 		&.portfolio
 			main
 				.columns .column
 					.categories
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 3 - 0.625rem)
+		&.contact
+			.waves
+				.wave1
+					background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
+				.wave2
+					background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
 
 // WIDESCREEN: FROM 1216 TO 1407
 @media screen and (min-width: $desktop-m)
 	.graphics
+		&.home
+			.showcase .columns h2
+				font-size: rem(28px)
 		&.portfolio
 			main
 				.columns .column
 					.categories
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 4 - 0.625rem)
+
+// FULL-HD: FROM 1440
+@media screen and (min-width: $full-hd)
+	.graphics
+		&.contact
+			.waves
+				.wave1
+					background-image: url("../src/graphics/contact/contact-wave1.svg")
+				.wave2
+					background-image: url("../src/graphics/contact/contact-wave2.svg")
 
 // MOBILE: UP TO 768
 @media screen and (max-width: $to-tablet)
@@ -267,6 +311,24 @@
 					font-size: rem(28px)
 					&:nth-child(2):after
 						height: rem(40px)
+			.showcase
+				.columns:not(:nth-child(1))
+					h2
+						margin-top: rem(20px)
+						&.selected:after
+							width: 40%
+			.action
+				h1
+					font-size: rem(48px)
+					line-height: rem(60px)
+				img
+					margin-top: rem(-145px)
+		&.about
+			main
+				.columns .column
+					&:nth-child(2)
+						.card
+							width: 100%
 		&.portfolio
 			main
 				.columns .column
@@ -331,6 +393,6 @@
 				div
 					background-size: contain
 				.wave1
-					background-image: url("../src/img/contact-mobile-wave1.svg")
+					background-image: url("../src/graphics/contact/contact-mobile-wave1.svg")
 				.wave2
-					background-image: url("../src/img/contact-mobile-wave2.svg")
+					background-image: url("../src/graphics/contact/contact-mobile-wave2.svg")
