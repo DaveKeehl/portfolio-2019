@@ -33,9 +33,9 @@
 				@for $i from 1 through $work-samples
 					&:nth-child(#{$i})
 						.categories
-							background-image: url(../media/img/graphics-work#{$i}.svg)
+							background-image: url(../src/graphics/portfolio/graphics-work#{$i}.svg)
 							&:hover
-								background-image: url(../media/img/graphics-work#{$i}-hover.svg)
+								background-image: url(../src/graphics/portfolio/graphics-work#{$i}-hover.svg)
 				.categories
 					display: flex
 					padding: rem(10px)
@@ -156,7 +156,7 @@
 				&::after
 					content: ''
 					margin-left: rem(10px)
-					background: url(../media/img/modal-arrow.svg) no-repeat
+					background: url(../src/graphics/portfolio/modal-arrow.svg) no-repeat
 					height: rem(8px)
 					width: rem(21px)
 					display: inline-block
@@ -235,7 +235,7 @@
 		.wave1
 			bottom: 0
 			z-index: -1
-			background-image: url("../media/img/portfolio-wave1.svg")
+			background-image: url("../src/graphics/portfolio/portfolio-wave1.svg")
 		.wave2
 			bottom: 0
-			background-image: url("../media/img/portfolio-wave2.svg")
+			background-image: url("../src/graphics/portfolio/portfolio-wave2.svg")

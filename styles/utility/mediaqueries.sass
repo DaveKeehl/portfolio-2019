@@ -1,5 +1,30 @@
 // TABLET: FROM 769 TO 1023
 @media screen and (max-width: $to-desktop)
+	.audio
+		header 
+			.navbar-brand-txt
+				display: none
+			.navbar .navbar-menu
+				background-color: $grey
+				-webkit-box-shadow: 0 0 0 $transparent
+				box-shadow: 0 0 0 $transparent
+				.navbar-end
+					text-align: center
+				ul
+					flex-direction: column
+					border-top: rem(1px) solid transparentize($white, .8)
+					padding-top: rem(40px)
+					padding-bottom: rem(20px)
+					margin-top: rem(10px)
+					font-size: rem(20px)
+					li
+						margin-right: 0
+						margin-top: rem(20px)
+						&:hover
+							border-bottom: 0 solid $transparent
+							padding-bottom: 0
+						&:first-child
+							margin-top: 0
 	.graphics
 		header .navbar
 			.navbar-burger
@@ -80,9 +105,9 @@
 						width: 80%
 			.waves
 				.wave1
-					background-image: url("../media/img/contact-tablet-wave1.svg")
+					background-image: url("../src/img/contact-tablet-wave1.svg")
 				.wave2
-					background-image: url("../media/img/contact-tablet-wave2.svg")
+					background-image: url("../src/img/contact-tablet-wave2.svg")
 @media screen and (min-width: $tablet)
 	.no-desktop
 		display: none !important
@@ -98,7 +123,7 @@
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 2 - 0.625rem)
 
 // DESKTOP: FROM 1024 TO 1215
-@media screen and (min-width: $desktop)
+@media screen and (min-width: $desktop-s)
 	.audio
 		&.home
 			main
@@ -123,7 +148,7 @@
 						height: calc(((100vw - 1.875rem) / 100 * 80) / 3 - 0.625rem)
 
 // WIDESCREEN: FROM 1216 TO 1407
-@media screen and (min-width: $widescreen)
+@media screen and (min-width: $desktop-m)
 	.graphics
 		&.portfolio
 			main
@@ -172,30 +197,6 @@
 			font-size: rem(28px)
 		h3
 			font-size: 1.3rem
-		header 
-			.navbar-brand-txt
-				display: none
-			.navbar .navbar-menu
-				background-color: $grey
-				-webkit-box-shadow: 0 0 0 $transparent
-				box-shadow: 0 0 0 $transparent
-				.navbar-end
-					text-align: center
-				ul
-					flex-direction: column
-					border-top: rem(1px) solid transparentize($white, .8)
-					padding-top: rem(40px)
-					padding-bottom: rem(20px)
-					margin-top: rem(10px)
-					font-size: rem(20px)
-					li
-						margin-right: 0
-						margin-top: rem(20px)
-						&:hover
-							border-bottom: 0 solid $transparent
-							padding-bottom: 0
-						&:first-child
-							margin-top: 0
 		&.home
 			.hero
 				.logo svg
@@ -307,6 +308,14 @@
 					&:nth-child(2)
 						margin-top: rem(20px)
 						padding-left: 0
+			.waves
+				div
+					&.wave1
+						background-image: url("../src/img/services-mobile-wave1.svg")
+					&.wave2
+						background-image: url("../src/img/services-mobile-wave2.svg")
+					&.wave3
+						background-image: url("../src/img/services-mobile-wave3.svg")
 
 // SMALL DEVICES: UP TO 576
 @media screen and (max-width: $to-small)
@@ -322,6 +331,6 @@
 				div
 					background-size: contain
 				.wave1
-					background-image: url("../media/img/contact-mobile-wave1.svg")
+					background-image: url("../src/img/contact-mobile-wave1.svg")
 				.wave2
-					background-image: url("../media/img/contact-mobile-wave2.svg")
+					background-image: url("../src/img/contact-mobile-wave2.svg")

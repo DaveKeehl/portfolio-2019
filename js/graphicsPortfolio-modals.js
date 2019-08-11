@@ -73,7 +73,7 @@ function openModal(id, name, description, tools, link) {
 				// USE IMAGES
 				logo = document.createElement("div");
 				// console.log(logo);
-				logo.style.background = "url(../media/img/" + tools[i] + ".svg) center/contain no-repeat ";
+				logo.style.background = "url(../src/graphics/portfolio/" + tools[i] + ".svg) center/contain no-repeat ";
 				logo.style.width = "24px";
 				logo.style.height = "24px";
 				logo.style.display = "block";
