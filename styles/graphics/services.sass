@@ -19,29 +19,37 @@
 				font-weight: 700
 				text-align: left
 
-			.column:nth-child(1)
-				display: flex
-				flex-direction: column
-				justify-content: center
-				padding-right: rem(10px)
+			.column
+				&:nth-child(1)
+					display: flex
+					flex-direction: column
+					justify-content: center
+				&:nth-child(2)
+					div
+						background-color: $white
+						border-radius: rem(10px)
+						height: rem(277px)
+						width: 100%
+						box-shadow: 0 0 rem(50px) transparentize($black, .9), 0 0 rem(15px) transparentize($black, .8), 0 0 rem(5px)transparentize($black, .9)
 
-			.column:nth-child(2)
-				padding-left: rem(10px)
-
-				div
-					background-color: $white
-					border-radius: rem(10px)
-					height: rem(277px)
-					width: 100%
-					box-shadow: 0 0 rem(50px) transparentize($black, .9), 0 0 rem(15px) transparentize($black, .8), 0 0 rem(5px)transparentize($black, .9)
+			&:nth-child(even)
+				.column
+					&:nth-child(1)
+						padding-right: rem(10px)
+					&:nth-child(2)
+						padding-left: rem(10px)
 
 			&:nth-child(odd)
 				flex-direction: row-reverse
-				text-align: right
+				// text-align: right
 				.column
-					display: flex
-					flex-direction: column
-					align-items: flex-end
+					// display: flex
+					// flex-direction: column
+					// align-items: flex-end
+					&:nth-child(1)
+						padding-left: rem(10px)
+					&:nth-child(2)
+						padding-right: rem(10px)
 				h2
 					text-align: right
 

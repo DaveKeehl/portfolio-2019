@@ -364,12 +364,17 @@
 						animation-name: mobileModalClose
 		&.services
 			main
-				.columns .column
-					&:nth-child(1)
-						padding-right: 0
-					&:nth-child(2)
-						margin-top: rem(20px)
-						padding-left: 0
+				.columns
+					.column
+						padding: 0
+					&:nth-child(even), &:nth-child(odd)
+						.column
+							&:nth-child(1)
+								padding: 0
+							&:nth-child(2)
+								margin-top: rem(20px)
+								padding: 0
+
 			.waves
 				div
 					&.wave1
@@ -380,7 +385,7 @@
 						background-image: url("../src/img/services-mobile-wave3.svg")
 
 // SMALL DEVICES: UP TO 576
-@media screen and (max-width: $to-small)
+@media screen and (max-width: $small)
 	.graphics
 		&.contact
 			main
@@ -396,3 +401,12 @@
 					background-image: url("../src/graphics/contact/contact-mobile-wave1.svg")
 				.wave2
 					background-image: url("../src/graphics/contact/contact-mobile-wave2.svg")
+
+// MOBILE-L: UP TO 425
+@media screen and (max-width: $mobile-l)
+	.graphics
+		&.about
+			main
+				.action button
+					width: 100%
+					padding: rem(15px) 0
