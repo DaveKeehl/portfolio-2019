@@ -117,11 +117,8 @@
 @media screen and (min-width: $tablet)
 	.no-desktop
 		display: none !important
-	.audio
-		&.home
-			.home-mastering
-				margin-left: 16.66667%
 
+	.audio
 		&.portfolio
 			main
 				.columns .column
@@ -315,7 +312,7 @@
 				.columns:not(:nth-child(1))
 					h2
 						margin-top: rem(20px)
-						&.selected:after
+						&:after, &.selected:after
 							width: 40%
 			.action
 				h1
