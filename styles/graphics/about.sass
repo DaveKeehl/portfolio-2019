@@ -94,13 +94,17 @@
 				display: flex
 				justify-content: center
 				border: 0
+				padding: 0
 				border-radius: rem(6px)
 				background-color: white
-				padding: rem(15px) rem(80px)
-				box-shadow: 0 rem(4px) rem(4px) transparentize($black, .75), 0 rem(2px) rem(2px) transparentize($black, .75)
+				box-shadow: 0 4px 4px transparentize($black, .75), 0 2px 2px transparentize($black, .75)
+				transition: box-shadow .5s
+				&:hover
+					box-shadow: 0 4px 4px transparentize($black, 1), 0 2px 2px transparentize($black, .75)
 				a
 					display: flex
 					width: max-content
+					padding: rem(15px) rem(80px)
 					img
 						height: rem(20px)
 					p

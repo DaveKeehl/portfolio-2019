@@ -242,9 +242,10 @@
 				font-weight: 700
 				padding: rem(15px) rem(80px)
 				width: fit-content
-				box-shadow: 0 rem(4px) rem(4px) transparentize($grey, .65), 0 rem(2px) rem(2px) transparentize($grey, .75)
-				&:active
-					box-shadow: 0 rem(4px) rem(4px) transparentize($black, .65), 0 rem(2px) rem(2px) transparentize($black, .75)
+				box-shadow: 0 4px 4px transparentize($homeBlue, .8), 0 2px 2px transparentize($homeBlue, .8)
+				transition: background-color .5s
+				&:hover
+					background-color: #2d83eb
 	footer
 		color: $black
 		background-color: $white
