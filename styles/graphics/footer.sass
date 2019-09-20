@@ -35,8 +35,10 @@
 					height: rem(40px)
 					justify-content: center
 					width: rem(40px)
-					box-shadow: 0 rem(2px) rem(25px) transparentize($black, .85), 0 rem(1px) rem(2px) transparentize($black, .65)
-
+					box-shadow: 0 2px 25px transparentize($black, .85), 0 1px 2px transparentize($black, .65)
+					transition: all .2s
+					&:hover
+						opacity: .75
 					i
 						font-size: rem(20px)
 						text-shadow: 0 0 0

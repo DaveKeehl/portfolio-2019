@@ -30,7 +30,8 @@
 				box-shadow: none
 			input, textarea
 				color: $grey
-				margin-bottom: rem(5px)
+				margin-bottom: 5px
+				transition: all .5s
 				&::placeholder
 					color: $grey
 					opacity: .2
@@ -40,18 +41,17 @@
 					background-color: #2A3039
 					color:  $white
 					font-size: rem(16px)
-					margin: rem(15px) 0 0 0
-					transition: all .25s ease
+					margin: 15px 0 0 0
 					&:hover
 						cursor: pointer
 						background-color: #1f2124
 					&:focus
-						border: rem(1px) solid $transparent
+						border: 1px solid $transparent
 						box-shadow: none
 				&:focus
 					outline: 0
-					border-color: #A73AD1
-					box-shadow: 0 rem(4px) rem(4px) rgba(167, 58, 209, 0.45), 0 rem(2px) rem(2px) rgba(167, 58, 209, 0.35)
+					border: 2px solid #edd8f6
+					box-shadow: 0 4px 4px rgba(167, 58, 209, 0.45), 0 2px 2px rgba(167, 58, 209, 0.35)
 					&::placeholder
 						color: #A73AD1
 			.select
@@ -63,8 +63,8 @@
 					height: 100%
 					width: 100%
 					box-shadow: none
+					transition: box-shadow .2s
 					&:focus
-						border-color: #A73AD1
 						box-shadow: 0 rem(4px) rem(4px) rgba(167, 58, 209, 0.45), 0 rem(2px) rem(2px) rgba(167, 58, 209, 0.35)
 				&:not(.is-multiple):not(.is-loading)::after
 					border-color: $grey
