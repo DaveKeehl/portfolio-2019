@@ -6,9 +6,9 @@
 		z-index: 20
 		.columns 
 			.column
-				&:nth-child(1)
-					img
-						margin-top: 20px
+				.signature
+					margin-top: 20px
+					width: 150px
 				&:nth-child(2)
 					display: flex
 					justify-content: center
@@ -67,12 +67,13 @@
 								flex-direction: row
 								a
 									display: flex
-									height: rem(30px)
-									width: rem(30px)
+									height: 30px
+									width: 30px
 									border-radius: 100%
 									justify-content: center
 									align-items: center
 									margin-right: rem(10px)
+									transition: all .2s
 									&.github
 										background-color: $github
 									&.linkedin
@@ -84,6 +85,8 @@
 									i
 										color: $white
 										font-size: rem(18px)
+									&:hover
+										opacity: .5
 		.action
 			display: flex
 			flex-direction: column
