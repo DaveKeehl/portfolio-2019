@@ -1,4 +1,4 @@
-// TABLET: FROM 769 TO 1023
+// TABLET: FROM 768 TO 1023
 @media screen and (max-width: $to-desktop-s)
 	.audio
 		header 
@@ -134,6 +134,9 @@
 				.columns .column
 					&:nth-child(2) .card
 						width: 80%
+				.action
+					button
+						width: auto
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
@@ -156,6 +159,9 @@
 				display: none
 		&.home
 			.showcase
+				.columns 
+					h2.column.selected:after, h2:hover:after
+						width: 95%
 				.work-samples
 					.back-sample-1, .back-sample-2
 						display: block
@@ -190,6 +196,11 @@
 // FULL-HD: FROM 1440
 @media screen and (min-width: $full-hd)
 	.graphics
+		&.home
+			.showcase
+				.columns
+					h2.column.selected:after, h2:hover:after
+						width: 80%
 		&.contact
 			.waves
 				.wave1
@@ -197,7 +208,7 @@
 				.wave2
 					background-image: url("../src/graphics/contact/contact-wave2.svg")
 
-// MOBILE: UP TO 768
+// MOBILE: UP TO 767
 @media screen and (max-width: $to-tablet)
 	.no-mobile
 		display: none !important
@@ -297,6 +308,9 @@
 						width: 100%
 					.form-button input
 						width: 100%
+	html body.graphics
+		main h1
+			margin-bottom: 50px
 	.graphics
 		header
 			.navbar .navbar-menu
@@ -308,12 +322,19 @@
 					font-size: rem(28px)
 					&:nth-child(2):after
 						height: rem(40px)
+			.services
+				div:nth-child(2) 
+					.container 
+						h3
+							margin-bottom: 0
+						.column
+							padding-bottom: 0
 			.showcase
 				.columns:not(:nth-child(1))
 					h2
 						margin-top: rem(20px)
 						&:after, &.selected:after
-							width: 40%
+							width: 35%
 			.action
 				h1
 					font-size: rem(48px)
@@ -326,6 +347,11 @@
 					&:nth-child(2)
 						.card
 							width: 100%
+				.action
+					margin-top: 100px
+					margin-bottom: 200px
+					button
+						width: 75%
 		&.portfolio
 			main
 				.columns .column
@@ -402,8 +428,39 @@
 // MOBILE-L: UP TO 425
 @media screen and (max-width: $mobile-l)
 	.graphics
+		main.container
+			max-width: 100%
+			padding: 0 20px
+		&.home
+			.showcase
+				.columns h2.column.selected:after
+					width: 60%
+		&.about
+			main
+				.action 
+					button
+						width: 100%
+						padding: 15px 0
+						a
+							padding: 0
+
+// MOBILE-M: UP TO 375
+@media screen and (max-width: $mobile-m)
+	.graphics
+		&.home
+			.showcase
+				.columns h2.column.selected:after
+					width: 70%
 		&.about
 			main
 				.action button
 					width: 100%
-					padding: rem(15px) 0
+
+// MOBILE-S: UP TO 320
+@media screen and (max-width: $mobile-s)
+	.graphics
+		&.home
+			.showcase
+				.columns h2.column.selected:after
+					width: 80%
+
