@@ -137,6 +137,11 @@
 				.action
 					button
 						width: auto
+		
+		&.portfolio
+			main
+				.filterButtons p:nth-child(2)
+					display: none
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
@@ -457,6 +462,8 @@
 			main
 				.columns .column .categories
 					height: calc(100vw - 50px)
+				.filterButtons p:nth-child(1)
+					display: none
 
 // MOBILE-M: UP TO 375
 @media screen and (max-width: $mobile-m)

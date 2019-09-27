@@ -90,16 +90,26 @@
 
 	<main class="container">
 		<h1>PORTFOLIO</h1>
-		<p id="filters">
-			<span onclick="filterSelection('all')" name="category">All</span> |
-			<span onclick="filterSelection('ux')" name="category">UI/UX Design</span> |
-			<span onclick="filterSelection('web')" name="category">Web Design</span> |
-			<span onclick="filterSelection('print')" name="category">Print Design</span> |
-			<span onclick="filterSelection('video')" name="category">Video Editing</span>
-		</p>
+		<div class="filterButtons">
+			<p id="filters">
+				<span onclick="filterSelection('all')" name="category">All</span> |
+				<span onclick="filterSelection('ux')" name="category">UI/UX Design</span> |
+				<span onclick="filterSelection('web')" name="category">Web Design</span> |
+				<span onclick="filterSelection('print')" name="category">Print Design</span> |
+				<span onclick="filterSelection('video')" name="category">Video Editing</span>
+			</p>
+			<p id="filters">
+				<span onclick="filterSelection('all')" name="category">All</span> |
+				<span onclick="filterSelection('ux')" name="category">UI/UX</span> |
+				<span onclick="filterSelection('web')" name="category">Web</span> |
+				<span onclick="filterSelection('print')" name="category">Print</span> |
+				<span onclick="filterSelection('video')" name="category">Video</span>
+			</p>
+		</div>
+
 		<div class="columns is-multiline">
 			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow ux web">
-				<div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is my personal online portfolio (you’re browsing it right now!). This website is the result of many hours of designing, testing, coding and debugging. You’ll find a selection of works done by me that represent my current skills in graphics.', ['html', 'sass', 'bulma', 'javascript', 'jquery', 'gulp', 'figma', 'zeplin', 'github'], 'davideciulla.netlify.com')"></div>
+				<div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is my personal online portfolio (you’re browsing it right now!). This website is the result of many hours of designing, testing, coding and debugging. You’ll find a selection of works done by me that represent my current skills in graphic design.', ['html', 'sass', 'bulma', 'javascript', 'jquery', 'gulp', 'figma', 'zeplin', 'github'], 'davideciulla.netlify.com')"></div>
 			</div>
 			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow web">
 				<div class="categories" onclick="openModal(1, 'SwissAPO', 'SwissAPO stands for Swiss Association of Professional Organizers. They wanted to change CMS (Content Management System) and have a brand new website. I created the latter following their brief and guidelines.', ['html', 'css', 'wordpress'], 'www.swiss-apo.ch')"></div>
