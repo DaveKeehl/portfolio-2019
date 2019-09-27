@@ -173,7 +173,7 @@
 			main
 				.columns .column
 					.categories
-						height: calc(((100vw - 1.875rem) / 100 * 80) / 3 - 0.625rem)
+						height: calc(100vw / 100 * 80 / 3 - 10px)
 		&.contact
 			.waves
 				.wave1
@@ -191,7 +191,7 @@
 			main
 				.columns .column
 					.categories
-						height: calc(((100vw - 1.875rem) / 100 * 80) / 4 - 0.625rem)
+						height: calc(100vw / 100 * 80 / 4 - 10px)
 
 // FULL-HD: FROM 1440
 @media screen and (min-width: $full-hd)
@@ -208,8 +208,19 @@
 				.wave2
 					background-image: url("../src/graphics/contact/contact-wave2.svg")
 
-// MOBILE: UP TO 767
+// MOBILE UP TO 767
 @media screen and (max-width: $to-tablet)
+	.graphics
+		&.home
+			.action
+				h1
+					font-size: rem(48px)
+					line-height: rem(60px)
+				img
+					margin-top: rem(-145px)
+
+// MOBILE: UP TO 768
+@media screen and (max-width: $tablet)
 	.no-mobile
 		display: none !important
 	.index
@@ -335,12 +346,7 @@
 						margin-top: rem(20px)
 						&:after, &.selected:after
 							width: 35%
-			.action
-				h1
-					font-size: rem(48px)
-					line-height: rem(60px)
-				img
-					margin-top: rem(-145px)
+
 		&.about
 			main
 				.columns .column
@@ -356,7 +362,7 @@
 			main
 				.columns .column
 					.categories
-						height: calc(((100vw - 1.875rem) / 100 * 80) / 1 - 0.625rem)
+						height: calc(100vw / 100 * 80 / 1 - 10px)
 			.modal-sidebar
 				align-items: flex-end
 				height: 100vh
@@ -435,6 +441,10 @@
 			.showcase
 				.columns h2.column.selected:after
 					width: 60%
+			.action
+				h1 ~ a
+					p
+						padding: 15px 50px
 		&.about
 			main
 				.action 
@@ -443,6 +453,10 @@
 						padding: 15px 0
 						a
 							padding: 0
+		&.portfolio
+			main
+				.columns .column .categories
+					height: calc(100vw - 50px)
 
 // MOBILE-M: UP TO 375
 @media screen and (max-width: $mobile-m)
