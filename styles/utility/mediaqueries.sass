@@ -101,9 +101,17 @@
 		&.about
 			main
 				h1 ~ .columns
-					flex-direction: column
+					display: flex
+					flex-direction: column-reverse
 				.card
-					margin-top: rem(100px)
+					margin-bottom: 100px
+				.columns .column
+					display: flex
+					flex-direction: column
+					align-items: center
+					p
+						text-align: justify
+						text-align-last: center
 		&.contact
 			main
 				form
@@ -114,6 +122,11 @@
 					background-image: url("../src/img/contact-tablet-wave1.svg")
 				.wave2
 					background-image: url("../src/img/contact-tablet-wave2.svg")
+		&.portfolio
+			main
+				.columns .column .categories
+					height: calc(100vw / 100 * 80 / 2 - 10px);
+
 @media screen and (min-width: $tablet)
 	.no-desktop
 		display: none !important
@@ -213,7 +226,16 @@
 				.wave2
 					background-image: url("../src/graphics/contact/contact-wave2.svg")
 
-// MOBILE UP TO 767
+// DESKTOP: UP TO 1024
+@media screen and (max-width: $desktop-m)
+	.graphics
+		&.home
+			.showcase
+				.columns
+					h2.column.selected:after, h2:hover:after
+						top: 15%
+
+// MOBILE: UP TO 767
 @media screen and (max-width: $to-tablet)
 	.graphics
 		&.home
@@ -326,7 +348,7 @@
 						width: 100%
 	html body.graphics
 		main h1
-			margin-bottom: 50px
+			margin-bottom: 80px
 	.graphics
 		header
 			.navbar .navbar-menu
@@ -366,8 +388,11 @@
 		&.portfolio
 			main
 				.columns .column
+					margin-bottom: 10px
 					.categories
 						height: calc(100vw / 100 * 80 / 1 - 10px)
+				.filterButtons p:nth-child(1)
+					display: none
 			.modal-sidebar
 				align-items: flex-end
 				height: 100vh
@@ -462,8 +487,7 @@
 			main
 				.columns .column .categories
 					height: calc(100vw - 50px)
-				.filterButtons p:nth-child(1)
-					display: none
+
 
 // MOBILE-M: UP TO 375
 @media screen and (max-width: $mobile-m)
@@ -482,6 +506,6 @@
 	.graphics
 		&.home
 			.showcase
-				.columns h2.column.selected:after
-					width: 80%
-
+				.columns 
+					h2.column.selected:after, h2:hover:after
+						width: 80%
