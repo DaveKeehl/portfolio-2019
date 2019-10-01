@@ -156,6 +156,18 @@
 				.filterButtons p:nth-child(2)
 					display: none
 
+@media screen and (min-width: $tablet) and (max-width: $to-desktop-s)
+	.graphics
+		&.home
+			.services 
+				div:nth-child(2) .container .columns
+					flex-wrap: wrap
+					.column
+						flex: 0 50%
+						p
+							text-align: center
+
+
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
 	.audio
