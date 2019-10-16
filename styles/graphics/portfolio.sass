@@ -38,9 +38,8 @@
 					&:nth-child(#{$i})
 						.categories
 							background-image: url(../src/graphics/portfolio/graphics-work#{$i}.svg)
-							&:hover
-								background-image: url(../src/graphics/portfolio/graphics-work#{$i}-hover.svg)
 				.categories
+					position: relative
 					display: flex
 					padding: rem(10px)
 					cursor: pointer
@@ -48,10 +47,24 @@
 					align-items: flex-end
 					height: calc(((100vw - 1.875rem) / 100 * 80) / 4 - 0.625rem)
 					border-radius: rem(10px)
-					box-shadow: 0 rem(4px) rem(4px) transparentize($black, .75), 0 rem(2px) rem(2px) transparentize($black, .85), 0 rem(5px) rem(20px) transparentize($black, .7)
+					box-shadow: 0 4px 4px transparentize($black, .75), 0 2px 2px transparentize($black, .85), 0 5px 20px transparentize($black, .7)
 					background-size: cover
-					transition: background-image .15s ease
+					&::before
+						content: ''
+						position: absolute
+						left: 0
+						top: 0
+						width: 100%
+						height: 100%
+						border-radius: 10px
+						opacity: .5
+						background: linear-gradient(to bottom, transparent, transparentize($black, .5))
+						transition: opacity .2s ease
+					&:hover
+						&::before
+							opacity: 1
 					p
+						z-index: $main-z
 						text-transform: uppercase
 						font-size: rem(12px)
 						padding: rem(5px)

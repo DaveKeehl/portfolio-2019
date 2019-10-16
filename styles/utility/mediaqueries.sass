@@ -1,3 +1,11 @@
+// MOBILE L: FROM 576 TO 768
+@media screen and (min-width: $mobile-l) and (max-width: $to-tablet)
+	.graphics
+		&.portfolio
+			main .columns .column
+				.categories p
+					font-size: rem(16px)
+
 // TABLET: FROM 768 TO 1023
 @media screen and (max-width: $to-desktop-s)
 	.audio
@@ -166,7 +174,6 @@
 						flex: 0 50%
 						p
 							text-align: center
-
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
