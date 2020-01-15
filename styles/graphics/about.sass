@@ -8,7 +8,8 @@
 			.column
 				.signature
 					margin-top: 30px
-					width: 150px
+					width: 100px
+					filter: drop-shadow(0px 2px 4px transparentize($black, .8))
 				&:nth-child(2)
 					display: flex
 					justify-content: center
@@ -107,18 +108,21 @@
 				padding: 0
 				border-radius: rem(6px)
 				background-color: white
-				box-shadow: 0 4px 4px transparentize($black, .75), 0 2px 2px transparentize($black, .75)
-				transition: box-shadow .5s
+				// box-shadow: 0 4px 4px transparentize($black, .75), 0 2px 2px transparentize($black, .75)
+				transition: box-shadow .2s
+				box-shadow: 0 2px 5px transparentize($black, .9), 0 10px 15px rgba(0,0,0,0.2)
 				&:hover
-					box-shadow: 0 4px 4px transparentize($black, 1), 0 2px 2px transparentize($black, .75)
+					// box-shadow: 0 4px 4px transparentize($black, 1), 0 2px 2px transparentize($black, .75)
+					box-shadow: 0 2px 5px transparentize($black, .9), 0 6px 12px rgba(0, 0, 0, 0.3)
 				a
 					display: flex
 					width: max-content
-					padding: 15px 80px
+					padding: 18px 60px
 					img
 						height: rem(20px)
 					p
-						font-size: rem(18px)
+						font-size: rem(20px)
+						font-weight: 600
 						margin: 0 rem(5px)
 
 	.waves

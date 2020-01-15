@@ -236,17 +236,19 @@
 			background-color: $white
 			height: 350px
 			a
-				background-color: $homeBlue
+				// background-color: $homeBlue
+				background-color: #187df7
 				color: $white
+				text-shadow: 0 1px 2px transparentize($black, .8)
 				border: 0
 				border-radius: rem(5px)
 				font-size: rem(18px)
 				font-weight: 700
 				padding: 15px 80px
-				box-shadow: 0 4px 4px transparentize($homeBlue, .8), 0 2px 2px transparentize($homeBlue, .8)
-				transition: background-color .5s
+				box-shadow: 0 2px 2px transparentize($homeBlue, .8),0 5px 10px transparentize($homeBlue, .3)
+				transition: background-color .2s
 				&:hover
-					background-color: #2d83eb
+					background-color: #1063c7
 	footer
 		color: $black
 		background-color: $white
