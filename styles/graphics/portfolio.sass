@@ -6,14 +6,32 @@
 		h1
 			margin-bottom: rem(50px)
 
-		span
-			cursor: pointer
-			&:focus, &:visited, &:hover, &:active
-				color: transparentize($white, .5)
+		.filters
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-bottom: rem(50px)
 
-		.filter-active
-			color: $white
-			text-decoration: underline
+			div
+				span
+					display: block
+					transform: translateY(0)
+					cursor: pointer;
+					background-color: $black;
+					padding: 5px 15px;
+					margin: 0 2px;
+					color: $white;
+					border-radius: 5px;
+					box-shadow: 0px 2px 4px transparentize($black, .5);
+					text-transform: uppercase;
+					font-weight: 600;
+					transition: all .2s
+					&.filter-active
+						background-color: $white
+						color: $black
+				&:hover span
+					transform: translateY(-2px)
+					box-shadow: 0px 6px 8px transparentize($black, .7);
 
 		.columnHide
 			display: none
@@ -22,14 +40,6 @@
 		.columnShow
 			display: block
 			padding: rem(5px)
-
-		.filterButtons
-			text-align: center
-			p
-				&:nth-child(1)
-					margin-bottom: 70px
-				&:nth-child(2)
-					margin-bottom: 50px
 
 		.columns
 			.column
@@ -87,8 +97,6 @@
 	footer
 		margin-top: 280px
 
-
-
 	.modal
 		display: none
 		position: fixed
@@ -145,15 +153,17 @@
 			&.modalSidebar-modalClose
 				@include animation (modalClose, .5s, 1, cubic-bezier(1, 0, 0, 1))
 				@include animation-fill-mode (forwards)
-			img.close
-				position: absolute
-				top: rem(10px)
-				right: rem(10px)
-				transition: all .25s ease
+			.close 
+				img
+					position: absolute
+					top: rem(10px)
+					right: rem(10px)
+					transition: all .25s ease
 				&:hover
-					opacity: .5
-					cursor: pointer
-					transform: rotate(90deg)
+					img
+						opacity: .5
+						cursor: pointer
+						transform: rotate(90deg)
 			.categories
 				display: flex
 				flex-direction: row

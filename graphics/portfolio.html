@@ -13,9 +13,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet prefetch" as="font">
 
 	<!-- Fontawesome -->
-	<link href="https://kit-free.fontawesome.com" rel="preconnect" as="script" crossorigin="anonymous">
+	<!-- <link href="https://kit-free.fontawesome.com" rel="preconnect" as="script" crossorigin="anonymous"> -->
+	<!-- <script src="https://kit.fontawesome.com/c6af894bde.js" crossorigin="anonymous"></script> -->
 	<script src="https://kit.fontawesome.com/c6af894bde.js" crossorigin="anonymous"></script>
-
 	<!-- Bulma CSS -->
 	<link href="../styles/bulma/bulma.min.css" rel="stylesheet preload" as="style">
 
@@ -90,21 +90,12 @@
 
 	<main class="container">
 		<h1>PORTFOLIO</h1>
-		<div class="filterButtons">
-			<p id="filters">
-				<span onclick="filterSelection('all')" name="category">All</span> |
-				<span onclick="filterSelection('ux')" name="category">UI/UX Design</span> |
-				<span onclick="filterSelection('web')" name="category">Web Design</span> |
-				<span onclick="filterSelection('print')" name="category">Print Design</span> |
-				<span onclick="filterSelection('video')" name="category">Video Editing</span>
-			</p>
-			<p id="filters">
-				<span onclick="filterSelection('all')" name="category">All</span> |
-				<span onclick="filterSelection('ux')" name="category">UI/UX</span> |
-				<span onclick="filterSelection('web')" name="category">Web</span> |
-				<span onclick="filterSelection('print')" name="category">Print</span> |
-				<span onclick="filterSelection('video')" name="category">Video</span>
-			</p>
+		<div class="filters">
+			<div><span class="filter-active" onclick="filterSelection('all')" name="category">All</span></div>
+			<div><span onclick="filterSelection('ux')" name="category">UI/UX</span></div>
+			<div><span onclick="filterSelection('web')" name="category">Web</span></div>
+			<div><span onclick="filterSelection('print')" name="category">Print</span></div>
+			<div><span onclick="filterSelection('video')" name="category">Video</span></div>
 		</div>
 
 		<div class="columns is-multiline">
@@ -172,7 +163,7 @@
 			<div class="content"></div>
 		</div>
 		<aside>
-			<img class="close" src="../src/graphics/portfolio/close-modal.svg">
+			<div class="close"><img src="../src/graphics/portfolio/close-modal.svg"></div>
 			<div class="categories"></div>
 			<h2></h2>
 			<p class="description"></p>

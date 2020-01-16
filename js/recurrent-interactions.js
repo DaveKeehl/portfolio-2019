@@ -58,5 +58,4 @@ $("#instagram").hover(
 // AUTOMATIC COPYRIGHT YEAR
 
 let footerCopyright = document.querySelector("footer .footer-bottom p");
-let currentYear = new Date().getFullYear();
-footerCopyright.innerHTML = "© " + currentYear + " Davide Ciulla. All Rights Reserved";
+footerCopyright.innerHTML = "© " + new Date().getFullYear() + " Davide Ciulla. All Rights Reserved";

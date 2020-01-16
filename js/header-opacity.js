@@ -14,7 +14,6 @@ $window.on('scroll', function scrollHandler() {
 	var opacity = yPosition / (windowHeight - headerHeight) * 0.5;
 	var maxOpacity = 0.25;
 	if (opacity === 0) {
-		console.log("test");
 		header.classList.remove('header-hover');
 	}
 	if (opacity <= maxOpacity) {
