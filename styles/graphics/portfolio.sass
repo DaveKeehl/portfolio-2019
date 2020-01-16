@@ -87,7 +87,9 @@
 	footer
 		margin-top: 280px
 
-	.modal-sidebar
+
+
+	.modal
 		display: none
 		position: fixed
 		justify-content: flex-end
@@ -99,13 +101,35 @@
 		z-index: $modal-z
 		transition: all 1s ease
 		&.display-flex
-			display: flex
+			display: -webkit-box
 		&.modal-background-in
 			@include animation (modal-background-in, .5s, 1, ease)
 			@include animation-fill-mode (forwards)
 		&.modal-background-out
 			@include animation (modal-background-out, 1s, 1, ease)
 			@include animation-fill-mode (forwards)
+		.presentation
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 100%;
+			width: calc(100% - 450px);
+			position: absolute;
+			left: 0;
+			top: 0;
+			.content
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: white
+				width: 80%
+				height: 80%
+				&.modalPresentation-modalOpen
+					@include animation (modalPresentation-fadeIn, .5s, 1, ease)
+					@include animation-fill-mode (forwards)
+				&.modalPresentation-modalClose
+					@include animation (modalPresentation-fadeOut, .5s, 1, ease)
+					@include animation-fill-mode (forwards)
 		aside
 			position: relative
 			padding: 25px
@@ -115,10 +139,10 @@
 			width: 450px
 			overflow: auto
 			transition: all .5s cubic-bezier(1, 0, 0, 1)
-			&.graphicsPortfolio-modalOpen
+			&.modalSidebar-modalOpen
 				@include animation (modalOpen, .5s, 1, cubic-bezier(1, 0, 0, 1))
 				@include animation-fill-mode (forwards)
-			&.graphicsPortfolio-modalClose
+			&.modalSidebar-modalClose
 				@include animation (modalClose, .5s, 1, cubic-bezier(1, 0, 0, 1))
 				@include animation-fill-mode (forwards)
 			img.close
@@ -219,6 +243,7 @@
 					&:hover
 						.tooltip-text
 							visibility: visible
+							@include animation (tooltip-show, .2s, 1, ease)
 					.tooltip-text
 						font-family: 'Lato', sans-serif
 						text-transform: uppercase

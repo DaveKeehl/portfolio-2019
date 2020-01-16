@@ -192,6 +192,10 @@
 					margin-left: 0
 	.graphics
 		header
+			&.header-hover
+				transition: background-color .2s
+				&:hover
+					background-color: transparentize($black, .5) !important
 			.navbar .navbar-burger
 				display: none
 		&.home
@@ -413,7 +417,7 @@
 						height: calc(100vw / 100 * 80 / 1 - 10px)
 				.filterButtons p:nth-child(1)
 					display: none
-			.modal-sidebar
+			.modal
 				align-items: flex-end
 				height: 100vh
 				aside
@@ -437,9 +441,9 @@
 						display: none
 					h2
 						margin-top: rem(40px)
-					&.graphicsPortfolio-modalOpen
+					&.modalSidebar-modalOpen
 						animation-name: mobileModalOpen
-					&.graphicsPortfolio-modalClose
+					&.modalSidebar-modalClose
 						animation-name: mobileModalClose
 		&.services
 			main

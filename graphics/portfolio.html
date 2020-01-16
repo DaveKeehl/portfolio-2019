@@ -109,7 +109,7 @@
 
 		<div class="columns is-multiline">
 			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow ux web">
-				<div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is my personal online portfolio (you’re browsing it right now!). This website is the result of many hours of designing, testing, coding and debugging. You’ll find a selection of works done by me that represent my current skills in graphic design.', ['html', 'sass', 'bulma', 'javascript', 'jquery', 'gulp', 'figma', 'zeplin', 'github'], 'davideciulla.netlify.com')"></div>
+				<div class="categories" onclick="openModal(0, 'Online Portfolio', 'This is my personal online portfolio (you’re browsing it right now!). This website is the result of many hours of designing, testing, coding and debugging. You’ll find a selection of works done by me that represent my current skills in graphic design.', ['html', 'sass', 'bulma', 'javascript', 'jquery', 'gulp', 'figma', 'zeplin', 'github'], 'davideciulla.netlify.com', 'hello-world')"></div>
 			</div>
 			<div class="column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow web">
 				<div class="categories" onclick="openModal(1, 'SwissAPO', 'SwissAPO stands for Swiss Association of Professional Organizers. They wanted to change CMS (Content Management System) and have a brand new website. I created the latter following their brief and guidelines.', ['html', 'css', 'wordpress'], 'www.swiss-apo.ch')"></div>
@@ -154,10 +154,7 @@
 					</div>
 				</div>
 				<div class="row info">
-					<div class="column is-12">
-						<p>+41 (0)77 403 59 30</p>
-						<p><a href="mailto: davide.ciulla@ticino.com">davide.ciulla@ticino.com</a></p>
-					</div>
+					<p><a href="mailto: davide.ciulla@ticino.com">davide.ciulla@ticino.com</a></p>
 				</div>
 			</div>
 			<div class="footer-divider"></div>
@@ -170,7 +167,10 @@
 		</div>
 	</footer>
 
-	<div class="modal-sidebar">
+	<div class="modal">
+		<div class="presentation">
+			<div class="content"></div>
+		</div>
 		<aside>
 			<img class="close" src="../src/graphics/portfolio/close-modal.svg">
 			<div class="categories"></div>
@@ -198,7 +198,7 @@
 		// let i = 0;
 
 		// var page = document.querySelector('.graphics.portfolio');
-		// var workPanel = document.querySelector('.graphics.portfolio .modal-sidebar aside');
+		// var workPanel = document.querySelector('.graphics.portfolio .modal aside');
 
 		// window.addEventListener('scroll', function() {
 		// 	console.log(pageYOffset + 'px');

@@ -1,15 +1,16 @@
 var page = document.getElementsByTagName("html")[0];
-var closeModalButton = document.querySelector(".graphics.portfolio .modal-sidebar aside img");
+var closeModalButton = document.querySelector(".graphics.portfolio .modal aside img");
 closeModalButton.addEventListener("click", closeModal);
-var modal = document.querySelector(".graphics.portfolio .modal-sidebar");
-var modalSidebar = document.querySelector(".graphics.portfolio .modal-sidebar aside");
+var modal = document.querySelector(".graphics.portfolio .modal");
+var modalPresentation = document.querySelector(".graphics.portfolio .modal .presentation .content");
+var modalSidebar = document.querySelector(".graphics.portfolio .modal aside");
 var work = document.querySelectorAll(".graphics.portfolio .columns .column");
 var workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
-var modalName = document.querySelector(".graphics.portfolio .modal-sidebar h2");
-var modalDescription = document.querySelector(".graphics.portfolio .modal-sidebar .description");
-var modalCategories = document.querySelector(".graphics.portfolio .modal-sidebar .categories");
-var modalTools = document.querySelector(".graphics.portfolio .modal-sidebar .tools");
-var modalLink = document.querySelector(".graphics.portfolio .modal-sidebar a");
+var modalName = document.querySelector(".graphics.portfolio .modal h2");
+var modalDescription = document.querySelector(".graphics.portfolio .modal .description");
+var modalCategories = document.querySelector(".graphics.portfolio .modal .categories");
+var modalTools = document.querySelector(".graphics.portfolio .modal .tools");
+var modalLink = document.querySelector(".graphics.portfolio .modal a");
 var isClosed = true;
 
 // ADDING TAGS TO EACH WORK SAMPLE
@@ -31,7 +32,7 @@ for (i = 0; i < work.length; i++) {
 
 // OPEN MODAL
 
-function openModal(id, name, description, tools, link) {
+function openModal(id, name, description, tools, link, presentation) {
 	if (isClosed == true && page.classList.contains("overflow-hidden") == false) {
 		// INJECT WORK NAME
 		modalName.innerHTML = name;
@@ -90,19 +91,28 @@ function openModal(id, name, description, tools, link) {
 			tool.classList.add(tools[i]);
 			modalTools.append(tool);
 		}
+		// INJECT PRESENTATION CONTENT
+		if (presentation !== undefined) {
+			modalPresentation.innerHTML = presentation;
+		}
+
 		// SHOW MODAL
 		// 1. REMOVE BACKGROUND OUT-ANIMATION
 		modal.classList.remove("modal-background-out");
 		// 2. REMOVE SIDEBAR OUT-ANIMATION
-		modalSidebar.classList.remove("graphicsPortfolio-modalClose");
-		// 3. REMOVE PAGE SCROLLBAR
+		modalSidebar.classList.remove("modalSidebar-modalClose");
+		// 3. REMOVE PRESENTATION OUT-ANIMATION
+		modalPresentation.classList.remove("modalPresentation-modalClose");
+		// 4. REMOVE PAGE SCROLLBAR
 		page.classList.add("overflow-hidden");
-		// 4. SHOW MODAL
+		// 5. SHOW MODAL
 		modal.classList.add("display-flex");
-		// 5. ADD BACKGROUND IN-ANIMATION
+		// 6. ADD BACKGROUND IN-ANIMATION
 		modal.classList.add("modal-background-in");
-		// 6. ADD SIDEBAR IN-ANIMATION
-		modalSidebar.classList.add("graphicsPortfolio-modalOpen");
+		// 7. ADD SIDEBAR IN-ANIMATION
+		modalSidebar.classList.add("modalSidebar-modalOpen");
+		// 8. ADD PRESENTATION IN-ANIMATION
+		modalPresentation.classList.add("modalPresentation-modalOpen");
 		// SET MODAL STATE
 		isClosed = false;
 	}
@@ -115,15 +125,19 @@ function closeModal() {
 		// 1. REMOVE BACKGROUND IN-ANIMATION
 		modal.classList.remove("modal-background-in");
 		// 2. REMOVE SIDEBAR IN-ANIMATION
-		modalSidebar.classList.remove("graphicsPortfolio-modalOpen");
-		// 3. ADD BACKGROUND OUT-ANIMATION
+		modalSidebar.classList.remove("modalSidebar-modalOpen");
+		// 3. REMOVE PRESENTATION IN-ANIMATION
+		modalPresentation.classList.remove("modalPresentation-modalOpen");
+		// 4. ADD BACKGROUND OUT-ANIMATION
 		modal.classList.add("modal-background-out");
-		// 4. ADD SIDEBAR OUT-ANIMATION
-		modalSidebar.classList.add("graphicsPortfolio-modalClose");
+		// 5. ADD SIDEBAR OUT-ANIMATION
+		modalSidebar.classList.add("modalSidebar-modalClose");
+		// 6. ADD PRESENTATION OUT-ANIMATION
+		modalPresentation.classList.add("modalPresentation-modalClose");
 		setTimeout(function() {
-			// 5. ADD SCROLLBAR TO PAGE
+			// 7. ADD SCROLLBAR TO PAGE
 			page.classList.remove("overflow-hidden");
-			// 6. REMOVE MODAL FROM PAGE
+			// 8. REMOVE MODAL FROM PAGE
 			modal.classList.remove("display-flex");
 			// RESET CATEGORIES
 			while (modalCategories.hasChildNodes()) {
@@ -133,6 +147,9 @@ function closeModal() {
 			while (modalTools.hasChildNodes()) {
 				modalTools.removeChild(modalTools.firstChild);
 			}
+			console.log("test");
+			// RESET PRESENTATION CONTENT
+			modalPresentation.innerHTML = "";
 		}, 500);
 		isClosed = true;
 	}

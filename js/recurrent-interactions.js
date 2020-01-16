@@ -54,3 +54,9 @@ $("#instagram").hover(
 		$("#instagram svg > path").removeClass("svg-purple");
 	},
 );
+
+// AUTOMATIC COPYRIGHT YEAR
+
+let footerCopyright = document.querySelector("footer .footer-bottom p");
+let currentYear = new Date().getFullYear();
+footerCopyright.innerHTML = "© " + currentYear + " Davide Ciulla. All Rights Reserved";
