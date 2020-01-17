@@ -369,14 +369,14 @@
 						width: 100%
 					.form-button input
 						width: 100%
-	html body.graphics
-		main h1
-			margin-bottom: 80px
 	.graphics
 		header
 			.navbar .navbar-menu
 				ul
 					width: 75%
+		main
+			h1
+				padding-top: calc(50px + 80px)
 		&.home
 			.hero>div #typewriter 
 				h1
@@ -469,6 +469,22 @@
 
 // SMALL DEVICES: UP TO 576
 @media screen and (max-width: $small)
+
+	.audio
+		&.portfolio
+			main
+				.filters
+					display: grid
+					grid-template-columns: 1fr 1fr
+					grid-column-gap: 5px
+					grid-row-gap: 5px
+					div 
+						&:hover span
+							transform: translateY(0)
+						span
+							margin: 0
+							padding: 10px 15px
+
 	.graphics
 		&.portfolio
 			main
