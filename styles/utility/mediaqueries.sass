@@ -470,6 +470,20 @@
 // SMALL DEVICES: UP TO 576
 @media screen and (max-width: $small)
 	.graphics
+		&.portfolio
+			main
+				.filters
+					display: grid
+					grid-template-columns: 1fr 1fr
+					grid-column-gap: 5px
+					grid-row-gap: 5px
+					div 
+						&:hover span
+							transform: translateY(0)
+							box-shadow: 0px 2px 4px transparentize($black, .6);
+						span
+							margin: 0
+
 		&.contact
 			main
 				form
