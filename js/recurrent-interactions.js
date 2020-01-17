@@ -20,9 +20,9 @@ $(".navbar-brand a").hover(
 	},
 );
 
-$(".navbar-burger").click(
+$(".audio .navbar-burger").click(
 	function() {
-		$(".navbar-brand svg").toggleClass("logo-rotate");
+		$(".audio .navbar-brand svg").toggleClass("logo-rotate");
 	},
 );
 

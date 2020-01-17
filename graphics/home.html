@@ -73,7 +73,11 @@
 			</div>
 
 			<div id="navMenu" class="navbar-menu">
-				<div class="navbar-end">
+				<div class="navbar-end mobileMenuClose">
+					<div class="closeMenu">
+						<span></span>
+						<span></span>
+					</div>
 					<ul>
 						<li><a class="current-page" href='home.html'>Home</a>
 						<li><a href="about.html">About</a>
@@ -203,6 +207,7 @@
 	<script src="../js/recurrent-interactions.js"></script>
 	<script src="../js/header-opacity.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+	<script src="../js/mobile-menu.js"></script>
 
 	<script type="text/javascript">
 		
@@ -263,36 +268,6 @@
 				showcaseDescription.innerHTML = descriptions[i];
 			});
 		}
-		
-		// MOBILE MENU
-
-		var page = document.querySelector('html');
-		var burger = document.querySelector('.graphics header .navbar-burger');
-		var mobileMenu = document.querySelector('.graphics header .navbar-end ul');
-		let isOpen = false;
-
-		function changeMenuState() {
-			isOpen ? isOpen = false : isOpen = true;
-		}
-
-		burger.addEventListener('click', (e) => {
-			if (isOpen === false) {
-				page.style.overflowY = 'hidden';
-				setTimeout((e) => {
-					mobileMenu.classList.remove('mobileMenuClose');
-					mobileMenu.classList.add('mobileMenuOpen');
-				}, 0);
-			} 
-			if (isOpen === true) {
-				page.style.overflowY = 'auto';
-				setTimeout((e) => {
-					mobileMenu.classList.remove('mobileMenuOpen');
-					mobileMenu.classList.add('mobileMenuClose');
-				}, 0);
-			}
-			changeMenuState();
-			console.log("Current menu state: " + isOpen);
-		});
 
 	</script>
 

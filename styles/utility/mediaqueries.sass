@@ -33,79 +33,91 @@
 							padding-bottom: 0
 						&:first-child
 							margin-top: 0
-	.graphics
-		header .navbar
-			.navbar-burger
-				&.is-active
-					position: fixed
-					top: calc(3px + 20px)
-					z-index: 20
-					width: auto
-					height: auto
-					color: black
-					animation: menuButtonAppear 1s 1 forwards
-			.navbar-menu
-				background-color: $transparent
-				-webkit-box-shadow: 0 0 0 $transparent
-				box-shadow: 0 0 0 $transparent
-				.navbar-end
-					position: fixed
-					width: 100%
-					height: 100%
-					top: 0
-					left: 0
-					background-color: transparentize($black, .25)
-					transition: all .2s
-				.close
-					display: initial
-					@include animation (closeMenuButton, 2s, 1, ease)
-					animation-delay: .2s
-				ul
-					position: fixed;
-					top: 0;
-					right: -50%;
-					background-color: $white;
-					height: 100vh;
-					margin: 0;
-					flex-direction: column;
-					justify-content: flex-end;
-					align-items: flex-start;
-					padding: rem(20px) rem(60px);
-					width: 50%;
-					font-size: rem(28px)
-					box-shadow: rem(-4px) 0 rem(50px) transparentize($black, .75)
-					transition: all .5s
-					&.mobileMenuOpen
-						// animation-name: mobileMenuOpen
-						right: 0
-					&.mobileMenuClose
-						animation-name: mobileMenuClose
-						// right: -50%
-				li
-					font-weight: normal
-					color: transparentize($black, .5)
-					margin: 0
-					margin-bottom: rem(20px)
-					&:last-child
-						margin-bottom: 0
-					.current-page
-						color: $black
-						font-weight: 600
-						border-bottom: 0
-						&:after
-							content: ''
-							position: absolute
-							left: rem(-40px)
-							top: 50%
-							transform: translateY(-50%)
-							background-color: $black
-							height: rem(2px)
-							width: rem(20px)
-					&:hover
-						color: $black
 
+	.graphics
+		header .navbar .navbar-menu
 			.navbar-end
+				position: fixed
+				width: 75%
+				height: 100%
+				top: 0
+				right: 0
 				text-align: center
+				transition: all .5s
+				&.mobileMenuOpen
+					animation-name: mobileMenuOpen
+					right: 0
+				&.mobileMenuClose
+					animation-name: mobileMenuClose
+					right: -75%
+				&:after
+					content: ''
+					position: fixed
+					left: 0
+					top: 0
+					z-index: -1
+					width: 100vw
+					height: 100vh
+					background-color: transparentize($black, .25)
+				.closeMenu
+					position: absolute
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					z-index: 5
+					height: 20px
+					width: 20px
+					top: 20px
+					left: 30px
+					&:hover
+						cursor: pointer
+					span
+						position: absolute
+						height: 3px
+						width: 100%
+						background-color: $black
+						&:nth-child(1)
+							transform: rotate(45deg)
+						&:nth-child(2)
+							transform: rotate(-45deg)
+			ul
+				position: fixed;
+				top: 0;
+				background-color: $white;
+				height: 100vh;
+				width: inherit;
+				margin: 0;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: flex-start;
+				padding: rem(20px) rem(60px);
+				font-size: rem(28px)
+				box-shadow: rem(-4px) 0 rem(50px) transparentize($black, .75)
+				transition: all .5s
+			li
+				font-weight: normal
+				color: transparentize($black, .5)
+				margin: 0
+				margin-bottom: rem(20px)
+				&:last-child
+					margin-bottom: 0
+				.current-page
+					color: $black
+					font-weight: 600
+					border-bottom: 0
+					&:after
+						content: ''
+						position: absolute
+						left: rem(-40px)
+						top: 50%
+						transform: translateY(-50%)
+						background-color: $black
+						height: rem(2px)
+						width: rem(20px)
+				&:hover
+					color: $black
+
 		&.about
 			main
 				h1 ~ .columns
@@ -249,7 +261,7 @@
 				.wave2
 					background-image: url("../src/graphics/contact/contact-wave2.svg")
 
-// DESKTOP: UP TO 1024
+// DESKTOP: UP TO 1216
 @media screen and (max-width: $desktop-m)
 	.graphics
 		&.home
@@ -370,10 +382,10 @@
 					.form-button input
 						width: 100%
 	.graphics
-		header
-			.navbar .navbar-menu
-				ul
-					width: 75%
+		// header
+		// 	.navbar .navbar-menu
+		// 		ul
+		// 			width: 75%
 		main
 			h1
 				padding-top: calc(50px + 80px)
