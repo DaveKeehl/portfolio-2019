@@ -1,5 +1,3 @@
-// MOBILE MENU
-
 var page = document.querySelector('html');
 var burger = document.querySelector('.graphics header .navbar-burger');
 var closeButton = document.querySelector('.graphics header .closeMenu');
@@ -18,7 +16,6 @@ burger.addEventListener('click', (e) => {
 			mobileMenu.classList.add('mobileMenuOpen');
 		}, 0);
 		changeMenuState();
-		console.log("Current menu state: " + isOpen);
 	} 
 });
 
@@ -31,6 +28,5 @@ closeButton.addEventListener("click", (e) => {
 			mobileMenu.classList.add('mobileMenuClose');
 		}, 0);
 		changeMenuState();
-		console.log("Current menu state: " + isOpen);
 	}
 });
