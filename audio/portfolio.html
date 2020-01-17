@@ -117,13 +117,13 @@
 
 		<h1>Portfolio</h1>
 
-		<p id="filters">
-			<span onclick="filterSelection('all')" name="category">All</span> |
-			<span onclick="filterSelection('recording')" name="category">Recording</span> |
-			<span onclick="filterSelection('mixing')" name="category">Mixing</span> |
-			<span onclick="filterSelection('mastering')" name="category">Mastering</span>
+		<div class="filters">
+			<div><span class="filter-active" onclick="filterSelection('all')" name="category">All</span></div>
+			<div><span onclick="filterSelection('recording')" name="category">Recording</span></div>
+			<div><span onclick="filterSelection('mixing')" name="category">Mixing</span></div>
+			<div><span onclick="filterSelection('mastering')" name="category">Mastering</span></div>
 			<!--| <span onclick="filterSelection('sound-design')" name="category">Sound Design</span>-->
-		</p>
+		</div>
 
 		<div class="columns is-multiline">
 
@@ -241,62 +241,10 @@
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	<script src="../js/back-to-top.js"></script>
 	<script src="../js/recurrent-interactions.js"></script>
+	<script src="../js/portfolio-filter.js"></script>
 	<script src="https://sdk.scdn.co/spotify-player.js"></script>
 
 	<script>
-		// Execute the function and show all columns
-		filterSelection("all")
-
-		function filterSelection(c) {
-			var x, i;
-			x = document.getElementsByClassName("columnHide");
-			filter = document.querySelectorAll("#filters span");
-			for (i = 0; i < filter.length; i++) {
-				filter[i].classList.remove("filter-active");
-			}
-			if (c == "all") {
-				element = document.querySelector("#filters span:nth-child(1)");
-				c = "";
-			} else if (c == "recording") {
-				element = document.querySelector("#filters span:nth-child(2)");
-			} else if (c == "mixing") {
-				element = document.querySelector("#filters span:nth-child(3)");
-			} else if (c == "mastering") {
-				element = document.querySelector("#filters span:nth-child(4)");
-			}
-			element.classList.add("filter-active");
-			// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-			for (i = 0; i < x.length; i++) {
-				filterRemoveClass(x[i], "columnShow");
-				if (x[i].className.indexOf(c) > -1) filterAddClass(x[i], "columnShow");
-			}
-			console.log("reached the end!");
-		}
-
-		// Show filtered elements
-		function filterAddClass(element, name) {
-			var i, arr1, arr2;
-			arr1 = element.className.split(" ");
-			arr2 = name.split(" ");
-			for (i = 0; i < arr2.length; i++) {
-				if (arr1.indexOf(arr2[i]) == -1) {
-					element.className += " " + arr2[i];
-				}
-			}
-		}
-
-		// Hide elements that are not selected
-		function filterRemoveClass(element, name) {
-			var i, arr1, arr2;
-			arr1 = element.className.split(" ");
-			arr2 = name.split(" ");
-			for (i = 0; i < arr2.length; i++) {
-				while (arr1.indexOf(arr2[i]) > -1) {
-					arr1.splice(arr1.indexOf(arr2[i]), 1);
-				}
-			}
-			element.className = arr1.join(" ");
-		}
 
 		$(".closePlayer").hover(
 			function() {

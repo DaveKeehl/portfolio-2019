@@ -1,20 +1,23 @@
 function filterSelection(c) {
+	console.log(c)
 	var element;
-	var filter = document.querySelectorAll(".graphics .filters span");
+	var filter = document.querySelectorAll(".filters span");
+	console.log(filter)
 	var x = document.getElementsByClassName("columnHide");
 	for (let i = 0; i < filter.length; i++) {
 		filter[i].classList.remove("filter-active");
 	}
-	if (c == "all") {
+	if (c === "all") {
 		element = document.querySelector(".filters div:nth-child(1) span");
 		c = "";
-	} else if (c == "ux") {
+	} else if (c === "ux" || c === 'recording') {
+		console.log(c);
 		element = document.querySelector(".filters div:nth-child(2) span");
-	} else if (c == "web") {
+	} else if (c === "web" || c === 'mixing') {
 		element = document.querySelector(".filters div:nth-child(3) span");
-	} else if (c == "print") {
+	} else if (c === "print" || c === 'mastering') {
 		element = document.querySelector(".filters div:nth-child(4) span");
-	} else if (c == "video") {
+	} else if (c === "video") {
 		element = document.querySelector(".filters div:nth-child(5) span");
 	}
 	element.classList.add("filter-active");
