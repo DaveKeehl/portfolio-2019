@@ -154,3 +154,17 @@ function closeModal() {
 		isClosed = true;
 	}
 }
+
+// MOBILE MODAL DRAG INTERACTION
+
+var dragHandle = document.querySelector(".graphics.portfolio .modal .close");
+
+modalName.addEventListener("dragstart", (event) => {
+	event.dataTransfer.setData("Text", event.target.id);
+	console.log("dragstart");
+});
+
+modalName.addEventListener("drag", (event) => {
+	modalName.innerHTML = "jweojoew";
+	console.log("drag");
+});
