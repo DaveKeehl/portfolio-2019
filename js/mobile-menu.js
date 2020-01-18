@@ -12,7 +12,6 @@ burger.addEventListener('click', (e) => {
 	if (isOpen === false) {
 		page.style.overflowY = 'hidden';
 		setTimeout((e) => {
-			mobileMenu.classList.remove('mobileMenuClose');
 			mobileMenu.classList.add('mobileMenuOpen');
 		}, 0);
 		changeMenuState();
@@ -25,7 +24,6 @@ closeButton.addEventListener("click", (e) => {
 		page.style.overflowY = 'auto';
 		setTimeout((e) => {
 			mobileMenu.classList.remove('mobileMenuOpen');
-			mobileMenu.classList.add('mobileMenuClose');
 		}, 0);
 		changeMenuState();
 	}

@@ -41,13 +41,11 @@
 				width: 75%
 				height: 100%
 				top: 0
-				right: 0
+				right: -75%
 				text-align: center
 				transition: all .5s
 				&.mobileMenuOpen
 					right: 0
-				&.mobileMenuClose
-					right: -75%
 				&:after
 					content: ''
 					position: fixed
@@ -68,13 +66,19 @@
 					width: 20px
 					top: 20px
 					left: 30px
+					transition: all .2s
 					&:hover
 						cursor: pointer
+						span:nth-child(1)
+							transform: rotate(135deg)
+						span:nth-child(2)
+							transform: rotate(45deg)
 					span
 						position: absolute
 						height: 3px
 						width: 100%
 						background-color: $black
+						transition: all .2s
 						&:nth-child(1)
 							transform: rotate(45deg)
 						&:nth-child(2)
