@@ -44,10 +44,7 @@
 				right: -75%
 				text-align: center
 				transition: all .5s
-				&.mobileMenuOpen
-					right: 0
-				&:after
-					content: ''
+				.background
 					position: fixed
 					left: 0
 					top: 0
@@ -55,6 +52,8 @@
 					width: 100vw
 					height: 100vh
 					background-color: transparentize($black, .25)
+					opacity: 0
+					transition: all .5s
 				.closeMenu
 					position: absolute
 					display: flex
@@ -66,7 +65,8 @@
 					width: 20px
 					top: 20px
 					left: 30px
-					transition: all .2s
+					// @include animation (closeButtonIn, .5s, 1, ease)
+					// @include animation-fill-mode (forwards)
 					&:hover
 						cursor: pointer
 						span:nth-child(1)
@@ -83,6 +83,13 @@
 							transform: rotate(45deg)
 						&:nth-child(2)
 							transform: rotate(-45deg)
+				&.mobileMenuOpen
+					right: 0
+					.closeMenu
+						@include animation (closeButtonIn, 2s, 1, ease)
+						@include animation-fill-mode (forwards)
+					.background
+						opacity: 1
 			ul
 				position: fixed;
 				top: 0;
