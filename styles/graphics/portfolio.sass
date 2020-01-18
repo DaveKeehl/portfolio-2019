@@ -155,15 +155,20 @@
 				@include animation (modalClose, .5s, 1, cubic-bezier(1, 0, 0, 1))
 				@include animation-fill-mode (forwards)
 			.close 
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				height: 20px;
+				width: 20px;
+				&:hover
+					cursor: pointer
 				img
-					position: absolute
-					top: rem(10px)
-					right: rem(10px)
 					transition: all .25s ease
 				&:hover
 					img
-						opacity: .5
-						cursor: pointer
 						transform: rotate(90deg)
 			.categories
 				display: flex

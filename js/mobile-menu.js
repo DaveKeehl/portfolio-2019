@@ -20,11 +20,11 @@ burger.addEventListener('click', (e) => {
 
 closeButton.addEventListener("click", (e) => {
 	if (isOpen === true) {
-		document.getElementById('navMenu').classList.remove('is-active');
+		mobileMenu.classList.remove('mobileMenuOpen');
 		page.style.overflowY = 'auto';
 		setTimeout((e) => {
-			mobileMenu.classList.remove('mobileMenuOpen');
-		}, 0);
+			document.getElementById('navMenu').classList.remove('is-active');
+		}, 500);
 		changeMenuState();
 	}
 });
