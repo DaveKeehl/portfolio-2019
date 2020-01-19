@@ -9,6 +9,8 @@ var modalPresentationContent = document.querySelector(".graphics.portfolio .moda
 
 var modalSidebar = document.querySelector(".graphics.portfolio .modal aside");
 
+var dragHandle = document.querySelector(".graphics.portfolio .modal .close");
+
 var work = document.querySelectorAll(".graphics.portfolio .columns .column");
 var workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
 var modalName = document.querySelector(".graphics.portfolio .modal h2");
@@ -167,8 +169,11 @@ function closeModal() {
 
 // MOBILE MODAL DRAG INTERACTION
 
-var dragHandle = document.querySelector(".graphics.portfolio .modal .close");
+var i = 0;
 
 dragHandle.addEventListener("touchstart", (event) => {
-	modalName.innerHTML = "Test";
+	
+	i++;
+	modalName.innerHTML = i;
+
 });
