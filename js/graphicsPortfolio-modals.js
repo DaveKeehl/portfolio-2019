@@ -1,9 +1,14 @@
 var page = document.getElementsByTagName("html")[0];
-var closeModalButton = document.querySelector(".graphics.portfolio .modal aside img");
-closeModalButton.addEventListener("click", closeModal);
+
 var modal = document.querySelector(".graphics.portfolio .modal");
-var modalPresentation = document.querySelector(".graphics.portfolio .modal .presentation .content");
+
+var modalBackground = document.querySelector(".graphics.portfolio .modal .background");
+
+var modalPresentation = document.querySelector(".graphics.portfolio .modal .presentation");
+var modalPresentationContent = document.querySelector(".graphics.portfolio .modal .presentation .content");
+
 var modalSidebar = document.querySelector(".graphics.portfolio .modal aside");
+
 var work = document.querySelectorAll(".graphics.portfolio .columns .column");
 var workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
 var modalName = document.querySelector(".graphics.portfolio .modal h2");
@@ -11,7 +16,13 @@ var modalDescription = document.querySelector(".graphics.portfolio .modal .descr
 var modalCategories = document.querySelector(".graphics.portfolio .modal .categories");
 var modalTools = document.querySelector(".graphics.portfolio .modal .tools");
 var modalLink = document.querySelector(".graphics.portfolio .modal a");
+
+var closeModalButton = document.querySelector(".graphics.portfolio .modal aside img");
+
 var isClosed = true;
+
+closeModalButton.addEventListener("click", closeModal);
+modalBackground.addEventListener("click", closeModal);
 
 // ADDING TAGS TO EACH WORK SAMPLE
 
@@ -93,7 +104,7 @@ function openModal(id, name, description, tools, link, presentation) {
 		}
 		// INJECT PRESENTATION CONTENT
 		if (presentation !== undefined) {
-			modalPresentation.innerHTML = presentation;
+			modalPresentationContent.innerHTML = presentation;
 		}
 
 		// SHOW MODAL
@@ -149,7 +160,7 @@ function closeModal() {
 			}
 			console.log("test");
 			// RESET PRESENTATION CONTENT
-			modalPresentation.innerHTML = "";
+			modalPresentationContent.innerHTML = "";
 		}, 500);
 		isClosed = true;
 	}
