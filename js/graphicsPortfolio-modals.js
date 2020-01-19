@@ -173,7 +173,7 @@ var i = 0;
 
 dragHandle.addEventListener("touchstart", (event) => {
 	
-	modalName.innerHTML = toString(i);
+	modalName.innerHTML = i.toString(2);
 	i++;
 
 });
