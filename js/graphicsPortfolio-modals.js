@@ -158,7 +158,6 @@ function closeModal() {
 			while (modalTools.hasChildNodes()) {
 				modalTools.removeChild(modalTools.firstChild);
 			}
-			console.log("test");
 			// RESET PRESENTATION CONTENT
 			modalPresentationContent.innerHTML = "";
 		}, 500);
@@ -170,12 +169,6 @@ function closeModal() {
 
 var dragHandle = document.querySelector(".graphics.portfolio .modal .close");
 
-modalName.addEventListener("dragstart", (event) => {
-	event.dataTransfer.setData("Text", event.target.id);
-	console.log("dragstart");
-});
-
-modalName.addEventListener("drag", (event) => {
-	modalName.innerHTML = "jweojoew";
-	console.log("drag");
+dragHandle.addEventListener("touchstart", (event) => {
+	modalName.innerHTML = "Test";
 });
