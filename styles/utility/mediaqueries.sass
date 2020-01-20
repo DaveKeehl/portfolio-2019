@@ -181,7 +181,7 @@
 					&:nth-child(2) .card
 						width: 80%
 				.action
-					button
+					a
 						width: auto
 		
 		&.portfolio
@@ -440,9 +440,8 @@
 				.action
 					margin-top: 100px
 					margin-bottom: 200px
-					button
-						a
-							padding: 15px 45px
+					a
+						padding: 15px 45px
 		&.portfolio
 			main
 				.columns .column
@@ -570,13 +569,9 @@
 					a
 						padding: 15px 50px
 		&.about
-			main
-				.action 
-					button
-						width: 100%
-						padding: 15px 0
-						a
-							padding: 0
+			main .action a
+				width: 100%
+				padding: 15px 0
 		&.portfolio
 			main
 				.columns .column .categories
@@ -591,7 +586,7 @@
 					width: 70%
 		&.about
 			main
-				.action button
+				.action a
 					width: 100%
 
 // MOBILE-S: UP TO 320

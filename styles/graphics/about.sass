@@ -112,16 +112,25 @@
 				box-shadow: 0 2px 5px transparentize($black, .9), 0 10px 15px transparentize($black, .8)
 				&:hover
 					box-shadow: 0 2px 5px transparentize($black, .9), 0 6px 10px transparentize($black, .6)
-				a
-					display: flex
-					width: max-content
-					padding: 18px 60px
-					img
-						height: rem(20px)
-					p
-						font-size: rem(20px)
-						font-weight: 600
-						margin: 0 rem(5px)
+			a
+				display: flex
+				justify-content: center
+				width: max-content
+				padding: 18px 60px
+				border: 0
+				border-radius: rem(6px)
+				background-color: white
+				box-shadow: 0 2px 5px transparentize($black, .9), 0 10px 15px transparentize($black, .8)
+				transition: box-shadow .2s
+				&:hover
+					box-shadow: 0 2px 5px transparentize($black, .9), 0 6px 10px transparentize($black, .6)
+				img
+					height: rem(20px)
+				p
+					font-size: rem(20px)
+					font-weight: 600
+					margin: 0 rem(5px)
+					color: $black
 
 	.waves
 		.wave1
