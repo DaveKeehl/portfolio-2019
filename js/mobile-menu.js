@@ -18,7 +18,7 @@ function openMenu() {
 		page.style.overflowY = 'hidden';
 		setTimeout( () => {
 			mobileMenu.classList.add('mobileMenuOpen');
-		}, 0);
+		}, 100);
 		changeMenuState();
 	} 
 }
