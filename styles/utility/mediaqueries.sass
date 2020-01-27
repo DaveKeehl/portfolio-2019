@@ -44,6 +44,8 @@
 				right: -50%
 				text-align: center
 				transition: all .5s
+				button
+					display: block
 				.background
 					position: fixed
 					left: 0
@@ -147,11 +149,11 @@
 				form
 					& *
 						width: 80%
-			.waves
-				.wave1
-					background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
-				.wave2
-					background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
+			// .waves
+			// 	.wave1
+			// 		background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
+			// 	.wave2
+			// 		background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
 		&.portfolio
 			main
 				.columns .column .categories
@@ -240,12 +242,12 @@
 				.columns .column
 					.categories
 						height: calc(100vw / 100 * 80 / 3 - 10px)
-		&.contact
-			.waves
-				.wave1
-					background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
-				.wave2
-					background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
+		// &.contact
+		// 	.waves
+		// 		.wave1
+		// 			background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
+		// 		.wave2
+		// 			background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
 
 // WIDESCREEN: FROM 1216 TO 1407
 @media screen and (min-width: $desktop-m)
@@ -267,12 +269,12 @@
 				.columns
 					h2.column.selected:after, h2:hover:after
 						width: 80%
-		&.contact
-			.waves
-				.wave1
-					background-image: url("../src/graphics/contact/contact-wave1.svg")
-				.wave2
-					background-image: url("../src/graphics/contact/contact-wave2.svg")
+		// &.contact
+		// 	.waves
+		// 		.wave1
+		// 			background-image: url("../src/graphics/contact/contact-wave1.svg")
+		// 		.wave2
+		// 			background-image: url("../src/graphics/contact/contact-wave2.svg")
 
 // DESKTOP: UP TO 1216
 @media screen and (max-width: $desktop-m)
@@ -496,14 +498,14 @@
 								margin-top: rem(20px)
 								padding: 0
 
-			.waves
-				div
-					&.wave1
-						background-image: url("../src/img/services-mobile-wave1.svg")
-					&.wave2
-						background-image: url("../src/img/services-mobile-wave2.svg")
-					&.wave3
-						background-image: url("../src/img/services-mobile-wave3.svg")
+			// .waves
+			// 	div
+			// 		&.wave1
+			// 			background-image: url("../src/img/services-mobile-wave1.svg")
+			// 		&.wave2
+			// 			background-image: url("../src/img/services-mobile-wave2.svg")
+			// 		&.wave3
+			// 			background-image: url("../src/img/services-mobile-wave3.svg")
 
 // SMALL DEVICES: UP TO 576
 @media screen and (max-width: $small)
@@ -546,13 +548,13 @@
 						width: 100%
 					input[type="submit"]
 						width: 100%
-			.waves
-				div
-					background-size: contain
-				.wave1
-					background-image: url("../src/graphics/contact/contact-mobile-wave1.svg")
-				.wave2
-					background-image: url("../src/graphics/contact/contact-mobile-wave2.svg")
+			// .waves
+			// 	div
+			// 		background-size: contain
+			// 	.wave1
+			// 		background-image: url("../src/graphics/contact/contact-mobile-wave1.svg")
+			// 	.wave2
+			// 		background-image: url("../src/graphics/contact/contact-mobile-wave2.svg")
 
 // MOBILE-L: UP TO 425
 @media screen and (max-width: $mobile-l)

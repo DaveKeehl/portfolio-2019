@@ -2,9 +2,9 @@
 
 	text-align: center
 
-	.bg-gradient
-		background-position: 0 0
-		background-image: linear-gradient(to bottom, $white 0, $white 250px, $white 250px, $black 100%)
+	// .bg-gradient
+	// 	background-position: 0 0
+	// 	background-image: linear-gradient(to bottom, $white 0, $white 250px, $white 250px, $black 100%)
 
 	.services-task
 		text-align: justify
@@ -23,14 +23,14 @@
 		margin-bottom: rem(10px)
 
 	.columns.services-task
-		box-shadow: 0 5px rem(7px) transparentize($black, .92), 0 5px rem(50px) transparentize($black, .8)
-		transition: box-shadow .2s
+		box-shadow: 0 0 10px transparentize($black, .9), 0 0 50px transparentize($black, .8)
+		transition: box-shadow .3s
 		&:hover
-			box-shadow: 0 5px rem(7px) transparentize($black, .92), 0 5px rem(50px) transparentize($black, .7)
+			box-shadow: 0 0 50px transparentize($black, .9), 0 0 50px transparentize($black, .75)
 
 	.services-task-textBox
 		padding: rem(40px)
-		background-color: whitesmoke
+		background-color: $white
 
 	.services-task-imageBox
 		overflow: hidden
@@ -45,8 +45,8 @@
 		@include filter (none)
 		@include transition (all, .25s, ease)
 		&:hover
-			@include transform (scale(1.2))
-			@include filter (opacity(.4))
+			@include transform (scale(1.05))
+			@include filter (opacity(.8))
 
 	#recording img
 		object-position: 60% 0
