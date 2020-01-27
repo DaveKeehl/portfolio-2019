@@ -15,10 +15,8 @@ function filterSelection(c) {
 		element = document.querySelector(".filters div:nth-child(2) span");
 	} else if (c === "web" || c === 'mixing') {
 		element = document.querySelector(".filters div:nth-child(3) span");
-	} else if (c === "print" || c === 'mastering') {
+	} else if (c === "video" || c === 'mastering') {
 		element = document.querySelector(".filters div:nth-child(4) span");
-	} else if (c === "video") {
-		element = document.querySelector(".filters div:nth-child(5) span");
 	}
 	element.classList.add("filter-active");
 	// Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected

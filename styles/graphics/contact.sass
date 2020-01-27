@@ -37,19 +37,27 @@
 					opacity: .2
 				&[type="submit"]
 					-webkit-appearance: none
-					width: 30%
-					background-color: #2A3039
+					font-size: 20px
+					margin-top: 10px
+					font-weight: 600
+					text-transform: uppercase
+					height: auto
+					padding: 10px
+					// width: 30%
+					background-color: rgba(0, 0, 0, 0.57);
 					color:  $white
-					font-size: rem(16px)
-					margin: 15px 0 0 0
+					// font-size: rem(16px)
+					// margin: 15px 0 0 0
 					&:hover
 						cursor: pointer
-						background-color: #1f2124
+						backdrop-filter: blur(2px)
+						background-color: rgba(31, 33, 36, 0.87)
 					&:focus
 						border: 1px solid $transparent
 						box-shadow: none
 				&:focus
 					outline: 0
+					// border: 2px solid #ecc7ff
 					// border: 2px solid #edd8f6
 					box-shadow: 0 0.25rem 0.25rem rgba(0,0,0,0.25), 0 0.125rem 0.125rem rgba(0,0,0,0.15)
 					// box-shadow: 0 4px 4px rgba(167, 58, 209, 0.45), 0 2px 2px rgba(167, 58, 209, 0.35)
