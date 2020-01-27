@@ -20,12 +20,6 @@ $(".navbar-brand a").hover(
 	},
 );
 
-$(".audio .navbar-burger").click(
-	function() {
-		$(".audio .navbar-brand svg").toggleClass("logo-rotate");
-	},
-);
-
 // FOOTER
 
 $("#facebook").hover(

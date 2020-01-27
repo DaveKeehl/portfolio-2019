@@ -1,8 +1,8 @@
 var page = document.querySelector('html');
-var burger = document.querySelector('.graphics header .navbar-burger');
-var closeButton = document.querySelector('.graphics header .closeMenu');
-var mobileMenu = document.querySelector('.graphics header .navbar-end');
-var menuBackground = document.querySelector('.graphics header .background');
+var burger = document.querySelector('header .navbar-burger');
+var closeButton = document.querySelector('header .closeMenu');
+var mobileMenu = document.querySelector('header .navbar-end');
+var menuBackground = document.querySelector('header .background');
 let isOpen = false;
 
 burger.addEventListener('click', openMenu);

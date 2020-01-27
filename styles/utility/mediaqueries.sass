@@ -1,603 +1,416 @@
 // MOBILE L: FROM 576 TO 768
 @media screen and (min-width: $mobile-l) and (max-width: $to-tablet)
-	.graphics
-		&.portfolio
-			main .columns .column
-				.categories p
-					font-size: rem(16px)
+	.portfolio
+		main .columns .column
+			.categories p
+				font-size: rem(16px)
 
 // TABLET: FROM 768 TO 1023
 @media screen and (max-width: $to-desktop-s)
-	.audio
-		header 
-			.navbar-brand-txt
-				display: none
-			.navbar .navbar-menu
-				background-color: $grey
-				-webkit-box-shadow: 0 0 0 $transparent
-				box-shadow: 0 0 0 $transparent
-				.navbar-end
-					text-align: center
-				ul
-					flex-direction: column
-					border-top: rem(1px) solid transparentize($white, .8)
-					padding-top: rem(40px)
-					padding-bottom: rem(22px)
-					// margin-top: rem(10px)
-					font-size: rem(20px)
-					li
-						margin-right: 0
-						margin-top: rem(20px)
-						&:hover
-							border-bottom: 0 solid $transparent
-							padding-bottom: 0
-						&:first-child
-							margin-top: 0
-
-	.graphics
-		header .navbar .navbar-menu
-			.navbar-end
+	header .navbar .navbar-menu
+		.navbar-end
+			position: fixed
+			width: 50%
+			height: 100%
+			top: 0
+			right: -50%
+			text-align: center
+			transition: all .5s
+			button
+				display: block
+			.background
 				position: fixed
-				width: 50%
-				height: 100%
+				left: 0
 				top: 0
-				right: -50%
-				text-align: center
+				z-index: -1
+				width: 100vw
+				height: 100vh
+				background-color: transparentize($black, .25)
+				opacity: 0
 				transition: all .5s
-				button
-					display: block
-				.background
-					position: fixed
-					left: 0
-					top: 0
-					z-index: -1
-					width: 100vw
-					height: 100vh
-					background-color: transparentize($black, .25)
-					opacity: 0
-					transition: all .5s
-				.closeMenu
-					position: absolute
-					display: flex
-					justify-content: center
-					align-items: center
-					flex-direction: column
-					z-index: 5
-					height: 20px
-					width: 20px
-					top: 20px
-					left: 30px
-					// @include animation (closeButtonIn, .5s, 1, ease)
-					// @include animation-fill-mode (forwards)
-					&:hover
-						cursor: pointer
-						span:nth-child(1)
-							transform: rotate(135deg)
-						span:nth-child(2)
-							transform: rotate(45deg)
-					span
-						position: absolute
-						height: 3px
-						width: 100%
-						background-color: $black
-						transition: all .2s
-						&:nth-child(1)
-							transform: rotate(45deg)
-						&:nth-child(2)
-							transform: rotate(-45deg)
-				&.mobileMenuOpen
-					right: 0
-					.closeMenu
-						@include animation (closeButtonIn, 2s, 1, ease)
-						@include animation-fill-mode (forwards)
-					.background
-						opacity: 1
-			ul
-				position: fixed;
-				top: 0;
-				background-color: $white;
-				height: 100%;
-				width: inherit;
-				margin: 0;
-				flex-direction: column;
-				justify-content: flex-end;
-				align-items: flex-start;
-				padding: rem(20px) rem(60px);
-				font-size: rem(28px)
-				box-shadow: rem(-4px) 0 rem(50px) transparentize($black, .75)
-				transition: all .5s
-			li
-				font-weight: normal
-				color: transparentize($black, .5)
-				margin: 0
-				margin-bottom: rem(20px)
-				&:last-child
-					margin-bottom: 0
-				.current-page
-					color: $black
-					font-weight: 600
-					border-bottom: 0
-					&:after
-						content: ''
-						position: absolute
-						left: rem(-40px)
-						top: 50%
-						transform: translateY(-50%)
-						background-color: $black
-						height: rem(2px)
-						width: rem(20px)
+			.closeMenu
+				position: absolute
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				z-index: 5
+				height: 20px
+				width: 20px
+				top: 20px
+				left: 30px
 				&:hover
-					color: $black
-
-		&.about
-			main
-				h1 ~ .columns
-					display: flex
-					flex-direction: column-reverse
-				.card
-					margin-bottom: 50px
-				.columns .column
-					display: flex
-					flex-direction: column
-					align-items: center
-					flex-basis: auto
-					p
-						text-align: justify
-						text-align-last: center
-		&.contact
-			main
-				form
-					& *
-						width: 80%
-			// .waves
-			// 	.wave1
-			// 		background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
-			// 	.wave2
-			// 		background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
-		&.portfolio
-			main
-				.columns .column .categories
-					height: calc(100vw / 100 * 80 / 2 - 10px)
-			.modal
-				.presentation .content
-					display: none
+					cursor: pointer
+					span:nth-child(1)
+						transform: rotate(135deg)
+					span:nth-child(2)
+						transform: rotate(45deg)
+				span
+					position: absolute
+					height: 3px
+					width: 100%
+					background-color: $black
+					transition: all .2s
+					&:nth-child(1)
+						transform: rotate(45deg)
+					&:nth-child(2)
+						transform: rotate(-45deg)
+			&.mobileMenuOpen
+				right: 0
+				.closeMenu
+					@include animation (closeButtonIn, 2s, 1, ease)
+					@include animation-fill-mode (forwards)
+				.background
+					opacity: 1
+		ul
+			position: fixed;
+			top: 0;
+			background-color: $white;
+			height: 100%;
+			width: inherit;
+			margin: 0;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: flex-start;
+			padding: rem(20px) rem(60px);
+			font-size: rem(28px)
+			box-shadow: rem(-4px) 0 rem(50px) transparentize($black, .75)
+			transition: all .5s
+		li
+			font-weight: normal
+			color: transparentize($black, .5)
+			margin: 0
+			margin-bottom: rem(20px)
+			&:last-child
+				margin-bottom: 0
+			.current-page
+				color: $black
+				font-weight: 600
+				border-bottom: 0
+				&:after
+					content: ''
+					position: absolute
+					left: rem(-40px)
+					top: 50%
+					transform: translateY(-50%)
+					background-color: $black
+					height: rem(2px)
+					width: rem(20px)
+			&:hover
+				color: $black
+	.about
+		main
+			h1 ~ .columns
+				display: flex
+				flex-direction: column-reverse
+			.card
+				margin-bottom: 50px
+			.columns .column
+				display: flex
+				flex-direction: column
+				align-items: center
+				flex-basis: auto
+				p
+					text-align: justify
+					text-align-last: center
+	.contact
+		main
+			form
+				& *
+					width: 80%
+		// .waves
+		// 	.wave1
+		// 		background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
+		// 	.wave2
+		// 		background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
+	.portfolio
+		main
+			.columns .column .categories
+				height: calc(100vw / 100 * 80 / 2 - 10px)
+		.modal
+			.presentation .content
+				display: none
 
 @media screen and (min-width: $tablet)
 	.no-desktop
 		display: none !important
 
-	.audio
-		&.portfolio
-			main
-				.columns .column
-					.categories
-						height: calc(((100vw - 1.875rem) / 100 * 80) / 2 - 0.625rem)
-	.graphics
-		&.home
+	.home
+		.action
+			h1
+				font-size: rem(80px)
+	.about
+		main
+			.columns .column
+				&:nth-child(2) .card
+					width: 80%
 			.action
-				h1
-					font-size: rem(80px)
-		&.about
-			main
-				.columns .column
-					&:nth-child(2) .card
-						width: 80%
-				.action
-					a
-						width: auto
-		
-		&.portfolio
-			main
-				.filterButtons p:nth-child(2)
-					display: none
+				a
+					width: auto
+	
+	.portfolio
+		main
+			.filterButtons p:nth-child(2)
+				display: none
 
 @media screen and (min-width: $tablet) and (max-width: $to-desktop-s)
-	.graphics
-		&.home
-			.services 
-				div:nth-child(2) .container .columns
-					flex-wrap: wrap
-					.column
-						flex: 0 50%
-						p
-							text-align: center
+	.home
+		.services 
+			div:nth-child(2) .container .columns
+				flex-wrap: wrap
+				.column
+					flex: 0 50%
+					p
+						text-align: center
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
-	.audio
-		&.home
-			main
-				.home-icons svg
-					isolation: isolate
-					width: 100%
-					height: rem(50px)
-					padding: 0 rem(20px)
-					margin-bottom: rem(20px)
-					fill: $black
-					@include transition (fill, .2s, ease)
-				.home-mastering
-					margin-left: 0
-	.graphics
-		header
-			&.header-hover
-				transition: background-color .2s
-				&:hover
-					background-color: transparentize($black, .5) !important
-			.navbar .navbar-burger
-				display: none
-		&.home
-			.showcase
-				.columns 
-					h2.column.selected:after, h2:hover:after
-						width: 95%
-				.work-samples
-					.back-sample-1, .back-sample-2
-						display: block
-			.action
-				h1
-					font-size: rem(96px)
-					line-height: rem(115px)
-		&.portfolio
-			main
-				.columns .column
-					.categories
-						height: calc(100vw / 100 * 80 / 3 - 10px)
-		// &.contact
-		// 	.waves
-		// 		.wave1
-		// 			background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
-		// 		.wave2
-		// 			background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
+	header
+		&.header-hover
+			transition: background-color .2s
+			&:hover
+				background-color: transparentize($black, .5) !important
+		.navbar .navbar-burger
+			display: none
+	.home
+		.showcase
+			.columns 
+				h2.column.selected:after, h2:hover:after
+					width: 95%
+			.work-samples
+				.back-sample-1, .back-sample-2
+					display: block
+		.action
+			h1
+				font-size: rem(96px)
+				line-height: rem(115px)
+	.portfolio
+		main
+			.columns .column
+				.categories
+					height: calc(100vw / 100 * 80 / 3 - 10px)
+	// .contact
+	// 	.waves
+	// 		.wave1
+	// 			background-image: url("../src/graphics/contact/contact-tablet-wave1.svg")
+	// 		.wave2
+	// 			background-image: url("../src/graphics/contact/contact-tablet-wave2.svg")
 
 // WIDESCREEN: FROM 1216 TO 1407
 @media screen and (min-width: $desktop-m)
-	.graphics
-		&.home
-			.showcase .columns h2
-				font-size: rem(28px)
-		&.portfolio
-			main
-				.columns .column
-					.categories
-						height: calc(100vw / 100 * 80 / 4 - 10px)
+	.home
+		.showcase .columns h2
+			font-size: rem(28px)
+	.portfolio
+		main
+			.columns .column
+				.categories
+					height: calc(100vw / 100 * 80 / 4 - 10px)
 
 // FULL-HD: FROM 1440
 @media screen and (min-width: $full-hd)
-	.graphics
-		&.home
-			.showcase
-				.columns
-					h2.column.selected:after, h2:hover:after
-						width: 80%
-		// &.contact
-		// 	.waves
-		// 		.wave1
-		// 			background-image: url("../src/graphics/contact/contact-wave1.svg")
-		// 		.wave2
-		// 			background-image: url("../src/graphics/contact/contact-wave2.svg")
+	.home
+		.showcase
+			.columns
+				h2.column.selected:after, h2:hover:after
+					width: 80%
+	// .contact
+	// 	.waves
+	// 		.wave1
+	// 			background-image: url("../src/graphics/contact/contact-wave1.svg")
+	// 		.wave2
+	// 			background-image: url("../src/graphics/contact/contact-wave2.svg")
 
 // DESKTOP: UP TO 1216
 @media screen and (max-width: $desktop-m)
-	.graphics
-		&.home
-			.showcase
-				.columns
-					h2.column.selected:after, h2:hover:after
-						top: 15%
+	.home
+		.showcase
+			.columns
+				h2.column.selected:after, h2:hover:after
+					top: 15%
 
 // MOBILE: UP TO 767
 @media screen and (max-width: $to-tablet)
-	.graphics
-		header .navbar .navbar-menu
-			.navbar-end
-				position: fixed
-				width: 75%
-				height: 100%
-				top: 0
-				right: -75%
-				text-align: center
-				transition: all .5s
-		&.home
-			.action
-				h1
-					font-size: rem(48px)
-					line-height: rem(60px)
-				img
-					margin-top: rem(-145px)
-		&.portfolio
-			.modal .presentation .background
-				z-index: 5
+	header .navbar .navbar-menu
+		.navbar-end
+			position: fixed
+			width: 75%
+			height: 100%
+			top: 0
+			right: -75%
+			text-align: center
+			transition: all .5s
+	.home
+		.action
+			h1
+				font-size: rem(48px)
+				line-height: rem(60px)
+			img
+				margin-top: rem(-145px)
+	.portfolio
+		.modal .presentation .background
+			z-index: 5
 
 // MOBILE: UP TO 768
 @media screen and (max-width: $tablet)
 	.no-mobile
 		display: none !important
-	.index
-		.triggers
-			.left-trigger
-				width: 100vw
-				height: 50vh
-			.right-trigger
-				width: 100vw
-				height: 50vh
-				position: absolute
-				left: 0
-				top: 50vh
-		.graphics
-			.left-graphics
-				@include clip-path (polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%))
-				h2
-					left: 50%
-					top: calc(25% - 9.375rem / 4)
-			.right-graphics
-				@include clip-path (polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%))
-				h2
-					left: 50%
-					top: calc(75% + 9.375rem / 4)
-			.left-hover
-				@include clip-path (polygon(0% 0%, 100% 0%, 100% 60%, 0% 40%))
-			.right-hover
-				@include clip-path (polygon(0% 40%, 100% 60%, 100% 100%, 0% 100%))
-			.left-hover-2
-				@include clip-path (polygon(0% 0%, 100% 0%, 100% 40%, 0% 60%))
-			.right-hover-2
-				@include clip-path (polygon(0% 60%, 100% 40%, 100% 100%, 0% 100%))
-	.audio
+	main
 		h1
-			font-size: rem(35px)
-		h2
-			font-size: rem(28px)
-		h3
-			font-size: 1.3rem
-		&.home
-			.hero
-				.logo svg
-					height: rem(200px)
-				.material-icons
-					font-size: rem(50px)
-				.down-arrow
-					height: rem(25px)
-				.hero-video
-					display: block
-
-			main
-				h3
-					margin-bottom: rem(60px)
-				.home-mastering
-					margin-left: 0
-				.home-recording-content,
-				.home-editing-content,
-				.home-mixing-content,
-				.home-mastering-content,
-				.home-graphics-content
-					padding: rem(10px) 0
-		&.about
-			main
-				.about-divider-mobile
-					display: block
-					width: 50%
-				.about-text
-					padding: 0
-		&.portfolio
-			.footer-afterOpen
-				margin-bottom: rem(132px)
-			.hidePlayer
-				@include transform (translateY(8.25rem) !important)
-			.moveArrow-afterOpen
-				bottom: rem(152px) !important
-			.moveArrow-afterClose
-				bottom: rem(20px) !important
-			.audioPlayer
-				padding: rem(20px)
-				transform: translateY(8.25rem)
-				.container
-					max-width: 100%
-					flex-direction: column
-					.art
-						display: none
-					.audio-controls
-						flex-direction: column
-						.seek
-							margin: rem(10px) 0
-		&.contact
-			main
-				form
-					input, textarea
-						width: 100%
-					.select.is-fullwidth
-						width: 100%
-					.form-button input
-						width: 100%
-	.graphics
-		main
+			padding-top: calc(50px + 80px)
+			margin-bottom: 50px
+	.home
+		.hero>div #typewriter 
 			h1
-				padding-top: calc(50px + 80px)
-				margin-bottom: 50px
-		&.home
-			.hero>div #typewriter 
-				h1
-					font-size: rem(28px)
-					&:nth-child(2):after
-						height: rem(40px)
-			.services
-				div:nth-child(2) 
-					.container 
-						h3
-							margin-bottom: 0
-						.column
-							padding-bottom: 0
-			.showcase
-				.columns:not(:nth-child(1))
-					h2
-						margin-top: rem(20px)
-						&:after, &.selected:after
-							width: 35%
-
-		&.about
-			main
-				.columns .column
-					&:nth-child(2)
-						.card
-							width: 100%
-				.action
-					margin-top: 100px
-					margin-bottom: 200px
-					a
-						padding: 15px 45px
-		&.portfolio
-			main
-				.columns .column
-					margin-bottom: 10px
-					.categories
-						height: calc(100vw / 100 * 80 / 1 - 10px)
-				.filterButtons p:nth-child(1)
-					display: none
-			.modal
-				align-items: flex-end
-				height: 100%
-				.presentation
-					display: block
-					width: 100%
-					.content
-						display: none
-				aside
-					position: absolute
-					top: auto
-					width: 100%
-					max-height: 75%
-					border-radius: rem(50px) rem(50px) 0 0
-					padding-top: rem(50px)
-					padding-bottom: rem(50px)
-					.close
-						height: rem(5px)
-						width: rem(100px)
-						background-color: #c4c4c4
-						border-radius: rem(10px)
-						position: absolute
-						top: rem(10px)
-						left: 50%
-						transform: translateX(-50%)
-						img
-							display: none
-					h2
-						margin-top: rem(40px)
-					&.modalSidebar-modalOpen
-						animation-name: mobileModalOpen
-					&.modalSidebar-modalClose
-						animation-name: mobileModalClose
-		&.services
-			main
-				.columns
+				font-size: rem(28px)
+				&:nth-child(2):after
+					height: rem(40px)
+		.services
+			div:nth-child(2) 
+				.container 
+					h3
+						margin-bottom: 0
 					.column
-						padding: 0
-					&:nth-child(even), &:nth-child(odd)
-						.column
-							&:nth-child(1)
-								padding: 0
-							&:nth-child(2)
-								margin-top: rem(20px)
-								padding: 0
+						padding-bottom: 0
+		.showcase
+			.columns:not(:nth-child(1))
+				h2
+					margin-top: rem(20px)
+					&:after, &.selected:after
+						width: 35%
 
-			// .waves
-			// 	div
-			// 		&.wave1
-			// 			background-image: url("../src/img/services-mobile-wave1.svg")
-			// 		&.wave2
-			// 			background-image: url("../src/img/services-mobile-wave2.svg")
-			// 		&.wave3
-			// 			background-image: url("../src/img/services-mobile-wave3.svg")
+	.about
+		main
+			.columns .column
+				&:nth-child(2)
+					.card
+						width: 100%
+			.action
+				margin-top: 100px
+				margin-bottom: 200px
+				a
+					padding: 15px 45px
+	.portfolio
+		main
+			.columns .column
+				margin-bottom: 10px
+				.categories
+					height: calc(100vw / 100 * 80 / 1 - 10px)
+			.filterButtons p:nth-child(1)
+				display: none
+		.modal
+			align-items: flex-end
+			height: 100%
+			.presentation
+				display: block
+				width: 100%
+				.content
+					display: none
+			aside
+				position: absolute
+				top: auto
+				width: 100%
+				max-height: 75%
+				border-radius: rem(50px) rem(50px) 0 0
+				padding-top: rem(50px)
+				padding-bottom: rem(50px)
+				.close
+					height: rem(5px)
+					width: rem(100px)
+					background-color: #c4c4c4
+					border-radius: rem(10px)
+					position: absolute
+					top: rem(10px)
+					left: 50%
+					transform: translateX(-50%)
+					img
+						display: none
+				h2
+					margin-top: rem(40px)
+				&.modalSidebar-modalOpen
+					animation-name: mobileModalOpen
+				&.modalSidebar-modalClose
+					animation-name: mobileModalClose
+		// .waves
+		// 	div
+		// 		&.wave1
+		// 			background-image: url("../src/img/services-mobile-wave1.svg")
+		// 		&.wave2
+		// 			background-image: url("../src/img/services-mobile-wave2.svg")
+		// 		&.wave3
+		// 			background-image: url("../src/img/services-mobile-wave3.svg")
 
 // SMALL DEVICES: UP TO 576
 @media screen and (max-width: $small)
+	.portfolio
+		main
+			.filters
+				display: grid
+				grid-template-columns: 1fr 1fr
+				grid-column-gap: 5px
+				grid-row-gap: 5px
+				div 
+					&:hover span
+						transform: translateY(0)
+						box-shadow: 0px 2px 4px transparentize($black, .6);
+					span
+						margin: 0
+						padding: 15px 15px
 
-	.audio
-		&.portfolio
-			main
-				.filters
-					display: grid
-					grid-template-columns: 1fr 1fr
-					grid-column-gap: 5px
-					grid-row-gap: 5px
-					div 
-						&:hover span
-							transform: translateY(0)
-						span
-							margin: 0
-							padding: 15px 15px
-
-	.graphics
-		&.portfolio
-			main
-				.filters
-					display: grid
-					grid-template-columns: 1fr 1fr
-					grid-column-gap: 5px
-					grid-row-gap: 5px
-					div 
-						&:hover span
-							transform: translateY(0)
-							box-shadow: 0px 2px 4px transparentize($black, .6);
-						span
-							margin: 0
-							padding: 15px 15px
-
-		&.contact
-			main
-				form
-					& *
-						width: 100%
-					input[type="submit"]
-						width: 100%
-			// .waves
-			// 	div
-			// 		background-size: contain
-			// 	.wave1
-			// 		background-image: url("../src/graphics/contact/contact-mobile-wave1.svg")
-			// 	.wave2
-			// 		background-image: url("../src/graphics/contact/contact-mobile-wave2.svg")
+	.contact
+		main
+			form
+				& *
+					width: 100%
+				input[type="submit"]
+					width: 100%
+		// .waves
+		// 	div
+		// 		background-size: contain
+		// 	.wave1
+		// 		background-image: url("../src/graphics/contact/contact-mobile-wave1.svg")
+		// 	.wave2
+		// 		background-image: url("../src/graphics/contact/contact-mobile-wave2.svg")
 
 // MOBILE-L: UP TO 425
 @media screen and (max-width: $mobile-l)
-	.graphics
-		main.container
-			max-width: 100%
-			padding: 0 20px
-		&.home
-			.showcase
-				.columns h2.column.selected:after
-					width: 60%
-			.action
-				div
-					a
-						padding: 15px 50px
-		&.about
-			main .action a
-				width: 100%
-				padding: 15px 0
-		&.portfolio
-			main
-				.columns .column .categories
-					height: calc(100vw - 50px)
-					p
-						font-size: rem(16px)
+	main.container
+		max-width: 100%
+		padding: 0 20px
+	.home
+		.showcase
+			.columns h2.column.selected:after
+				width: 60%
+		.action
+			div
+				a
+					padding: 15px 50px
+	.about
+		main .action a
+			width: 100%
+			padding: 15px 0
+	.portfolio
+		main
+			.columns .column .categories
+				height: calc(100vw - 50px)
+				p
+					font-size: rem(16px)
 
 // MOBILE-M: UP TO 375
 @media screen and (max-width: $mobile-m)
-	.graphics
-		&.home
-			.showcase
-				.columns h2.column.selected:after
-					width: 70%
-		&.about
-			main
-				.action a
-					width: 100%
+	.home
+		.showcase
+			.columns h2.column.selected:after
+				width: 70%
+	.about
+		main
+			.action a
+				width: 100%
 
 // MOBILE-S: UP TO 320
 @media screen and (max-width: $mobile-s)
-	.graphics
-		&.home
-			.showcase
-				.columns 
-					h2.column.selected:after, h2:hover:after
-						width: 80%
+	.home
+		.showcase
+			.columns 
+				h2.column.selected:after, h2:hover:after
+					width: 80%

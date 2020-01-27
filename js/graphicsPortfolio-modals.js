@@ -1,25 +1,25 @@
 var page = document.getElementsByTagName("html")[0];
 
-var modal = document.querySelector(".graphics.portfolio .modal");
+var modal = document.querySelector(".portfolio .modal");
 
-var modalBackground = document.querySelector(".graphics.portfolio .modal .background");
+var modalBackground = document.querySelector(".portfolio .modal .background");
 
-var modalPresentation = document.querySelector(".graphics.portfolio .modal .presentation");
-var modalPresentationContent = document.querySelector(".graphics.portfolio .modal .presentation .content");
+var modalPresentation = document.querySelector(".portfolio .modal .presentation");
+var modalPresentationContent = document.querySelector(".portfolio .modal .presentation .content");
 
-var modalSidebar = document.querySelector(".graphics.portfolio .modal aside");
+var modalSidebar = document.querySelector(".portfolio .modal aside");
 
-var dragHandle = document.querySelector(".graphics.portfolio .modal .close");
+var dragHandle = document.querySelector(".portfolio .modal .close");
 
-var work = document.querySelectorAll(".graphics.portfolio .columns .column");
-var workCategories = document.querySelectorAll(".graphics.portfolio .columns .column .categories");
-var modalName = document.querySelector(".graphics.portfolio .modal h2");
-var modalDescription = document.querySelector(".graphics.portfolio .modal .description");
-var modalCategories = document.querySelector(".graphics.portfolio .modal .categories");
-var modalTools = document.querySelector(".graphics.portfolio .modal .tools");
-var modalLink = document.querySelector(".graphics.portfolio .modal a");
+var work = document.querySelectorAll(".portfolio .columns .column");
+var workCategories = document.querySelectorAll(".portfolio .columns .column .categories");
+var modalName = document.querySelector(".portfolio .modal h2");
+var modalDescription = document.querySelector(".portfolio .modal .description");
+var modalCategories = document.querySelector(".portfolio .modal .categories");
+var modalTools = document.querySelector(".portfolio .modal .tools");
+var modalLink = document.querySelector(".portfolio .modal a");
 
-var closeModalButton = document.querySelector(".graphics.portfolio .modal aside img");
+var closeModalButton = document.querySelector(".portfolio .modal aside img");
 
 var isClosed = true;
 

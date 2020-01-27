@@ -1,88 +1,86 @@
-.graphics
+footer
+	@include transition (all, .2s, ease)
+	position: relative
+	z-index: 20
+	color: $white
 
-	footer
-		@include transition (all, .2s, ease)
-		position: relative
-		z-index: 20
-		color: $white
+	.container
+		display: flex
+		align-items: center
+		flex-direction: column
+		justify-content: center
 
-		.container
+	.footer-top,
+	.footer-bottom
+		font-weight: 400
+
+	.footer-top
+		text-align: center
+
+		.footer-icons
 			display: flex
-			align-items: center
-			flex-direction: column
+			flex-direction: row
 			justify-content: center
-
-		.footer-top,
-		.footer-bottom
-			font-weight: 400
-
-		.footer-top
-			text-align: center
-
-			.footer-icons
-				display: flex
-				flex-direction: row
-				justify-content: center
-				margin-bottom: rem(20px)
-
-				a
-					display: flex
-					margin: 0 rem(5px)
-					align-items: center
-					background-color: $white
-					border-radius: 100%
-					color: $footerIcons
-					height: rem(40px)
-					justify-content: center
-					width: rem(40px)
-					box-shadow: 0 2px 25px transparentize($black, .85), 0 1px 2px transparentize($black, .65)
-					transition: all .2s
-					&:hover
-						opacity: .75
-					i
-						font-size: rem(20px)
-						text-shadow: 0 0 0
-
-			.info
-				margin: 0 auto
-
-				div
-					font-weight: 300
-					letter-spacing: rem(.5px)
-
-				p
-					font-weight: 400
-					margin-bottom: rem(5px)
-
-					&:last-child
-						margin-bottom: 0
-
-					a
-						transition: all .15s ease
-
-						&:hover
-							opacity: .5
-
-		.footer-divider
-			margin: rem(20px) 0
-			background-color: $white
-			height: rem(1px)
-			width: rem(50px)
-
-		.footer-bottom
-			padding-bottom: rem(50px)
-			text-align: center
+			margin-bottom: rem(20px)
 
 			a
 				display: flex
+				margin: 0 rem(5px)
+				align-items: center
+				background-color: $white
+				border-radius: 100%
+				color: $footerIcons
+				height: rem(40px)
 				justify-content: center
-				margin-top: rem(20px)
+				width: rem(40px)
+				box-shadow: 0 2px 25px transparentize($black, .85), 0 1px 2px transparentize($black, .65)
+				transition: all .2s
+				&:hover
+					opacity: .75
+				i
+					font-size: rem(20px)
+					text-shadow: 0 0 0
 
-				p
-					color: $white
-					font-size: rem(12px)
-					text-decoration: underline
-					transition: all .2s ease
-					width: fit-content
+		.info
+			margin: 0 auto
+
+			div
+				font-weight: 300
+				letter-spacing: rem(.5px)
+
+			p
+				font-weight: 400
+				margin-bottom: rem(5px)
+
+				&:last-child
+					margin-bottom: 0
+
+				a
+					transition: all .15s ease
+
 					&:hover
-						opacity: 0.5
+						opacity: .5
+
+	.footer-divider
+		margin: rem(20px) 0
+		background-color: $white
+		height: rem(1px)
+		width: rem(50px)
+
+	.footer-bottom
+		padding-bottom: rem(50px)
+		text-align: center
+
+		a
+			display: flex
+			justify-content: center
+			margin-top: rem(20px)
+
+			p
+				color: $white
+				font-size: rem(12px)
+				text-decoration: underline
+				transition: all .2s ease
+				width: fit-content
+				&:hover
+					opacity: 0.5
