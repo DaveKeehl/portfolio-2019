@@ -10,12 +10,12 @@ function filterSelection(c) {
 	if (c === "all") {
 		element = document.querySelector(".filters div:nth-child(1) span");
 		c = "";
-	} else if (c === "ux" || c === 'recording') {
+	} else if (c === "ux") {
 		console.log(c);
 		element = document.querySelector(".filters div:nth-child(2) span");
-	} else if (c === "web" || c === 'mixing') {
+	} else if (c === "web") {
 		element = document.querySelector(".filters div:nth-child(3) span");
-	} else if (c === "video" || c === 'mastering') {
+	} else if (c === "video") {
 		element = document.querySelector(".filters div:nth-child(4) span");
 	}
 	element.classList.add("filter-active");
