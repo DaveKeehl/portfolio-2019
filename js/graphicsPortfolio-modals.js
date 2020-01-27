@@ -23,6 +23,8 @@ var closeModalButton = document.querySelector(".portfolio .modal aside img");
 
 var isClosed = true;
 
+console.log(work[6]);
+
 closeModalButton.addEventListener("click", closeModal);
 modalBackground.addEventListener("click", closeModal);
 
@@ -30,7 +32,7 @@ modalBackground.addEventListener("click", closeModal);
 
 for (i = 0; i < work.length; i++) {
 	for (j = 0; j < work[i].classList.length; j++) {
-		if (work[i].classList[j] === 'ux' || work[i].classList[j] === 'web' || work[i].classList[j] === 'video' || work[i].classList[j] === 'print') {
+		if (work[i].classList[j] === 'ux' || work[i].classList[j] === 'web' || work[i].classList[j] === 'video') {
 			let category = document.createElement("p");
 			if (work[i].classList[j] === 'ux') {
 				category.innerHTML = 'ui/ux';
@@ -54,7 +56,7 @@ function openModal(id, name, description, tools, link, presentation) {
 		// INJECT WORK EXTERNAL LINK
 		modalLink.href = 'https://' + link;
 		// INJECT WORK TAGS
-		for (i = 0; i < workCategories[id].children.length; i++) {
+		for (let i = 0; i < workCategories[id].children.length; i++) {
 			if (workCategories[id].children[i].innerHTML === 'ui/ux' || 'web' || 'print' || 'video') {
 				let category = document.createElement("p");
 				category.innerHTML = workCategories[id].children[i].innerHTML;
@@ -87,7 +89,7 @@ function openModal(id, name, description, tools, link, presentation) {
 				// USE IMAGES
 				logo = document.createElement("div");
 				// console.log(logo);
-				logo.style.background = "url(../src/graphics/portfolio/" + tools[i] + ".svg) center/contain no-repeat ";
+				logo.style.background = "url(../src/portfolio/" + tools[i] + ".svg) center/contain no-repeat ";
 				logo.style.width = "24px";
 				logo.style.height = "24px";
 				logo.style.display = "block";
