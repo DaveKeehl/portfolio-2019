@@ -8,9 +8,14 @@
 		font-size: 100px
 		font-weight: 900
 
-	h2
+	.services h2,
+	.projects h2
+		color: $white
 		font-size: 60px
 		font-weight: 800
+		text-shadow: 0px 4px 4px transparentize($black, .75)
+		span
+			color: $green
 
 	.hero
 		display: flex
@@ -157,33 +162,41 @@
 						&:hover
 							opacity: .5
 	.services
+		display: flex
+		flex-direction: column
+		margin-bottom: 150px
 		h2
-			color: $white
-			margin-top: 200px
 			margin-bottom: 100px
-			text-shadow: 0px 4px 4px transparentize($black, .75)
-			span
-				color: $green
-		.container
-			padding: rem(50px) 0 rem(100px) 0
-			h3
-				text-align: center
-				font-size: rem(40px)
-				color: $black
-				margin-bottom: rem(50px)
-			.column
+		.cards
+			display: flex
+			div
+				position: relative
 				display: flex
-				text-align: center
 				flex-direction: column
 				align-items: center
-				padding: rem(20px)
-				h4
-					color: $black
-					font-weight: 700
-					margin-bottom: 10px
-				p
-					color: $darkBlue
-					text-align: left
+				padding: 30px
+				background-color: $white
+				background-clip: padding-box
+				border: 8px solid transparent
+				border-radius: 10px
+				box-shadow: 0 4px 50px transparentize($green, .4), 0 4px 20px transparentize($green, .7)
+				&::before
+					content: ''
+					position: absolute
+					top: 0
+					bottom: 0
+					left: 0
+					right: 0
+					z-index: -1
+					margin: -8px
+					border-radius: inherit
+				&:nth-child(1)::before, &:nth-child(3)::before
+					background: linear-gradient(to bottom, $white, $green)
+				&:nth-child(2)::before
+					background: linear-gradient(to top, $white, $green)
+		h4
+			font-size: 20px
+			font-weight: 800
 
 	.projects
 		display: flex
@@ -191,11 +204,7 @@
 		align-items: center
 		margin-bottom: 250px
 		h2
-			color: $white
 			margin-bottom: 50px
-			text-shadow: 0px 4px 4px transparentize($black, .75)
-			span
-				color: $green
 		a
 			display: flex
 			align-items: center
@@ -203,6 +212,9 @@
 			border-radius: 6px
 			padding: 18px 60px
 			box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
+			transition: all .2s
+			&:hover
+				box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
 			img
 				height: 20px
 			p
