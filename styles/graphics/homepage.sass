@@ -8,11 +8,13 @@
 		font-size: 100px
 		font-weight: 900
 
+	h2
+		font-size: 60px
+		font-weight: 800
+
 	.services h2,
 	.projects h2
 		color: $white
-		font-size: 60px
-		font-weight: 800
 		text-shadow: 0px 4px 4px transparentize($black, .75)
 		span
 			color: $green
@@ -40,7 +42,7 @@
 				color: $green
 
 	.linear-gradient
-		background: linear-gradient(to right, $green, $celeste)
+		background: $gradient
 
 	.welcome
 		display: flex
@@ -169,17 +171,23 @@
 			margin-bottom: 100px
 		.cards
 			display: flex
-			div
+			justify-content: center
+			& > div
 				position: relative
 				display: flex
 				flex-direction: column
 				align-items: center
-				padding: 30px
+				width: 258px
+				padding: 22px
 				background-color: $white
 				background-clip: padding-box
 				border: 8px solid transparent
 				border-radius: 10px
 				box-shadow: 0 4px 50px transparentize($green, .4), 0 4px 20px transparentize($green, .7)
+				& *:not(:last-child)
+					margin-bottom: 20px
+				&:not(:last-child)
+					margin-right: 20px
 				&::before
 					content: ''
 					position: absolute
@@ -194,9 +202,30 @@
 					background: linear-gradient(to bottom, $white, $green)
 				&:nth-child(2)::before
 					background: linear-gradient(to top, $white, $green)
-		h4
-			font-size: 20px
-			font-weight: 800
+			.label
+				align-self: flex-end
+				background-color: tomato
+				color: white
+				font-size: 14px
+				line-height: 17px
+				padding: 2px 5px
+				border-radius: 3px
+				&.ux
+					background-color: $ux
+				&.web
+					background-color: $web
+				&.video
+					background-color: $video
+			h4
+				font-size: 20px
+				font-weight: 800
+			.divider
+				height: 3px
+				width: 30px
+				background-color: $black
+			p
+				line-height: 19px
+
 
 	.projects
 		display: flex
@@ -224,60 +253,61 @@
 
 	.action
 		h1
-			margin: 0
-			padding: 0 10px
-			color: white
-			font-size: rem(96px)
-			font-weight: 900
-			line-height: rem(115px)
+			color: tomato
+			line-height: 120px
 			position: relative
 			z-index: 5
-			span
-				display: block
-				&:nth-child(1)
-					text-shadow: 0 rem(4px) rem(4px) transparentize($black, .75)
-
-				&:nth-child(2)
-					color: $homeBlue
-					text-shadow: 0 rem(4px) rem(4px) transparentize($black, .85)
 		img
 			display: block
 			width: 100%
 			margin-top: rem(-320px)
 			transform: translateY(1px)
-		div
-			display: flex
-			justify-content: center
-			align-items: center
-			background-color: $white
-			height: 350px
-			a
-				// background-color: $homeBlue
-				background-color: #187df7
-				color: $white
-				// text-shadow: 0 1px 2px transparentize($black, .8)
-				border: 0
-				border-radius: rem(5px)
-				font-size: rem(18px)
-				font-weight: 700
-				padding: 15px 80px
-				box-shadow: 0 2px 2px transparentize($homeBlue, .8),0 5px 10px transparentize($homeBlue, .3)
-				transition: all .2s
-				&:hover
-					background-color: #1063c7
-					box-shadow: 0 2px 2px transparentize(#1063c7, .8),0 5px 10px transparentize(#1063c7, .3)
+		a
+			display: inline-block
+			background-color: $blue
+			color: $white
+			border: 0
+			border-radius: rem(5px)
+			font-size: rem(18px)
+			font-weight: 700
+			padding: 15px 80px
+			box-shadow: 0 2px 2px transparentize($homeBlue, .8),0 5px 10px transparentize($homeBlue, .3)
+			transition: all .2s
+			&:hover
+				background-color: #1063c7
+				box-shadow: 0 2px 2px transparentize(#1063c7, .8),0 5px 10px transparentize(#1063c7, .3)
+		// div
+		// 	display: flex
+		// 	justify-content: center
+		// 	align-items: center
+		// 	background-color: $white
+		// 	height: 350px
+
+
 	footer
 		color: $black
-		background-color: $white
-		.footer-top .footer-icons
+		background: $gradient
+		padding: 50px 0
+		.icons
+			display: flex
+			justify-content: center
+			& *:not(:last-child)
+				margin-right: 10px
 			a
-				background-color: $homeBlue
+				display: flex
+				justify-content: center
+				align-items: center
+				background-color: $blue
 				box-shadow: 0 0 0
+				border-radius: 100%
+				height: 40px
+				width: 40px
+				box-shadow: 0 2px 4px transparentize($blue, .75)
 			i
 				color: $white
-		.footer-divider
-			background-color: transparentize($grey, .8)
-		.footer-bottom a p
-			color: $darkBlue
-			&:hover
-				color: $black
+				font-size: 20px
+		.divider
+			height: 1px
+			width: 50px
+			margin: 20px 0
+			background-color: transparentize($black, .5)
