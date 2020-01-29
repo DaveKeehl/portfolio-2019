@@ -1,4 +1,4 @@
-// HAMBURGER MENU
+// ACTIVATE MOBILE MENU
 
 (function() {
 	var burger = document.querySelector('.burger');
@@ -9,7 +9,7 @@
 	});
 })();
 
-// LOGO
+// ROTATE LOGO ON HOVER
 
 $(".navbar-brand a").hover(
 	function() {
@@ -20,7 +20,7 @@ $(".navbar-brand a").hover(
 	},
 );
 
-// FOOTER
+// CHANGE ICONS COLOR ON HOVER (FOOTER)
 
 $("#facebook").hover(
 	function() {
