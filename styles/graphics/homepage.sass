@@ -251,17 +251,25 @@
 			align-items: center
 			background-color: $white
 			border-radius: 6px
-			padding: 18px 60px
+			padding: 18px 50px
 			box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
+			overflow: hidden
 			transition: all .2s
 			&:hover
 				box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
+				img
+					animation-name: rocket-launch
+					animation-duration: .7s
+					animation-iteration-count: 1
+					&:nth-of-type(2)
+						animation-delay: .2s
 			img
-				height: 20px
+				height: 25px
+				transition: all .2s
 			p
 				font-size: 20px
 				font-weight: 700
-				margin: 0 5px
+				margin: 0 10px
 
 	.action
 		position: relative
