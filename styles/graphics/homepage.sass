@@ -72,34 +72,33 @@
 			text-shadow: 0 4px 10px transparentize($blue, .9), 0 2px 4px transparentize($blue, .8)
 
 	.about
-		.columns
-			.column
-				display: flex
-				flex-direction: column
-				align-items: center
-				width: 50%
-				h2
-					color: $blue
-					margin-bottom: 10px
-					text-align: left
-				h2, p
-					width: 400px
-				&:nth-child(1)
-					p
-						font-size: 30px
-						font-weight: 900
-						line-height: 36px
-						opacity: .75
-						background: -webkit-linear-gradient(-90deg, #28A5EB, $blue);
-						-webkit-background-clip: text;
-						-webkit-text-fill-color: transparent;
-						margin-bottom: 50px
+		.column
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 50%
+			h2
+				color: $blue
+				margin-bottom: 10px
+				text-align: left
+			h2, p
+				width: 400px
+			&:nth-child(1)
+				p
+					font-size: 30px
+					font-weight: 900
+					line-height: 36px
+					opacity: .75
+					background: -webkit-linear-gradient(-90deg, #28A5EB, $blue);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					margin-bottom: 50px
 		.card
 			background-color: $white
 			color: $black
 			text-align: left
 			width: 450px
-			border-radius: rem(10px)
+			border-radius: 10px
 			padding: rem(40px) rem(20px)
 			transform: translateY(220px) rotate(1.14deg)
 			z-index: 5
@@ -115,18 +114,18 @@
 				h4
 					font-size: rem(24px)
 					font-weight: normal
-					& ~ div
-						display: flex
-						justify-content: center
-						align-items: center
-						margin-top: rem(10px)
-						margin-bottom: rem(20px)
-						p
-							margin: 0 rem(5px)
-							font-style: italic
-							width: fit-content
-						img
-							height: rem(19px)
+				.status
+					display: flex
+					justify-content: center
+					align-items: center
+					margin-top: rem(10px)
+					margin-bottom: rem(20px)
+					p
+						margin: 0 rem(5px)
+						font-style: italic
+						width: fit-content
+					img
+						height: rem(19px)
 			.middle, .bottom
 				border-top: rem(1px) solid transparentize($black, .8)
 				padding-top: rem(20px)
@@ -137,9 +136,7 @@
 			.middle
 				padding-bottom: rem(15px)
 				p
-					float: left
 					margin: 0 rem(10px) rem(5px) 0
-					font-size: rem(16px)
 					color: white
 					background-color: $blue
 					border-radius: rem(3px)
@@ -151,14 +148,17 @@
 					display: flex
 					flex-direction: row
 					a
+						&:not(:last-child)
+							margin-right: rem(10px)
 						display: flex
+						justify-content: center
+						align-items: center
 						height: 30px
 						width: 30px
 						border-radius: 100%
-						justify-content: center
-						align-items: center
-						margin-right: rem(10px)
 						transition: all .2s
+						&:hover
+							opacity: .5
 						&.github
 							background-color: $github
 						&.linkedin
@@ -170,8 +170,6 @@
 						i
 							color: $white
 							font-size: rem(18px)
-						&:hover
-							opacity: .5
 	
 	.about-bottom-wave
 		transform: scale(1.005) translateY(-1px)
