@@ -20,35 +20,6 @@ $(".navbar-brand a").hover(
 	},
 );
 
-// CHANGE ICONS COLOR ON HOVER (FOOTER)
-
-$("#facebook").hover(
-	function() {
-		$("#facebook svg > path").addClass("svg-darkBlue");
-	},
-	function() {
-		$("#facebook svg > path").removeClass("svg-darkBlue");
-	},
-);
-
-$("#twitter").hover(
-	function() {
-		$("#twitter svg > path").addClass("svg-lightBlue");
-	},
-	function() {
-		$("#twitter svg > path").removeClass("svg-lightBlue");
-	},
-);
-
-$("#instagram").hover(
-	function() {
-		$("#instagram svg > path").addClass("svg-purple");
-	},
-	function() {
-		$("#instagram svg > path").removeClass("svg-purple");
-	},
-);
-
 // AUTOMATIC COPYRIGHT YEAR
 
 let footerCopyright = document.querySelector("p.copyright");

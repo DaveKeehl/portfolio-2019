@@ -247,6 +247,7 @@
 		h2
 			margin-bottom: 50px
 		a
+			position: relative
 			display: flex
 			align-items: center
 			background-color: $white
@@ -255,6 +256,9 @@
 			box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
 			overflow: hidden
 			transition: all .2s
+			& *
+				position: relative
+				z-index: 5
 			&:hover
 				box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
 				img
@@ -263,6 +267,8 @@
 					animation-iteration-count: 1
 					&:nth-of-type(2)
 						animation-delay: .2s
+			&:active::after
+					width: 100%
 			img
 				height: 25px
 				transition: all .2s
@@ -270,6 +276,15 @@
 				font-size: 20px
 				font-weight: 700
 				margin: 0 10px
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				background-image: $gradient
+				width: 0
+				height: 100%
+				transition: width .75s cubic-bezier(0.88, -0.15, 0.08, 1.08)
 
 	.action
 		position: relative
@@ -314,6 +329,8 @@
 			a
 				background-color: $blue
 				box-shadow: 0 2px 4px transparentize($blue, .75)
+				&:hover
+					background-color: transparentize($blue, .3)
 			i
 				color: $white
 				font-size: 20px
