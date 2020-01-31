@@ -250,34 +250,45 @@
 			position: relative
 			display: flex
 			align-items: center
+			border: 0
 			background-color: $white
 			border-radius: 6px
 			padding: 18px 50px
 			box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
 			overflow: hidden
 			transition: all .2s
-			& *
+			&.glow
+				box-shadow: 0 4px 50px rgba(68,251,201,0.6), 0 4px 20px rgba(68,251,201,0.3) !important
+			.content
 				position: relative
+				display: flex
+				margin: 0
 				z-index: 5
-			&:hover
-				box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
+				& *
+					pointer-events: none
 				img
-					animation-name: rocket-launch
-					animation-duration: .7s
-					animation-iteration-count: 1
-					&:nth-of-type(2)
+					height: 25px
+					transition: all .2s
+					&.rocket-launch
+						animation-name: rocket-launch
+						animation-duration: .7s
+						animation-iteration-count: 1
+					&:nth-of-type(2).rocket-launch
 						animation-delay: .2s
-			&:active::after
-					width: 100%
-			img
-				height: 25px
-				transition: all .2s
-			p
-				font-size: 20px
-				font-weight: 700
-				margin: 0 10px
-			&::after
-				content: ''
+				p
+					font-size: 20px
+					font-weight: 700
+					margin: 0 10px
+			.invisible
+				position: absolute
+				top: 0
+				left: 0
+				background: transparent
+				width: 0
+				height: 100%
+				width: 100%
+				z-index: 20
+			.bg
 				position: absolute
 				top: 0
 				left: 0
@@ -285,6 +296,11 @@
 				width: 0
 				height: 100%
 				transition: width .75s cubic-bezier(0.88, -0.15, 0.08, 1.08)
+				&.background-animation
+					width: 100%
+			&:hover
+				cursor: pointer
+				box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
 
 	.action
 		position: relative
@@ -317,7 +333,7 @@
 			font-weight: 700
 			padding: 15px 80px
 			text-shadow: 0 0 4px transparentize($white, .7)
-			box-shadow: 0 2px 2px transparentize($homeBlue, .8),0 5px 10px transparentize($homeBlue, .3)
+			box-shadow: 0 2px 2px transparentize($blue, .8),0 5px 10px transparentize($blue, .3)
 			transition: all .2s
 			&:hover
 				box-shadow: 0 2px 2px transparentize(#1063c7, .8),0 5px 10px transparentize(#1063c7, .3)

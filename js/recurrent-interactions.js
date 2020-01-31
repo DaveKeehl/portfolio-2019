@@ -9,17 +9,6 @@
 	});
 })();
 
-// ROTATE LOGO ON HOVER
-
-$(".navbar-brand a").hover(
-	function() {
-		$(".navbar-brand svg").addClass("logo-rotate");
-	},
-	function() {
-		$(".navbar-brand svg").removeClass("logo-rotate");
-	},
-);
-
 // AUTOMATIC COPYRIGHT YEAR
 
 let footerCopyright = document.querySelector("p.copyright");

@@ -165,9 +165,13 @@
 	<div class="projects container">
 		<h2>Fancy looking at my <span>projects</span>?</h2>
 		<a>
-			<img src="src/home/rocket.png">
-			<p>Check out my portfolio</p>
-			<img src="src/home/rocket.png">
+			<div class="invisible"></div>
+			<div class="content">
+				<img src="src/home/rocket.png">
+				<p>Check out my portfolio</p>
+				<img src="src/home/rocket.png">
+			</div>
+			<div class="bg"></div>
 		</a>
 	</div>
 
@@ -215,14 +219,35 @@
 		// 	hero.style.backgroundPosition = 'center ' + (yPosition * 0.5) + 'px';
 		// }
 
-		let projectsButton = document.querySelector(".home .projects a");
-		console.log(projectsButton);
+		let projectsButton = document.querySelector('.home .projects a .invisible');
+		projectsButton.addEventListener('mouseover', (e) => {
+			e.stopImmediatePropagation();
+			if (e.target !== projectsButton) {
+				console.log('exit');
+				return;
+			}
+			console.log('hover');
+			let images = document.querySelectorAll('.home .projects img');
+			for (let i = 0; i < images.length; i++) {
+				images[i].classList.add('rocket-launch');
+			}
+			setTimeout( () => {
+				for (let i = 0; i < images.length; i++) {
+				images[i].classList.remove('rocket-launch');
+			}
+			},900);
+		});
+		projectsButton.addEventListener('mouseleave', (e) => {
+			console.log('left');
+		});
 		projectsButton.addEventListener('click', (e) => {
 			e.preventDefault();
-			setTimeout( (e) => {
-				// window.location = 'contact.html';
-			},750);
-			window.location = 'contact.html';
+			let bg = document.querySelector('.home .projects a .bg');
+			projectsButton.classList.add('glow');
+			bg.classList.add('background-animation');
+			setTimeout( () => {
+				window.location = 'portfolio.html';
+			},1200);
 		});
 
 	</script>
