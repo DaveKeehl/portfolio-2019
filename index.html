@@ -220,30 +220,30 @@
 		// }
 
 		let projectsButton = document.querySelector('.home .projects a .invisible');
+		let images = document.querySelectorAll('.home .projects img');
+		let bg = document.querySelector('.home .projects a .bg');
+		let button = document.querySelector('.home .projects a');
+
 		projectsButton.addEventListener('mouseover', (e) => {
-			e.stopImmediatePropagation();
-			if (e.target !== projectsButton) {
-				console.log('exit');
-				return;
-			}
-			console.log('hover');
-			let images = document.querySelectorAll('.home .projects img');
+			button.classList.add('is-hover');
 			for (let i = 0; i < images.length; i++) {
 				images[i].classList.add('rocket-launch');
 			}
 			setTimeout( () => {
 				for (let i = 0; i < images.length; i++) {
-				images[i].classList.remove('rocket-launch');
-			}
+					images[i].classList.remove('rocket-launch');
+				}
 			},900);
 		});
+
 		projectsButton.addEventListener('mouseleave', (e) => {
+			button.classList.remove('is-hover');
 			console.log('left');
 		});
+
 		projectsButton.addEventListener('click', (e) => {
-			e.preventDefault();
-			let bg = document.querySelector('.home .projects a .bg');
-			projectsButton.classList.add('glow');
+
+			button.classList.add('glow');
 			bg.classList.add('background-animation');
 			setTimeout( () => {
 				window.location = 'portfolio.html';
