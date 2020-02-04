@@ -32,7 +32,7 @@
 		height: 100vh
 		min-height: rem(360px)
 		margin-bottom: 20px
-
+	
 		h1
 			font-weight: 800
 			text-shadow: 0 4px 4px transparentize($black, .75)
@@ -44,10 +44,11 @@
 			span
 				color: $green
 
-	.artwork-container
-		margin-top: -75vh
+		& + .artwork-container
+			margin-top: -75vh
 
 	.top-section
+		margin-top: -100px
 		background: $gradient
 
 	.welcome
@@ -59,7 +60,6 @@
 		padding-bottom: 100px
 		h1
 			color: $blue
-			margin-top: 200px
 			margin-bottom: 100px
 		p
 			font-size: 34px
