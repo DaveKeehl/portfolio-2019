@@ -20,6 +20,8 @@
 			color: $green
 
 	.hero
+		position: relative
+		z-index: 5
 		display: flex
 		justify-content: center
 		align-items: center
@@ -30,6 +32,7 @@
 		height: 100vh
 		min-height: rem(360px)
 		margin-bottom: 20px
+
 		h1
 			font-weight: 800
 			text-shadow: 0 4px 4px transparentize($black, .75)
@@ -137,6 +140,8 @@
 					margin-bottom: rem(20px)
 			.middle
 				padding-bottom: rem(15px)
+				.columns
+					display: flex
 				p
 					margin: 0 rem(10px) rem(5px) 0
 					color: white
@@ -186,6 +191,7 @@
 		.cards
 			display: flex
 			justify-content: center
+			flex-wrap: wrap
 			& > div
 				position: relative
 				display: flex
@@ -193,6 +199,8 @@
 				align-items: center
 				width: 258px
 				padding: 22px
+				margin-right: 20px
+				margin-bottom: 20px
 				background-color: $white
 				background-clip: padding-box
 				border: 8px solid transparent

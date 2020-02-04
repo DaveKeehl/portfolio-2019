@@ -5,7 +5,7 @@
 			.categories p
 				font-size: rem(16px)
 
-// TABLET: FROM 768 TO 1023
+// TABLET: UP TO 1023
 @media screen and (max-width: $to-desktop-s)
 	header .navbar .navbar-menu
 		.navbar-end
@@ -98,21 +98,25 @@
 					width: rem(20px)
 			&:hover
 				color: $black
-	.about
-		main
-			h1 ~ .columns
-				display: flex
-				flex-direction: column-reverse
-			.card
-				margin-bottom: 50px
-			.columns .column
-				display: flex
+	.home
+		.about
+			& > .columns
 				flex-direction: column
-				align-items: center
-				flex-basis: auto
-				p
-					text-align: justify
-					text-align-last: center
+			.column
+				width: 100%
+				&:nth-child(1) p:last-child
+					margin-bottom: 0
+			.card
+				margin-top: 50px
+				transform: translateY(50px)
+	.portfolio
+		main
+			.columns .column .categories
+				height: calc(100vw / 100 * 80 / 2 - 10px)
+		.modal
+			.presentation .content
+				display: none
+
 	.contact
 		main
 			form
@@ -123,45 +127,25 @@
 		// 		background-image: url("../src/contact/contact-tablet-wave1.svg")
 		// 	.wave2
 		// 		background-image: url("../src/contact/contact-tablet-wave2.svg")
-	.portfolio
-		main
-			.columns .column .categories
-				height: calc(100vw / 100 * 80 / 2 - 10px)
-		.modal
-			.presentation .content
-				display: none
 
+
+// TABLET: FROM TO 768
 @media screen and (min-width: $tablet)
 	.no-desktop
 		display: none !important
-
-	.home
-		.action
-			h1
-				font-size: rem(80px)
-	.about
-		main
-			.columns .column
-				&:nth-child(2) .card
-					width: 80%
-			.action
-				a
-					width: auto
 	
 	.portfolio
 		main
 			.filterButtons p:nth-child(2)
 				display: none
 
-@media screen and (min-width: $tablet) and (max-width: $to-desktop-s)
+// TABLET: FROM 768 TO 1023
+@media screen and (min-width: $tablet) and (max-width: $to-desktop-m)
 	.home
-		.services 
-			div:nth-child(2) .container .columns
-				flex-wrap: wrap
-				.column
-					flex: 0 50%
-					p
-						text-align: center
+		.action
+			h1
+				font-size: 80px
+				line-height: 80px
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
@@ -172,18 +156,6 @@
 				background-color: transparentize($black, .7) !important
 		.navbar .navbar-burger
 			display: none
-	.home
-		.showcase
-			.columns 
-				h2.column.selected:after, h2:hover:after
-					width: 95%
-			.work-samples
-				.back-sample-1, .back-sample-2
-					display: block
-		.action
-			h1
-				font-size: rem(96px)
-				line-height: rem(115px)
 	.portfolio
 		main
 			.columns .column
@@ -198,9 +170,6 @@
 
 // WIDESCREEN: FROM 1216 TO 1407
 @media screen and (min-width: $desktop-m)
-	.home
-		.showcase .columns h2
-			font-size: rem(28px)
 	.portfolio
 		main
 			.columns .column
@@ -208,12 +177,7 @@
 					height: calc(100vw / 100 * 80 / 4 - 10px)
 
 // FULL-HD: FROM 1440
-@media screen and (min-width: $full-hd)
-	.home
-		.showcase
-			.columns
-				h2.column.selected:after, h2:hover:after
-					width: 80%
+// @media screen and (min-width: $full-hd)
 	// .contact
 	// 	.waves
 	// 		.wave1
@@ -222,12 +186,7 @@
 	// 			background-image: url("../src/contact/contact-wave2.svg")
 
 // DESKTOP: UP TO 1216
-@media screen and (max-width: $desktop-m)
-	.home
-		.showcase
-			.columns
-				h2.column.selected:after, h2:hover:after
-					top: 15%
+// @media screen and (max-width: $desktop-m)
 
 // MOBILE: UP TO 767
 @media screen and (max-width: $to-tablet)
@@ -241,12 +200,15 @@
 			text-align: center
 			transition: all .5s
 	.home
+		h2
+			font-size: 50px
+		.services
+			h2
+				margin-bottom: 50px
 		.action
 			h1
-				font-size: rem(48px)
-				line-height: rem(60px)
-			img
-				margin-top: rem(-145px)
+				font-size: 60px
+				line-height: 60px
 	.portfolio
 		.modal .presentation .background
 			z-index: 5
@@ -259,37 +221,6 @@
 		h1
 			padding-top: calc(50px + 80px)
 			margin-bottom: 50px
-	.home
-		.hero>div #typewriter 
-			h1
-				font-size: rem(28px)
-				&:nth-child(2):after
-					height: rem(40px)
-		.services
-			div:nth-child(2) 
-				.container 
-					h3
-						margin-bottom: 0
-					.column
-						padding-bottom: 0
-		.showcase
-			.columns:not(:nth-child(1))
-				h2
-					margin-top: rem(20px)
-					&:after, &.selected:after
-						width: 35%
-
-	.about
-		main
-			.columns .column
-				&:nth-child(2)
-					.card
-						width: 100%
-			.action
-				margin-top: 100px
-				margin-bottom: 200px
-				a
-					padding: 15px 45px
 	.portfolio
 		main
 			.columns .column
@@ -377,18 +308,6 @@
 	main.container
 		max-width: 100%
 		padding: 0 20px
-	.home
-		.showcase
-			.columns h2.column.selected:after
-				width: 60%
-		.action
-			div
-				a
-					padding: 15px 50px
-	.about
-		main .action a
-			width: 100%
-			padding: 15px 0
 	.portfolio
 		main
 			.columns .column .categories
@@ -397,20 +316,7 @@
 					font-size: rem(16px)
 
 // MOBILE-M: UP TO 375
-@media screen and (max-width: $mobile-m)
-	.home
-		.showcase
-			.columns h2.column.selected:after
-				width: 70%
-	.about
-		main
-			.action a
-				width: 100%
+// @media screen and (max-width: $mobile-m)
 
 // MOBILE-S: UP TO 320
-@media screen and (max-width: $mobile-s)
-	.home
-		.showcase
-			.columns 
-				h2.column.selected:after, h2:hover:after
-					width: 80%
+// @media screen and (max-width: $mobile-s)
