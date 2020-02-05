@@ -85,7 +85,7 @@
 				margin-bottom: 0
 			.current-page
 				color: $black
-				font-weight: 600
+				font-weight: 700
 				border-bottom: 0
 				&:after
 					content: ''
@@ -94,7 +94,7 @@
 					top: 50%
 					transform: translateY(-50%)
 					background-color: $black
-					height: rem(2px)
+					height: rem(3px)
 					width: rem(20px)
 			&:hover
 				color: $black
@@ -109,6 +109,10 @@
 			.card
 				margin-top: 50px
 				transform: translateY(50px)
+		.action
+			h1
+				font-size: 80px
+				line-height: 90px
 	.portfolio
 		main
 			.columns .column .categories
@@ -128,7 +132,6 @@
 		// 	.wave2
 		// 		background-image: url("../src/contact/contact-tablet-wave2.svg")
 
-
 // TABLET: FROM TO 768
 @media screen and (min-width: $tablet)
 	.no-desktop
@@ -140,12 +143,12 @@
 				display: none
 
 // TABLET: FROM 768 TO 1023
-@media screen and (min-width: $tablet) and (max-width: $to-desktop-m)
-	.home
-		.action
-			h1
-				font-size: 80px
-				line-height: 80px
+// @media screen and (min-width: $tablet) and (max-width: $to-desktop-m)
+// 	.home
+// 		.action
+// 			h1
+// 				font-size: 80px
+// 				line-height: 80px
 
 // DESKTOP: FROM 1024 TO 1215
 @media screen and (min-width: $desktop-s)
@@ -185,9 +188,6 @@
 	// 		.wave2
 	// 			background-image: url("../src/contact/contact-wave2.svg")
 
-// DESKTOP: UP TO 1216
-// @media screen and (max-width: $desktop-m)
-
 // MOBILE: UP TO 767
 @media screen and (max-width: $to-tablet)
 	header .navbar .navbar-menu
@@ -202,13 +202,19 @@
 	.home
 		h2
 			font-size: 50px
+		.welcome
+			p
+				font-size: 30px
+				text-align: left
+				span
+					font-size: inherit
 		.services
 			h2
 				margin-bottom: 50px
 		.action
 			h1
 				font-size: 60px
-				line-height: 60px
+				line-height: 70px
 	.portfolio
 		.modal .presentation .background
 			z-index: 5
@@ -273,6 +279,22 @@
 
 // SMALL DEVICES: UP TO 576
 @media screen and (max-width: $small)
+	.home
+		.about
+			.column
+				h2,p
+					width: 100%
+		.services
+			.cards 
+				p
+					font-size: 18px
+					line-height: 20px
+				&>div
+					margin-right: 0
+		.action
+			.to-contact a
+				width: 100%
+				padding: 15px
 	.portfolio
 		main
 			.filters
@@ -308,6 +330,13 @@
 	main.container
 		max-width: 100%
 		padding: 0 20px
+	.home
+		.hero h1
+			font-size: 80px
+		.action
+			h1
+				font-size: 40px
+				line-height: 50px
 	.portfolio
 		main
 			.columns .column .categories

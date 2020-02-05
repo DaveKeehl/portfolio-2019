@@ -37,6 +37,7 @@
 			font-weight: 800
 			text-shadow: 0 4px 4px transparentize($black, .75)
 		p
+			text-align: center
 			font-size: 20px
 			font-weight: 800
 			text-shadow: 0 2px 4px transparentize($black, .75)
@@ -50,6 +51,9 @@
 	.top-section
 		margin-top: -100px
 		background: $gradient
+
+	.top-section ~ .artwork-container
+		margin-top: -100px
 
 	.welcome
 		display: flex
@@ -175,9 +179,6 @@
 						i
 							color: $white
 							font-size: rem(18px)
-	
-	.about-bottom-wave
-		transform: scale(1.005) translateY(-1px)
 
 	.services
 		display: flex
@@ -206,8 +207,8 @@
 				box-shadow: 0 4px 50px transparentize($green, .4), 0 4px 20px transparentize($green, .7)
 				& *:not(:last-child)
 					margin-bottom: 20px
-				&:not(:last-child)
-					margin-right: 20px
+				// &:not(:last-child)
+				// 	margin-right: 20px
 				&::before
 					content: ''
 					position: absolute
@@ -261,6 +262,7 @@
 			align-items: center
 			border: 0
 			background-color: $white
+			text-align: center
 			border-radius: 6px
 			padding: 18px 50px
 			box-shadow: 0 10px 15px transparentize($black, .8), 0 4px 4px transparentize($black, .75)
@@ -273,6 +275,7 @@
 			.content
 				position: relative
 				display: flex
+				align-items: center
 				margin: 0
 				z-index: 5
 				img
@@ -334,6 +337,7 @@
 				border-radius: rem(5px)
 				font-size: rem(18px)
 				font-weight: 700
+				text-align: center
 				padding: 15px 80px
 				text-shadow: 0 0 4px transparentize($white, .7)
 				box-shadow: 0 2px 2px transparentize($blue, .8),0 5px 10px transparentize($blue, .3)
@@ -343,7 +347,7 @@
 		.artwork-container
 			position: absolute
 			bottom: 0
-			filter: drop-shadow(0 0 200px #A600FF);
+			filter: drop-shadow(0 0 200px #A600FF)
 
 	footer
 		color: $black
