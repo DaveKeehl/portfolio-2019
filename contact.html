@@ -74,20 +74,26 @@
 		<h3>CONTACT</h3>
 		<p>Feel free to send me an email if you have any questions or need some extra information. I will try to respond as soon as possible.</p>
 		<form method="POST" name="contactform" id="contactform">
-			<input type="text" name="Name" class="form-control form-name" placeholder="Name" required>
-			<input type="email" name="_replyto" class="form-control form-email" placeholder="Email" required>
-			<input type="tel" name="Phone" class="form-control form-phone" placeholder="Phone (Optional)">
-			<input type="text" name="Subject" class="form-control form-subject" placeholder="Subject" required>
+			<label for="name">Name*</label>
+			<input type="text" name="Name" id="name" class="form-control form-name" placeholder="Name" required>
+			<label for="email">Email*</label>
+			<input type="email" name="_replyto" id="email" class="form-control form-email" placeholder="Email" required>
+			<label for="phone">Phone</label>
+			<input type="tel" name="Phone" id="phone" class="form-control form-phone" placeholder="Phone (Optional)">
+			<label for="subject">Subject</label>
+			<input type="text" name="Subject" id="subject" class="form-control form-subject" placeholder="Subject" required>
 			<input type="hidden" name="_next" value="https://davekeehl.github.io/Portfolio/graphics/contact.html" />
 			<input type="hidden" name="_subject" value="Online Portfolio Contact" />
 			<input type="text" name="_gotcha" style="display:none" />
+			<label for="category">Category</label>
 			<div class="select">
-				<select name="Category" required>
+				<select name="Category" id="category" required>
 					<option selected>General Question</option>
 					<option>Work Offer</option>
 				</select>
 			</div>
-			<textarea class="form-control form-message" name="Message" rows="10" placeholder="Your message" required></textarea>
+			<label for="message">Message</label>
+			<textarea class="form-control form-message" name="Message" id="message" rows="10" placeholder="Your message" required></textarea>
 			<input type="submit" name="Send" class="form-send" value="Send" />
 		</form>
 	</main>

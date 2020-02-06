@@ -28,9 +28,10 @@
 				height: auto
 				padding: 0
 				box-shadow: none
+			input, textarea, .select
+				margin-bottom: 20px
 			input, textarea
 				color: $grey
-				margin-bottom: 5px
 				transition: all .2s
 				&::placeholder
 					color: $grey
@@ -38,7 +39,7 @@
 				&[type="submit"]
 					-webkit-appearance: none
 					font-size: 20px
-					margin-top: 10px
+					margin-top: 20px
 					font-weight: 600
 					text-transform: uppercase
 					height: auto
@@ -66,7 +67,6 @@
 			.select
 				padding: 0
 				border: 0
-				margin-bottom: rem(5px)
 				select
 					color: $grey
 					height: 100%
