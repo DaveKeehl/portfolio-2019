@@ -75,9 +75,7 @@
 		<p><span>Visual Designer</span> and Front-end <span>Web Developer</span></p>
 	</div>
 
-	<!-- <img src="src/home/smoke_new.png" alt="smoke"> -->
-
-	<div class="artwork-container">
+	<div class="artwork-container hero-wave">
 		<svg width="3000" height="771" viewBox="0 0 3000 771" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M2068.5 216.354C1854.78 112.071 1566.5 147.354 1431 280.354C1295.5 413.354 1200.5 409.354 1109 369.354C1017.5 329.354 942.5 353.354 859.5 454.354C826.599 494.39 805 501.041 780 507.543C653.656 540.402 550.5 434.541 256.5 610.541C85 723.5 0 748.041 0 748.041V770.041H3000V97.041C3000 97.041 2813 30.5405 2662.5 8.04054C2512 -14.4595 2384.5 10.5406 2300.5 79.5407C2216.5 148.541 2177.5 269.541 2068.5 216.354Z" fill="url(#waves-gradient-1)"/>
 			<defs>
@@ -88,6 +86,8 @@
 			</defs>
 		</svg>
 	</div>
+
+	<img src="src/home/smoke_new.png" class="hero-smoke" alt="smoke">
 
 	<div class="top-section">
 		<div class="welcome container">
@@ -253,6 +253,7 @@
 	<script src="js/header-opacity.js"></script>
 	<script src="js/mobile-menu.js"></script>
 	<script src="js/updateGradients.js"></script>
+	<script src="js/home-projectsButton.js"></script>
 
 	<script type="text/javascript">
 		
@@ -266,65 +267,46 @@
 		// 	hero.style.backgroundPosition = 'center ' + (yPosition * 0.5) + 'px';
 		// }
 
-		let projectsButton = document.querySelector('.home .projects a .invisible');
-		let images = document.querySelectorAll('.home .projects img');
-		let bg = document.querySelector('.home .projects a .bg');
-		let button = document.querySelector('.home .projects a');
-
-		projectsButton.addEventListener('mouseover', (e) => {
-			button.classList.add('is-hover');
-			for (let i = 0; i < images.length; i++) {
-				images[i].classList.add('rocket-launch');
-			}
-			setTimeout( () => {
-				for (let i = 0; i < images.length; i++) {
-					images[i].classList.remove('rocket-launch');
-				}
-			},1200);
-		});
-
-		projectsButton.addEventListener('mouseleave', (e) => {
-			button.classList.remove('is-hover');
-			console.log('left');
-		});
-
-		projectsButton.addEventListener('click', (e) => {
-
-			button.classList.add('glow');
-			bg.classList.add('background-animation');
-			setTimeout( () => {
-				window.location = 'portfolio.html';
-			},1200);
-		});
-
-
 		function appearOnScroll() {
 			console.log(document.documentElement.scrollTop);
 			let scroll = document.documentElement.scrollTop;
+			let offset = 0;
 			let hi = document.querySelector('.home .welcome h1');
 			let about = document.querySelector('.home .welcome p');
 			let love = document.querySelector('.home .love');
 			let goal = document.querySelector('.home .goal');
+			let offer = document.querySelector('.home .services h2');
 			let cards = document.querySelector('.home .cards');
 			let card_1 = document.querySelector('.home .cards div:nth-child(1)');
 			let card_2 = document.querySelector('.home .cards div:nth-child(2)');
 			let card_3 = document.querySelector('.home .cards div:nth-child(3)');
-			if (scroll > 500) {
+			let projects = document.querySelector('.home .projects h2');
+			let projects_button = document.querySelector('.home .projects > a');
+			if (scroll > 500+offset) {
 				hi.classList.add('appear');
 			}
-			if (scroll > 700) {
+			if (scroll > 600+offset) {
 				about.classList.add('appear');
 			}
-			if (scroll > 1000) {
+			if (scroll > 900+offset) {
 				love.classList.add('appear');
 			}
-			if (scroll > 1300) {
+			if (scroll > 1200+offset) {
 				goal.classList.add('appear');
 			}
-			if (scroll > 2200) {
+			if (scroll > 2100+offset) {
+				offer.classList.add('appear');
+			}
+			if (scroll > 2200+offset) {
 				card_1.classList.add('appear');
 				card_2.classList.add('appear');
 				card_3.classList.add('appear');
+			}
+			if (scroll > 2700+offset) {
+				projects.classList.add('appear');
+			}
+			if (scroll > 2800+offset) {
+				projects_button.classList.add('appear');
 			}
 		}
 
