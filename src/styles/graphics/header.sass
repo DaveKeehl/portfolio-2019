@@ -1,0 +1,85 @@
+header
+	font-family: 'Raleway', sans-serif
+	position: fixed
+	top: 0
+	width: 100%
+	z-index: $header-z
+	color: $white
+	padding: rem(10px) 0
+
+	.navbar
+		background-color: $transparent
+		height: rem(50px)
+		.navbar-brand
+			height: inherit
+			a:hover
+				img
+					transform: rotate(360deg)
+			img
+				width: 60px
+				max-height: inherit
+				transition: all .5s
+		.navbar-item,
+		.navbar-link
+			padding: 0
+			line-height: 1
+			color: $white
+		.navbar-burger
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			height: auto
+			color: $white
+			background: none
+			border: 0
+			&:focus
+				outline: 0
+			&.is-active span
+				&:nth-child(1)
+					transform: translateY(0) rotate(0)
+				&:nth-child(2)
+					opacity: 1
+				&:nth-child(3)
+					transform: translateY(0) rotate(0)
+			span
+				position: relative
+				top: auto
+				left: auto
+				height: rem(2px)
+				width: rem(28px)
+				&:nth-child(2)
+					margin: rem(4px) 0
+			&:hover
+				background-color: $transparent
+		.navbar-menu
+			font-weight: 400
+			text-transform: uppercase
+			background-color: $transparent
+			box-shadow: 0 0 0 $transparent
+			padding: 0
+			button
+				display: none
+				background: none
+				border: 0
+				cursor: pointer
+				&:focus
+					outline: 0
+			ul
+				display: flex
+				flex-direction: row
+				align-items: center
+			li
+				color: $white
+				margin-right: rem(20px)
+				float: left
+				font-weight: 400
+				&:hover
+					color: transparentize($white, .5)
+				&:active
+					color: $white
+				&:last-child
+					margin-right: 0
+			.current-page
+				position: relative
+				border-bottom: rem(1px) solid

@@ -1,0 +1,39 @@
+footer
+	position: relative
+	z-index: 20
+	color: $white
+	text-align: center
+	padding: 50px 0
+	background: $gradient-2
+	filter: drop-shadow(0 -20px 50px transparentize($black, .85), 0 -10px 25px transparentize($black, .95))
+	transition: all .2s
+	.icons
+		display: flex
+		justify-content: center
+		& *:not(:last-child)
+			margin-right: 10px
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			background-color: $white
+			border-radius: 100%
+			height: 40px
+			width: 40px
+			box-shadow: 0 2px 4px transparentize($blue, .75)
+			transition: background-color .2s
+			&:hover
+				background-color: transparentize($white, .3)
+			i
+				color: $footer-icons
+				font-size: 20px
+			p
+				color: $footer-icons
+				font-size: 24px
+				font-weight: 800
+				margin-top: -5px
+	.divider
+		height: 1px
+		width: 50px
+		margin: 20px auto
+		background-color: transparentize($white, .5)
