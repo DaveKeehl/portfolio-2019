@@ -1,8 +1,0 @@
-@function rem($pixels, $context: $baseSize)
-	@if (unitless($pixels))
-		$pixels: $pixels * 1px
-
-	@if (unitless($context))
-		$context: $context * 1px
-
-	@return $pixels / $context * 1rem

@@ -1,6 +1,0 @@
-# robots.txt for https://www.davideciulla.com
-
-User-agent: *
-Allow: /
-
-Sitemap: http://www.davideciulla.com/sitemap.xml

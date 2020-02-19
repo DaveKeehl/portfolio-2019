@@ -1,0 +1,148 @@
+@import "utility/mixins"
+@import "utility/variables"
+@import "utility/functions"
+
+*,
+*::before,
+*::after
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+
+html
+	overflow-y: auto
+
+body
+	font-family: 'Lato', sans-serif
+	color: initial
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	position: relative
+	z-index: $body-z
+	overflow-y: hidden
+
+main
+	position: relative
+	color: $white
+	z-index: $main-z
+
+h1, h2, h3
+	font-family: 'Montserrat', sans-serif
+	text-align: center
+
+h3
+	font-size: 40px
+	padding-top: calc(100px + 70px)
+	padding-bottom: 20px
+	margin-bottom: 50px
+	text-transform: uppercase
+	position: relative
+	text-shadow: 0 1px 2px transparentize($black, .95), 0 2px 4px transparentize($black, .8)
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		height: 3px
+		width: 50px
+		background-color: $white
+		box-shadow: 0 1px 2px transparentize($black, .8)
+
+a, a:hover
+	color: inherit
+	text-decoration: none
+
+p
+	font-weight: 400
+	line-height: 25px
+
+ul
+	margin: 0
+	list-style: none
+	padding: 0
+
+#return-to-top
+	display: none
+	justify-content: center
+	align-content: center
+	position: fixed
+	bottom: 20px
+	right: 20px
+	z-index: $toTop-z
+	width: 50px
+	height: 50px
+	border-radius: 100%
+	text-align: center
+	background: transparentize($black, .3)
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		height: 20px
+		filter: invert(1)
+		transform: translateX(-50%) translateY(calc(-50% - 2px))
+		transition: all .2s
+	&:hover
+		background: transparentize($black, .15)
+		img
+			transform: translateX(-50%) translateY(calc(-50% - 12px))
+
+.wave-container
+	width: 100%
+	overflow: hidden
+	display: flex
+	justify-content: center
+	svg
+		flex: 0 0 auto
+
+.portfolio, .contact
+	footer
+		padding: 50px 0 70px 0
+		.wave-container
+			position: absolute
+			top: -114px
+
+.columns
+	margin-left: 0
+	margin-right: 0
+	margin-top: 0
+	&:not(:last-child)
+		margin-bottom: 0
+	&:last-child
+		margin-bottom: 0
+
+.column
+	padding: 0
+
+.container
+	max-width: 80%
+
+.row
+	margin-left: 0px
+	margin-right: 0px
+	&[class^=col]
+		margin: 0
+
+.modal-content
+	overflow: hidden
+
+// UTILITY
+
+.hide
+	display: none !important
+
+.logo-rotate
+	@include transform (rotate(360deg) !important)
+
+.closeButton-rotate
+	@include transform (rotate(90deg) translateX(0.5px) translateY(1px))
+	opacity: 0.5
+
+.footer-afterOpen
+	margin-bottom: 70px
+
+.footer-afterClose
+	margin-bottom: 0
+
+.overflow-hidden
+	overflow: hidden

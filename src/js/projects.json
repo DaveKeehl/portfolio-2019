@@ -1,0 +1,101 @@
+{
+	"projects" : [
+		{
+			"title" : "Online Portfolio",
+			"description" : "This is my personal online portfolio (you’re browsing it right now!). This website is the result of many hours of designing, testing, coding and debugging. You’ll find a selection of works done by me that represent my current skills in graphic design.",
+			"categories" : [
+				"UI/UX", 
+				"WEB"
+			],
+			"technologies" : [
+				"HTML",
+				"SASS",
+				"JAVASCRIPT",
+				"JQUERY",
+				"GULP"
+			],
+			"link" : "https://www.davideciulla.com",
+			"thumbnail" : "online-portfolio.svg",
+			"presentation" : "<iframe style=\"border: none;\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIlM3o8ppq4cteCHNyw6SNgcX%2FPortfolio%3Fnode-id%3D383%253A15\" allowfullscreen></iframe>"
+		},
+		{
+			"title" : "SwissAPO",
+			"description" : "SwissAPO stands for Swiss Association of Professional Organizers. They wanted to change CMS (Content Management System) and have a brand new website. I created the latter following their brief and guidelines.",
+			"categories" : [
+				"WEB"
+			],
+			"technologies" : [
+				"HTML",
+				"CSS",
+				"WORDPRESS"
+			],
+			"link" : "https://www.swiss-apo.ch/",
+			"thumbnail" : "swiss-apo.svg"
+		},
+		{
+			"title" : "Voices Beyond Silence",
+			"description" : "The Locarno based indie-rock band Voices Beyond Silence needed a website and I offered to make it for them. The band wanted something simple but nice looking and capable of allowing them to sell physical CDs and listen to their music. All this without wanting to spend a single coin. That’s why I opted for Wix.",
+			"categories" : [
+				"WEB"
+			],
+			"technologies" : [
+				"WIX"
+			],
+			"link" : "https://voicesbeyondsilence.wixsite.com/home",
+			"thumbnail" : "vbs.svg"
+		},
+		{
+			"title" : "Film in Piazza - Intro",
+			"description" : "Film in Piazza is a young group of friends and film lovers. Every year they follow very closely the Locarno Film Festival, uploading daily vlogs and reviews on their social media platforms. I made them an intro to be used at the beginning of their videos.",
+			"categories" : [
+				"VIDEO"
+			],
+			"technologies" : [
+				"AFTER EFFECTS"
+			],
+			"link" : "https://www.youtube.com/watch?v=FWUztyZtst4",
+			"thumbnail" : "fip-intro.svg",
+			"presentation" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FWUztyZtst4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+		},
+		{
+			"title" : "Film in Piazza - Editing",
+			"description" : "I also worked for Film In Piazza as a video editor, here’s a playlist of videos I produced for them.",
+			"categories" : [
+				"VIDEO"
+			],
+			"technologies" : [
+				"PREMIERE"
+			],
+			"link" : "https://www.youtube.com/playlist?list=PLd9NVYS9mUv13y5Cxy1JWDABhKhHGMDs3",
+			"thumbnail" : "fip-editing.svg"
+		},
+		{
+			"title" : "Teleticino - Index",
+			"description" : "Teleticino is a local television channel based in Melide (Ticino, CH). I did an internship with them for a few months a couple years ago and this intro was created by me for a then-to-come-out format rebranding.",
+			"categories" : [
+				"VIDEO"
+			],
+			"technologies" : [
+				"PREMIERE",
+				"AFTER EFFECTS",
+				"CINEMA 4D"
+			],
+			"link" : "https://www.youtube.com/watch?v=5P8-UoY_KGQ",
+			"thumbnail" : "teleticino-index.svg"
+		},
+		{
+			"title" : "Teleticino - Piazza del Corriere",
+			"description" : "Teleticino is a local television channel based in Melide (Ticino, CH). I did an internship with them for a few months a couple years ago and this intro was created by me for a then-to-come-out format rebranding.",
+			"categories" : [
+				"VIDEO"
+			],
+			"technologies" : [
+				"PREMIERE",
+				"AFTER EFFECTS",
+				"CINEMA 4D"
+			],
+			"link" : "https://www.youtube.com/watch?v=fp_73DgKr04",
+			"thumbnail" : "teleticino-pdc.svg"
+		}
+	]
+}
