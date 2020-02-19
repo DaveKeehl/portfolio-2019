@@ -1,6 +1,7 @@
 const url = 'http://localhost:8080/js/projects.json';
+const liveUrl = 'https://www.davideciulla.com/js/projects.json'
 
-fetch(url)
+fetch(liveUrl)
 	.then((res) => res.json())
 	.then(function(data) {
 
