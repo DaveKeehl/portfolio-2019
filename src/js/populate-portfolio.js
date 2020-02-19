@@ -1,7 +1,7 @@
 const url = 'http://localhost:8080/js/projects.json';
 const liveUrl = 'https://www.davideciulla.com/js/projects.json';
 
-fetchData(url);
+fetchData(liveUrl);
 
 async function fetchData(url) {
 
