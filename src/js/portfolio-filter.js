@@ -1,8 +1,8 @@
 function filterSelection(c) {
-	console.log(c)
+	// console.log(c)
 	var element;
 	var filter = document.querySelectorAll(".filters span");
-	console.log(filter)
+	// console.log(filter)
 	var x = document.getElementsByClassName("columnHide");
 	for (let i = 0; i < filter.length; i++) {
 		filter[i].classList.remove("filter-active");
@@ -11,7 +11,7 @@ function filterSelection(c) {
 		element = document.querySelector(".filters div:nth-child(1) span");
 		c = "";
 	} else if (c === "ux") {
-		console.log(c);
+		// console.log(c);
 		element = document.querySelector(".filters div:nth-child(2) span");
 	} else if (c === "web") {
 		element = document.querySelector(".filters div:nth-child(3) span");

@@ -1,7 +1,6 @@
-const url = 'http://localhost:8080/js/projects.json';
-const liveUrl = 'https://www.davideciulla.com/js/projects.json';
+const url = '../js/projects.json';
 
-fetchData(liveUrl);
+fetchData(url);
 
 async function fetchData(url) {
 
@@ -16,7 +15,7 @@ async function fetchData(url) {
 
 		const json = await res.json();
 
-		console.log(json.projects);
+		// console.log(json.projects);
 
 		// BUILD HTML PROJECTS
 
