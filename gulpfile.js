@@ -56,7 +56,6 @@ function jsTask() {
 		.pipe(plumber())
 		// .pipe(concat('main.js'))
 		.pipe(terser())
-		// .pipe(uglify())
 		// .pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('./dist/js'))
 }

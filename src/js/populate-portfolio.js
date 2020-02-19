@@ -1,39 +1,48 @@
 const url = 'http://localhost:8080/js/projects.json';
-const liveUrl = 'https://www.davideciulla.com/js/projects.json'
+const liveUrl = 'https://www.davideciulla.com/js/projects.json';
 
-fetch(liveUrl)
-	.then((res) => res.json())
-	.then(function(data) {
+fetchData(url);
+
+async function fetchData(url) {
+
+	const res = await fetch(url);
+	
+	if (res.status !== 200) {
+
+		console.log('Looks like there was a problem. Status Code: ' + response.status);
+		return;
+
+	} else {
+
+		const json = await res.json();
+
+		console.log(json.projects);
 
 		// BUILD HTML PROJECTS
 
-		// console.log(data);
-
 		let projectsContainer = document.querySelector('.portfolio main .columns.is-multiline');
 
-		for (project in data.projects) {
-
-			// console.log(data.projects[project].presentation);
+		for (project in json.projects) {
 
 			let outerDiv = document.createElement('div');
 			let innerDiv = document.createElement('div');
 
 			outerDiv.className += 'column is-one-quarter-widescreen is-one-third-desktop is-half-tablet columnHide columnShow';
 			innerDiv.className += 'categories'
-			innerDiv.style.backgroundImage = 'url(./img/portfolio/projects/' + data.projects[project].thumbnail + ')';
+			innerDiv.style.backgroundImage = 'url(./img/portfolio/projects/' + json.projects[project].thumbnail + ')';
 			innerDiv.dataset.index = project;
 
 			innerDiv.addEventListener('click', (e) => {
 				let index = e.target.dataset.index;
-				openModal(data.projects[index].title, data.projects[index].description, data.projects[index].categories, data.projects[index].technologies, data.projects[index].link, data.projects[index].presentation)
+				openModal(json.projects[index].title, json.projects[index].description, json.projects[index].categories, json.projects[index].technologies, json.projects[index].link, json.projects[index].presentation)
 			});
 
 			projectsContainer.appendChild(outerDiv);
 			outerDiv.appendChild(innerDiv);
 
-			for (category in data.projects[project].categories) {
+			for (category in json.projects[project].categories) {
 				let label = document.createElement('p');
-				let workCategory = data.projects[project].categories[category];
+				let workCategory = json.projects[project].categories[category];
 				label.innerHTML = workCategory;
 				if (workCategory === 'UI/UX') {
 					label.classList.add('ux');
@@ -47,5 +56,8 @@ fetch(liveUrl)
 			}
 
 		}
-	})
+	}
+
+}
+
 

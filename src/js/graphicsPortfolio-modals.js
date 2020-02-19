@@ -100,6 +100,9 @@ function openModal(name, description, categories, technologies, link, presentati
 
 function closeModal() {
 	if (isClosed == false && page.classList.contains("overflow-hidden")) {
+
+		console.log("About to close");
+
 		// 1. REMOVE BACKGROUND IN-ANIMATION
 		modal.classList.remove("modal-background-in");
 		// 2. REMOVE SIDEBAR IN-ANIMATION
