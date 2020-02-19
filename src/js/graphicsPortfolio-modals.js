@@ -1,114 +1,77 @@
 var page = document.getElementsByTagName("html")[0];
 
 var modal = document.querySelector(".portfolio .modal");
-
 var modalBackground = document.querySelector(".portfolio .modal .background");
-
 var modalPresentation = document.querySelector(".portfolio .modal .presentation");
 var modalPresentationContent = document.querySelector(".portfolio .modal .presentation .content");
-
-var modalSidebar = document.querySelector(".portfolio .modal aside");
-
-var dragHandle = document.querySelector(".portfolio .modal .close");
-
-var work = document.querySelectorAll(".portfolio .columns .column");
-var workCategories = document.querySelectorAll(".portfolio .columns .column .categories");
 var modalName = document.querySelector(".portfolio .modal h2");
 var modalDescription = document.querySelector(".portfolio .modal .description");
 var modalCategories = document.querySelector(".portfolio .modal .categories");
-var modalTools = document.querySelector(".portfolio .modal .tools");
+var modalTools = document.querySelector(".portfolio .modal .technologies");
 var modalLink = document.querySelector(".portfolio .modal a");
+var modalSidebar = document.querySelector(".portfolio .modal aside");
+
+var dragHandle = document.querySelector(".portfolio .modal .close");
 
 var closeModalButton = document.querySelector(".portfolio .modal aside img");
 
 var isClosed = true;
 
-console.log(work[6]);
-
 closeModalButton.addEventListener("click", closeModal);
 modalBackground.addEventListener("click", closeModal);
 
-// ADDING TAGS TO EACH WORK SAMPLE
-
-for (i = 0; i < work.length; i++) {
-	for (j = 0; j < work[i].classList.length; j++) {
-		if (work[i].classList[j] === 'ux' || work[i].classList[j] === 'web' || work[i].classList[j] === 'video') {
-			let category = document.createElement("p");
-			if (work[i].classList[j] === 'ux') {
-				category.innerHTML = 'ui/ux';
-			} else {
-				category.innerHTML = work[i].classList[j];
-			}
-			category.classList.add(work[i].classList[j]);
-			workCategories[i].appendChild(category);
-		}
-	}
-}
-
 // OPEN MODAL
 
-function openModal(id, name, description, tools, link, presentation) {
+function openModal(name, description, categories, technologies, link, presentation) {
+
 	if (isClosed == true && page.classList.contains("overflow-hidden") == false) {
-		// INJECT WORK NAME
-		modalName.innerHTML = name;
-		// INJECT WORK DESCRIPTION
-		modalDescription.innerHTML = description;
-		// INJECT WORK EXTERNAL LINK
-		modalLink.href = 'https://' + link;
-		// INJECT WORK TAGS
-		for (let i = 0; i < workCategories[id].children.length; i++) {
-			if (workCategories[id].children[i].innerHTML === 'ui/ux' || 'web' || 'print' || 'video') {
-				let category = document.createElement("p");
-				category.innerHTML = workCategories[id].children[i].innerHTML;
-				if (workCategories[id].children[i].innerHTML === "ui/ux") {
-					category.classList.add("ux");
-				} else {
-					category.classList.add(workCategories[id].children[i].innerHTML);
-				}
-				modalCategories.appendChild(category);
-			}
-		}
-		// INJECT WORK TOOLS AND TECHNOLOGIES
-		for (i = 0; i < tools.length; i++) {
-			let logo;
-			// USE ICONS
-			if (['html', 'css', 'bootstrap', 'sass', 'javascript', 'github', 'wordpress', 'wix'].includes(tools[i])) {
-				logo = document.createElement("i");
-				let toolClass;
-				if (tools[i] === 'html') {
-					toolClass = "fa-html5";
-				} else if (tools[i] === 'css') {
-					toolClass = "fa-css3-alt";
-				} else if (tools[i] === 'javascript') {
-					toolClass = "fa-js";
-				} else {
-					toolClass = "fa-" + tools[i];
-				}
-				logo.classList.add("fab", toolClass);
-			} else {
-				// USE IMAGES
-				logo = document.createElement("div");
-				// console.log(logo);
-				logo.style.background = "url(../img/portfolio/" + tools[i] + ".svg) center/contain no-repeat ";
-				logo.style.width = "24px";
-				logo.style.height = "24px";
-				logo.style.display = "block";
-			}
-			logo.classList.add("tooltip");
-			let tooltip = document.createElement("span");
-			tooltip.classList.add("tooltip-text");
-			tooltipText = tools[i].replace('-', ' ');
-			// console.log(tooltipText)
-			tooltip.innerHTML = tooltipText;
-			logo.appendChild(tooltip);
-			let tool = document.createElement("div");
-			tool.appendChild(logo);
-			tool.classList.add(tools[i]);
-			modalTools.append(tool);
-		}
+
 		// INJECT PRESENTATION CONTENT
 		if (presentation !== undefined) {
+			console.log(presentation)
+			modalPresentationContent.classList.remove('hide');
 			modalPresentationContent.innerHTML = presentation;
+		} else {
+			modalPresentationContent.classList.add('hide');
+		}
+
+		// INJECT WORK NAME
+		modalName.innerHTML = name;
+
+		// INJECT WORK DESCRIPTION
+		modalDescription.innerHTML = description;
+
+		// INJECT WORK EXTERNAL LINK
+		modalLink.href = link;
+
+		// INJECT WORK CATEGORIES
+		for (let i = 0; i < categories.length; i++) {
+			let category = document.createElement('p');
+			category.innerHTML = categories[i];
+			if (categories[i] === 'UI/UX') {
+				category.classList.add('ux');
+			} else {
+				category.classList.add(categories[i].toLowerCase());
+			}
+			modalCategories.appendChild(category);
+		}
+
+		// INJECT WORK TECHNOLOGIES
+		for (let i = 0; i < technologies.length; i++) {
+
+			let logo = document.createElement("div");
+			logo.style.backgroundImage = "url(../img/portfolio/icons/" + technologies[i].toLowerCase().replace(' ', '-') + ".svg)";
+			logo.classList.add("tooltip");
+
+			let tooltip = document.createElement("span");
+			tooltip.classList.add("tooltip-text");
+			tooltip.innerHTML = technologies[i];
+
+			logo.appendChild(tooltip);
+
+			let tool = document.createElement("div");
+			tool.appendChild(logo);
+			modalTools.appendChild(tool);
 		}
 
 		// SHOW MODAL
@@ -158,7 +121,7 @@ function closeModal() {
 			while (modalCategories.hasChildNodes()) {
 				modalCategories.removeChild(modalCategories.firstChild);
 			}
-			// RESET TOOLS
+			// RESET technologies
 			while (modalTools.hasChildNodes()) {
 				modalTools.removeChild(modalTools.firstChild);
 			}
@@ -173,9 +136,9 @@ function closeModal() {
 
 var i = 0;
 
-dragHandle.addEventListener("touchstart", (event) => {
+dragHandle.addEventListener("touchstart", (e) => {
 	
 	modalName.innerHTML = i.toString(2);
 	i++;
 
-});
+}, {passive:true});

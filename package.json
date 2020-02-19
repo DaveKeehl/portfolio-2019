@@ -1,7 +1,7 @@
 {
 	"name": "portfolio",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Personal online portfolio of Davide Ciulla - Visual Designer and Front-end Web Developer",
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -18,16 +18,26 @@
 	},
 	"homepage": "https://github.com/DaveKeehl/Portfolio#readme",
 	"devDependencies": {
+		"del": "^5.1.0",
 		"gulp": "^4.0.2",
 		"gulp-autoprefixer": "^6.1.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-connect": "^5.7.0",
+		"gulp-imagemin": "^7.1.0",
 		"gulp-plumber": "^1.2.1",
+		"gulp-postcss": "^8.0.0",
+		"gulp-purgecss": "^2.0.6",
 		"gulp-rename": "^2.0.0",
 		"gulp-sass": "^4.0.2",
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-terser": "^1.2.0",
-		"gulp-uglifycss": "^1.1.0"
+		"gulp-uglify": "^3.0.2",
+		"gulp-uglifycss": "^1.1.0",
+		"gulp-uncss": "^1.0.6",
+		"rimraf": "^3.0.2"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"aos": "^2.3.4",
+		"scrollreveal": "^4.0.5"
+	}
 }

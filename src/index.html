@@ -13,10 +13,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet prefetch" as="font">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900&display=swap" rel="stylesheet prefetch" as="font">
 
-	<!-- Fontawesome -->
-	<link href="https://kit-free.fontawesome.com" rel="preconnect" as="script" crossorigin="anonymous">
-	<script src="https://kit.fontawesome.com/c6af894bde.js" crossorigin="anonymous"></script>
-
 	<!-- Bulma CSS -->
 	<link rel="stylesheet preload" href="styles/bulma.min.css" as="style">
 
@@ -46,9 +42,9 @@
 		<nav class="navbar container" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand navbar-left">
 				<a class="navbar-item" href="index.html">
-					<img src="img/logo.svg">
+					<img src="img/logo.svg" alt="logo">
 				</a>
-				<button class="navbar-burger burger" data-target="navMenu">
+				<button class="navbar-burger burger" data-target="navMenu" aria-label="menu">
 					<span></span>
 					<span></span>
 					<span></span>
@@ -88,11 +84,15 @@
 		</svg>
 	</div>
 
-	<img src="img/home/smoke_new.png" class="hero-smoke" alt="smoke">
+	<div class="smoke">
+		<div class="hero-smoke">
+			<img src="img/home/smoke_new_new.png" alt="smoke">
+		</div>
+	</div>
 
 	<div class="top-section">
 		<div class="welcome container">
-			<h1>HI.</h1>
+			<h1 data-aos="fade-up">HI.</h1>
 			<p>My name is <span>Davide Ciulla</span> and I am a <span>Visual Designer</span> and Front-end <span>Web Developer</span> based in <span>Ticino</span> (Switzerland)</p>
 		</div>
 		<div class="about container">
@@ -113,9 +113,9 @@
 							<img src="img/home/dave.jpg" alt="Davide">
 							<h4>Davide Ciulla</h4>
 							<div class="status">
-								<img src="img/home/palette.png" alt="Rocket">
+								<img src="img/home/palette.png" alt="palette emoji">
 								<p>Busy creating</p>
-								<img src="img/home/palette.png" alt="Rocket">
+								<img src="img/home/palette.png" alt="palette emoji">
 							</div>
 						</div>
 						<div class="middle">
@@ -138,10 +138,10 @@
 						<div class="bottom">
 							<h5>KEEP UP WITH MY WORK</h5>
 							<div>
-								<a class="instagram" href="https://www.instagram.com/davekeehl/" target="_blank"><i class="fab fa-instagram"></i></a>
-								<a class="dribble" href="https://dribbble.com/davekeehl" target="_blank"><i class="fab fa-dribbble"></i></a>
-								<a class="github" href="https://github.com/DaveKeehl" target="_blank"><i class="fab fa-github"></i></a>
-								<a class="linkedin" href="https://www.linkedin.com/in/davide-ciulla-57790018a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+								<a class="instagram" href="https://www.instagram.com/davekeehl/" target="_blank" rel="noopener"><img src="img/home/instagram.svg" alt="instagram"></a>
+								<a class="dribble" href="https://dribbble.com/davekeehl" target="_blank" rel="noopener"><img src="img/home/dribbble.svg" alt="dribbble"></a>
+								<a class="github" href="https://github.com/DaveKeehl" target="_blank" rel="noopener"><img src="img/home/github.svg" alt="github"></a>
+								<a class="linkedin" href="https://www.linkedin.com/in/davide-ciulla-57790018a/" target="_blank" rel="noopener"><img src="img/home/linkedin.svg" alt="linkedin"></a>
 							</div>
 						</div>
 					</div>
@@ -200,9 +200,9 @@
 		<a>
 			<div class="invisible"></div>
 			<div class="content">
-				<img src="img/home/rocket.png">
+				<img src="img/home/rocket.png" alt="rocket emoji">
 				<p>Check out my portfolio</p>
-				<img src="img/home/rocket.png">
+				<img src="img/home/rocket.png" alt="rocket emoji">
 			</div>
 			<div class="bg"></div>
 		</a>
@@ -217,10 +217,10 @@
 			<div class="container">
 				<div class="icons">
 					<a id="facebook" href="https://m.me/100010249987728" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Facebook.">
-						<i class="fab fa-facebook-f"></i>
+						<img src="img/home/facebook.svg" alt="facebook">
 					</a>
 					<a id="twitter" href="https://twitter.com/messages/compose?recipient_id=1004548398" target="_blank" rel="noreferrer" aria-label="Send me a Direct Message on Twitter">
-						<i class="fab fa-twitter"></i>
+						<img src="img/home/twitter.svg" alt="twitter">
 					</a>
 					<a id="email" href="contact.html" aria-label="Go to the contact page">
 						<p>@</p>
@@ -251,6 +251,7 @@
 	<script src="js/mobile-menu.js"></script>
 	<script src="js/updateGradients.js"></script>
 	<script src="js/home-projectsButton.js"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
 
 	<script type="text/javascript">
 		
@@ -264,63 +265,69 @@
 		// 	hero.style.backgroundPosition = 'center ' + (yPosition * 0.5) + 'px';
 		// }
 
-		let ticking = false;
-		let scroll = 0;
 
-		function appearOnScroll() {
+		// let ticking = false;
+		// let scroll = 0;
 
-			let offset = 0;
+		// function appearOnScroll() {
 
-			let hi = document.querySelector('.home .welcome h1');
-			let about = document.querySelector('.home .welcome p');
-			let love = document.querySelector('.home .love');
-			let goal = document.querySelector('.home .goal');
-			let offer = document.querySelector('.home .services h2');
-			let cards = document.querySelector('.home .cards');
-			let card_1 = document.querySelector('.home .cards div:nth-child(1)');
-			let card_2 = document.querySelector('.home .cards div:nth-child(2)');
-			let card_3 = document.querySelector('.home .cards div:nth-child(3)');
-			let projects = document.querySelector('.home .projects h2');
-			let projects_button = document.querySelector('.home .projects > a');
+		// 	let offset = 0;
 
-			if (scroll > 500+offset) {
-				hi.classList.add('appear');
-			}
-			if (scroll > 600+offset) {
-				about.classList.add('appear');
-			}
-			if (scroll > 900+offset) {
-				love.classList.add('appear');
-			}
-			if (scroll > 1200+offset) {
-				goal.classList.add('appear');
-			}
-			if (scroll > 2100+offset) {
-				offer.classList.add('appear');
-			}
-			if (scroll > 2200+offset) {
-				card_1.classList.add('appear');
-				card_2.classList.add('appear');
-				card_3.classList.add('appear');
-			}
-			if (scroll > 2700+offset) {
-				projects.classList.add('appear');
-			}
-			if (scroll > 2800+offset) {
-				projects_button.classList.add('appear');
-			}
-		}
+		// ScrollReveal({ reset: false });
 
-		window.addEventListener('scroll', (e) => {
-			scroll = window.scrollY;
-			if (!ticking) {
-				window.requestAnimationFrame( (e) => {
-					appearOnScroll(scroll);
-					ticking = false;
-				});
-			}
-			ticking = true;
-		});
+		let hi = document.querySelector('.home .welcome h1');
+		let about = document.querySelector('.home .welcome p');
+		let love = document.querySelector('.home .love');
+		let goal = document.querySelector('.home .goal');
+		let offer = document.querySelector('.home .services h2');
+		let cards = document.querySelector('.home .cards');
+		let card_1 = document.querySelector('.home .cards div:nth-child(1)');
+		let card_2 = document.querySelector('.home .cards div:nth-child(2)');
+		let card_3 = document.querySelector('.home .cards div:nth-child(3)');
+		let projects = document.querySelector('.home .projects h2');
+		let projects_button = document.querySelector('.home .projects > a');
+
+		ScrollReveal().reveal([hi,about,love,goal,offer,card_1,card_2,card_3,projects,projects_button], {delay: 1000});
+
+
+		// 	if (scroll > 500+offset) {
+		// 		hi.classList.add('appear');
+		// 	}
+		// 	if (scroll > 600+offset) {
+		// 		about.classList.add('appear');
+		// 	}
+		// 	if (scroll > 900+offset) {
+		// 		love.classList.add('appear');
+		// 	}
+		// 	if (scroll > 1200+offset) {
+		// 		goal.classList.add('appear');
+		// 	}
+		// 	if (scroll > 2100+offset) {
+		// 		offer.classList.add('appear');
+		// 	}
+		// 	if (scroll > 2200+offset) {
+		// 		card_1.classList.add('appear');
+		// 		card_2.classList.add('appear');
+		// 		card_3.classList.add('appear');
+		// 	}
+		// 	if (scroll > 2700+offset) {
+		// 		projects.classList.add('appear');
+		// 	}
+		// 	if (scroll > 2800+offset) {
+		// 		projects_button.classList.add('appear');
+		// 	}
+		// }
+
+		// window.addEventListener('scroll', (e) => {
+		// 	scroll = window.scrollY;
+		// 	if (!ticking) {
+		// 		window.requestAnimationFrame( (e) => {
+		// 			appearOnScroll(scroll);
+		// 			ticking = false;
+		// 		});
+		// 	}
+		// 	ticking = true;
+		// });
 
 	</script>
 

@@ -15,7 +15,8 @@
 				"GULP"
 			],
 			"link" : "https://www.davideciulla.com",
-			"thumbnail" : "online-portfolio.svg"
+			"thumbnail" : "online-portfolio.svg",
+			"presentation" : "<iframe style=\"border: none;\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIlM3o8ppq4cteCHNyw6SNgcX%2FPortfolio%3Fnode-id%3D383%253A15\" allowfullscreen></iframe>"
 		},
 		{
 			"title" : "SwissAPO",
@@ -53,7 +54,8 @@
 				"AFTER EFFECTS"
 			],
 			"link" : "https://www.youtube.com/watch?v=FWUztyZtst4",
-			"thumbnail" : "fip-intro.svg"
+			"thumbnail" : "fip-intro.svg",
+			"presentation" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FWUztyZtst4\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
 		},
 		{
 			"title" : "Film in Piazza - Editing",

@@ -42,10 +42,6 @@
 		.columns
 			.column
 				padding: rem(5px)
-				@for $i from 1 through $work-samples
-					&:nth-child(#{$i})
-						.categories
-							background-image: url(../img/portfolio/graphics-work#{$i}.svg)
 				.categories
 					position: relative
 					display: flex
@@ -128,13 +124,20 @@
 				@include animation (modalPresentation-fadeOut, .5s, 1, ease)
 				@include animation-fill-mode (forwards)
 			.content
+				position: relative
 				display: flex
 				justify-content: center
 				align-items: center
 				background-color: white
 				width: 80%
-				height: 80%
 				margin: 0
+				padding-top: 56.25%
+				iframe
+					position: absolute
+					width: 100%
+					height: 100%
+					top: 0
+					left: 0
 			.background
 				position: absolute;
 				width: 100%;
@@ -230,50 +233,34 @@
 				&::after
 					content: ''
 					margin-left: rem(10px)
-					background: url(../src/portfolio/modal-arrow.svg) no-repeat
+					background: url(../../img/portfolio/modal-arrow.svg) no-repeat
 					height: rem(8px)
 					width: rem(21px)
 					display: inline-block
-			.tools
+			.technologies
 				display: flex
 				flex-wrap: wrap
 				margin-top: rem(20px)
 				font-size: rem(24px)
-				color: #8f8f8f
 				div
 					padding: 5px
 					transition: all .15s ease
 					&:last-child
 						margin-right: 0
-				.html:hover
-					color: $html
-				.css:hover
-					color: $css
-				.sass:hover
-					color: $sass
-				.bootstrap:hover
-					color: $bootstrap
-				.javascript:hover
-					color: $js
-				.github:hover
-					color: $black
-				.wordpress
-					&:hover
-						color: $wordpress
-				.wix:hover
-					color: $wix
-				.figma, .premiere, .after-effects, .affinity-photo, .affinity-designer, .affinity-publisher, .cinema-4d, .bulma, .jquery, .react, .gitlab, .node-js, .zeplin, .gulp, .contentful
-					.tooltip
-						height: rem(24px)
-						filter: grayscale(1)
-						transition: all .15s ease
-						&:hover
-							filter: grayscale(0)
-						span
-							transition: none
 				.tooltip
 					position: relative
+					background-position: center center
+					background-size: contain
+					background-repeat: no-repeat 
+					width: 24px;
+					height: 24px;
+					display: block;
+					filter: grayscale(1)
+					opacity: .5
+					transition: all .2
 					&:hover
+						filter: grayscale(0)
+						opacity: 1
 						.tooltip-text
 							visibility: visible
 							@include animation (tooltip-show, .2s, 1, ease)
