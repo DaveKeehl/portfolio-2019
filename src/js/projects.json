@@ -67,7 +67,8 @@
 				"PREMIERE"
 			],
 			"link" : "https://www.youtube.com/playlist?list=PLd9NVYS9mUv13y5Cxy1JWDABhKhHGMDs3",
-			"thumbnail" : "fip-editing.svg"
+			"thumbnail" : "fip-editing.svg",
+			"presentation" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/videoseries?list=PLd9NVYS9mUv13y5Cxy1JWDABhKhHGMDs3\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
 		},
 		{
 			"title" : "Teleticino - Index",
@@ -81,7 +82,8 @@
 				"CINEMA 4D"
 			],
 			"link" : "https://www.youtube.com/watch?v=5P8-UoY_KGQ",
-			"thumbnail" : "teleticino-index.svg"
+			"thumbnail" : "teleticino-index.svg",
+			"presentation" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5P8-UoY_KGQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
 		},
 		{
 			"title" : "Teleticino - Piazza del Corriere",
@@ -95,7 +97,38 @@
 				"CINEMA 4D"
 			],
 			"link" : "https://www.youtube.com/watch?v=fp_73DgKr04",
-			"thumbnail" : "teleticino-pdc.svg"
+			"thumbnail" : "teleticino-pdc.svg",
+			"presentation" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/fp_73DgKr04\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+		},
+		{
+			"title" : "Laboratorio di Cucina Naturale",
+			"description" : "The \"Laboratorio di Cucina Naturale\" is a ",
+			"categories" : [
+				"UI/UX",
+				"WEB"
+			],
+			"technologies" : [
+				"CSS",
+				"WORDPRESS"
+			],
+			"link" : "https://new.laboratoriocucina.ch/",
+			"thumbnail" : "laboratorio.svg"
+		},
+		{
+			"title" : "USIGeek",
+			"description" : "USIGeek is the official student of USI (Università della Svizzera Italiana). My role for this project was to completely restyle their existing website...",
+			"categories" : [
+				"UI/UX",
+				"WEB"
+			],
+			"technologies" : [
+				"HTML",
+				"CSS",
+				"JAVASCRIPT",
+				"REACT"
+			],
+			"link" : "https://usigeek.netlify.com/",
+			"thumbnail" : "usigeek.svg"
 		}
 	]
 }

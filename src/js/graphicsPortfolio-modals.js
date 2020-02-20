@@ -28,7 +28,6 @@ function openModal(name, description, categories, technologies, link, presentati
 
 		// INJECT PRESENTATION CONTENT
 		if (presentation !== undefined) {
-			console.log(presentation)
 			modalPresentationContent.classList.remove('hide');
 			modalPresentationContent.innerHTML = presentation;
 		} else {

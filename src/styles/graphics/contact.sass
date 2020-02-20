@@ -47,15 +47,12 @@
 					text-transform: uppercase
 					height: auto
 					padding: 10px
-					// width: 30%
-					background-color: rgba(0, 0, 0, 0.57);
+					background-color: transparentize($black, 0)
 					color:  $white
-					// font-size: rem(16px)
-					// margin: 15px 0 0 0
 					&:hover
 						cursor: pointer
 						backdrop-filter: blur(2px)
-						background-color: rgba(31, 33, 36, 0.87)
+						background-color: transparentize($black, .3)
 					&:focus
 						border: 1px solid $transparent
 						box-shadow: none

@@ -1,6 +1,6 @@
 {
-    "name": "DC Sound",
-    "short_name": "DC Sound",
+    "name": "Portfolio",
+    "short_name": "Portfolio",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#333333",
-    "background_color": "#333333",
+    "theme_color": "#000000",
+    "background_color": "#000000",
     "display": "standalone"
 }

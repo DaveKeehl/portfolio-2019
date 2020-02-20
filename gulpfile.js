@@ -76,7 +76,7 @@ function imgTask() {
 		.src('./src/img/**/*.*')
 		.pipe(plumber())
 		.pipe(imagemin([],{
-			verbose: true
+			// verbose: true
 		}))
 		.pipe(gulp.dest('./dist/img'))
 }
