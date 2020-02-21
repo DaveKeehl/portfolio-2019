@@ -104,8 +104,6 @@
 				flex-direction: column
 			.column
 				width: 100%
-				&:nth-child(1) p:last-child
-					margin-bottom: 0
 			.card
 				margin-top: 50px
 				transform: translateY(50px)
@@ -113,6 +111,8 @@
 			h1
 				font-size: 80px
 				line-height: 90px
+			.wave-container
+				bottom: -70px
 	.portfolio
 		main
 			.columns .column .categories
@@ -189,6 +189,8 @@
 			h1
 				font-size: 60px
 				line-height: 70px
+			.wave-container
+				bottom: -110px
 
 	.portfolio
 		.modal .presentation .background
@@ -295,16 +297,29 @@
 		max-width: 100%
 		padding: 0 20px
 	.home
-		.hero h1
-			font-size: 80px
+		.hero
+			h1
+				font-size: 70px
+			p
+				font-size: 18px
 		.services
 			.cards
+				.card
+					margin-right: 0
 				.card-content
 					width: 100%
+		.projects 
+			a
+				width: 100%
+				padding: 15px 0
+				.content img
+					display: none
 		.action
 			h1
-				font-size: 40px
-				line-height: 50px
+				font-size: 50px
+				line-height: 55px
+			.wave-container
+				bottom: -140px
 	.portfolio
 		main
 			.columns .column .categories
@@ -314,3 +329,12 @@
 	.contact
 		label[for="phone"]
 			color: $black
+
+@media screen and (max-width: $mobile-m)
+	.home
+		.action
+			h1
+				font-size: 40px
+				line-height: 45px
+			.wave-container
+				bottom: -120px
