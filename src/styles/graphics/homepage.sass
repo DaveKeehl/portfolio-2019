@@ -37,13 +37,19 @@
 		overflow: hidden
 		width: 100%
 		height: 100%
-		.hero-smoke
+		img
+			width: 100%
+		& > div
 			position: absolute
-			top: 0
 			width: 3000px
 			left: 50%
 			transform: translateX(-50%)
 			mix-blend-mode: multiply
+			z-index: -1
+		&--hero
+			top: 0
+		&--services
+			top: 2500px
 
 	.hero
 		position: relative
@@ -212,6 +218,8 @@
 							background-color: $dribble
 						&.instagram
 							background-color: $instagram
+						&.codepen
+							background-color: $codepen
 						i
 							color: $white
 							font-size: rem(18px)
@@ -221,7 +229,7 @@
 	.services
 		display: flex
 		flex-direction: column
-		margin-top: calc(60px + 200px)
+		margin-top: calc(200px - 40px)
 		margin-bottom: 150px
 		h2
 			// opacity: 0

@@ -10,7 +10,7 @@ closeButton.addEventListener("click", closeMenu);
 menuBackground.addEventListener("click", closeMenu);
 
 function changeMenuState() {
-	isOpen ? isOpen = false : isOpen = true;
+	isOpen = !isOpen;
 }
 
 function openMenu() {
@@ -26,7 +26,7 @@ function openMenu() {
 function closeMenu() {
 	if (isOpen === true) {
 		mobileMenu.classList.remove('mobileMenuOpen');
-		page.style.overflowY = 'auto';
+		page.style.cssText = '';
 		setTimeout( () => {
 			document.getElementById('navMenu').classList.remove('is-active');
 		}, 500);

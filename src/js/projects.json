@@ -2,7 +2,7 @@
 	"projects" : [
 		{
 			"title" : "Online Portfolio",
-			"description" : "This is my personal online portfolio (you’re browsing it right now!). This website is the result of many hours of designing, testing, coding and debugging. You’ll find a selection of works done by me that represent my current skills in graphic design.",
+			"description" : "What you're seeing right now is my own online portfolio, containing links to my social media accounts, skillsets and samples of projects that are representative of my current skills.",
 			"categories" : [
 				"UI/UX", 
 				"WEB"
@@ -10,6 +10,7 @@
 			"technologies" : [
 				"HTML",
 				"SASS",
+				"BULMA",
 				"JAVASCRIPT",
 				"JQUERY",
 				"GULP"
@@ -20,7 +21,7 @@
 		},
 		{
 			"title" : "SwissAPO",
-			"description" : "SwissAPO stands for Swiss Association of Professional Organizers. They wanted to change CMS (Content Management System) and have a brand new website. I created the latter following their brief and guidelines.",
+			"description" : "SwissAPO stands for Swiss Association of Professional Organizers. They wanted to have a new website and change the CMS (Content Management System) they were previously using. Following their brief and feedback, I created this website using Wordpress and some custom HTML and CSS.",
 			"categories" : [
 				"WEB"
 			],
@@ -33,20 +34,8 @@
 			"thumbnail" : "swiss-apo.svg"
 		},
 		{
-			"title" : "Voices Beyond Silence",
-			"description" : "The Locarno based indie-rock band Voices Beyond Silence needed a website and I offered to make it for them. The band wanted something simple but nice looking and capable of allowing them to sell physical CDs and listen to their music. All this without wanting to spend a single coin. That’s why I opted for Wix.",
-			"categories" : [
-				"WEB"
-			],
-			"technologies" : [
-				"WIX"
-			],
-			"link" : "https://voicesbeyondsilence.wixsite.com/home",
-			"thumbnail" : "vbs.svg"
-		},
-		{
 			"title" : "Film in Piazza - Intro",
-			"description" : "Film in Piazza is a young group of friends and film lovers. Every year they follow very closely the Locarno Film Festival, uploading daily vlogs and reviews on their social media platforms. I made them an intro to be used at the beginning of their videos.",
+			"description" : "Film in Piazza is a young group of friends and film lovers. Every year they follow very closely the <a href=\"https://www.locarnofestival.ch/\" target=\"_blank\" rel=\"noopener\">Locarno Film Festival</a>, uploading daily vlogs and movie reviews on their social media platforms. I was commissioned to create an intro to be used at the beginning of their videos and this is the final result.<br>I wanted to create something slightly resambling the Disney Pixar lamp intro, but using elements from the movie industry world.",
 			"categories" : [
 				"VIDEO"
 			],
@@ -59,7 +48,7 @@
 		},
 		{
 			"title" : "Film in Piazza - Editing",
-			"description" : "I also worked for Film In Piazza as a video editor, here’s a playlist of videos I produced for them.",
+			"description" : "Film in Piazza is a young group of friends and film lovers. Every year they follow very closely the <a href=\"https://www.locarnofestival.ch/\" target=\"_blank\" rel=\"noopener\">Locarno Film Festival</a>, uploading daily vlogs and movie reviews on their social media platforms. For them, not only I have created an intro for their videos, but have also did some editing work, here’s a playlist of videos I worked on.",
 			"categories" : [
 				"VIDEO"
 			],
