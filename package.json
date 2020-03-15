@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "gulp",
 		"build": "gulp build"
 	},
 	"repository": {
@@ -33,11 +34,11 @@
 		"gulp-terser": "^1.2.0",
 		"gulp-uglify": "^3.0.2",
 		"gulp-uglifycss": "^1.1.0",
-		"gulp-uncss": "^1.0.6",
 		"rimraf": "^3.0.2"
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
+		"node-sass": "^4.13.1",
 		"scrollreveal": "^4.0.5"
 	}
 }
