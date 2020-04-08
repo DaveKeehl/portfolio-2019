@@ -4,9 +4,9 @@
 	"description": "Personal online portfolio of Davide Ciulla - Visual Designer and Front-end Web Developer",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "gulp",
-		"build": "gulp build"
+		"build": "gulp build",
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
