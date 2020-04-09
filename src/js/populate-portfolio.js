@@ -23,7 +23,7 @@ async function fetchData(url) {
 
 		for (project in json.projects) {
 
-			console.log(json.projects[project].visibility)
+			// console.log(json.projects[project].visibility)
 
 			if (json.projects[project].visibility === 'public') {
 

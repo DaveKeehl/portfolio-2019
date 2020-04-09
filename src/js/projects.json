@@ -22,7 +22,7 @@
 		},
 		{
 			"title" : "SwissAPO",
-			"description" : "SwissAPO stands for Swiss Association of Professional Organizers. They wanted to have a new website and change the CMS (Content Management System) they were previously using. Following their brief and feedback, I created this website using Wordpress and some custom HTML and CSS.",
+			"description" : "SwissAPO stands for Swiss Association of Professional Organizers, and they are the largest team of professional organizers in Switzerland.\nThey hired me to develop their new website and their main concern was to have a more fresh and easy on the eyes user interface, elements that lacked in the previous platform.\nDuring development, I used a very simple tech stack because they wanted to keep everything very simple along with the ability of being able to manage their own content via a CMS (Content Management System).",
 			"categories" : [
 				"WEB"
 			],
@@ -37,7 +37,7 @@
 		},
 		{
 			"title" : "Film in Piazza - Intro",
-			"description" : "Film in Piazza is a young group of friends and film lovers. Every year they follow very closely the <a href=\"https://www.locarnofestival.ch/\" target=\"_blank\" rel=\"noopener\">Locarno Film Festival</a>, uploading daily vlogs and movie reviews on their social media platforms. I was commissioned to create an intro to be used at the beginning of their videos and this is the final result.<br>I wanted to create something slightly resambling the Disney Pixar lamp intro, but using elements from the movie industry world.",
+		"description" : "<a href=\"https://www.facebook.com/filminpiazza/\" target=\"_blank\" rel=\"noopener\">Film in Piazza</a> is a young group of friends and film lovers. Every year they follow very closely the <a href=\"https://www.locarnofestival.ch/\" target=\"_blank\" rel=\"noopener\">Locarno Film Festival</a>, uploading daily vlogs and movie reviews on their social media platforms.\nI was commissioned to create an intro to be used at the beginning of their videos and this is the final result.\nI wanted to create something slightly resambling the Disney Pixar lamp intro, but using elements from the movie industry world.",
 			"categories" : [
 				"VIDEO"
 			],
@@ -51,7 +51,7 @@
 		},
 		{
 			"title" : "Film in Piazza - Editing",
-			"description" : "Film in Piazza is a young group of friends and film lovers. Every year they follow very closely the <a href=\"https://www.locarnofestival.ch/\" target=\"_blank\" rel=\"noopener\">Locarno Film Festival</a>, uploading daily vlogs and movie reviews on their social media platforms. For them, not only I have created an intro for their videos, but have also did some editing work, here’s a playlist of videos I worked on.",
+			"description" : "<a href=\"https://www.facebook.com/filminpiazza/\" target=\"_blank\" rel=\"noopener\">Film in Piazza</a> is a young group of friends and film lovers. Every year they follow very closely the <a href=\"https://www.locarnofestival.ch/\" target=\"_blank\" rel=\"noopener\">Locarno Film Festival</a>, uploading daily vlogs and movie reviews on their social media platforms.\nFor them, not only I have created an intro for their videos, but have also did some editing work. Here’s a playlist of videos I worked on.",
 			"categories" : [
 				"VIDEO"
 			],
@@ -65,12 +65,11 @@
 		},
 		{
 			"title" : "Teleticino - Index",
-			"description" : "Teleticino is a local television channel based in Melide (Ticino, CH). I did an internship with them for a few months a couple years ago and this intro was created by me for a then-to-come-out format rebranding.",
+			"description" : "<a href=\"http://teleticino.ch/\" target=\"_blank\" rel=\"noopener\">Teleticino</a> is a local television channel based in Melide (Ticino, CH).\n Some years ago, I worked there for a few months as a graphic designer intern and during that time I created an intro for \"Index\", a format they were in the process of rebranding.\nI did all the modeling and main animations in Cinema 4D and all the further editing and compositing in After Effects. It wasn't technically difficult, but I remember we went through a couple of revisions because we wanted to make it right.",
 			"categories" : [
 				"VIDEO"
 			],
 			"technologies" : [
-				"PREMIERE",
 				"AFTER EFFECTS",
 				"CINEMA 4D"
 			],
@@ -81,14 +80,12 @@
 		},
 		{
 			"title" : "Teleticino - Piazza del Corriere",
-			"description" : "Teleticino is a local television channel based in Melide (Ticino, CH). I did an internship with them for a few months a couple years ago and this intro was created by me for a then-to-come-out format rebranding.",
+			"description" : "<a href=\"http://teleticino.ch/\" target=\"_blank\" rel=\"noopener\">Teleticino</a> is a local television channel based in Melide (Ticino, CH).\n Some years ago, I worked there for a few months as a graphic designer intern and during that time I created an intro for \"Piazza del Corriere\" a format they were in the process of rebranding.\nEverything was created using After Effects and I learned a couple of nice perspective tricks from the graphic designer I assisted during my internship!",
 			"categories" : [
 				"VIDEO"
 			],
 			"technologies" : [
-				"PREMIERE",
-				"AFTER EFFECTS",
-				"CINEMA 4D"
+				"AFTER EFFECTS"
 			],
 			"link" : "https://www.youtube.com/watch?v=fp_73DgKr04",
 			"thumbnail" : "teleticino-pdc.svg",
@@ -97,7 +94,7 @@
 		},
 		{
 			"title" : "Laboratorio di Cucina Naturale",
-			"description" : "The \"Laboratorio di Cucina Naturale\" is a ",
+			"description" : "The \"Laboratorio di Cucina Naturale\" is a food catering service which specializes in natural and mediterrian food. I was hired to develop a new website and their brief was to make something nicer than their old website, but also easily manageable and with an ecommerce.\n In these cases, I always go with Wordpress, because it's a CMS I know quite well, and which is perfect for such situations.\n",
 			"categories" : [
 				"UI/UX",
 				"WEB"
@@ -112,7 +109,7 @@
 		},
 		{
 			"title" : "USIGeek",
-			"description" : "USIGeek is the official student of USI (Università della Svizzera Italiana). My role for this project was to completely restyle their existing website...",
+			"description" : "USIGeek is a student association of the Università della Svizzera italiana (USI) with the goal of sharing passions and interests about entartainment and technology.\nI created this website completely spontaneously because I wanted to put my React skills to practice with some new topics I had just learned, and I didn't like their previous platform.\nI'm really happy with how it turned out, especially because it's the first time I make a multi-language website from scratch using a non-monolithic approach.",
 			"categories" : [
 				"UI/UX",
 				"WEB"
@@ -125,6 +122,23 @@
 			],
 			"link" : "https://usigeek.netlify.com/",
 			"thumbnail" : "usigeek.svg",
+			"visibility" : "private"
+		},
+		{
+			"title" : "Stack and Heap Diagrams Library",
+			"description" : "This was my thesis",
+			"categories" : [
+				"UI/UX",
+				"WEB"
+			],
+			"technologies" : [
+				"HTML",
+				"SASS",
+				"JAVASCRIPT",
+				"REACT"
+			],
+			"link" : "https://stackandheap.netlify.com/",
+			"thumbnail" : "",
 			"visibility" : "private"
 		}
 	]
