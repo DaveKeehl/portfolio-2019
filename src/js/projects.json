@@ -123,6 +123,23 @@
 			"link" : "https://usigeek.netlify.com/",
 			"thumbnail" : "usigeek.svg",
 			"visibility" : "private"
+		},
+		{
+			"title" : "Stack and Heap Diagrams Library",
+			"description" : "This was my thesis",
+			"categories" : [
+				"UI/UX",
+				"WEB"
+			],
+			"technologies" : [
+				"HTML",
+				"SASS",
+				"JAVASCRIPT",
+				"REACT"
+			],
+			"link" : "https://stackandheap.netlify.com/",
+			"thumbnail" : "",
+			"visibility" : "private"
 		}
 	]
 }
