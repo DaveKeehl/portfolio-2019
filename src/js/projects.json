@@ -109,7 +109,7 @@
 		},
 		{
 			"title" : "USIGeek",
-			"description" : "USIGeek is a student association of the Università della Svizzera italiana (USI) with the goal of sharing passions and interests about entartainment and technology.\nI created this website completely spontaneously because I wanted to put my React skills to practice with some new topics I had just learned, and I didn't like their previous platform.\nI'm really happy with how it turned out, especially because it's the first time I make a multi-language website from scratch using a non-monolithic approach.",
+			"description" : "USIGeek is a student association of the Università della Svizzera italiana (USI) with the goal of sharing passions and interests about entartainment and technology.\nI created this website completely spontaneously because I wanted to put my React skills to practice with some new topics I had just learned, and I didn't like their previous platform.\nI'm really happy with how it turned out, especially because it's the first time I make a multi-language website from scratch using a non-monolithic approach.\n",
 			"categories" : [
 				"UI/UX",
 				"WEB"
@@ -122,7 +122,7 @@
 			],
 			"link" : "https://usigeek.netlify.com/",
 			"thumbnail" : "usigeek.svg",
-			"visibility" : "private"
+			"visibility" : "public"
 		},
 		{
 			"title" : "Stack and Heap Diagrams Library",
