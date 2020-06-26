@@ -247,11 +247,13 @@
 				flex-wrap: wrap
 				margin-top: rem(20px)
 				font-size: rem(24px)
-				div
+				& > div
 					padding: 5px
 					transition: all .15s ease
+					&:first-child
+						padding-left: 0
 					&:last-child
-						margin-right: 0
+						padding-right: 0
 				.tooltip
 					position: relative
 					background-position: center center
@@ -280,14 +282,14 @@
 						color: $white
 						text-align: center
 						border-radius: rem(6px)
-						padding: rem(5px)
+						padding: rem(6px)
 						position: absolute
 						z-index: 1000
 						bottom: 150%
 						left: -50%
 						transform: translateX(-50%)
 						margin-left: 100%
-						line-height: 1
+						line-height: 1.2
 						box-shadow: 0 rem(2px) rem(4px) transparentize($black, .75), 0 rem(2px) rem(2px) transparentize($black, .85)
 						&:after
 							content: ''

@@ -18,7 +18,7 @@
 			"link" : "https://www.davideciulla.com",
 			"thumbnail" : "online-portfolio.svg",
 			"presentation" : "<iframe style=\"border: none;\" width=\"800\" height=\"450\" src=\"https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FIlM3o8ppq4cteCHNyw6SNgcX%2FPortfolio%3Fnode-id%3D383%253A15\" allowfullscreen></iframe>",
-			"visibility" : "public"
+			"visibility" : "private"
 		},
 		{
 			"title" : "SwissAPO",
@@ -115,12 +115,10 @@
 				"WEB"
 			],
 			"technologies" : [
-				"HTML",
-				"CSS",
-				"JAVASCRIPT",
+				"SASS",
 				"REACT"
 			],
-			"link" : "https://usigeek.netlify.com/",
+			"link" : "https://usigeek.netlify.app/",
 			"thumbnail" : "usigeek.svg",
 			"visibility" : "public"
 		},
@@ -137,7 +135,7 @@
 				"JAVASCRIPT",
 				"REACT"
 			],
-			"link" : "https://stackandheap.netlify.com/",
+			"link" : "https://stackandheap.netlify.app/",
 			"thumbnail" : "",
 			"visibility" : "private"
 		}
