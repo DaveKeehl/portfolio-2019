@@ -38,7 +38,7 @@
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
-		"node-sass": "^4.13.1",
+		"node-sass": "^7.0.0",
 		"scrollreveal": "^4.0.5"
 	}
 }
